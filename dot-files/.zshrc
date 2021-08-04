@@ -99,10 +99,10 @@ source $ZSH/oh-my-zsh.sh
 	# Substitution
 	ZSH_HIGHLIGHT_STYLES[command-substitution]=cyan
 	ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[process-substitution]=fg=green
-	ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=green
-	ZSH_HIGHLIGHT_STYLES[redirection]=fg=green
-	ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=green
+	ZSH_HIGHLIGHT_STYLES[process-substitution]=fg=blue,bold
+	ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=blue,bold
+	ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
+	ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
 
 	# Hyphens
 	ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta,bold
