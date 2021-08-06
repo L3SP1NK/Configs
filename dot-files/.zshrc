@@ -53,7 +53,6 @@ source $ZSH/oh-my-zsh.sh
 	alias fgrep='fgrep --color=auto'
 	alias egrep='egrep --color=auto'
 	alias diff='diff --color=auto'
-	alias ip='ifconfig | ccze -A'
 
 	# Custom
 	alias l='ls --time-style="+%d-%b-%y %H:%M:%S" -hAl'
