@@ -19,11 +19,11 @@ COMPLETION_WAITING_DOTS="true"
 HISTFILE=~/.zsh_history
 #HISTSIZE=1000
 #SAVEHIST=2000
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-setopt share_history         # share command history data
+setopt hist_expire_dups_first	# delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups			# ignore duplicated commands history list
+setopt hist_ignore_space		# ignore commands that start with space
+setopt hist_verify				# show command with history expansion to user before running it
+setopt share_history			# share command history data
 
 # force zsh to show the complete history
 alias history="history 0"
@@ -62,6 +62,7 @@ source $ZSH/oh-my-zsh.sh
 	alias emoji="cat ~/.emoji"
 	alias c='ccze -A'
 	alias note='nano .note'
+	alias remote-touchpad='xterm -e /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad&'
 
 	# Man/less color
 	export LESS_TERMCAP_mb=$'\E[1;31m'
