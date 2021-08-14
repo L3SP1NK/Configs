@@ -200,13 +200,13 @@ set historylog
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
- set titlecolor lightwhite,black
+ set titlecolor white,black
  set statuscolor black,green
  set errorcolor black,red
  set selectedcolor lightwhite,blue
  set stripecolor bold,yellow
  set scrollercolor lightwhite
- set numbercolor white
+ set numbercolor lightwhite
  set keycolor cyan
  set functioncolor green
 
