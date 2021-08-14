@@ -1,10 +1,12 @@
-XTerm*title: xterm
+! XTerm*title: XTerm
 XTerm*loginShell: true
 XTerm*scrollBar: false
 XTerm*scrollKey: true
-XTerm*saveLines: 1250
 XTerm*multiClickTime: 250
 XTerm*renderFont: true
+XTerm*savelines: 99999
+XTerm*selectToClipboard: true
+
 
 Xft.dpi: 96
 Xft.antialias: true
@@ -13,65 +15,60 @@ Xft.rgba: rgb
 Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
-
-XTerm*savelines: 99999
-
-xterm*selectToClipboard: true
-
 ! Global color
-xterm*foreground: rgb:ff/ff/ff
-xterm*background: rgb:00/00/00
+XTerm*foreground: rgb:ff/ff/ff
+XTerm*background: rgb:00/00/00
 
 ! white/grey
-*color7:       #585858
-*color15:      #eeeeee
+*color7:       #eeeeee
+*color15:      #585858
 
 ! Application Resources
-xterm.locale: true
-xterm.termName: xterm-256color
-xterm.utmpInhibit: true
+XTerm.locale: true
+XTerm.termName: XTerm-256color
+XTerm.utmpInhibit: true
 
 ! VT100 Widget Resources
-xterm*allowTitleOps:  false
-xterm*altSendsEscape: true
-xterm*bellIsUrgent: true
-xterm*borderLess: true
+XTerm*allowTitleOps:  false
+XTerm*altSendsEscape: true
+XTerm*bellIsUrgent: true
+XTerm*borderLess: true
 ! allow selecting email/url by double click
-xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
-xterm*colorBD: wheat
-xterm*colorBDMode: true
-xterm*colorUL: green
-xterm*colorULMode: false
-xterm*cursorBlink: true
-xterm*eightBitInput: false
-xterm*fastScroll: true
-xterm*highlightSelection: true
+XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+XTerm*colorBD: wheat
+XTerm*colorBDMode: true
+XTerm*colorUL: green
+XTerm*colorULMode: false
+XTerm*cursorBlink: true
+XTerm*eightBitInput: false
+XTerm*fastScroll: true
+XTerm*highlightSelection: true
 XTerm*jumpScroll: true
-xterm*loginshell: true
+XTerm*loginshell: true
 XTerm*multiScroll: true
-xterm*printAttributes: 2
-xterm*printerCommand: xterm -T History -e sh -c 'less -r -o /tmp/xterm.dump <&3' 3<&0
-xterm*rightScrollBar: true
-xterm*scrollBar: false
-xterm*trimSelection: true
-xterm*veryBoldColors: 4
-xterm*xftAntialias: true
+XTerm*printAttributes: 2
+XTerm*printerCommand: XTerm -T History -e sh -c 'less -r -o /tmp/XTerm.dump <&3' 3<&0
+XTerm*rightScrollBar: true
+XTerm*scrollBar: false
+XTerm*trimSelection: true
+XTerm*veryBoldColors: 4
+XTerm*xftAntialias: true
 ! set font and fontsize
 XTerm*faceName: Monospace
-XTerm*faceSize: 16
+XTerm*faceSize: 15
 
 ! VT Font Menu: Unreadable
-xterm*faceSize1: 8
+XTerm*faceSize1: 8
 ! VT font menu: Tiny
-xterm*faceSize2: 10
+XTerm*faceSize2: 10
 ! VT font menu: Medium
-xterm*faceSize3: 12
+XTerm*faceSize3: 12
 ! VT font menu: Large
-xterm*faceSize4: 16
+XTerm*faceSize4: 16
 ! VT font menu: Huge
-xterm*faceSize5: 22
+XTerm*faceSize5: 22
 
-! Ensure that your locale is set up for UTF-8. If you do not use UTF-8, you may need to force xterm to more strictly follow your locale by setting
+! Ensure that your locale is set up for UTF-8. If you do not use UTF-8, you may need to force XTerm to more strictly follow your locale by setting
 XTerm.vt100.locale: true
 
 XTerm*cursorBlink: true
@@ -83,8 +80,8 @@ XTerm*trimSelection: true
 ! Turn the scrollbar on, and put it on the right
 ! XTerm.vt100.scrollBar: true
 ! XTerm.vt100.scrollbar.width: 8
-! xterm*scrollBar: true
-! xterm*rightScrollBar: true
+! XTerm*scrollBar: true
+! XTerm*rightScrollBar: true
 
 ! Do not scroll when there is new input e.g. tail -f /var/syslog
 !XTerm*scrollTtyOutput: false
@@ -103,7 +100,7 @@ XTerm.vt100.translations: #override \n\
 
 
 ! double-click to select whole URLs :D
-! https://scarygliders.net/2011/12/01/customize-xterm-the-original-and-best-terminal/
+! https://scarygliders.net/2011/12/01/customize-XTerm-the-original-and-best-terminal/
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 ! Tips: Left and right selection (text selection using left button for beginning and right button for end)
