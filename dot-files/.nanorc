@@ -203,7 +203,7 @@ set historylog
  set titlecolor white,black
  set statuscolor black,green
  set errorcolor black,red
- set selectedcolor lightwhite,blue
+ set selectedcolor white,blue
  set stripecolor bold,yellow
  set scrollercolor lightwhite
  set numbercolor lightwhite
