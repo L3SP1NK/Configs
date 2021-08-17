@@ -135,7 +135,7 @@ DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2)
 if [[ ${DISTRO} == '"Kali GNU/Linux Rolling"' ]]
 	then
 		HOSTNAME_COLOR=cyan
-elif [[ ${DISTRO} == '"Debian GNU/Linux 10 (buster)"' ]]
+elif [[ ${DISTRO} == '"Debian GNU/Linux 11 (bullseye)"' ]]
 	then
 		HOSTNAME_COLOR=magenta
 	else
