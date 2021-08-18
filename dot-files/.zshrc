@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 	alias l='ls --time-style="+%d-%b-%y %H:%M:%S" -hAl'
 	alias lt='ls --time-style="+%d-%b-%y %H:%M:%S" -hAltr'
 	alias netspeed='ethtool eth0 | grep Speed'
-	alias emoji="cat ~/.emoji"
+	alias emoji="cat ~/.emoji | tac"
 	alias c='ccze -A'
 	alias note='nano .note'
 	alias remote-touchpad='xterm -e /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad&'
