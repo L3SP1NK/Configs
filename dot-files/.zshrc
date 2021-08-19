@@ -63,6 +63,7 @@ source $ZSH/oh-my-zsh.sh
 	alias c='ccze -A'
 	alias note='nano .note'
 	alias remote-touchpad='xterm -e /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad&'
+	alias stopx='xfce4-session-logout'
 
 	# Man/less color
 	export LESS_TERMCAP_mb=$'\E[1;31m'
