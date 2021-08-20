@@ -48,7 +48,7 @@ XTerm*loginshell: true
 XTerm*multiScroll: true
 XTerm*printAttributes: 2
 XTerm*printerCommand: XTerm -T History -e sh -c 'less -r -o /tmp/XTerm.dump <&3' 3<&0
-XTerm*rightScrollBar: true
+!XTerm*rightScrollBar: true
 XTerm*scrollBar: false
 XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
