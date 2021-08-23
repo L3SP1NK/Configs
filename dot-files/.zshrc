@@ -62,7 +62,7 @@ source $ZSH/oh-my-zsh.sh
 	alias emoji="cat ~/.emoji | tac"
 	alias c='ccze -A'
 	alias note='nano .note'
-	alias remote-touchpad='xterm -e /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad&'
+	alias remote-touchpad='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad&'
 	alias stopx='xfce4-session-logout -f -l'
 
 	# Man/less color
