@@ -1,5 +1,16 @@
-## Personal configuration
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+#	 _                    _       _			#
+#	| |    ___  ___ _ __ (_)_ __ | | __		#
+#	| |   / _ \/ __| '_ \| | '_ \| |/ /		#
+#	| |__|  __/\__ \ |_) | | | | |   <		#
+#	|_____\___||___/ .__/|_|_| |_|_|\_\		#
+#   	           |_|						#
+#											#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
+##~~~~~~~~~~~~~~~~~~~~~~~~~##
+## Personal configuration. ##
+##~~~~~~~~~~~~~~~~~~~~~~~~~##
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
@@ -15,21 +26,30 @@ DISABLE_MAGIC_FUNCTIONS="true"
 COMPLETION_WAITING_DOTS="true"
 #ZSH_THEME="random"
 
-## History configurations
+##~~~~~~~~~~~~~~~~~~~~~~~~~##
+## History configurations. ##
+##~~~~~~~~~~~~~~~~~~~~~~~~~##
 HISTFILE=~/.zsh_history
 #HISTSIZE=1000
 #SAVEHIST=2000
-setopt hist_expire_dups_first	# delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups			# ignore duplicated commands history list
-setopt hist_ignore_space		# ignore commands that start with space
-setopt hist_verify				# show command with history expansion to user before running it
-setopt share_history			# share command history data
+## Delete duplicates first when HISTFILE size exceeds HISTSIZE.
+setopt hist_expire_dups_first
+## Ignore duplicated commands history list.
+setopt hist_ignore_dups
+## Ignore commands that start with space.
+setopt hist_ignore_space
+## Show command with history expansion to user before running it.
+setopt hist_verify
+## Share command history data.
+setopt share_history
 
-# force zsh to show the complete history
+##force zsh to show the complete history.
 alias history="history 0"
 HIST_STAMPS="+%d %b %H:%M"
 
-
+##~~~~~~~~~~##
+## Plugins. ##
+##~~~~~~~~~~##
 plugins=(
 	zsh-completions
 	zsh-navigation-tools
@@ -38,112 +58,126 @@ plugins=(
 	command-not-found
 )
 
-## Base zsh script (after plugins)
+## Base zsh script (after plugins).
 source $ZSH/oh-my-zsh.sh
 
-## Alias
+##~~~~~~~~##
+## Alias. ##
+##~~~~~~~~##
+## Add verbose mode.
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
 
-	# Add verbose mode
-	alias cp='cp -v'
-	alias mv='mv -v'
-	alias rm='rm -v'
+## Add color.
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
 
-	# Add color
-	alias ls='ls --color=auto'
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
-	alias diff='diff --color=auto'
+## Custom.
+alias l='ls --time-style="+%d-%b-%y %H:%M:%S" -hAl'
+alias lt='ls --time-style="+%d-%b-%y %H:%M:%S" -hAltr'
+alias netspeed='ethtool eth0 | grep Speed'
+alias emoji="cat ~/.emoji | tac"
+alias c='ccze -A'
+alias note='nano .note'
+alias remote-touchpad='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad'
+alias stopx='xfce4-session-logout -f -l'
 
-	# Custom
-	alias l='ls --time-style="+%d-%b-%y %H:%M:%S" -hAl'
-	alias lt='ls --time-style="+%d-%b-%y %H:%M:%S" -hAltr'
-	alias netspeed='ethtool eth0 | grep Speed'
-	alias emoji="cat ~/.emoji | tac"
-	alias c='ccze -A'
-	alias note='nano .note'
-	alias remote-touchpad='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad'
-	alias stopx='xfce4-session-logout -f -l'
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+## Syntax highligthing configuration. ##
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-	# Man/less color
-	export LESS_TERMCAP_mb=$'\E[1;31m'
-	export LESS_TERMCAP_md=$'\E[1;36m'
-	export LESS_TERMCAP_me=$'\E[0m'
-	export LESS_TERMCAP_so=$'\E[01;33m'
-	export LESS_TERMCAP_se=$'\E[0m'
-	export LESS_TERMCAP_us=$'\E[1;32m'
-	export LESS_TERMCAP_ue=$'\E[0m'
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=yellow,bold,underline
+ZSH_HIGHLIGHT_STYLES[comment]=fg=cyan,bold
+ZSH_HIGHLIGHT_STYLES[assign]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[named-fd]=fg=magenta,bold
+ZSH_HIGHLIGHT_STYLES[numeric-fd]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=yellow
+ZSH_HIGHLIGHT_STYLES[global-alias]=fg=yellow
 
-## Syntax highligthing configuration
-	. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-	ZSH_HIGHLIGHT_STYLES[default]=fg
+## Path.
+ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[path]=fg=grey,underline
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=grey,underline
+ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=grey,underline
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
 
-	ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
-	ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
-	ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=yellow,bold,underline
-	ZSH_HIGHLIGHT_STYLES[comment]=fg=cyan,bold
-	ZSH_HIGHLIGHT_STYLES[assign]=fg=cyan
-	ZSH_HIGHLIGHT_STYLES[named-fd]=fg=magenta,bold
-	ZSH_HIGHLIGHT_STYLES[numeric-fd]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
-	ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=yellow
-	ZSH_HIGHLIGHT_STYLES[global-alias]=fg=yellow
+## Substitution.
+ZSH_HIGHLIGHT_STYLES[command-substitution]=cyan
+ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=red,bold
+ZSH_HIGHLIGHT_STYLES[process-substitution]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
 
-	# Path
-	ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=cyan
-	ZSH_HIGHLIGHT_STYLES[path]=fg=grey,underline
-	ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=grey,underline
-	ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=grey,underline
-	ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
+## Hyphens.
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta,bold
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=magenta,bold
 
-	# Substitution
-	ZSH_HIGHLIGHT_STYLES[command-substitution]=cyan
-	ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[process-substitution]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
+## Quotes.
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
+ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
+ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=red,bold
 
-	# Hyphens
-	ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta,bold
-	ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=magenta,bold
+## Brackets.
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
+ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=red,bold
+ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 
-	# Quotes
-	ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
-	ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=green,bold
-	ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
-	ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=red,bold
+## Man/less color.
+export LESS_TERMCAP_mb=$'\E[1;31m'
+export LESS_TERMCAP_md=$'\E[1;36m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;33m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[1;32m'
+export LESS_TERMCAP_ue=$'\E[0m'
 
-	# Brackets
-	ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
+##~~~~~~~~~##
+## Prompt. ##
+##~~~~~~~~~##
+## Colors.
+RESET_COLOR="\e[0m"
+BOLD="\e[1m"
+GREY="\e[37m"
+YELLOW="\e[33m"
+GREEN="\e[32m"
+RED="\e[31m"
+BLUE="\e[34m"
 
-## Check on which distro i am
-DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2)
+## Check on which distro i am (Kali or Debian).
+DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g')
 
-if [[ ${DISTRO} == '"Kali GNU/Linux Rolling"' ]]
+if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
 	then
 		HOSTNAME_COLOR=cyan
-elif [[ ${DISTRO} == '"Debian GNU/Linux 11 (bullseye)"' ]]
+elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
 	then
 		HOSTNAME_COLOR=magenta
 	else
 		HOSTNAME_COLOR=white
 fi
 
-# Add the user name to the prompt
+## Change color if user is root.
 if [[ "$EUID" -ne 0 ]]
 	then
 		NAME_COLOR=green
@@ -151,11 +185,27 @@ if [[ "$EUID" -ne 0 ]]
 		NAME_COLOR=red
 fi
 
-## Prompt
+## user@hostname:/dir/$
 PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+## Time
 RPROMPT='%{$fg_bold[grey]%}%*%{$reset_color%}'
 
+## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} != "" ]]
 	then
-		neofetch
+		which neofetch > /dev/null
+			if [[ ${?} -eq "0" ]]
+				then
+					neofetch
+				else
+					if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
+						then
+							echo -e "${BOLD}${BLUE}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
+					elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
+						then
+							echo -e "${BOLD}${RED}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
+						else
+							echo -e "${BOLD}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
+					fi
+			fi
 fi
