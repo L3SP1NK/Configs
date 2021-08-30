@@ -68,6 +68,7 @@ source $ZSH/oh-my-zsh.sh
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
+alias trash='trash -v'
 
 ## Add color.
 alias ls='ls --color=auto'
