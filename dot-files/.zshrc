@@ -84,7 +84,6 @@ alias lt='ls --time-style="+%d-%b-%y %H:%M:%S" -hAltr'
 alias netspeed='ethtool eth0 | grep Speed'
 alias emoji="cat ~/.emoji | tac"
 alias c='ccze -A'
-alias note='nano .note'
 alias remote-touchpad='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad'
 alias stopx='xfce4-session-logout -f -l'
 
