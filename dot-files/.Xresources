@@ -55,7 +55,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 XTerm*faceName: Monospace
-XTerm*faceSize: 15
+XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
