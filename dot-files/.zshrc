@@ -11,13 +11,14 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Personal configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~##
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ZSH=$HOME/.oh-my-zsh
+export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin
+export ZSH=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
 export ARCHFLAGS="-arch x86_64"
 export UPDATE_ZSH_DAYS=1
 export LANG=en_US.UTF-8
 export EDITOR=nano
+export PATH
 XDG_SESSION_TYPE=x11
 
 CASE_SENSITIVE="true"
@@ -59,7 +60,7 @@ plugins=(
 )
 
 ## Base zsh script (after plugins).
-source $ZSH/oh-my-zsh.sh
+source ${ZSH}/oh-my-zsh.sh
 
 ##~~~~~~~~##
 ## Alias. ##
@@ -179,7 +180,7 @@ elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
 fi
 
 ## Change color if user is root.
-if [[ "$EUID" -ne 0 ]]
+if [[ "${EUID}" -ne 0 ]]
 	then
 		NAME_COLOR=green
 	else
