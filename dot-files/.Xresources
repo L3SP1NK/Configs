@@ -54,7 +54,7 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: Monospace
+XTerm*faceName: DejaVuSansMono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
