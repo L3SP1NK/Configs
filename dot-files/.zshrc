@@ -18,7 +18,6 @@ export ARCHFLAGS="-arch x86_64"
 export UPDATE_ZSH_DAYS=1
 export LANG=en_US.UTF-8
 export EDITOR=nano
-export PATH
 XDG_SESSION_TYPE=x11
 
 CASE_SENSITIVE="true"
@@ -79,12 +78,10 @@ alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 
 ## Custom.
-alias l='ls --time-style="+%d-%b-%y %H:%M:%S" -hAl'
-alias lt='ls --time-style="+%d-%b-%y %H:%M:%S" -hAltr'
+alias l='ls --time-style="+%d-%b-%y %T" -hAl'
 alias netspeed='ethtool eth0 | grep Speed'
 alias emoji="cat ~/.emoji | tac"
 alias c='ccze -A'
-alias remote-touchpad='/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=remote-touchpad-wait-on-error com.github.unrud.RemoteTouchpad'
 alias stopx='xfce4-session-logout -f -l'
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
