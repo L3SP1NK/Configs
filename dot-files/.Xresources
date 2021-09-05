@@ -29,7 +29,7 @@ XTerm.termName: XTerm-256color
 XTerm.utmpInhibit: true
 
 ! VT100 Widget Resources
-XTerm*allowTitleOps:  false
+! XTerm*allowTitleOps:  false
 XTerm*altSendsEscape: true
 XTerm*bellIsUrgent: true
 XTerm*borderLess: true
