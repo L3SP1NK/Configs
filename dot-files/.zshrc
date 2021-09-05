@@ -18,6 +18,8 @@ export ARCHFLAGS="-arch x86_64"
 export UPDATE_ZSH_DAYS=1
 export LANG=en_US.UTF-8
 export EDITOR=nano
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
 XDG_SESSION_TYPE=x11
 
 CASE_SENSITIVE="true"
