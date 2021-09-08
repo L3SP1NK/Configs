@@ -71,6 +71,7 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias trash='trash -v'
+alias mkdir="mkdir -v"
 
 ## Add color.
 alias ls='ls --color=auto'
