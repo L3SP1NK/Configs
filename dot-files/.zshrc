@@ -187,22 +187,9 @@ if [[ "${EUID}" -ne 0 ]]
 fi
 
 ## user@hostname:/dir/$
-## Bold.
-#PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Time.
-#RPROMPT='%{$fg_bold[white]%}%*%{$reset_color%}'
-
-## user@hostname:/dir/$
-## Normal.
-#PROMPT='%{$fg[${NAME_COLOR}]%}%n%{$fg[yellow]%}@%{$fg[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}%(?.%{$fg[green]%}.%{$fg[red]%})%(!.#.$)%{$reset_color%} '
-## Time.
-#RPROMPT='%{$fg[white]%}%*%{$reset_color%}'
-
-## user@hostname:/dir/$
-## Mixed.
-PROMPT='%{$fg[${NAME_COLOR}]%}%n%{$fg[yellow]%}@%{$fg[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg[green]%}.%{$fg[red]%})%(!.#.$)%{$reset_color%} '
-RPROMPT='%{$fg[white]%}%*%{$reset_color%}'
-
+RPROMPT='%{$fg_bold[white]%}%*%{$reset_color%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} != "" ]]
