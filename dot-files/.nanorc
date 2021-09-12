@@ -230,7 +230,6 @@ include "/usr/share/nano/*.nanorc"
 include "/usr/share/nanorc/*.nanorc"
 
 
-
 ## Or you can select just the ones you need.  For example:
 # include "/usr/share/nano/html.nanorc"
 # include "/usr/share/nano/python.nanorc"
@@ -242,7 +241,7 @@ include "/usr/share/nanorc/*.nanorc"
 
 ## If <Tab> should always produce four spaces when editing a Python file,
 ## independent of the settings of 'tabsize' and 'tabstospaces':
- extendsyntax python tabgives "    "
+# extendsyntax python tabgives "    "
 
 ## If <Tab> should always produce an actual TAB when editing a Makefile:
 # extendsyntax makefile tabgives "	"

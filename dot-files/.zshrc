@@ -19,8 +19,7 @@ export UPDATE_ZSH_DAYS=1
 export LANG=en_US.UTF-8
 export EDITOR=nano
 export QT_QPA_PLATFORMTHEME="qt5ct"
-
-XDG_SESSION_TYPE=x11
+export XDG_SESSION_TYPE=x11
 
 CASE_SENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"
@@ -28,26 +27,47 @@ DISABLE_MAGIC_FUNCTIONS="true"
 COMPLETION_WAITING_DOTS="true"
 #ZSH_THEME="random"
 
-##~~~~~~~~~~~~~~~~~~~~~~~~~##
-## History configurations. ##
-##~~~~~~~~~~~~~~~~~~~~~~~~~##
-HISTFILE=~/.zsh_history
+##~~~~~~~~~~##
+## History. ##
+##~~~~~~~~~~##
+## See https://unix.stackexchange.com/questions/273861/unlimited-history-in-zsh.
+alias history="history 0"
+HIST_STAMPS="+%d %b %T"
+HISTFILE="${HOME}/.zsh_history"
+HISTSIZE=999999999
+SAVEHIST=999999999
+
+setopt BANG_HIST				# Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY			# Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY		# Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY			# Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST	# Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS			# Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS		# Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS		# Do not display a line previously found.
+setopt HIST_IGNORE_SPACE		# Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS		# Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS		# Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY				# Don't execute immediately upon history expansion.
+setopt HIST_BEEP				# Beep when accessing nonexistent history.
+export SAVEHIST=${HISTSIZE}
+
+## Previous config.
+#HISTFILE=~/.zsh_history
 #HISTSIZE=1000
 #SAVEHIST=2000
 ## Delete duplicates first when HISTFILE size exceeds HISTSIZE.
-setopt hist_expire_dups_first
+#setopt hist_expire_dups_first
 ## Ignore duplicated commands history list.
-setopt hist_ignore_dups
+#setopt hist_ignore_dups
 ## Ignore commands that start with space.
-setopt hist_ignore_space
+#setopt hist_ignore_space
 ## Show command with history expansion to user before running it.
-setopt hist_verify
+#setopt hist_verify
 ## Share command history data.
-setopt share_history
+#setopt share_history
 
-##force zsh to show the complete history.
-alias history="history 0"
-HIST_STAMPS="+%d %b %H:%M"
+
 
 ##~~~~~~~~~~##
 ## Plugins. ##
@@ -90,7 +110,7 @@ alias stopx='xfce4-session-logout -f -l'
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
