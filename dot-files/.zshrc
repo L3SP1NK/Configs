@@ -212,7 +212,7 @@ PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_
 RPROMPT='%{$fg_bold[white]%}%*%{$reset_color%}'
 
 ## Display system information if connected through SSH.
-if [[ ${SSH_CONNECTION} != "" ]]
+if [[ ${SSH_CONNECTION} ]]
 	then
 		which neofetch > /dev/null
 			if [[ ${?} -eq "0" ]]

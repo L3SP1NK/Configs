@@ -3,8 +3,8 @@ XTerm*loginShell: true
 XTerm*scrollBar: false
 XTerm*scrollKey: true
 XTerm*multiClickTime: 250
-XTerm*renderFont: true
-XTerm*savelines: 99999
+XTerm*renderont: true
+XTerm*savelines: 999999999999
 XTerm*selectToClipboard: true
 
 
@@ -54,7 +54,7 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: DejaVuSansMono
+XTerm*faceName: JetBrainsMonoNL
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
