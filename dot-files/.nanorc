@@ -187,7 +187,7 @@ set stateflags
 
 ## Detect word boundaries differently by treating punctuation
 ## characters as parts of words.
-set wordbounds
+#set wordbounds
 
 ## The characters (besides alphanumeric ones) that should be considered
 ## as parts of words.  This option does not have a default value.  When
