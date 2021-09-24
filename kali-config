@@ -1,0 +1,44 @@
+#!/bin/bash
+## - Install basics needed tools.
+## - Configure a Kali-Linux live system for remote access.
+## Typically you will run this script with "curl <host>/kali-config | bash"
+
+RESET_COLOR="\e[0m"
+RED="\e[31m"
+GREEN="\e[32m"
+
+PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework"
+DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')
+
+INSTALL_PACKAGES()
+{
+#	apt-get update
+	apt-get install -f -y ${PACKAGES}
+}
+
+SERVICES()
+{
+	## SSH
+	systemctl enable --now ssh.service
+	## RDP
+	systemctl enable --now xrdp.service
+	## Login manager
+	systemctl disable --now lightdm.service
+}
+
+## Check if root ?
+if [ "$EUID" -ne 0 ]
+	then
+		echo -e "${RED}This script must be runned as root !${RESET_COLOR}"
+	    exit 1
+	else
+		if [[ ${DISTRO} != "Kali GNU/Linux Rolling" ]]
+			then
+				echo -e "${RED}You are not on a Kali-Linux system, exiting...${RESET_COLOR}"
+				exit 1
+			else
+				INSTALL_PACKAGES
+				SERVICES
+				echo -e "${GREEN}Done !${RESET_COLOR}"
+		fi
+fi
