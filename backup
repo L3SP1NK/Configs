@@ -1,0 +1,20 @@
+#!/bin/bash
+## Backup important files.
+## Typically you will run this script once a day, using cron for example.
+
+function RUN()
+{
+	## Personal files.
+	[ -f ${HOME}/.pass.gpg ] && mkdir -p ${HOME}/.bak && cp ${HOME}/.pass.gpg ${HOME}/.bak/.pass.gpg.bak
+	[ -f ${HOME}/.note ] && mkdir -p ${HOME}/.bak && cp ${HOME}/.note ${HOME}/.bak/.note.bak
+
+	## Config files.
+	[ -f ${HOME}/.zshrc ] && mkdir -p ${HOME}/.bak && cp ${HOME}/.zshrc ${HOME}/.bak/.zshrc.bak
+	[ -f ${HOME}/.bashrc ] && mkdir -p ${HOME}/.bak && cp ${HOME}/.bashrc ${HOME}/.bak/.bashrc.bak
+
+	## Monero keys.
+	[ -f ${HOME}/Documents/Monero/lespink/lespink.keys ] && mkdir -p ${HOME}/.bak && cp ${HOME}/Documents/Monero/lespink/lespink.keys ${HOME}/.bak/lespink.keys.bak
+	[ -f ${HOME}/Documents/Monero/lespink/lespink ] && mkdir -p ${HOME}/.bak && cp ${HOME}/Documents/Monero/lespink/lespink ${HOME}/.bak/lespink.bak
+}
+
+RUN && notify-send " ✅ Backup done! " || " ❌ Backup failed! "
