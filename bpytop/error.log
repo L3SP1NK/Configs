@@ -60,3 +60,26 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 937, in _get_key
     input_key += sys.stdin.read(1)						#* Read 1 key safely with blocking on
 OSError: [Errno 5] Input/output error
+29/09/21 (07:02:52) | ERROR: Remote end closed connection without response
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5009, in _checker
+    with urllib.request.urlopen("https://github.com/aristocratos/bpytop/raw/master/bpytop.py", timeout=5) as source: # type: ignore
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.9/urllib/request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/usr/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.9/http/client.py", line 288, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response

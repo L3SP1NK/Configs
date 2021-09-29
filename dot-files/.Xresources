@@ -1,4 +1,3 @@
-! XTerm*title: XTerm
 XTerm*loginShell: true
 XTerm*scrollBar: false
 XTerm*scrollKey: true
@@ -8,20 +7,54 @@ XTerm*savelines: 999999999999
 XTerm*selectToClipboard: true
 
 
+! Display
 Xft.dpi: 96
 Xft.antialias: true
-Xft.hinting: true
 Xft.rgba: rgb
+!Xft.lcdfilter: lcdfilter
+
+! Hinting
+Xft.hinting: true
 Xft.autohint: true
 Xft.hintstyle: hintfull
-Xft.lcdfilter: lcdfilter
+
 ! Global color
 XTerm*foreground: rgb:ff/ff/ff
 XTerm*background: rgb:00/00/00
 
-! white/grey
-*color15:       #585858
-*color7:      #eeeeee
+! Pure themes
+
+! black
+*color0:		#000000
+*color8:		#FF0000
+
+! red
+*color1:		#FF0000
+*color9:		#FF00B3
+
+! green
+*color2:		#00FF0B
+*color10:		#00FFCB
+
+! yellow
+*color3:		#FF9900
+*color11:		#FFC600
+
+! blue
+*color4:		#0047FF
+*color12:		#535AFF
+
+! magenta
+*color5:		#9E00FF
+*color13:		#FB3CFF
+
+! cyan
+*color6:		#00C1FF
+*color14:		#00FFFF
+
+! white
+*color7:		#FFFFFF
+*color15:		#77767B
 
 ! Application Resources
 XTerm.locale: true
@@ -29,12 +62,14 @@ XTerm.termName: XTerm-256color
 XTerm.utmpInhibit: true
 
 ! VT100 Widget Resources
-! XTerm*allowTitleOps:  false
+XTerm*allowTitleOps:  true
 XTerm*altSendsEscape: true
 XTerm*bellIsUrgent: true
 XTerm*borderLess: true
+
 ! allow selecting email/url by double click
 XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+
 XTerm*colorBD: wheat
 XTerm*colorBDMode: true
 XTerm*colorUL: green
@@ -49,12 +84,12 @@ XTerm*multiScroll: true
 XTerm*printAttributes: 2
 XTerm*printerCommand: XTerm -T History -e sh -c 'less -r -o /tmp/XTerm.dump <&3' 3<&0
 !XTerm*rightScrollBar: true
-XTerm*scrollBar: false
+!XTerm*scrollBar: false
 XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: JetBrainsMonoNL
+XTerm*faceName: monospace
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
