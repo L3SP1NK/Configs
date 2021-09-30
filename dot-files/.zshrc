@@ -89,7 +89,7 @@ source ${ZSH}/oh-my-zsh.sh
 ## Add verbose mode.
 alias cp='cp -vi'
 alias mv='mv -vi'
-alias rm='rm -vI'
+alias rm='rm -v'
 alias trash='trash -v'
 alias mkdir="mkdir -v"
 
