@@ -89,8 +89,8 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: monospace
-XTerm*faceSize: 14
+XTerm*faceName: JetBrains Mono
+XTerm*faceSize: 13
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
