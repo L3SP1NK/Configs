@@ -1,0 +1,34 @@
+
+2021/10/01 (17:01:01) | ===> btop++ v.1.0.12
+2021/10/01 (17:01:01) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2021/10/01 (17:11:45) | ===> btop++ v.1.0.12
+2021/10/01 (17:11:45) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+2021/10/01 (17:12:34) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:35) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:37) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:39) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:41) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:43) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:45) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:47) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+
+2021/10/01 (17:12:49) | ===> btop++ v.1.0.12
+2021/10/01 (17:12:49) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+2021/10/01 (17:12:49) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:49) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:51) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:53) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:55) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:57) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:12:59) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+2021/10/01 (17:13:01) | WARNING: Failed to get disk/partition stats with statvfs() for: /run/user/1000/doc
+
+2021/10/01 (17:13:52) | ===> btop++ v.1.0.12
+2021/10/01 (17:13:52) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2021/10/01 (17:14:40) | ===> btop++ v.1.0.12
+2021/10/01 (17:14:40) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2021/10/01 (17:15:26) | ===> btop++ v.1.0.12
+2021/10/01 (17:15:26) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
