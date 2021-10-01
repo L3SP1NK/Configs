@@ -83,3 +83,166 @@ Traceback (most recent call last):
   File "/usr/lib/python3.9/http/client.py", line 288, in _read_status
     raise RemoteDisconnected("Remote end closed connection without"
 http.client.RemoteDisconnected: Remote end closed connection without response
+30/09/21 (06:03:25) | WARNING: Config key "cpu_sensor" does not contain an available sensor!
+30/09/21 (06:03:25) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (06:21:21) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (06:35:19) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (06:40:18) | ERROR: Exception when sending signal 9 to pid 5727
+30/09/21 (06:40:18) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 5459, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+30/09/21 (06:40:25) | ERROR: Exception when sending signal 9 to pid 5727
+30/09/21 (06:40:25) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 5459, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+30/09/21 (06:47:40) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (06:52:34) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (07:27:55) | ERROR: [Errno 2] No such file or directory: '/root/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.config/bpytop/themes'
+30/09/21 (07:32:50) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (07:41:25) | ERROR: [Errno 2] No such file or directory: '/root/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/root/.config/bpytop/themes'
+30/09/21 (08:07:56) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:13:31) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:02) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:06) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:11) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:18) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:29) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:35) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:14:38) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:15:22) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:47:05) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (08:48:12) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (12:08:38) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+30/09/21 (12:09:56) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (00:14:08) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (00:18:49) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (00:21:12) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (05:57:27) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (06:29:13) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (06:34:03) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (08:22:03) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+01/10/21 (09:16:38) | ERROR: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/local/bin/bpytop", line 1337, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/lespink/.config/bpytop/themes'
