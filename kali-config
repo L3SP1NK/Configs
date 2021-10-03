@@ -12,7 +12,7 @@ DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g'
 
 INSTALL_PACKAGES()
 {
-#	apt-get update
+	apt-get update
 	apt-get install -f -y ${PACKAGES}
 }
 
