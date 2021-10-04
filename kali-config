@@ -7,7 +7,7 @@ RED="\e[31m"
 GREEN="\e[32m"
 
 DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')
-PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework nmap nano wireshark aircrack-ng tor ccze"
+PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework nmap nano wireshark aircrack-ng tor ccze ncdu"
 
 INSTALL_PACKAGES()
 {
