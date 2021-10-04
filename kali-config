@@ -1,14 +1,13 @@
 #!/bin/bash
-## - Install basics needed tools.
+## - Install basics tools.
 ## - Configure a Kali-Linux live system for remote access.
-## Typically you will run this script with "curl <host>/kali-config | bash"
 
 RESET_COLOR="\e[0m"
 RED="\e[31m"
 GREEN="\e[32m"
 
-PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework nmap nano wireshark aircrack-ng tor ccze"
 DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')
+PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework nmap nano wireshark aircrack-ng tor ccze"
 
 INSTALL_PACKAGES()
 {
@@ -26,6 +25,15 @@ SERVICES()
 	systemctl disable --now lightdm.service
 }
 
+function CLEAR_APT_ARCHIVES()
+{
+	## Removes apt archives after downloading and installing them.
+	## On live USB space is precious!
+	apt-get purge --autoremove -f -y
+	apt-get clean -y
+	apt-get autoclean -y
+}
+
 ## Check if root?
 if [ "$EUID" -ne 0 ]
 	then
@@ -38,6 +46,7 @@ if [ "$EUID" -ne 0 ]
 				exit 1
 			else
 				INSTALL_PACKAGES
+				CLEAR_APT_ARCHIVES
 				SERVICES
 				echo -e "${GREEN}Done!${RESET_COLOR}"
 		fi
