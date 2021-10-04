@@ -7,7 +7,7 @@ RESET_COLOR="\e[0m"
 RED="\e[31m"
 GREEN="\e[32m"
 
-PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework"
+PACKAGES="htop bpytop xterm xrdp openssh-server zaproxy burpsuite maltego maltego-teeth metasploit-framework nmap nano wireshark aircrack-ng tor ccze"
 DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')
 
 INSTALL_PACKAGES()
@@ -29,12 +29,12 @@ SERVICES()
 ## Check if root?
 if [ "$EUID" -ne 0 ]
 	then
-		echo -e "${RED}This script must be runned as root!${RESET_COLOR}"
+		echo -e "${RED}This script must be run as root!\nExiting...${RESET_COLOR}"
 	    exit 1
 	else
-		if [[ ${DISTRO}!= "Kali GNU/Linux Rolling" ]]
+		if [[ ${DISTRO} != "Kali GNU/Linux Rolling" ]]
 			then
-				echo -e "${RED}You are not on a Kali-Linux system, exiting...${RESET_COLOR}"
+				echo -e "${RED}You are not on a Kali-Linux system\nExiting...${RESET_COLOR}"
 				exit 1
 			else
 				INSTALL_PACKAGES

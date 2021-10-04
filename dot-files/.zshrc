@@ -77,12 +77,12 @@ plugins=(
 #	zsh-syntax-highlighting
 	zsh-autosuggestions
 	command-not-found
-## History
-#	zsh-navigation-tools
-## Ctrl + T: paste the path of file or directory found on the command line
-## Ctrl + R: find history command and paste command on the command line
+## Ctrl + T: paste the path of file or directory found on the command line.
+## Ctrl + R: find history command and paste command on the command line.
 ## Alt + C: cd to specific directory
 	fzf
+## History (load it after FZF).
+	zsh-navigation-tools
 )
 
 ## Base zsh script (after plugins).
