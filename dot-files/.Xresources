@@ -6,7 +6,6 @@ XTerm*renderont: true
 XTerm*savelines: 999999999999
 XTerm*selectToClipboard: true
 
-
 ! Display
 Xft.dpi: 96
 Xft.antialias: true
@@ -106,18 +105,6 @@ XTerm*faceSize5: 22
 ! Ensure that your locale is set up for UTF-8. If you do not use UTF-8, you may need to force XTerm to more strictly follow your locale by setting
 XTerm.vt100.locale: true
 
-XTerm*cursorBlink: true
-! Only select text
-XTerm*highlightSelection: true
-! Remove trailing spaces
-XTerm*trimSelection: true
-
-! Turn the scrollbar on, and put it on the right
-! XTerm.vt100.scrollBar: true
-! XTerm.vt100.scrollbar.width: 8
-! XTerm*scrollBar: true
-! XTerm*rightScrollBar: true
-
 ! Do not scroll when there is new input e.g. tail -f /var/syslog
 !XTerm*scrollTtyOutput: false
 
@@ -133,53 +120,8 @@ XTerm.vt100.translations: #override \n\
   <Btn2Up>: insert-selection(PRIMARY) \n\
   Ctrl <Key> L: clear-saved-lines()
 
-
-! double-click to select whole URLs :D
-! https://scarygliders.net/2011/12/01/customize-XTerm-the-original-and-best-terminal/
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
 ! Tips: Left and right selection (text selection using left button for beginning and right button for end)
 ! Tips: Triple Click ( 1 click = nothing, 2 click = select word, 3 click = select line )
 !
 ! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
-
-
-! More keybindindgs
-! <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
-! Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
-! <Btn4Down>:scroll-back(5,line,m) \n\
-! Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
-! <Btn5Down>:scroll-forw(5,line,m) \n\
-
-!    Ctrl <Key>M: maximize() \n\
-!    Ctrl <Key>R: restore() \n\
-!                 Shift <KeyPress> Prior:scroll-back(1,halfpage) \n\
-!                  Shift <KeyPress> Next:scroll-forw(1,halfpage) \n\
-!                Shift <KeyPress> Select:select-cursor-start() \
-!                                        select-cursor-end(SELECT, CUT_BUFFER0) \n\
-!                Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
-!                        Alt <Key>Return:fullscreen() \n\
-!               <KeyRelease> Scroll_Lock:scroll-lock() \n\
-!           Shift~Ctrl <KeyPress> KP_Add:larger-vt-font() \n\
-!           Shift Ctrl <KeyPress> KP_Add:smaller-vt-font() \n\
-!           Shift <KeyPress> KP_Subtract:smaller-vt-font() \n\
-!                       ~Meta <KeyPress>:insert-seven-bit() \n\
-!                        Meta <KeyPress>:insert-eight-bit() \n\
-!                       !Ctrl <Btn1Down>:popup-menu(mainMenu) \n\
-!                       ~Meta <Btn1Down>:select-start() \n\
-!                     ~Meta <Btn1Motion>:select-extend() \n\
-!                       !Ctrl <Btn2Down>:popup-menu(vtMenu) \n\
-!                 ~Ctrl ~Meta <Btn2Down>:ignore() \n\
-!                        Meta <Btn2Down>:clear-saved-lines() \n\
-!                   ~Ctrl ~Meta <Btn2Up>:insert-selection(SELECT, CUT_BUFFER0) \n\
-!                       !Ctrl <Btn3Down>:popup-menu(fontMenu) \n\
-!                 ~Ctrl ~Meta <Btn3Down>:start-extend() \n\
-!                     ~Meta <Btn3Motion>:select-extend() \n\
-!                        Ctrl <Btn4Down>:scroll-back(1,halfpage,m) \n\
-!                             <Btn4Down>:scroll-back(5,line,m)     \n\
-!                        Ctrl <Btn5Down>:scroll-forw(1,halfpage,m) \n\
-!                                <BtnUp>:select-end(SELECT, CUT_BUFFER0) \n\
-!                              <BtnDown>:ignore()
-
-
