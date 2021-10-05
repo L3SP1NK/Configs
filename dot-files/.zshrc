@@ -97,6 +97,8 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias trash='trash -v'
 alias mkdir="mkdir -v"
+alias pip="pip -v"
+alias pip3="pip3 -v"
 
 ## Add color.
 alias ls='ls --color=auto'
