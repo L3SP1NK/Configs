@@ -41,7 +41,7 @@ XTerm*background: rgb:00/00/00
 
 ! blue
 *color4:		#0047FF
-*color12:		#535AFF
+*color12:		#0074FF
 
 ! magenta
 *color5:		#9E00FF
