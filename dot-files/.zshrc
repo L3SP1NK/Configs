@@ -113,6 +113,7 @@ alias netspeed='ethtool eth0 | grep Speed'
 alias emoji="cat ~/.emoji | tac"
 alias c='ccze -A'
 alias stopx='xfce4-session-logout -f -l'
+alias cal="calcurse"
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
