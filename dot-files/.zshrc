@@ -67,9 +67,30 @@ export SAVEHIST=${HISTSIZE}
 ## Share command history data.
 #setopt share_history
 
+##~~~~~~~~~~##
+## Plugins. ##
+##~~~~~~~~~~##
+plugins=(
+	zsh-completions
+#	zsh-syntax-highlighting
+	zsh-autosuggestions
+	command-not-found
+# Ctrl + T: paste the path of file or directory found on the command line.
+# Ctrl + R: find history command and paste command on the command line.
+# Alt + C: cd to specific directory.
+	fzf
+## History (load it after FZF).
+	zsh-navigation-tools
+)
+
+## Base zsh script (after plugins).
+source ${ZSH}/oh-my-zsh.sh
+
 ##~~~~~~~~##
 ## Alias. ##
 ##~~~~~~~~##
+## After Base zsh script.
+
 ## Add verbose mode.
 alias cp='cp -v'
 alias mv='mv -v'
@@ -93,25 +114,6 @@ alias emoji="cat ~/.emoji | tac"
 alias c='ccze -A'
 alias stopx='xfce4-session-logout -f -l'
 alias cal="calcurse"
-
-##~~~~~~~~~~##
-## Plugins. ##
-##~~~~~~~~~~##
-plugins=(
-	zsh-completions
-#	zsh-syntax-highlighting
-	zsh-autosuggestions
-	command-not-found
-# Ctrl + T: paste the path of file or directory found on the command line.
-# Ctrl + R: find history command and paste command on the command line.
-# Alt + C: cd to specific directory.
-	fzf
-## History (load it after FZF).
-	zsh-navigation-tools
-)
-
-## Base zsh script (after plugins).
-source ${ZSH}/oh-my-zsh.sh
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
