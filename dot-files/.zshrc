@@ -75,10 +75,11 @@ plugins=(
 #	zsh-syntax-highlighting
 	zsh-autosuggestions
 	command-not-found
-## Ctrl + T: paste the path of file or directory found on the command line.
-## Ctrl + R: find history command and paste command on the command line.
-## Alt + C: cd to specific directory.
-#	fzf
+## FZF shortcuts:
+## Ctrl + T = Paste the path of file or directory found on the command line.
+## Ctrl + R = Find history command and paste command on the command line.
+## Alt  + C = Go to specific directory.
+	fzf
 ## History (load it after FZF).
 	zsh-navigation-tools
 )
@@ -193,7 +194,7 @@ GREEN="\e[32m"
 RED="\e[31m"
 BLUE="\e[34m"
 
-## Check on which distro i am (Kali or Debian).
+## Check the distro (Kali or Debian).
 DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g')
 
 if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
@@ -206,7 +207,7 @@ elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
 		HOSTNAME_COLOR=white
 fi
 
-## Change color if user is root.
+## Change color if root.
 if [[ "${EUID}" -ne 0 ]]
 	then
 		NAME_COLOR=green
@@ -217,7 +218,6 @@ fi
 ## user@hostname:/dir/$
 PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Time.
-#RPROMPT='%{$fg_bold[white]%}%*%{$reset_color%}'
 RPROMPT='%{$fg_bold[white]%}%D{%T}%{$reset_color%}'
 
 ## Display system information if connected through SSH.
