@@ -44,7 +44,7 @@ configuration {
 	separator-style: "dash";
 	hide-scrollbar: true;
 /*	fullscreen: false;*/
-	fake-transparency: false;
+	fake-transparency: true;
 /*	dpi: -1;*/
 /*	threads: 0;*/
 	scrollbar-width: 12;
