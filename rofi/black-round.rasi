@@ -6,13 +6,13 @@
  */
 
 * {
-    selected-normal-foreground:  rgba ( 0, 0, 0, 90 % );
+    selected-normal-foreground:  rgba ( 0, 0, 0, 100 % );
     foreground:                  rgba ( 255, 255, 255, 100 % );
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 90 % );
     red:                         rgba ( 255, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 255, 255, 255, 100 % );
-    blue:                        rgba ( 0, 150, 255, 100 % );
+    blue:                        rgba ( 39, 119, 255, 100 % );
     urgent-foreground:           rgba ( 255, 255, 255, 100 % );
     alternate-urgent-background: rgba ( 0, 0, 0, 90 % );
     active-foreground:           rgba ( 255, 255, 255, 100 % );
@@ -81,7 +81,7 @@
 }
 #element.selected.normal {
     background-color: @blue;
-    text-color:       @selected-normal-foreground;
+    text-color:       rgba ( 255, 255, 255, 100 % );
 }
 #element.selected.urgent {
     background-color: @selected-urgent-background;
