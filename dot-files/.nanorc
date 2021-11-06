@@ -172,7 +172,7 @@ set stateflags
  set tabsize 4
 
 ## Convert typed tabs to spaces.
-#set tabstospaces
+set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
 #set trimblanks
@@ -228,7 +228,7 @@ set functioncolor green
 
 ## To include most of the existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
-include "/usr/share/nanorc/*.nanorc"
+#include "/usr/share/nanorc/*.nanorc"
 
 
 ## Or you can select just the ones you need.  For example:
