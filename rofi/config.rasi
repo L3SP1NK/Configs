@@ -65,11 +65,11 @@ configuration {
 /*	pid: "/run/user/1000/rofi.pid";*/
 	display-window: "WINDOW";
 	display-windowcd: "WINDOWS-CD" ;
-	display-run: "RUN";
-	display-ssh: "SSH";
-	display-drun: "DRUN";
-	display-combi: "COMBI" ;
-	display-keys: "KEYS" ;
+	display-run: "";
+	display-ssh: "";
+	display-drun: "";
+	display-combi: "" ;
+	display-keys: "" ;
 	kb-primary-paste: "Control+V,Shift+Insert";
 /*	kb-secondary-paste: "Control+v,Insert";*/
 /*	kb-clear-line: "Control+w";*/
