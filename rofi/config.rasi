@@ -63,8 +63,8 @@ configuration {
 /*	matching-negate-char: '-' /* unsupported */;*/
 	cache-dir: "/home/lespink/.cache/rofi";
 /*	pid: "/run/user/1000/rofi.pid";*/
-	display-window: "WINDOW";
-	display-windowcd: "WINDOWS-CD" ;
+	display-window: "";
+	display-windowcd: "" ;
 	display-run: "";
 	display-ssh: "";
 	display-drun: "";
