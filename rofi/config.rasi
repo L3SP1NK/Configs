@@ -26,17 +26,17 @@ configuration {
 	disable-history: false;
 /*	ignored-prefixes: "";*/
 	sort: true;
-	sorting-method: "fzf";
+	sorting-method: "levenshtein";
 	case-sensitive: false;
-	cycle: false;
+	cycle: true;
 	sidebar-mode: false;
 	eh: 1;
-/*	auto-select: false;*/
+	auto-select: false;
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 	combi-modi: "window,drun";
 /*	matching: "normal";*/
-	tokenize: false;
+	tokenize: true;
 	m: "-5";
 	line-margin: 2;
 	line-padding: 1;
