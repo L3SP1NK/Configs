@@ -119,7 +119,7 @@ alias cal="calcurse"
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. .oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
