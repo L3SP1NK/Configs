@@ -72,7 +72,7 @@ export SAVEHIST=${HISTSIZE}
 ##~~~~~~~~~~##
 plugins=(
 	zsh-completions
-#	zsh-syntax-highlighting
+	zsh-syntax-highlighting
 	zsh-autosuggestions
 	command-not-found
 ## FZF shortcuts:
