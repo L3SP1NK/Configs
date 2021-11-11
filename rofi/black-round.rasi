@@ -44,7 +44,7 @@
 #element {
     border:         0px;
     padding:        4px;
-    border-radius:  12px; 
+    border-radius:  8px; 
 }
 #element.normal.normal {
     background-color: @background-color;
