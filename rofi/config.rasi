@@ -53,7 +53,7 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 	click-to-exit: true;
 	show-match: true;
-	theme: "/opt/My-Repo/Configs/Arc-Dark.rasi";
+	theme: "~/.config/rofi/black-round.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
