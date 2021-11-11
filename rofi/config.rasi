@@ -1,9 +1,9 @@
 configuration {
-	modi: "window,drun";
+	modi: "window,run,ssh,drun";
 	width: 50;
 	lines: 10;
 	columns: 1;
-    font: "JetBrains Mono 14";
+	font: "Jetbrains Mono 14";
 	bw: 0;
 	location: 0;
 	padding: 5;
@@ -28,15 +28,15 @@ configuration {
 	sort: true;
 	sorting-method: "fzf";
 	case-sensitive: false;
-	cycle: true;
+	cycle: false;
 	sidebar-mode: false;
 	eh: 1;
-	auto-select: false;
+/*	auto-select: false;*/
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modi: "window,drun";
+	combi-modi: "window,run,drun";
 /*	matching: "normal";*/
-	tokenize: true;
+	tokenize: false;
 	m: "-5";
 	line-margin: 2;
 	line-padding: 1;
@@ -63,8 +63,8 @@ configuration {
 /*	matching-negate-char: '-' /* unsupported */;*/
 	cache-dir: "/home/lespink/.cache/rofi";
 /*	pid: "/run/user/1000/rofi.pid";*/
-	display-window: "";
-	display-windowcd: "" ;
+	display-window: "WINDOW";
+	display-windowcd: "WINDOWS-CD" ;
 	display-run: "";
 	display-ssh: "";
 	display-drun: "";
