@@ -52,8 +52,8 @@ XTerm*background: rgb:00/00/00
 *color14:		#00FFFF
 
 ! white
-*color7:		#FFFFFF
-*color15:		#77767B
+*color7:		#77767B
+*color15:		#FFFFFF
 
 ! Application Resources
 XTerm.locale: true

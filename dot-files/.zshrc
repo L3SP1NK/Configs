@@ -206,7 +206,7 @@ fi
 ## user@hostname:/dir/$
 PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Time.
-RPROMPT='%{$fg_bold[grey]%}%D{%T}%{$reset_color%}'
+RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
