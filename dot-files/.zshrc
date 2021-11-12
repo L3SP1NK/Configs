@@ -206,7 +206,7 @@ fi
 ## user@hostname:/dir/$
 PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Time.
-RPROMPT='%{$fg_bold[white]%}%D{%T}%{$reset_color%}'
+RPROMPT='%{$fg_bold[grey]%}%D{%T}%{$reset_color%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
@@ -226,4 +226,12 @@ if [[ ${SSH_CONNECTION} ]]
 							echo -e "${BOLD}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
 					fi
 			fi
+fi
+
+## Check on which terminal i am.
+TERMINAL=$(ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$))
+## Run bash if not on tilix.
+if [[ ${TERMINAL} != "/bin/tilix" ]]
+    then
+        bash
 fi
