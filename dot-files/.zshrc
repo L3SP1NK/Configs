@@ -228,10 +228,10 @@ if [[ ${SSH_CONNECTION} ]]
 			fi
 fi
 
-## Check on which terminal i am.
-TERMINAL=$(ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$))
-## Run bash if not on tilix.
-if [[ ${TERMINAL} != "/bin/tilix" ]]
-    then
-        bash
-fi
+## Check on which terminal i am (by checking the the parent process of the current shell instance).
+#TERMINAL=$(ps -o 'cmd=' -p $(ps -o 'ppid=' -p $$))
+## Run bash if not on tilix (and if the shell is not launched by zsh or su).
+#if [[ ${TERMINAL} != "/bin/tilix" ]] && [[ ${TERMINAL} != "zsh" ]] && [[ ${TERMINAL} != "su" ]]
+#    then
+#        bash
+#fi

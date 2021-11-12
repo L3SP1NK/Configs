@@ -200,13 +200,13 @@ set zap
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
-set titlecolor white,black
+set titlecolor lightwhite,black
 set statuscolor black,green
 set errorcolor black,red
 set selectedcolor white,blue
 set stripecolor bold,yellow
 set scrollercolor lightwhite
-set numbercolor lightwhite
+set numbercolor white
 set keycolor cyan
 set functioncolor green
 
