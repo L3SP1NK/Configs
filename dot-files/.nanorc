@@ -45,13 +45,13 @@ set brackets ""')>]}"
 #set casesensitive
 
 ## Constantly display the cursor position in the status bar or minibar.
-#set constantshow
+set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
 #set cutfromcursor
 
 ## Do not use the line below the title bar, leaving it entirely blank.
-#set emptyline
+set emptyline
 
 ## Set the target width for automatic hard-wrapping and for justifying
 ## paragraphs.  If the specified value is 0 or less, the wrapping point
@@ -196,11 +196,9 @@ set tabstospaces
 ## as parts of words.  This option does not have a default value.  When
 ## set, it overrides option 'set wordbounds'.
 #set wordchars "<_>."
-
 ## Let an unmodified Backspace or Delete erase the marked region (instead
 ## of a single character, and without affecting the cutbuffer).
 set zap
-
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
@@ -213,6 +211,9 @@ set scrollercolor lightwhite
 set numbercolor white
 set keycolor cyan
 set functioncolor green
+set minicolor italic,yellow,black
+set promptcolor yellow,black
+set scrollercolor bold,grey
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
@@ -228,7 +229,6 @@ include "/usr/share/nanorc/*.nanorc"
 
 ## In /usr/share/nano/extra/ you can find some syntaxes that are
 ## specific for certain distros or for some less common languages.
-
 
 ## If <Tab> should always produce four spaces when editing a Python file,
 ## independent of the settings of 'tabsize' and 'tabstospaces':
