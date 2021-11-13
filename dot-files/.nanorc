@@ -1,9 +1,9 @@
 ## Sample initialization file for GNU nano.
-## 
+##
 ## For the options that take parameters, the default value is shown.
 ## Other options are unset by default.  To make sure that an option
 ## is disabled, you can use "unset <option>".
-## 
+##
 ## Characters that are special in a shell should not be escaped here.
 ## Inside string parameters, quotes should not be escaped -- the last
 ## double quote on the line will be seen as the closing quote.
