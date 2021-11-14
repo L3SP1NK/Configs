@@ -67,43 +67,17 @@ plugins=(
 ## Ctrl + T = Paste the path of file or directory found on the command line.
 ## Ctrl + R = Find history command and paste command on the command line.
 ## Alt  + C = Go to specific directory.
-	fzf
+#	fzf
 ## History (load it after FZF).
 	zsh-navigation-tools
 )
 
 ## Base zsh script (after plugins).
-source ${ZSH}/oh-my-zsh.sh
+. ${ZSH}/oh-my-zsh.sh
 
-##~~~~~~~~##
-## Alias. ##
-##~~~~~~~~##
-## After Base zsh script.
-
-## Add verbose mode.
-alias cp='cp -v'
-alias mv='mv -v'
-alias rm='rm -v'
-alias trash='trash -v'
-alias mkdir="mkdir -v"
-alias pip="pip -v"
-alias pip3="pip3 -v"
-
-## Add color.
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias diff='diff --color=auto'
-
-## Custom.
-alias l='ls --time-style="+%d-%b-%y %T" -hAl'
-alias netspeed='ethtool eth0 | grep Speed'
-alias emoji="cat ~/.emoji | tac"
-alias c='ccze -A'
-alias stopx='xfce4-session-logout -f -l'
-alias cal="calcurse"
-
+## Load alias
+## "." is like "source" but slightly faster to load
+[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
@@ -181,19 +155,10 @@ YELLOW="\e[33m"
 GREEN="\e[32m"
 RED="\e[31m"
 BLUE="\e[34m"
+MAGENTA="\e[35m"
 
 ## Check the distro (Kali or Debian).
-DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g')
-
-if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
-	then
-		HOSTNAME_COLOR=cyan
-elif [[ ${DISTRO} == 'Debian GNU/Linux bookworm/sid' ]]
-	then
-		HOSTNAME_COLOR=magenta
-	else
-		HOSTNAME_COLOR=white
-fi
+DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
 
 ## Change color if root.
 if [[ "${EUID}" -ne 0 ]]
@@ -211,19 +176,12 @@ RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
-		which neofetch > /dev/null
+		which aneofetch > /dev/null
 			if [[ ${?} -eq "0" ]]
 				then
 					neofetch
 				else
-					if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
-						then
-							echo -e "${BOLD}${BLUE}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-					elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
-						then
-							echo -e "${BOLD}${RED}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-						else
-							echo -e "${BOLD}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-					fi
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"
+					free -h
 			fi
 fi

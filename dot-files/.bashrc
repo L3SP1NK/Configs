@@ -181,6 +181,9 @@ GREEN="\e[32m"
 RED="\e[31m"
 BLUE="\e[34m"
 
+
+## Alias
+[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
