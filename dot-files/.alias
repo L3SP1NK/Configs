@@ -1,0 +1,29 @@
+##~~~~~~~~##
+## Alias. ##
+##~~~~~~~~##
+## After Base zsh script.
+
+## Add verbose mode.
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+alias trash='trash -v'
+alias mkdir="mkdir -v"
+alias pip="pip -v"
+alias pip3="pip3 -v"
+
+## Add color.
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+
+## Custom.
+alias l='ls --time-style="+%d-%b-%y %T" -hAl'
+alias netspeed='ethtool eth0 | grep Speed'
+alias emoji="cat ~/.emoji | tac"
+alias c='ccze -A'
+alias stopx='xfce4-session-logout -f -l'
+alias cal="calcurse"
+alias s="xclip -selection clipboard"

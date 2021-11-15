@@ -157,8 +157,19 @@ RED="\e[31m"
 BLUE="\e[34m"
 MAGENTA="\e[35m"
 
-## Check the distro (Kali or Debian).
+## Set prompt color according to the distro.
 DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
+case ${DISTRO} in
+	Kali)
+		HOSTNAME_COLOR=cyan
+		;;
+	Debian)
+		HOSTNAME_COLOR=magenta
+		;;
+	*)
+		HOSTNAME_COLOR=grey
+		;;
+esac
 
 ## Change color if root.
 if [[ "${EUID}" -ne 0 ]]
@@ -176,7 +187,7 @@ RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
-		which aneofetch > /dev/null
+		which neofetch > /dev/null
 			if [[ ${?} -eq "0" ]]
 				then
 					neofetch
