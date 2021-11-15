@@ -1,6 +1,19 @@
-##~~~~~~~~~~~~~~~~~~~~~~~~~##
-## Personal configuration. ##
-##~~~~~~~~~~~~~~~~~~~~~~~~~##
+##############################################################
+##															##
+##	 ██                               ██          ██		##
+##	░██                       ██████ ░░          ░██		##
+##	░██        █████   ██████░██░░░██ ██ ███████ ░██  ██	##
+##	░██       ██░░░██ ██░░░░ ░██  ░██░██░░██░░░██░██ ██		##
+##	░██      ░███████░░█████ ░██████ ░██ ░██  ░██░████		##
+##	░██      ░██░░░░  ░░░░░██░██░░░  ░██ ░██  ░██░██░██		##
+##	░████████░░██████ ██████ ░██     ░██ ███  ░██░██░░██	##
+##	░░░░░░░░  ░░░░░░ ░░░░░░  ░░      ░░ ░░░   ░░ ░░  ░░		##
+##															##
+##############################################################
+
+##~~~~~~~~~~~~~~~~~~~~~~~##
+## General conf and var. ##
+##~~~~~~~~~~~~~~~~~~~~~~~##
 export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin
 export ZSH=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
@@ -63,10 +76,11 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	command-not-found
-## FZF shortcuts:
-## Ctrl + T = Paste the path of file or directory found on the command line.
-## Ctrl + R = Find history command and paste command on the command line.
-## Alt  + C = Go to specific directory.
+## FZF
+## shortcuts:
+## 	- Ctrl + T = Paste the path of file or directory found on the command line.
+## 	- Ctrl + R = Find history command and paste command on the command line.
+## 	- Alt  + C = Go to specific directory.
 #	fzf
 ## History (load it after FZF).
 	zsh-navigation-tools
@@ -154,6 +168,7 @@ GREY="\e[37m"
 YELLOW="\e[33m"
 GREEN="\e[32m"
 RED="\e[31m"
+CYAN="\e[36m"
 BLUE="\e[34m"
 MAGENTA="\e[35m"
 
@@ -162,12 +177,15 @@ DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | aw
 case ${DISTRO} in
 	Kali)
 		HOSTNAME_COLOR=cyan
+		HOSTNAME_COLOR_B=${CYAN}
 		;;
 	Debian)
 		HOSTNAME_COLOR=magenta
+		HOSTNAME_COLOR_B=${MAGENTA}
 		;;
 	*)
 		HOSTNAME_COLOR=grey
+		HOSTNAME_COLOR_B=${GREY}
 		;;
 esac
 
@@ -187,12 +205,12 @@ RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
-		which neofetch > /dev/null
+		which aneofetch > /dev/null
 			if [[ ${?} -eq "0" ]]
 				then
 					neofetch
 				else
-					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"|sed "s/NAME=//g"|sed 's/"//g'
 					free -h
 			fi
 fi

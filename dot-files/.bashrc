@@ -1,3 +1,16 @@
+##############################################################
+##															##
+##	 ██                               ██          ██		##
+##	░██                       ██████ ░░          ░██		##
+##	░██        █████   ██████░██░░░██ ██ ███████ ░██  ██	##
+##	░██       ██░░░██ ██░░░░ ░██  ░██░██░░██░░░██░██ ██		##
+##	░██      ░███████░░█████ ░██████ ░██ ░██  ░██░████		##
+##	░██      ░██░░░░  ░░░░░██░██░░░  ░██ ░██  ░██░██░██		##
+##	░████████░░██████ ██████ ░██     ░██ ███  ░██░██░░██	##
+##	░░░░░░░░  ░░░░░░ ░░░░░░  ░░      ░░ ░░░   ░░ ░░  ░░		##
+##															##
+##############################################################
+
 ## ~/.bashrc: executed by bash(1) for non-login shells.
 ## see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 ## for examples
@@ -58,33 +71,6 @@ export SAVEHIST=${HISTSIZE}
 #set hist_verify
 ## Share command history data.
 #set share_history
-
-##~~~~~~~~##
-## Alias. ##
-##~~~~~~~~##
-## Add verbose mode.
-alias cp='cp -v'
-alias mv='mv -v'
-alias rm='rm -v'
-alias trash='trash -v'
-alias mkdir="mkdir -v"
-alias pip="pip -v"
-alias pip3="pip3 -v"
-
-## Add color.
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias diff='diff --color=auto'
-
-## Custom.
-alias l='ls --time-style="+%d-%b-%y %T" -hAl'
-alias netspeed='ethtool eth0 | grep Speed'
-alias emoji="cat ~/.emoji | tac"
-alias c='ccze -A'
-alias stopx='xfce4-session-logout -f -l'
-alias cal="calcurse"
 
 ## check the window size after each command and, if necessary,
 ## update the values of LINES and COLUMNS.
@@ -169,6 +155,10 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[1;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
+## Load alias
+## "." is like "source" but slightly faster to load
+[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+
 ##~~~~~~~~~##
 ## Prompt. ##
 ##~~~~~~~~~##
@@ -181,9 +171,6 @@ GREEN="\e[32m"
 RED="\e[31m"
 BLUE="\e[34m"
 
-
-## Alias
-[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
@@ -192,14 +179,7 @@ if [[ ${SSH_CONNECTION} ]]
 				then
 					neofetch
 				else
-					if [[ ${DISTRO} == 'Kali GNU/Linux Rolling' ]]
-						then
-							echo -e "${BOLD}${BLUE}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-					elif [[ ${DISTRO} == 'Debian GNU/Linux 11 (bullseye)' ]]
-						then
-							echo -e "${BOLD}${RED}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-						else
-							echo -e "${BOLD}$(cat /etc/os-release | grep PRETTY_NAME | cut -d "=" -f 2 | sed 's/"//g')" ; echo -e "${GREY}${BOLD}$(free -h --si)" ; echo -e "\n\e[33m$(apt list --installed 2>/dev/null| wc -l) packages currently installed"
-					fi
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"
+					free -h
 			fi
 fi
