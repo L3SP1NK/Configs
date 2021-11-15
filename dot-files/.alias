@@ -12,7 +12,7 @@ alias mkdir="mkdir -v"
 alias pip="pip -v"
 alias pip3="pip3 -v"
 
-## Add color.
+## Add colors.
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
