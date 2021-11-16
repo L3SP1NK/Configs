@@ -14,7 +14,7 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## General config and variables. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin
+export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin:${HOME}/.local/bin
 export ZSH=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
 export ARCHFLAGS="-arch x86_64"
