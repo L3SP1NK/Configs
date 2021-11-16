@@ -11,9 +11,9 @@
 ##															##
 ##############################################################
 
-##~~~~~~~~~~~~~~~~~~~~~~~##
-## General conf and var. ##
-##~~~~~~~~~~~~~~~~~~~~~~~##
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
+## General config and variables. ##
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin
 export ZSH=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
@@ -189,7 +189,7 @@ case ${DISTRO} in
 		;;
 esac
 
-## Change color if root.
+## Change username color if root.
 if [[ "${EUID}" -ne 0 ]]
 	then
 		NAME_COLOR=green
@@ -205,7 +205,7 @@ RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
 	then
-		which aneofetch > /dev/null
+		which neofetch > /dev/null
 			if [[ ${?} -eq "0" ]]
 				then
 					neofetch
