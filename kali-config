@@ -2,7 +2,7 @@
 ## - Install basics tools.
 ## - Configure a Kali-Linux live system for remote access.
 
-RESET_COLOR="\e[0m"
+RC="\e[0m"
 RED="\e[31m"
 GREEN="\e[32m"
 
@@ -25,7 +25,7 @@ SERVICES()
 	systemctl disable --now lightdm.service
 }
 
-function CLEAR_APT_ARCHIVES()
+CLEAR_APT_ARCHIVES()
 {
 	## Removes apt archives after downloading and installing them.
 	## On live USB space is precious!
@@ -37,17 +37,17 @@ function CLEAR_APT_ARCHIVES()
 ## Check if root?
 if [ "$EUID" -ne 0 ]
 	then
-		echo -e "${RED}This script must be run as root!\nExiting...${RESET_COLOR}"
+		echo -e "${RED}This script must be run as root!\nExiting...${RC}"
 	    exit 1
 	else
 		if [[ ${DISTRO} != "Kali GNU/Linux Rolling" ]]
 			then
-				echo -e "${RED}You are not on a Kali-Linux system\nExiting...${RESET_COLOR}"
+				echo -e "${RED}You are not on a Kali-Linux system\nExiting...${RC}"
 				exit 1
 			else
 				INSTALL_PACKAGES
 				CLEAR_APT_ARCHIVES
 				SERVICES
-				echo -e "${GREEN}Done!${RESET_COLOR}"
+				echo -e "${GREEN}Done!${RC}"
 		fi
 fi

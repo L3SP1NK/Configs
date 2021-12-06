@@ -1,17 +1,17 @@
 #!/bin/bash
 ## Start my calendar (calcurse) when X start.
 
-function CAL()
+CAL()
 {
 	## Check if the daemon is running, and launch it if not.
 	pidof calcurse>/dev/null
 	[[ ${?} -ne "0" ]] && calcurse --daemon
-	## Notification with the today's date appointements.
+	## Send notification with the today's appointements.
 	notify-send -u critical "$(calcurse -s)"
 }
 
 RED="\e[31m"
-RESET_COLOR="\e[0m"
+RC="\e[0m"
 
 REQUIREMENTS="notify-send calcurse"
 which ${REQUIREMENTS}>/dev/null
@@ -20,5 +20,5 @@ if [[ ${?} -eq "0" ]]
 	then
 		CAL
 	else
-		echo -e "${RED}\n To run this program, you need the following packages installed: ${BOLD}${REQUIREMENTS}${RESET_COLOR}\n${RED} Exiting...${RESET_COLOR}\n"
+		echo -e "${RED}\n To run this program, you need the following packages installed: ${BOLD}${REQUIREMENTS}${RC}\n${RED} Exiting...${RC}\n"
 fi
