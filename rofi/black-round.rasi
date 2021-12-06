@@ -8,14 +8,14 @@
     foreground-color:   rgba ( 255, 255, 255, 100 % );
     background-color:   rgba ( 0, 0, 0, 100 % );
     selected-color:     rgba ( 39, 119, 255, 100 % );
-    border-color:       rgba ( 255, 255, 255, 100 % );
-    
+/*  border-color:       rgba ( 255, 255, 255, 100 % );*/
+	border-color:		rgba ( 39, 119, 255, 100 % );    
 
 }
 
 #window {
     background-color: @background-color;
-    border:           0;
+    border:           1;
     padding:          16;
     border-radius:    8;
 }
