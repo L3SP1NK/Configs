@@ -82,15 +82,16 @@ plugins=(
 ## 	- Ctrl + R = Find history command and paste command on the command line.
 ## 	- Alt  + C = Go to specific directory.
 #	fzf
+
 ## History (load it after FZF).
 	zsh-navigation-tools
 )
 
 ## Base zsh script (after plugins).
+## "." is like "source" but slightly faster to load.
 . ${ZSH}/oh-my-zsh.sh
 
 ## Load alias
-## "." is like "source" but slightly faster to load
 [[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
@@ -162,7 +163,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 ## Prompt. ##
 ##~~~~~~~~~##
 ## Colors.
-RESET_COLOR="\e[0m"
+RC="\e[0m"
 BOLD="\e[1m"
 GREY="\e[37m"
 YELLOW="\e[33m"
@@ -197,10 +198,12 @@ if [[ "${EUID}" -ne 0 ]]
 		NAME_COLOR=red
 fi
 
-## user@hostname:/dir/$
-PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+## Left prompt.
+## user@host:/dir/ $
+PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$RC%}:%{$fg_bold[blue]%}%~%{$RC%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$RC%} '
+## Right prompt.
 ## Time.
-RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
+RPROMPT='%{$fg[white]%}%D{%T}%{$RC%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
@@ -210,7 +213,8 @@ if [[ ${SSH_CONNECTION} ]]
 				then
 					neofetch
 				else
-					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"|sed "s/NAME=//g"|sed 's/"//g'
+					## Show basic info if neofetch is not installed.
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RC}"|sed "s/NAME=//g"|sed 's/"//g'
 					free -h
 			fi
 fi
