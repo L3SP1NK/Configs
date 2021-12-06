@@ -200,10 +200,10 @@ fi
 
 ## Left prompt.
 ## user@host:/dir/ $
-PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$RC%}:%{$fg_bold[blue]%}%~%{$RC%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$RC%} '
+PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Right prompt.
 ## Time.
-RPROMPT='%{$fg[white]%}%D{%T}%{$RC%}'
+RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
