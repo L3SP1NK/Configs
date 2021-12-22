@@ -6,10 +6,9 @@
 
     spacing:            0;
     foreground-color:   rgba ( 255, 255, 255, 100 % );
-    background-color:   rgba ( 0, 0, 0, 100 % );
-    selected-color:     rgba ( 39, 119, 255, 100 % );
-/*  border-color:       rgba ( 255, 255, 255, 100 % );*/
-	border-color:		rgba ( 39, 119, 255, 100 % );    
+    background-color:   rgba ( 35, 37, 46, 100% );
+    selected-color:     rgba ( 150, 42, 195, 100 % );
+    border-color:       rgba ( 150, 42, 195, 100 % );
 
 }
 
