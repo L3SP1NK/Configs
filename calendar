@@ -7,7 +7,7 @@ CAL()
 	pidof calcurse>/dev/null
 	[[ ${?} -ne "0" ]] && calcurse --daemon
 	## Send notification with the today's appointements.
-	notify-send -u critical "$(calcurse -s)"
+	notify-send -u critical "$(calcurse -Q)"
 }
 
 RED="\e[31m"
