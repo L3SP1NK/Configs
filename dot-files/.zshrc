@@ -200,8 +200,12 @@ fi
 
 ## Left prompt.
 ## user@host:/dir/ $
-#PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
-PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+## Color based on the distro.
+PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+## Green/red if root.
+#PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
+## Green/red if root + bracket.
+#PROMPT='[%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}]%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Right prompt.
 ## Time.
 RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
