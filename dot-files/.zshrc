@@ -208,7 +208,7 @@ PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_
 #PROMPT='[%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}]%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
 ## Right prompt.
 ## Time.
-RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
+#RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
