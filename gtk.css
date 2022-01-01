@@ -1,15 +1,17 @@
-/* Round panel */
-/*.xfce4-panel {
-   border-top-left-radius: 8px;
-   border-top-right-radius: 8px;
-   border-bottom-left-radius: 8px;
-   border-bottom-right-radius: 8px;
-}
-*/
-
-#whiskermenu-window entry
+.xfce4-panel
 {
-    border-width: 2px;
+/*   	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+   	border-bottom-left-radius: 8px;
+   	border-bottom-right-radius: 8px;
+	font-weight: bold;
+*/
+}
+
+#whiskermenu-button label
+{
+    color: lightblue;
+    font-weight: bold;
 }
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
