@@ -28,17 +28,17 @@
 
 .xfce4-panel button:hover
 {
-	border-radius: 8px;
+/*	border-radius: 8px;*/
     background: rgba(255, 255, 255, 0.05);
 }
 
 
-/*.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(#whiskermenu-button):active*/
-.xfce4-panel button:checked, .xfce4-panel button:active
+.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(#whiskermenu-button):active
+/*.xfce4-panel button:checked, .xfce4-panel button:active*/
 {
-    background: rgba(255, 255, 255, 0.1);
-	border-radius: 8px;
-/*    background: @theme_selected_bg_color;*/
-    box-shadow: inset 0px -0px 0px @theme_selected_bg_color;
+    background: rgba(255, 255, 255, 0.05);
+/*	border-radius: 8px;
+    background: @theme_selected_bg_color;*/
+    box-shadow: inset 0px -6px 0px @theme_selected_bg_color;
 
 }
