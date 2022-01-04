@@ -20,8 +20,10 @@
 #whiskermenu-window border
 {
 	padding: 8px;
+/*
     border-width: 2px;
 	border-color: @theme_selected_bg_color;
+*/
     border-top-right-radius: 16px;
 }
 
