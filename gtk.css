@@ -1,23 +1,28 @@
 .xfce4-panel
 {
-/*   	border-top-left-radius: 8px;
+/*
+	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
 */
 }
+.xfce4-panel
+{
+	background-color: rgba(0, 0, 0, 0.9);
+}
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
-    border-radius: 8px;
 }
 
 #whiskermenu-window border
 {
-    border-width: 0px;
-/*    border-color: rgba(255, 255, 255, 0.25);*/
-    padding: 8px;
+	padding: 8px;
+    border-width: 2px;
+	border-color: @theme_selected_bg_color;
+    border-top-right-radius: 16px;
 }
 
 #whiskermenu-window
@@ -25,10 +30,14 @@
     border-top-right-radius: 16px;
 }
 
+.xfce4-panel button
+{
+	border-radius: 8px;
+}
+
 
 .xfce4-panel button:hover
 {
-/*	border-radius: 8px;*/
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -37,7 +46,8 @@
 /*.xfce4-panel button:checked, .xfce4-panel button:active*/
 {
     background: rgba(255, 255, 255, 0.1);
-/*	border-radius: 8px;*/
-    box-shadow: inset 0px -6px 0px @theme_selected_bg_color;
-
+    box-shadow: inset 0px -0px 0px 2px @theme_selected_bg_color;
+	color: white;
 }
+
+

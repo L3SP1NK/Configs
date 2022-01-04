@@ -208,7 +208,6 @@ set statuscolor black,green
 set errorcolor black,red
 set selectedcolor bold,white,blue
 set stripecolor bold,yellow
-set scrollercolor bold,white
 set numbercolor grey
 set keycolor cyan
 set functioncolor green
