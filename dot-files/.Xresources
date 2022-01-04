@@ -21,40 +21,6 @@ Xft.hintstyle: hintfull
 XTerm*foreground: rgb:ff/ff/ff
 XTerm*background: rgb:00/00/00
 
-! Pure themes
-
-! black
-*color0:		#000000
-*color8:		#FF0000
-
-! red
-*color1:		#FF0000
-*color9:		#FF00B3
-
-! green
-*color2:		#00FF0B
-*color10:		#00FFCB
-
-! yellow
-*color3:		#FF9900
-*color11:		#FFC600
-
-! blue
-*color4:		#0047FF
-*color12:		#0074FF
-
-! magenta
-*color5:		#9E00FF
-*color13:		#FB3CFF
-
-! cyan
-*color6:		#00C1FF
-*color14:		#00FFFF
-
-! white
-*color7:		#77767B
-*color15:		#FFFFFF
-
 ! Application Resources
 XTerm.locale: true
 XTerm.termName: XTerm-256color
@@ -125,3 +91,4 @@ XTerm.vt100.translations: #override \n\
 !
 ! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+
