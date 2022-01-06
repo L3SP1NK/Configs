@@ -22,7 +22,7 @@ alias diff='diff --color=auto'
 ## Custom.
 alias l='ls --time-style="+%d-%b-%y %T" -hAl'
 alias netspeed='ethtool eth0 | grep Speed'
-alias emoji="cat ~/.emoji | tac"
+alias unicode="cat ~/.unicode | tac"
 alias c='ccze -A'
 alias stopx='xfce4-session-logout -f -l'
 alias cal="calcurse"
