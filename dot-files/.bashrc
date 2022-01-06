@@ -11,8 +11,6 @@
 ##															##
 ##############################################################
 
-## Bash configuration file, based on the Debian default one
-
 ## ~/.bashrc: executed by bash(1) for non-login shells.
 ## see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 ## for examples
@@ -22,6 +20,10 @@ case $- in
     *i*) ;;
       *) return;;
 esac
+
+## don't put duplicate lines or lines starting with space in the history.
+## See bash(1) for more options
+HISTCONTROL=ignoreboth
 
 ## append to the history file, don't overwrite it
 shopt -s histappend
@@ -107,8 +109,59 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+##~~~~~~~~~##
+## Prompt. ##
+##~~~~~~~~~##
+## Colors.
+RC="\e[0m"
+BOLD="\e[1m"
+GREY="\e[37m"
+YELLOW="\e[33m"
+GREEN="\e[32m"
+RED="\e[31m"
+CYAN="\e[36m"
+BLUE="\e[34m"
+MAGENTA="\e[35m"
+
+## Set prompt color according to the distro.
+DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
+case ${DISTRO} in
+	Kali)
+		HOSTNAME_COLOR=${CYAN}
+		;;
+	Debian)
+		HOSTNAME_COLOR=${MAGENTA}
+		;;
+	*)
+		HOSTNAME_COLOR=${GREY}
+		;;
+esac
+
+## Change username color if root.
+if [[ "${EUID}" -ne 0 ]]
+	then
+		NAME_COLOR=${GREEN}
+	else
+		NAME_COLOR=${RED}
+fi
+
+if [[ ${EUID} -eq "0" ]]
+	then
+		PS1="${debian_chroot:+($debian_chroot)}\e[1m${NAME_COLOR}\u\e[33m@${HOSTNAME_COLOR}\H\e[0m:\e[1m\e[34m\w\e[0m\$ "
+	else
+		PS1="${debian_chroot:+($debian_chroot)}\e[1m${NAME_COLOR}\u\e[33m@${HOSTNAME_COLOR}\H\e[0m:\e[1m\e[34m\w\e[0m\$ "
+fi
 
 unset color_prompt force_color_prompt
+
+## If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
 
 ## enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -146,39 +199,13 @@ export LESS_TERMCAP_ue=$'\E[0m'
 ## Prompt. ##
 ##~~~~~~~~~##
 ## Colors.
-RC="\e[0m"
+RESET_COLOR="\e[0m"
 BOLD="\e[1m"
 GREY="\e[37m"
 YELLOW="\e[33m"
 GREEN="\e[32m"
 RED="\e[31m"
-CYAN="\e[36m"
 BLUE="\e[34m"
-MAGENTA="\e[35m"
-
-## Set prompt color according to the distro.
-DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
-case ${DISTRO} in
-	Kali)
-		HOSTNAME_COLOR=${CYAN}
-		;;
-	Debian)
-		HOSTNAME_COLOR=${MAGENTA}
-		;;
-	*)
-		HOSTNAME_COLOR=${GREY}
-		;;
-esac
-
-## Change username color if root.
-if [[ "${EUID}" -ne 0 ]]
-	then
-		NAME_COLOR=${GREEN}
-	else
-		NAME_COLOR=${RED}
-fi
-
-PS1="\e[1m${NAME_COLOR}\u\e[33m@${HOSTNAME_COLOR}\H\e[0m:\e[1m\e[34m\w\e[0m$ "
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
@@ -188,7 +215,7 @@ if [[ ${SSH_CONNECTION} ]]
 				then
 					neofetch
 				else
-					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RC}"
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RESET_COLOR}"
 					free -h
 			fi
 fi
