@@ -106,6 +106,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+## Load personal aliases.
+[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

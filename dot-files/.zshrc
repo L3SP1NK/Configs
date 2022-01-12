@@ -91,8 +91,9 @@ plugins=(
 ## "." is like "source" but slightly faster to load.
 . ${ZSH}/oh-my-zsh.sh
 
-## Load alias
+## Load personal aliases.
 [[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
