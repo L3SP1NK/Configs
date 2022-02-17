@@ -6,10 +6,8 @@
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
 */
-}
-.xfce4-panel
-{
 	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
 }
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
