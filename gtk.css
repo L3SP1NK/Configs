@@ -13,26 +13,24 @@
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    border-radius: 8px;
 }
 
 #whiskermenu-window border
 {
 	padding: 8px;
-/*
-    border-width: 2px;
-	border-color: @theme_selected_bg_color;
-*/
-    border-top-right-radius: 16px;
+	border-radius: 24px;
 }
 
 #whiskermenu-window
 {
-    border-top-right-radius: 16px;
+    border-radius: 24px;
 }
 
 .xfce4-panel button
 {
-	border-radius: 8px;
+	border-radius: 12px;
 	padding: 4px;
 }
 
@@ -48,7 +46,7 @@
 */
 .xfce4-panel button:checked, .xfce4-panel button:active
 {
-    background: rgba(255, 255, 255, 0.0);
+    background: rgba(255, 255, 255, 0);
     box-shadow: inset 0px -0px 0px 2px @theme_selected_bg_color;
 }
 
