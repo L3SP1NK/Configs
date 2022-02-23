@@ -28,3 +28,4 @@ alias stopx='xfce4-session-logout -f -l'
 alias cal="calcurse"
 alias s="xclip -selection clipboard"
 alias note="${EDITOR} ~/.note"
+alias todo="${EDITOR} ~/.todo"
