@@ -58,7 +58,7 @@ configuration {
 /*	color-urgent: ;*/
 /*	color-active: ;*/
 /*	color-window: ;*/
-	max-history-size: 0 ;
+	max-history-size: 5 ;
 	combi-hide-mode-prefix: true ;
 /*	matching-negate-char: '-' /* unsupported */ ;*/
 	cache-dir: "/home/lespink/.cache/rofi" ;
