@@ -21,7 +21,6 @@ alias diff='diff --color=auto'
 
 ## Custom.
 alias l='ls --time-style="+%d-%b-%y %T" -hAl'
-alias netspeed="ethtool $(ifconfig | head -n 1 | awk {'print $1'} | cut -d ':' -f 1) | grep Speed"
 alias unicode="cat ~/.unicode | tac"
 alias c='ccze -A'
 alias stopx='xfce4-session-logout -f -l'
