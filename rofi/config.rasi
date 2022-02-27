@@ -38,7 +38,7 @@ configuration {
 	combi-modi: "window,run,drun" ;
 	matching: "normal" ;
 	tokenize: false ;
-	m: "-5" ;
+	m: "1" ;
 	line-margin: 0 ;
 	line-padding: 0 ;
 /*	filter: ;*/
