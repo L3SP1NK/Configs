@@ -7,10 +7,7 @@
    	border-bottom-right-radius: 8px;
 */
 	font-weight: normal;
-	/* Flat Remix Darkest */
-	background-color: #000000;
-	/* Flat Remix Dark */
-	background-color: #23252e;
+	background-color: @theme_bg_color;
 }
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
