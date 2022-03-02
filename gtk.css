@@ -5,9 +5,12 @@
 	border-top-right-radius: 8px;
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
-	font-weight: bold;
-	background-color: rgba(0, 0, 0, 0.9);
 */
+	font-weight: normal;
+	/* Flat Remix Darkest */
+	background-color: #000000;
+	/* Flat Remix Dark */
+	background-color: #23252e;
 }
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
