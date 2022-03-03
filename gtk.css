@@ -39,7 +39,7 @@
 
 .xfce4-panel button:hover
 {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -48,6 +48,6 @@
 */
 .xfce4-panel button:checked, .xfce4-panel button:active
 {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0);
     box-shadow: inset 0px 0px 0px 2px @theme_selected_bg_color;
 }
