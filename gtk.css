@@ -6,11 +6,10 @@
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
 */
-	font-weight: normal;
 	background-color: @theme_bg_color;
 }
 
-#whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
+#whiskermenu-window scrolledwindow.frame treeview:hover, .whiskermenu-window scrolledwindow.frame treeview:active, .whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
@@ -30,24 +29,24 @@
 
 .xfce4-panel button
 {
-
 	border-radius: 10px;
 	padding: 4px;
 	color: white;
+	font-weight: bold;
 }
 
 
 .xfce4-panel button:hover
 {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba ( 255, 255, 255, 0.1 );
 }
 
 
 /*
-.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(#whiskermenu-button):active
+.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(.whiskermenu-button):active
 */
-.xfce4-panel button:checked, .xfce4-panel button:active
+.xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:active
 {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: inset 0px 0px 0px 2px @theme_selected_bg_color;
+    background: @theme_selected_bg_color;
+    box-shadow: inset 0px 0px 0px 0px @theme_selected_bg_color;
 }
