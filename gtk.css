@@ -6,7 +6,7 @@
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
 */
-	background-color: @theme_bg_color;
+	background-color: rgba ( 0, 0, 0, 0.8);
 }
 
 #whiskermenu-window scrolledwindow.frame treeview:hover, .whiskermenu-window scrolledwindow.frame treeview:active, .whiskermenu-window scrolledwindow.frame treeview:selected
