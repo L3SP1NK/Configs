@@ -270,6 +270,8 @@ bind ^W exit all
 bind ^S savefile all
 bind ^O insert main
 bind ^F whereis all
+bind ^F whereis all
+bind ^R replace main
 bind ^R replace main
 bind ^X cut main
 bind ^C copy main
