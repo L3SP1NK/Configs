@@ -220,7 +220,7 @@ if [[ ${SSH_CONNECTION} ]]
 					neofetch
 				else
 					## Show basic info if neofetch is not installed.
-					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')${RC}"|sed "s/NAME=//g"|sed 's/"//g'
+					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')"|sed "s/NAME=//g"|sed 's/"//g'
 					free -h
 			fi
 fi
