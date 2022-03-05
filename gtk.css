@@ -1,3 +1,4 @@
+/* XFCE panel */
 .xfce4-panel
 {
 /*
@@ -9,6 +10,32 @@
 	background-color: rgba ( 0, 0, 0, 0.8);
 }
 
+.xfce4-panel button
+{
+	border-radius: 10px;
+	padding: 4px;
+	color: white;
+	font-weight: bold;
+}
+
+
+.xfce4-panel button:hover
+{
+	background-color: rgba ( 0, 0, 0, 0.8);
+	opacity: 0.5;
+}
+
+
+/*
+.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(.whiskermenu-button):active
+*/
+.xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:active
+{
+    background: @theme_selected_bg_color;
+    box-shadow: inset 0px 0px 0px 0px transparent;
+}
+
+/* Whisker Menu */
 #whiskermenu-window scrolledwindow.frame treeview:hover, .whiskermenu-window scrolledwindow.frame treeview:active, .whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
@@ -26,30 +53,3 @@
 {
     border-radius: 24px;
 }
-
-.xfce4-panel button
-{
-	border-radius: 10px;
-	padding: 4px;
-	color: white;
-	font-weight: bold;
-}
-
-
-.xfce4-panel button:hover
-{
-    background: rgba ( 255, 255, 255, 0.1 );
-}
-
-
-/*
-.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(.whiskermenu-button):active
-*/
-.xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:active
-{
-    background: @theme_selected_bg_color;
-/*
-    box-shadow: inset 0px 0px 0px 0px @theme_selected_bg_color;
-*/
-}
-
