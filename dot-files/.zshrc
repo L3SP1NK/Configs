@@ -51,7 +51,7 @@ plugins=(
 #	fzf
 
 ## History (load it after FZF).
-	zsh-navigation-tools
+#	zsh-navigation-tools
 )
 
 ## Base zsh script (after plugins).
