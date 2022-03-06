@@ -17,7 +17,7 @@
         "#0047FF",
         "#9E00FF",
         "#00C1FF",
-        "#9A9996",
+        "#FFFFFF",
         "#77767B",
         "#FF00B3",
         "#00FFCB",
@@ -25,7 +25,7 @@
         "#0075FF",
         "#FB3CFF",
         "#00FFFF",
-        "#FFFFFF"
+        "#77767B"
     ],
     "use-badge-color": false,
     "use-bold-color": false,
