@@ -27,3 +27,4 @@ alias stopx='xfce4-session-logout -f -l'
 alias s="xclip -selection clipboard"
 alias note="${EDITOR} ~/.note"
 alias todo="${EDITOR} ~/.todo"
+alias disktemp="sudo hddtemp /dev/sd[a1..z9]|c"
