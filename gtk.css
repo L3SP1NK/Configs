@@ -1,4 +1,11 @@
-/* XFCE panel */
+/************************/
+/*	Custom GTK (XFCE) 	*/
+/*	By Lespink.			*/
+/************************/
+
+/****************/
+/*	XFCE panel	*/
+/****************/
 .xfce4-panel
 {
 /*
@@ -7,24 +14,7 @@
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
 */
-	background-color: rgba ( 0, 0, 0, 0.8);
 	background-color: @theme_bg_color;
-}
-
-
-#xfce4-notification-plugin image
-{
-	-gtk-icon-transform: scale(0.7);
-}
-
-#pulseaudio-button image
-{
-	-gtk-icon-transform: scale(0.8);
-}
-
-#xfce-panel-button image
-{
-	-gtk-icon-transform: scale(1);
 }
 
 .xfce4-panel button
@@ -34,19 +24,36 @@
 	color: white;
 	font-weight: bold;
 }
+
+/* On Hover */
 .xfce4-panel button:hover
 {
-	background-color: rgba ( 255, 255, 255, 0.1);
+	background-color: rgba ( 255, 255, 255, 0.1 );
 }
-/*
-.xfce4-panel button:not(#whiskermenu-button):checked, .xfce4-panel button:not(.whiskermenu-button):active
-*/
-.xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:active
+
+/* On select */
+.xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-    background: @theme_selected_bg_color;
+	background-color: rgba ( 255, 255, 255, 0.2 );
     box-shadow: inset 0px 0px 0px 0px transparent;
 }
-/* Whisker Menu */
+
+/* On click */
+.xfce4-panel button:active,#sn-button:active
+{
+	background-color: @theme_selected_bg_color;
+    box-shadow: inset 0px 0px 0px 0px transparent;
+}
+
+/* Reduce pulseaudio icon size */
+#pulseaudio-button image
+{
+	-gtk-icon-transform: scale(0.8);
+}
+
+/********************/
+/*	Whisker Menu	*/
+/********************/
 #whiskermenu-window scrolledwindow.frame treeview:hover, .whiskermenu-window scrolledwindow.frame treeview:active, .whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
