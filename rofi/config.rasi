@@ -4,7 +4,7 @@ configuration {
 	heigth: 0 ;
 	lines: 3 ;
 	columns: 0 ;
-	font: "Noto sans 16" ;
+	font: "Roboto Regular 16" ;
 	bw: 1 ;
 	location: 0 ;
 	padding: 0 ;
