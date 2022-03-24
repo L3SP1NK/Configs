@@ -13,8 +13,8 @@
 	border-top-right-radius: 8px;
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
-	background-color: @theme_bg_color;
 */
+	background-color: @theme_bg_color;
 }
 
 .xfce4-panel button
@@ -72,4 +72,3 @@
 {
     border-radius: 8px;
 }
-
