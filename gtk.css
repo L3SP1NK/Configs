@@ -13,8 +13,8 @@
 	border-top-right-radius: 8px;
    	border-bottom-left-radius: 8px;
    	border-bottom-right-radius: 8px;
-*/
 	background-color: @theme_bg_color;
+*/
 }
 
 .xfce4-panel button
@@ -54,19 +54,22 @@
 /********************/
 /*	Whisker Menu	*/
 /********************/
-#whiskermenu-window scrolledwindow.frame treeview:hover, .whiskermenu-window scrolledwindow.frame treeview:active, .whiskermenu-window scrolledwindow.frame treeview:selected
+#whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
 {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
     border-radius: 8px;
 }
+
 #whiskermenu-window border
 {
-	padding: 8px;
-	border-radius: 24px;
+	border-radius: 8px;
+	border-width: 2px;
+	border-color: @theme_bg_color;
 }
+
 #whiskermenu-window
 {
-    border-radius: 24px;
-	padding: 8px;
+    border-radius: 8px;
 }
+
