@@ -9,46 +9,51 @@
 .xfce4-panel
 {
 /*
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-   	border-bottom-left-radius: 8px;
-   	border-bottom-right-radius: 8px;
+	border-top-left-radius:		8px;
+	border-top-right-radius:	8px;
+  	border-bottom-left-radius:	8px;
+  	border-bottom-right-radius:	8px;
 */
-	background-color: @theme_bg_color;
+	background-color:			@theme_bg_color;
 }
 
 .xfce4-panel button
 {
-	border-radius: 10px;
-	padding: 0px;
-	color: white;
-	font-weight: normal;
+	border-radius:				10px;
+	color: 						white;
+	padding:					8px;
+	font-weight:				normal;
 }
 
 /* On Hover */
 .xfce4-panel button:hover
 {
-	background-color: rgba ( 255, 255, 255, 0.05 );
+	background-color:			rgba ( 255, 255, 255, 0.05 );
 }
 
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-	background-color: rgba ( 255, 255, 255, 0.1 );
-    box-shadow: inset 0px 0px 0px 0px transparent;
+	background-color:			rgba ( 255, 255, 255, 0.1 );
+  box-shadow:					inset 0 0 0 0 transparent;
 }
 
 /* On click */
 .xfce4-panel button:active,#sn-button:active
 {
-	background-color: @theme_selected_bg_color;
-    box-shadow: inset 0px 0px 0px 0px transparent;
+	background-color:			@theme_selected_bg_color;
+	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
-/* Reduce pulseaudio icon size */
+/* Change icon size */
 #pulseaudio-button image
 {
-	-gtk-icon-transform: scale(0.8);
+	-gtk-icon-transform:		scale(0.8);
+}
+
+#XfcePanelWindow image
+{
+	-gtk-icon-transform:		scale(1.2);
 }
 
 /********************/
@@ -56,19 +61,19 @@
 /********************/
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
 {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-    border-radius: 8px;
+  background-color:				@theme_selected_bg_color;
+  color:						@theme_selected_fg_color;
+  border-radius:				8px;
 }
 
 #whiskermenu-window border
 {
-	border-radius: 8px;
-	border-width: 2px;
-	border-color: @theme_bg_color;
+	border-radius:				8px;
+	border-width:				2px;
+	border-color:				@theme_bg_color;
 }
 
 #whiskermenu-window
 {
-    border-radius: 8px;
+  border-radius:				8px;
 }
