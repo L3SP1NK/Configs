@@ -48,8 +48,8 @@ configuration {
 	fake-transparency: false ;
 /*	dpi: -1 ;*/
 /*	threads: 0 ;*/
-	scrollbar-width: 12 ;
-	scroll-method: 1 ;
+/*	scrollbar-width: 12 ;*/
+	scroll-method: 0 ;
 /*	fake-background: "screenshot" ;*/
 /*	window-format: "{w}    {c}   {t}" ;*/
 	click-to-exit: true ;
