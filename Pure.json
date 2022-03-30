@@ -1,12 +1,12 @@
 {
     "background-color": "#000000",
-    "badge-color": "#AC7EA8",
+    "badge-color": "#FFFFFF",
     "bold-color": "#FFFFFF",
     "comment": "",
     "cursor-background-color": "#000000",
     "cursor-foreground-color": "#FFFFFF",
     "foreground-color": "#FFFFFF",
-    "highlight-background-color": "#0000FF",
+    "highlight-background-color": "#000000",
     "highlight-foreground-color": "#FFFFFF",
     "name": "Pure",
     "palette": [
@@ -22,7 +22,7 @@
         "#FF00B3",
         "#00FFCB",
         "#FFC600",
-        "#0075FF",
+        "#2776FF",
         "#FB3CFF",
         "#00FFFF",
         "#9A9996"
