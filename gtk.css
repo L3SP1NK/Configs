@@ -6,6 +6,12 @@
 /****************/
 /*	XFCE panel	*/
 /****************/
+
+@define-color theme_bg_color #1b2421;
+@define-color theme_fg_color #bbf1dd;
+@define-color theme_selected_bg_color #abdcca;
+@define-color theme_selected_fg_color #151c19;
+
 .xfce4-panel
 {
 /*
@@ -14,15 +20,14 @@
   	border-bottom-left-radius:	8px;
   	border-bottom-right-radius:	8px;
 */
-	background-color:			@theme_bg_color;
 }
 
 .xfce4-panel button
 {
 	border-radius:				10px;
-	color: 						white;
 	padding:					8px;
-	font-weight:				normal;
+	font-weight:				bold;
+	color: 						@theme_fg_color;
 }
 
 /* On Hover */
@@ -35,7 +40,7 @@
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
 	background-color:			rgba ( 255, 255, 255, 0.1 );
-  box-shadow:					inset 0 0 0 0 transparent;
+	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
 /* On click */
@@ -48,7 +53,7 @@
 /* Change icon size */
 #pulseaudio-button image
 {
-	-gtk-icon-transform:		scale(1.0);
+	-gtk-icon-transform:		scale(0.8);
 }
 
 #XfcePanelWindow image
