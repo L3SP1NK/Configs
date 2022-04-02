@@ -7,10 +7,11 @@
 /*	XFCE panel	*/
 /****************/
 
-@define-color theme_bg_color #1b2421;
 @define-color theme_fg_color #bbf1dd;
-@define-color theme_selected_bg_color #abdcca;
+@define-color theme_fg_color #ffffff;
+@define-color theme_bg_color #1b2421;
 @define-color theme_selected_fg_color #151c19;
+@define-color theme_selected_bg_color #abdcca;
 
 .xfce4-panel
 {
