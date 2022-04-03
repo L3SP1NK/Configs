@@ -62,6 +62,41 @@
 	-gtk-icon-transform:		scale(1.2);
 }
 
+#xfce4-notification-plugin image
+{
+	-gtk-icon-transform:		scale(0.6);
+}
+
+#whiskermenu-button image
+{
+	-gtk-icon-transform:		scale(0.6);
+}
+
+#xfce4-power-manager-plugin image
+{
+	-gtk-icon-transform:		scale(0.6);
+}
+
+#clock-button image
+{
+	-gtk-icon-transform:		scale(0.6);
+}
+
+#indicator-button image
+{
+	-gtk-icon-transform:		scale(0.4);
+}
+
+#sn-button image
+{
+	-gtk-icon-transform:		scale(0.8);
+}
+
+#showdesktop-button image
+{
+	-gtk-icon-transform:		scale(0.1);
+}
+
 /********************/
 /*	Whisker Menu	*/
 /********************/
