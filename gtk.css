@@ -19,7 +19,7 @@
 .xfce4-panel button
 {
 	border-radius:				10px;
-	padding:					8px;
+	padding:					6px;
 	font-weight:				bold;
 	color: 						@theme_fg_color;
 }

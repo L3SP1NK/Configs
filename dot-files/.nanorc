@@ -207,13 +207,13 @@ set titlecolor bold,white,blue
 set statuscolor black,green
 set errorcolor black,red
 set selectedcolor white,blue
-set stripecolor bold,yellow
+set stripecolor black
 set numbercolor grey
 set keycolor cyan
 set functioncolor green
-set minicolor italic,yellow,black
-set promptcolor yellow,black
-set scrollercolor bold,white,black
+set minicolor italic,grey
+set promptcolor cyan
+set scrollercolor grey
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
