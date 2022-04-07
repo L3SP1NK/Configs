@@ -18,9 +18,9 @@
 
 .xfce4-panel button
 {
+	font-weight:				bold;
 	border-radius:				10px;
 	padding:					6px;
-	font-weight:				bold;
 	color: 						@theme_fg_color;
 }
 
@@ -39,8 +39,7 @@
 
 /* On click */
 .xfce4-panel button:active,#sn-button:active
-{
-	background-color:			@theme_selected_bg_color;
+{	background-color:			@theme_selected_bg_color;
 	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
@@ -52,7 +51,7 @@
 
 #XfcePanelWindow image
 {
-	-gtk-icon-transform:		scale(1);
+	-gtk-icon-transform:		scale(1.2);
 }
 
 #xfce4-notification-plugin image
