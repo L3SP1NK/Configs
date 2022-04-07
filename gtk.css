@@ -8,12 +8,7 @@
 /****************/
 .xfce4-panel
 {
-/*
-	border-top-left-radius:		8px;
-	border-top-right-radius:	8px;
-  	border-bottom-left-radius:	8px;
-  	border-bottom-right-radius:	8px;
-*/
+	background-color:			rgba ( 0, 0, 0, 0.80 );
 }
 
 .xfce4-panel button
@@ -27,13 +22,13 @@
 /* On Hover */
 .xfce4-panel button:hover
 {
-	background-color:			rgba ( 255, 255, 255, 0.05 );
+	background-color:			rgba ( 255, 255, 255, 0.025 );
 }
 
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-	background-color:			rgba ( 255, 255, 255, 0.1 );
+	background-color:			rgba ( 255, 255, 255, 0.05 );
 	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
