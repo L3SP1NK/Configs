@@ -20,7 +20,7 @@ alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 
 ## CPU specific.
-alias stress=stress -c $(nproc)"
+alias stress="stress -c $(nproc)"
 alias make="make -j $(nproc)"
 alias parallel="parallel -j$(nproc)"
 
