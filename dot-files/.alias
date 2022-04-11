@@ -19,6 +19,10 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias diff='diff --color=auto'
 
+## CPU specific.
+alias make="make -j $(nproc)"
+alias parallel="parallel -j$(nproc)"
+
 ## Custom.
 alias l='ls --time-style="+%d-%m-%Y @ %T" -hAl'
 alias unicode="cat ~/.unicode | tac"
@@ -27,7 +31,6 @@ alias stopx='xfce4-session-logout -f -l'
 alias s="xclip -selection clipboard"
 alias disktemp="sudo hddtemp /dev/sd[a1..z9]|c"
 alias phs="sudo python3 -m http.server 80"
-alias make="make -j $(nproc)"
 alias tren="trans -b -t en"
 alias trfr="trans -b -t fr"
 alias log="script -B ~/.term.log -aq"
