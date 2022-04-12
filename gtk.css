@@ -8,7 +8,7 @@
 /****************/
 .xfce4-panel
 {
-	background-color:			rgba ( 0, 0, 0, 0.8 );
+	background-color:			rgba ( 0, 0, 0, 0.9 );
 }
 
 .xfce4-panel button
@@ -22,13 +22,13 @@
 /* On Hover */
 .xfce4-panel button:hover
 {
-	background-color:			rgba ( 255, 255, 255, 0.025 );
+	background-color:			rgba ( 255, 255, 255, 0.05 );
 }
 
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-	background-color:			rgba ( 255, 255, 255, 0.05 );
+	background-color:			rgba ( 255, 255, 255, 0.1 );
 	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
