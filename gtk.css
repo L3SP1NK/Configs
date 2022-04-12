@@ -8,14 +8,12 @@
 /****************/
 .xfce4-panel
 {
-	background-color:			rgba ( 0, 0, 0, 0.90 );
+	background-color:			rgba ( 0, 0, 0, 0.8 );
 }
 
 .xfce4-panel button
 {
-/*
 	font-weight:				bold;
-*/
 	border-radius:				10px;
 	padding:					6px;
 	color: 						@theme_fg_color;
@@ -98,12 +96,12 @@
 
 #whiskermenu-window border
 {
-	border-radius:				8px;
+	border-radius:				16px;
 	border-width:				2px;
 	border-color:				@theme_bg_color;
 }
 
 #whiskermenu-window
 {
-  border-radius:				8px;
+  border-radius:				16px;
 }
