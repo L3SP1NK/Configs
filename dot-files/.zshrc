@@ -15,7 +15,7 @@
 ## General config and variables. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin:${HOME}/.local/bin
-export ZSH=${HOME}/.oh-my-zsh
+export OMZ=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
 export ARCHFLAGS="-arch x86_64"
 export UPDATE_ZSH_DAYS=1
@@ -30,41 +30,16 @@ DISABLE_MAGIC_FUNCTIONS="true"
 COMPLETION_WAITING_DOTS="true"
 #ZSH_THEME="random"
 
-##~~~~~~~~~~##
-## History. ##
-##~~~~~~~~~~##
-## History is removed and linked to /dev/null.
-
-##~~~~~~~~~~##
-## Plugins. ##
-##~~~~~~~~~~##
-plugins=(
-	zsh-completions
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	command-not-found
-## FZF
-## shortcuts:
-## 	- Ctrl + T = Paste the path of file or directory found on the command line.
-## 	- Ctrl + R = Find history command and paste command on the command line.
-## 	- Alt  + C = Go to specific directory.
-#	fzf
-
-## History (load it after FZF).
-#	zsh-navigation-tools
-)
-
-## Base zsh script (after plugins).
-## "." is like "source" but slightly faster to load.
-. ${ZSH}/oh-my-zsh.sh
+## Base zsh script (to load after plugins).
+source ${OMZ}/oh-my-zsh.sh
 
 ## Load personal aliases.
-[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+[[ -f ~/.alias ]] && source ~/.alias || echo '\e[31m Alias file missing!'
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-. ${HOME}/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
@@ -158,25 +133,8 @@ case ${DISTRO} in
 		;;
 esac
 
-## Change username color if root.
-if [[ "${EUID}" -ne 0 ]]
-	then
-		NAME_COLOR=green
-	else
-		NAME_COLOR=red
-fi
-
-## Left prompt.
-## user@host:/dir/ $
-## Color based on the distro.
-PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n%{$fg_bold[yellow]%}@%{$fg_bold[${HOSTNAME_COLOR}]%}%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
-## Green/red if root.
-#PROMPT='%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
-## Green/red if root + bracket.
-#PROMPT='[%{$fg_bold[${NAME_COLOR}]%}%n@%m:%{$fg_bold[blue]%}%~%{$reset_color%}]%(?.%{$fg_bold[green]%}.%{$fg_bold[red]%})%(!.#.$)%{$reset_color%} '
-## Right prompt.
-## Time.
-#RPROMPT='%{$fg[white]%}%D{%T}%{$reset_color%}'
+[[ ${EUID} -eq "0" ]] && NAME_COLOR="red" || NAME_COLOR="green"
+PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~ %(?.%F{green}.%F{red})%(!.#.%%)%{$reset_color%} '
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
