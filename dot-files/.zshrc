@@ -30,6 +30,11 @@ DISABLE_MAGIC_FUNCTIONS="true"
 COMPLETION_WAITING_DOTS="true"
 #ZSH_THEME="random"
 
+plugins=(
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+	zsh-navigation-tools
+)
 ## Base zsh script (to load after plugins).
 source ${OMZ}/oh-my-zsh.sh
 
@@ -134,7 +139,7 @@ case ${DISTRO} in
 esac
 
 [[ ${EUID} -eq "0" ]] && NAME_COLOR="red" || NAME_COLOR="green"
-PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~ %(?.%F{green}.%F{red})%(!.#.%%)%{$reset_color%} '
+PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
 ## Display system information if connected through SSH.
 if [[ ${SSH_CONNECTION} ]]
