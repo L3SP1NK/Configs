@@ -179,13 +179,13 @@ set tabsize 4
 #set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
-#set trimblanks
+set trimblanks
 
 ## The two single-column characters used to display the first characters
 ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
 ## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
 ## The default when in a UTF-8 locale:
-#set whitespace "»·"
+set whitespace "→·"
 ## The default otherwise:
 #set whitespace ">."
 
