@@ -13,7 +13,7 @@ configuration
 	xoffset:				0;
 	fixed-num-lines:		true;
 	show-icons:				true;
-	icon-theme:				"Papirus-Dark";
+/*	icon-theme:				"Papirus-Dark";*/
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
 	ssh-command:			"{terminal} -e {ssh-client} {host} [-p {port}]";
