@@ -1,2 +1,2 @@
 ## Configs
-⚠️ THESE SCRIPTS ARE PERSONAL AND FREQUENTLY UPDATED/BROKEN⚠️
+Configuration/dotfiles.
