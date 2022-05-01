@@ -51,7 +51,7 @@ set casesensitive
 set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
-set cutfromcursor
+#set cutfromcursor
 
 ## Do not use the line below the title bar, leaving it entirely blank.
 set emptyline
@@ -145,7 +145,7 @@ set rawsequences
 
 ## Do regular-expression searches by default.
 ## #Regular expressions are of the extended type (ERE).
-set regexp
+#set regexp
 
 ## Save a changed buffer automatically on exit; don't prompt.
 #set saveonexit

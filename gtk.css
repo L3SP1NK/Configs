@@ -3,8 +3,8 @@
 /****************/
 .xfce4-panel
 {
-	background-color:			rgba ( 0, 0, 0, 0.9);
-/*	background-color:			@theme_bg_color;*/
+/*	background-color:			rgba ( 0, 0, 0, 0.9);*/
+	background-color:			@theme_bg_color;
 }
 
 .xfce4-panel button
