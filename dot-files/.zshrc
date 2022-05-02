@@ -59,9 +59,9 @@ ZSH_HIGHLIGHT_STYLES[global-alias]=fg=yellow
 
 ## Path.
 ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[path]=fg=grey,underline
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=grey,underline
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=grey,underline
+ZSH_HIGHLIGHT_STYLES[path]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
 
@@ -110,31 +110,17 @@ export LESS_TERMCAP_ue=$'\E[0m'
 ##~~~~~~~~~##
 ## Prompt. ##
 ##~~~~~~~~~##
-## Colors.
-RC="\e[0m"
-BOLD="\e[1m"
-GREY="\e[37m"
-YELLOW="\e[33m"
-GREEN="\e[32m"
-RED="\e[31m"
-CYAN="\e[36m"
-BLUE="\e[34m"
-MAGENTA="\e[35m"
-
 ## Set prompt color according to the distro.
 DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
 case ${DISTRO} in
 	Kali)
 		HOSTNAME_COLOR=cyan
-		HOSTNAME_COLOR_B=${CYAN}
 		;;
 	Debian)
 		HOSTNAME_COLOR=magenta
-		HOSTNAME_COLOR_B=${MAGENTA}
 		;;
 	*)
-		HOSTNAME_COLOR=grey
-		HOSTNAME_COLOR_B=${GREY}
+		HOSTNAME_COLOR=white
 		;;
 esac
 
@@ -142,15 +128,4 @@ esac
 PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
 ## Display system information if connected through SSH.
-if [[ ${SSH_CONNECTION} ]]
-	then
-		which neofetch > /dev/null
-			if [[ ${?} -eq "0" ]]
-				then
-					neofetch
-				else
-					## Show basic info if neofetch is not installed.
-					echo -e "${HOSTNAME_COLOR_B}$(cat /etc/os-release | grep --color=never -iE '^name=')"|sed "s/NAME=//g"|sed 's/"//g'
-					free -h
-			fi
-fi
+[[ ${SSH_CONNECTION} ]] && neofetch

@@ -42,7 +42,7 @@ set bookstyle
 set brackets ""')>]}"
 
 ## Automatically hard-wrap the current line when it becomes overlong.
-set breaklonglines
+#set breaklonglines
 
 ## Do case-sensitive searches by default.
 set casesensitive
@@ -217,14 +217,14 @@ set zap
 set titlecolor bold,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor white,blue
+set selectedcolor bold,white,blue
 set stripecolor black
-set numbercolor grey
+set numbercolor white
 set keycolor cyan
 set functioncolor green
-set minicolor italic,grey
+set minicolor italic,white
 set promptcolor cyan
-set scrollercolor grey
+set scrollercolor white
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
