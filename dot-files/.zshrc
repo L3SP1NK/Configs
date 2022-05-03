@@ -34,7 +34,9 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 	zsh-navigation-tools
+	command-not-found
 )
+
 ## Base zsh script (to load after plugins).
 source ${OMZ}/oh-my-zsh.sh
 

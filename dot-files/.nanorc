@@ -11,9 +11,9 @@
 ## Inside string parameters, quotes should not be escaped -- the last
 ## double quote on the line will be seen as the closing quote.
 
-## Make 'nextword' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
+## Make 'nextord' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
 ## stop at word ends instead of at beginnings.
-set afterends
+#set afterends
 
 ## When soft line wrapping is enabled, make it wrap lines at blanks
 ## (tabs and spaces) instead of always at the edge of the screen.
@@ -203,7 +203,7 @@ set whitespace "→·"
 ## The characters (besides alphanumeric ones) that should be considered
 ## as parts of words.  This option does not have a default value.  When
 ## set, it overrides option 'set wordbounds'.
-set wordchars "<_>."
+#set wordchars "<_>."
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead
 ## of a single character, and without affecting the cutbuffer).
