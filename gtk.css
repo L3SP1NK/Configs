@@ -29,7 +29,8 @@
 
 /* On click */
 .xfce4-panel button:active,#sn-button:active
-{	background-color:			@theme_selected_bg_color;
+{
+	background-color:			rgba ( 255, 255, 255, 0.1 );
 	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
