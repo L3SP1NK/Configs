@@ -222,7 +222,7 @@ set stripecolor black
 set numbercolor grey
 set keycolor cyan
 set functioncolor green
-set minicolor italic,white
+set minicolor italic,grey
 set promptcolor white
 set scrollercolor grey
 
