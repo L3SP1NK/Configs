@@ -4,7 +4,6 @@
 .xfce4-panel
 {
 	background-color:			rgba ( 0, 0, 0, 0.9 );
-/*	background-color:			@theme_bg_color;*/
 }
 
 .xfce4-panel button
@@ -31,8 +30,8 @@
 /* On click */
 .xfce4-panel button:active,#sn-button:active
 {
-	background-color:			rgba ( 255, 255, 255, 0.1 );
 	box-shadow:					inset 0px 0px 0px 0px transparent;
+	background-color:			@theme_selected_bg_color;
 }
 
 /* Change icon size */
