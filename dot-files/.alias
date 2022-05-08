@@ -1,7 +1,6 @@
 ##~~~~~~~~##
 ## Alias. ##
 ##~~~~~~~~##
-## After Base zsh script.
 
 ## Add verbose mode.
 alias cp='cp -v'
@@ -22,7 +21,6 @@ alias diff='diff --color=auto'
 ## CPU specific.
 alias stress="stress -c $(nproc)"
 alias make="make -j $(nproc)"
-alias parallel="parallel -j$(nproc)"
 
 ## Custom.
 alias l='ls --time-style="+%d-%m-%Y @ %T" -hAl'
@@ -39,3 +37,4 @@ alias rs="rsync -4 --archive --compress --compress-choice=zstd --compress-level=
 alias ipa="ip -4 -c -br a"
 alias tb="nc termbin.com 9999"
 alias netstats="sudo netstat --tcp --udp -lapute | c"
+alias weather="curl -s wttr.in | grep -v 'Follow'"
