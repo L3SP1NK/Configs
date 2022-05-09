@@ -110,3 +110,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# Enables autocompletion of options for bashfuscator
+eval "$(/usr/bin/register-python-argcomplete3 bashfuscator)"
