@@ -9,7 +9,7 @@
 
 .xfce4-panel button
 {
-	font-weight:				regular;
+	font-weight:				bold;
 	border-radius:				10px;
 	padding:					4px;
 	color: 						@theme_fg_color;
