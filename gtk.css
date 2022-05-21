@@ -3,13 +3,13 @@
 /****************/
 .xfce4-panel
 {
-/*	background-color:			rgba ( 0, 0, 0, 0.9 );*/
-	background-color:			@theme_bg_color;
+	background-color:			rgba ( 0, 0, 0, 0.9 );
+/*	background-color:			@theme_bg_color;*/
 }
 
 .xfce4-panel button
 {
-	font-weight:				regular;
+	font-weight:				normal;
 	border-radius:				10px;
 	padding:					4px;
 	color: 						@theme_fg_color;
@@ -31,8 +31,8 @@
 /* On click */
 .xfce4-panel button:active,#sn-button:active
 {
-	box-shadow:					inset 0px 0px 0px 0px transparent;
 	background-color:			@theme_selected_bg_color;
+	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
 /* Change icon size */
