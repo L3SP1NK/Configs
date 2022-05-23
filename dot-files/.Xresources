@@ -95,3 +95,7 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 ! white dark/light
 *color7:	grey
 *color15:	white
+
+Sxiv.background: #000000
+Sxiv.foreground: #ffffff
+Sxiv.font: JetBrains Mono-13
