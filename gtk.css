@@ -24,21 +24,21 @@
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-	background-color:			rgba ( 255, 255, 255, 0.1 );
-	box-shadow:					inset 0px 0px 0px 0px @theme_selected_bg_color;
+	background-color:			@theme_selected_bg_color;
+	/* Dirty way for plain color button with the dracula gtk themes */
+	box-shadow:					inset 0px 0px 0px 999px @theme_selected_bg_color;
 }
 
 /* On click */
 .xfce4-panel button:active,#sn-button:active
 {
 	background-color:			@theme_selected_bg_color;
-	box-shadow:					inset 0px 0px 0px 0px transparent;
 }
 
 /* Change icon size */
 #pulseaudio-button image
 {
-	-gtk-icon-transform:		scale(0.8);
+	-gtk-icon-transform:		scale(0.6);
 }
 
 #XfcePanelWindow image
@@ -88,17 +88,10 @@
 {
   background-color:				@theme_selected_bg_color;
   color:						@theme_selected_fg_color;
-  border-radius:				8px;
 }
 
 #whiskermenu-window border
 {
-	border-radius:				16px;
 	border-width:				2px;
 	border-color:				@theme_bg_color;
-}
-
-#whiskermenu-window
-{
-  border-radius:				16px;
 }

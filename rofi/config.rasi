@@ -72,4 +72,4 @@ configuration
 	display-keys:			"";
 }
 
-@theme "~/.config/rofi/flat-remix.rasi"
+@theme "~/.config/rofi/wpg.rasi"
