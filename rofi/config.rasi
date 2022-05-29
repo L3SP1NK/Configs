@@ -72,4 +72,4 @@ configuration
 	display-keys:			"";
 }
 
-@theme "~/.config/rofi/wpg.rasi"
+@theme "~/.config/rofi/lespink-theme.rasi"
