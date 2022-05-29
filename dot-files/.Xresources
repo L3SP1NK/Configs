@@ -3,7 +3,7 @@ XTerm*scrollBar: false
 XTerm*scrollKey: true
 XTerm*multiClickTime: 250
 XTerm*renderont: true
-XTerm*savelines: 999999999999
+XTerm*savelines: 0
 XTerm*selectToClipboard: true
 
 ! Display
