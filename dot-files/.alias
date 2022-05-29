@@ -23,10 +23,10 @@ alias stress="stress -c $(nproc)"
 alias make="make -j $(nproc)"
 
 ## Custom.
+alias stopx="pidof Xorg>/dev/null && echo 'Close everything and press: [enter]' && read && killall Xorg || echo Xorg is not running!"
 alias l='ls --time-style="+%d-%m-%Y @ %T" -hAl'
 alias unicode="cat ~/.unicode | tac"
 alias c='ccze -A'
-alias stopx='killall Xorg'
 alias s="xclip -selection clipboard"
 alias disktemp="sudo hddtemp /dev/sd[a1..z9]|c"
 alias phs="sudo python3 -m http.server 80"
