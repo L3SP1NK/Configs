@@ -84,7 +84,7 @@
 
 #showdesktop-button image
 {
-	-gtk-icon-transform:		scale(0.1);
+	-gtk-icon-transform:		scale(0.0);
 }
 
 /********************/
