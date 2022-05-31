@@ -217,7 +217,7 @@ set zap
 set titlecolor bold,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor white,black
+set selectedcolor white,blue
 set stripecolor black
 set numbercolor grey
 set keycolor cyan

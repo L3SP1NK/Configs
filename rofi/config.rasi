@@ -59,7 +59,7 @@ configuration
 	color-urgent:			red;
 	color-active:			green;
 	color-window:			white;
-	max-history-size:		3;
+	max-history-size:		10;
 	combi-hide-mode-prefix:	true;
 	cache-dir:				"/home/lespink/.cache/rofi";
 	pid:					"/run/user/1000/rofi.pid";
@@ -71,5 +71,4 @@ configuration
 	display-combi:			"";
 	display-keys:			"";
 }
-
 @theme "~/.config/rofi/wpg.rasi"

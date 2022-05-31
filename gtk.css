@@ -30,9 +30,9 @@
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
+	background-color:			rgba ( 255, 255, 255, 0.1 );
+/*	box-shadow:					inset 0px 0px 0px 0px @theme_selected_bg_color;*/
 	background-color:			@theme_selected_bg_color;
-	/* Dirty way for plain color button with the dracula gtk themes */
-	box-shadow:					inset 0px 0px 0px 999px @theme_selected_bg_color;
 }
 
 /* On click */
@@ -92,8 +92,8 @@
 /********************/
 #whiskermenu-window scrolledwindow.frame treeview:hover, #whiskermenu-window scrolledwindow.frame treeview:active, #whiskermenu-window scrolledwindow.frame treeview:selected
 {
-  background-color:				@theme_selected_bg_color;
-  color:						@theme_selected_fg_color;
+	background-color:			@theme_selected_bg_color;
+	color:						@theme_selected_fg_color;
 }
 
 #whiskermenu-window border
