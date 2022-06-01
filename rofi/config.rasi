@@ -3,7 +3,7 @@ configuration
 	modi:					"window,run,ssh,drun";
 	width:					0;
 	heigth:					0;
-	lines:					0;
+	lines:					3;
 	columns:				0;
 	font:					"Roboto regular 16";
 	bw:						1;
@@ -71,4 +71,4 @@ configuration
 	display-combi:			"";
 	display-keys:			"";
 }
-@theme "~/.config/rofi/wpg.rasi"
+@theme "~/.config/rofi/lespink-theme.rasi"
