@@ -11,6 +11,9 @@
 {
 	background-color:			rgba ( 0, 0, 0, 0.90 );
 	background-color:			@theme_bg_color;
+/*	font-family:				Jetbrains Mono;
+	font-size:					18;*/
+	font-weight:				normal;
 }
 
 .xfce4-panel button
