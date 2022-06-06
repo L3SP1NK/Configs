@@ -30,7 +30,7 @@ configuration
 	sort:					true;
 	sorting-method:			"fzf";
 	case-sensitive:			false;
-	cycle:					false;
+	cycle:					true;
 	sidebar-mode:			false;
 	eh:						1;
 /*	auto-select:			false;*/
@@ -49,12 +49,12 @@ configuration
 	fake-transparency:		false;
 /*	dpi:					-1;*/
 	threads:				0;
-/*	scrollbar-width:		12;*/
+	scrollbar-width:		0;
 	scroll-method:			0;
 /*	fake-background:		"screenshot";*/
 	window-format:			"{w}  {c}  {t}";
 	click-to-exit:			true;
-	show-match:				false;
+	show-match:				true;
 	color-normal:			white;
 	color-urgent:			red;
 	color-active:			green;
