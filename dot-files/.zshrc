@@ -1,19 +1,3 @@
-##############################################################
-##															##
-##	 ██                               ██          ██		##
-##	░██                       ██████ ░░          ░██		##
-##	░██        █████   ██████░██░░░██ ██ ███████ ░██  ██	##
-##	░██       ██░░░██ ██░░░░ ░██  ░██░██░░██░░░██░██ ██		##
-##	░██      ░███████░░█████ ░██████ ░██ ░██  ░██░████		##
-##	░██      ░██░░░░  ░░░░░██░██░░░  ░██ ░██  ░██░██░██		##
-##	░████████░░██████ ██████ ░██     ░██ ███  ░██░██░░██	##
-##	░░░░░░░░  ░░░░░░ ░░░░░░  ░░      ░░ ░░░   ░░ ░░  ░░		##
-##															##
-##############################################################
-
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-## General config and variables. ##
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin:${HOME}/.local/bin
 export OMZ=${HOME}/.oh-my-zsh
 export MANPATH="/usr/local/man:$MANPATH"
@@ -37,23 +21,20 @@ plugins=(
 	command-not-found
 )
 
-## Base zsh script (to load after plugins).
+## Base zsh script (load it after plugins).
 source ${OMZ}/oh-my-zsh.sh
 
 ## Load personal aliases.
-[[ -f ~/.alias ]] && source ~/.alias || echo '\e[31m Alias file missing!'
+[[ -f ~/.alias ]] && source ~/.alias || echo -e '\e[31m Alias file missing!'
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
-if [[ -f ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]
-	then
-		source ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+[[ -f ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ${OMZ}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=green
 ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red
-ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=yellow,bold,underline
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=green,underline
 ZSH_HIGHLIGHT_STYLES[comment]=fg=cyan,bold
 ZSH_HIGHLIGHT_STYLES[assign]=fg=cyan
 ZSH_HIGHLIGHT_STYLES[named-fd]=fg=magenta,bold
@@ -130,6 +111,7 @@ case ${DISTRO} in
 esac
 
 [[ ${EUID} -eq "0" ]] && NAME_COLOR="red" || NAME_COLOR="green"
+## user@host:~ % ( "%" red if the last command failed)
 PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
 ## Display system information if connected through SSH.
