@@ -71,4 +71,4 @@ configuration
 	display-combi:			"";
 	display-keys:			"";
 }
-@theme "~/.config/rofi/theme.rasi"
+@theme "~/.config/rofi/light.rasi"
