@@ -1,0 +1,172 @@
+/************************************************
+ * ROFI Color theme
+ * User: Lespink
+ ***********************************************/
+* {
+
+	background-color:		#000000;
+	foreground-color:		#FFFFFF;
+	selected-bg-color:		#2777ff;
+	selected-fg-color:		#ffffff;
+	border-color:			#0d0d0d;
+}
+
+#window
+{
+	text-color:				@foreground-color;
+	border:					4;
+	border-radius:			0;
+	padding:				16;
+	border-color:			@selected-bg-color;
+}
+
+#mainbox
+{
+	border:					0;
+	padding:				0;
+}
+
+#message
+{
+	border:					2 2 0;
+	border-radius:			8;
+	border-color:			@selected-bg-color;
+	padding:				16;
+}
+
+#textbox
+{
+	text-color:				@foreground-color;
+}
+
+#listview
+{
+	fixed-height:			8;
+	scrollbar:				true;
+	lines:					3;
+}
+
+#element
+{
+	padding:				8;
+	border-radius:			8;
+}
+
+#element-text, element-icon
+{
+	text-color:				inherit;
+	background-color:		inherit;
+	padding:				2;
+	size:					48;
+}
+
+#element.normal.normal
+{
+	text-color:				@foreground-color;
+}
+
+#element.normal.urgent
+{
+	background-color:		@selected-bg-color;
+	text-color:				@foreground-color;
+}
+
+#element.normal.active
+{
+	background-color:		@selected-bg-color;
+	text-color:				@foreground-color;
+}
+
+#element.selected.normal
+{
+	background-color:		@selected-bg-color;
+	text-color:				@selected-fg-color;
+}
+
+#element.selected.urgent
+{
+	background-color:		@selected-bg-color;
+	text-color:				@selected-fg-color;
+}
+
+#element.selected.active
+{
+	background-color:		@selected-bg-color;
+	text-color:				@foreground-color;
+}
+
+#element.alternate.normal
+{
+	text-color:				@foreground-color;
+}
+
+#element.alternate.urgent
+{
+	background-color:		@selected-bg-color;
+	text-color:				@foreground-color;
+}
+
+#element.alternate.active
+{
+	background-color:		@selected-bg-color;
+	text-color:				@foreground-color;
+}
+
+#mode-switcher
+{
+	background-color:		@background-color;
+	border:					0 0 0;
+	border-color:			@selected-bg-color;
+}
+
+#button
+{
+	spacing:				0;
+	color:					@background-color;
+}
+
+#button.selected
+{
+	text-color:				@foreground-color;
+	background-color:		@selected-bg-color;
+}
+
+#inputbar
+{
+	spacing:				0;
+	text-color:				@foreground-color;
+	padding:				0;
+}
+
+#case-indicator
+{
+	spacing:				0;
+	text-color:				@foreground-color;
+}
+
+#entry
+{
+	spacing:				0;
+	padding:				8;
+	text-color:				@foreground-color;
+	background-color:		@background-color;
+	border-radius:			8;
+}
+
+#prompt
+{
+	spacing:				0;
+	text-color:				@foreground-color;
+}
+
+#inputbar
+{
+	children:				[ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon
+{
+	expand:					false;
+	str:					"";
+	margin:					0;
+}
