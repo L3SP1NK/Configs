@@ -35,6 +35,10 @@ selected bg = #e8a4a4
 bg = 0d0d0d
 selected bg = #2777ff
 
+## Flat Remix GTK Red
+bg = 0d0d0d
+selected bg = #ec0101
+
 ## Flat Remix GTK Violet
 bg = 0d0d0d
 selected bg = #962ac3
