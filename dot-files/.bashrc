@@ -114,3 +114,6 @@ fi
 
 # Enables autocompletion of options for bashfuscator
 eval "$(/usr/bin/register-python-argcomplete3 bashfuscator)"
+
+## Display system information if connected through SSH.
+[[ ${SSH_CONNECTION} ]] && neofetch
