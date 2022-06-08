@@ -14,10 +14,10 @@
 #window
 {
 	text-color:				@foreground-color;
-	border:					4;
-	border-radius:			0;
+	border:					2;
+	border-radius:			8;
 	padding:				16;
-	border-color:			@selected-bg-color;
+	border-color:			@border-color;
 }
 
 #mainbox
