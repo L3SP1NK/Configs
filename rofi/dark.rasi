@@ -4,11 +4,11 @@
  ***********************************************/
 * {
 
-	background-color:		#000000;
+	background-color:		#0d0d0d;
 	foreground-color:		#FFFFFF;
 	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
-	border-color:			#0d0d0d;
+	border-color:			#000000;
 }
 
 #window
