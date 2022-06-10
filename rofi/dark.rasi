@@ -42,7 +42,7 @@
 {
 	fixed-height:			0;
 	scrollbar:				false;
-	lines:					5;
+	lines:					3;
 }
 
 #element
