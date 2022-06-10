@@ -1,12 +1,12 @@
-export PATH=${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:/${HOME}/.cargo/bin:${HOME}/.local/bin
-export OMZ=${HOME}/.oh-my-zsh
+export PATH="${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:${HOME}/.local/bin"
+export OMZ="${HOME}/.oh-my-zsh"
 export MANPATH="/usr/local/man:$MANPATH"
-export ARCHFLAGS="-arch x86_64"
-export UPDATE_ZSH_DAYS=1
-export LANG=en_US.UTF-8
-export EDITOR=nano
+export ARCHFLAGS="-arch $(arch)"
+export UPDATE_ZSH_DAYS="1"
+export LANG="en_US.UTF-8"
+export EDITOR="nano"
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export XDG_SESSION_TYPE=x11
+export XDG_SESSION_TYPE="x11"
 
 CASE_SENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"

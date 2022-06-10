@@ -22,7 +22,7 @@ set atblanks
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-set autoindent
+#set autoindent
 
 ## Back up files to the current filename plus a tilde.
 set backup
@@ -218,12 +218,12 @@ set titlecolor bold,white,blue
 set statuscolor black,green
 set errorcolor black,red
 set selectedcolor white,blue
-set stripecolor black
-set numbercolor grey
+set stripecolor yellow
+set numbercolor grey,black
 set keycolor cyan
 set functioncolor green
 set minicolor italic,grey
-set promptcolor white
+set promptcolor green,black
 set scrollercolor grey
 
 ## === Syntax coloring ===
@@ -259,7 +259,7 @@ include "/usr/share/nano/sh.nanorc"
 ## keycode, which is hard-bound to the backspace function.  So, if you
 ## normally use <Backspace> for backspacing and not ^H, you can make
 ## <Ctrl+Backspace> delete the word to the left of the cursor with:
-#bind ^H chopwordleft main
+bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
 bind M-C comment main
@@ -302,7 +302,7 @@ bind ^T gotoline main
 bind ^Y speller main
 bind ^Z undo main
 bind ^Y redo main
-bind ^H speller main
+#bind ^H speller main
 bind ^U unindent all
 bind ^L linter execute
 bind ^E execute main
