@@ -37,7 +37,5 @@ alias rs="rsync -4 --archive --compress --compress-choice=zstd --compress-level=
 alias ipa="ip -4 -c -br a"
 alias tb="nc termbin.com 9999"
 alias netstats="sudo netstat --tcp --udp -lapute | c"
-alias weather="curl -s wttr.in | grep -v 'Follow'"
 alias cal="calcurse"
-alias note="${EDITOR} .me/note"
-alias todo="${EDITOR} .me/todo"
+alias tg="telegram-cli"

@@ -19,6 +19,7 @@ plugins=(
 	zsh-syntax-highlighting
 #	zsh-navigation-tools
 	command-not-found
+#    fzf
 )
 
 ## Base zsh script (load it after plugins).
