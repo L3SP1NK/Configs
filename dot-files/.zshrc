@@ -1,4 +1,4 @@
-export PATH="${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:${HOME}/.local/bin"
+export PATH="${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:${HOME}/.local/bin:${HOME}/.cargo/bin"
 export OMZ="${HOME}/.oh-my-zsh"
 export MANPATH="/usr/local/man:$MANPATH"
 export ARCHFLAGS="-arch $(arch)"
