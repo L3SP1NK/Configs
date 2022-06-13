@@ -219,7 +219,7 @@ set statuscolor black,green
 set errorcolor black,red
 set selectedcolor white,blue
 set stripecolor yellow
-set numbercolor grey,black
+set numbercolor grey
 set keycolor cyan
 set functioncolor green
 set minicolor italic,grey
