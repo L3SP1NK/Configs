@@ -302,7 +302,7 @@ bind ^T gotoline main
 bind ^Y speller main
 bind ^Z undo main
 bind ^Y redo main
-#bind ^H speller main
+bind ^H speller main
 bind ^U unindent all
 bind ^L linter execute
 bind ^E execute main
