@@ -5,12 +5,13 @@
 {
 /*	color:						white;*/
 	text-shadow: 				none;
+    border-radius:              8px;
 }
 
 .xfce4-panel
 {
-	background-color:			rgba (0,0,0, 0.9);
 	background-color:			@theme_bg_color;
+	background-color:			rgba (0,0,0, 0.8);
 }
 
 .xfce4-panel button
