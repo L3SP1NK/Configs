@@ -53,4 +53,4 @@ configuration
 	display-combi:			"";
 	display-keys:			"";
 }
-@theme "~/.config/rofi/dark.rasi"
+@theme "~/.config/rofi/wpg.rasi"

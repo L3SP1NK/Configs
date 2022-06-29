@@ -9,9 +9,9 @@
 
 .xfce4-panel
 {
+	background-color:			rgba (0,0,0, 0.9);
 	background-color:			@theme_bg_color;
-	background-color:			rgba (0,0,0, 0.8);
-	border-radius:				8px;
+	border-radius:				0px;
 }
 
 .xfce4-panel button
