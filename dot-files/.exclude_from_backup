@@ -4,7 +4,6 @@ boot
 dev
 #etc
 #home
-home/lespink/Pictures/
 initrd.img
 lib
 lib32
