@@ -1,25 +1,19 @@
 /****************/
 /*	XFCE panel	*/
 /****************/
-*
-{
-/*	color:						white;*/
-	text-shadow: 				none;
-}
-
 .xfce4-panel
 {
 	background-color:			rgba (0,0,0, 0.9);
 	background-color:			@theme_bg_color;
-	border-radius:				0px;
 }
 
 .xfce4-panel button
 {
 	font-weight:				normal;
-	border-radius:				8px;
+	border-radius:				0px;
 	padding:					4px;
 	color: 						@theme_fg_color;
+	border-radius:				6px;
 }
 
 /* On Hover */
@@ -102,3 +96,13 @@
 	border-width:				2px;
 	border-color:				@theme_bg_color;
 }
+
+/*
+*
+{
+	text-shadow: 				none;
+	radius:				        0px;
+	border-width:				0px;
+	border-radius:				0px;
+}
+*/
