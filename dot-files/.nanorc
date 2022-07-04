@@ -145,7 +145,7 @@ set rawsequences
 
 ## Do regular-expression searches by default.
 ## #Regular expressions are of the extended type (ERE).
-set regexp
+#set regexp
 
 ## Save a changed buffer automatically on exit; don't prompt.
 #set saveonexit
