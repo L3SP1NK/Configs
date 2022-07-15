@@ -111,7 +111,7 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-    padding: 32px;
+    padding: 16px;
     background-image: none;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
