@@ -107,3 +107,47 @@
 	border-radius:				0px;
 }
 */
+
+/* Xfwm4's alt-tab dialog, aka "tabwin" */
+#xfwm-tabwin
+{
+    padding: 32px;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 8px;
+    /* Set the application icon- and preview-size to 64px */
+    -XfwmTabwinWidget-icon-size: 128px;
+    -XfwmTabwinWidget-preview-size: 128px;
+    border-color: #1f1f1f;
+}
+
+#xfwm-tabwin button
+{
+    background-image: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+#xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
+{
+    background: rgba(255, 255, 255, 0.2);
+    background: @theme_selected_bg_color;
+}
+
+#xfwm-tabwin button:hover
+{
+    background: @theme_selected_bg_color;
+    transition-duration: 50ms;
+}
+
+#xfwm-tabwin .tabwin-app-grid button
+{
+    min-width: 96px;
+    min-height: 96px;
+}
