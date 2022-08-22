@@ -5,6 +5,7 @@ dev
 #etc
 #home
 home/lespink/Pictures
+home/lespink/.local/share/Steam/
 initrd.img
 lib
 lib32
