@@ -4,6 +4,7 @@
 .xfce4-panel
 {
 	background-color:			@theme_bg_color;
+	background-color:			rgba ( 0, 0, 0, 0.9 );
 	border-radius:				0px;
 }
 
@@ -14,7 +15,6 @@
 	padding:					4px;
 	color: 						@theme_fg_color;
 	border-radius:				6px;
-	background-color:			@theme_bg_color;
 }
 
 /* On Hover */
@@ -105,6 +105,10 @@
     padding:              8px;
 }
 
+/*************/
+/* ALT - TAB */
+/*************/
+
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
@@ -123,12 +127,12 @@
 #xfwm-tabwin button
 {
     background-image: none;
-    color: black;
+    color: inherit;
     font-weight: bold;
     text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
     text-shadow: none;
     border: 2px;
-    border-color: @theme_selected_bg_color;
+    border-color: #1f1f1f;
     border-radius: 6px;
     box-shadow: none;
 }

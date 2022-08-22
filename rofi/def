@@ -43,6 +43,10 @@ selected bg = #ec0101
 bg = 0d0d0d
 selected bg = #962ac3
 
+## Flat Remix GTK Orange
+bg = 0d0d0d
+selected bg = #fd7d00
+
 ## Dracula
 Background		#282a36
 Current Line	#44475a
