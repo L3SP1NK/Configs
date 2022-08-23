@@ -5,7 +5,7 @@
 * {
 	background-color:		#0d0d0d;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#fd7d00;
+	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
 	border-color:			#0d0d0d;
 }
