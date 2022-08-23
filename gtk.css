@@ -3,7 +3,9 @@
 /****************/
 .xfce4-panel
 {
+/*
 	background-color:			@theme_bg_color;
+*/
 	background-color:			rgba ( 0, 0, 0, 0.9 );
 	border-radius:				0px;
 }
@@ -35,7 +37,6 @@
 .xfce4-panel button:active,#sn-button:active
 {
 	background-color:			@theme_selected_bg_color;
-    color:                      black;
 }
 
 /* Change icon size */
