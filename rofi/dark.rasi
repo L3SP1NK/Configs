@@ -3,18 +3,19 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#0d0d0d;
+	background-color:		#000000;
 	foreground-color:		#ffffff;
 	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
 	border-color:			#0d0d0d;
+	border-color:			@selected-bg-color;
 }
 
 #window
 {
 	text-color:				@foreground-color;
-	border:					0;
-	border-radius:			8;
+	border:					4;
+	border-radius:			32;
 	padding:				16;
 	border-color:			@border-color;
 }
@@ -40,6 +41,7 @@
 
 #listview
 {
+    padding:                16;
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
@@ -47,8 +49,8 @@
 
 #element
 {
-	padding:				4;
-	border-radius:			4;
+	padding:				8;
+	border-radius:			8;
 }
 
 #element-text, element-icon
@@ -56,7 +58,7 @@
 	text-color:				inherit;
 	background-color:		inherit;
 	padding:				2;
-	size:					48;
+	size:					64;
 }
 
 #element.normal.normal
@@ -148,7 +150,6 @@
 	margin:                 0;
 	text-color:				@foreground-color;
 	background-color:		@background-color;
-	border-radius:			8;
 	padding:				8;
 	spacing:				0;
 }

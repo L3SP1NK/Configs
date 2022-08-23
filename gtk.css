@@ -13,10 +13,9 @@
 .xfce4-panel button
 {
 	font-weight:				normal;
-	border-radius:				0px;
 	padding:					4px;
 	color: 						@theme_fg_color;
-	border-radius:				6px;
+	border-radius:				8px;
 }
 
 /* On Hover */
@@ -28,9 +27,11 @@
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
+/*
 	background-color:			@theme_selected_bg_color;
 	background-color:			rgba ( 255, 255, 255, 0.1 );
-	box-shadow:					inset 0px 0px 0px 0px @theme_selected_bg_color;
+*/
+	box-shadow:					inset 0px 0px 0px 4px @theme_selected_bg_color;
 }
 
 /* On click */
@@ -113,45 +114,44 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-    padding: 16px;
-    background-image: none;
-    background-color: @theme_bg_color;
-    color: inherit;
-    border-radius: 8px;
+	box-shadow:				        inset 0px 0px 0px 4px @theme_selected_bg_color;
+    padding:                        32px;
+    border-radius:                  32px;
     /* Set the application icon- and preview-size to 64px */
-    -XfwmTabwinWidget-icon-size: 128px;
+    -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
-    border: 2px;
-    border-color: @theme_selected_bg_color;
+    border-color:                   @theme_selected_bg_color;
+    background-color:               @theme_bg_color;
+	background-color:			    rgba ( 0, 0, 0, 0.9 );
+
 }
 
 #xfwm-tabwin button
 {
-    background-image: none;
-    color: inherit;
     font-weight: bold;
-    text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 8px rgba(0, 0, 0, 0.8);
     text-shadow: none;
-    border: 2px;
-    border-color: #1f1f1f;
-    border-radius: 6px;
-    box-shadow: none;
+    border-radius: 16px;
+    padding:            16px;
 }
 
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
 {
     background: rgba(255, 255, 255, 0.2);
     background: @theme_selected_bg_color;
+    box-shadow: none;
+    transition-duration: 500ms;
 }
 
 #xfwm-tabwin button:hover
 {
-    background: @theme_selected_bg_color;
-    transition-duration: 50ms;
+    background: rgba(255, 255, 255, 0.2);
+    transition-duration: 500ms;
 }
 
 #xfwm-tabwin .tabwin-app-grid button
 {
     min-width: 96px;
+    transition-duration: 500ms;
     min-height: 96px;
 }
