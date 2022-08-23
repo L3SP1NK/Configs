@@ -3,19 +3,20 @@
 /****************/
 .xfce4-panel
 {
-/*
 	background-color:			@theme_bg_color;
-*/
+/*
 	background-color:			rgba ( 0, 0, 0, 0.9 );
+*/
 	border-radius:				0px;
 }
 
 .xfce4-panel button
 {
+	background-color:			@theme_bg_color;
 	font-weight:				normal;
-	padding:					4px;
+	padding:					2px;
 	color: 						@theme_fg_color;
-	border-radius:				8px;
+	border-radius:				4px;
 }
 
 /* On Hover */
@@ -27,11 +28,11 @@
 /* On select */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-/*
 	background-color:			@theme_selected_bg_color;
+/*
 	background-color:			rgba ( 255, 255, 255, 0.1 );
 */
-	box-shadow:					inset 0px 0px 0px 4px @theme_selected_bg_color;
+	box-shadow:					inset 0px 0px 0px 0px @theme_selected_bg_color;
 }
 
 /* On click */
@@ -93,13 +94,13 @@
 {
 	background-color:			@theme_selected_bg_color;
 	color:						@theme_selected_fg_color;
-	border-radius:				8px;
+	border-radius:				4px;
 }
 
 #whiskermenu-window
 {
     padding:                    8px;
-    border-radius:        16px;
+    border-radius:              8px;
 }
 #whiskermenu-window border
 {
@@ -114,9 +115,9 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-	box-shadow:				        inset 0px 0px 0px 4px @theme_selected_bg_color;
-    padding:                        32px;
-    border-radius:                  32px;
+	box-shadow:				        inset 0px 0px 0px 2px @theme_selected_bg_color;
+    padding:                        16px;
+    border-radius:                  16px;
     /* Set the application icon- and preview-size to 64px */
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
