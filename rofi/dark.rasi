@@ -14,7 +14,7 @@
 #window
 {
 	text-color:				@foreground-color;
-	border:					2;
+	border:					3;
 	border-radius:			16;
 	padding:				4;
 	border-color:			@border-color;
@@ -31,7 +31,7 @@
 	border:					0;
 	border-radius:			0;
 	border-color:			@selected-bg-color;
-	padding:				0;
+	padding:				32;
 }
 
 #textbox
