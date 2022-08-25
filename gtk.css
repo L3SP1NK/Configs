@@ -35,11 +35,11 @@
 /*
 	background-color:			@theme_selected_bg_color;
 	box-shadow:					inset 0px -4px 0px 0px @theme_selected_bg_color;
+    box-shadow:                 0px -2px 0px 0px white inset;
 */
 	background-color:			rgba ( 255, 255, 255, 0.1 );
-    box-shadow:                 0px -2px 0px 0px white inset;
+    box-shadow:                 none;
 	color: 						@theme_fg_color;
-    padding:                    8px;
 }
 
 /* On click */

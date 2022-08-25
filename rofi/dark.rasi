@@ -16,7 +16,7 @@
 	text-color:				@foreground-color;
 	border:					1;
 	border-radius:			16;
-	padding:				4;
+	padding:				8;
 	border-color:			@border-color;
 }
 
@@ -37,6 +37,7 @@
 #textbox
 {
 	text-color:				@foreground-color;
+	padding:				32;
 }
 
 #listview
@@ -58,7 +59,7 @@
 	text-color:				inherit;
 	background-color:		inherit;
 	padding:				0;
-	size:					48;
+	size:					64;
 }
 
 #element.normal.normal
