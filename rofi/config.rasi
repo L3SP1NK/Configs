@@ -39,6 +39,7 @@ configuration
 	threads:				0;
 	scroll-method:			0;
 /*	fake-background:		"screenshot";*/
+	fake-transparency:		true;
 	window-format:			"{w}  {c}  {t}";
 	click-to-exit:			true;
 	max-history-size:		10;

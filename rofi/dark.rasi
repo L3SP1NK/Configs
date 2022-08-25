@@ -7,14 +7,14 @@
 	foreground-color:		#ffffff;
 	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
-	border-color:			#0d0d0d;
+	border-color:			#1f1f1f;
 	border-color:			@selected-bg-color;
 }
 
 #window
 {
 	text-color:				@foreground-color;
-	border:					3;
+	border:					1;
 	border-radius:			16;
 	padding:				4;
 	border-color:			@border-color;
