@@ -56,9 +56,8 @@
 
 #element-text, element-icon
 {
-	text-color:				inherit;
+	text-color:				@foreground-color;
 	background-color:		inherit;
-	padding:				0;
 	size:					64;
 }
 
@@ -161,7 +160,7 @@
 #prompt
 {
 	spacing:				0;
-	padding:				16;
+	padding:				0;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
@@ -169,7 +168,8 @@
 #inputbar
 {
 	children:				[ prompt,textbox-prompt-colon,entry,case-indicator ];
-    padding: 8px;
+    padding:                8px;
+    margin:                 24px;
 }
 
 #textbox-prompt-colon
