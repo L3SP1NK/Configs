@@ -11,6 +11,7 @@
 .xfce4-panel button
 {
 	border-radius:				8px;
+    padding:                    4px;
 }
 
 /* On Hover */
