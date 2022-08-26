@@ -148,7 +148,6 @@
 
 #entry
 {
-	margin:                 0;
 	background-color:		#ffffff1a;
 	text-color:				@foreground-color;
 	padding:				16;
@@ -163,6 +162,7 @@
 	padding:				0;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
+    padding:                16px;
 }
 
 #inputbar
