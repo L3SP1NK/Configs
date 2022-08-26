@@ -14,7 +14,7 @@
 #window
 {
 	text-color:				@foreground-color;
-	border:					1;
+	border:					0;
 	border-radius:			16;
 	padding:				8;
 	border-color:			@border-color;

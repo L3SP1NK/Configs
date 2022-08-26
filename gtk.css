@@ -3,22 +3,13 @@
 /****************/
 .xfce4-panel
 {
-/*
-	background-color:			@theme_bg_color;
-*/
 	background-color:			rgba ( 0, 0, 0, 0.9 );
-	border-radius:				0px;
+	font-weight:				normal;
 	color: 						@theme_fg_color;
 }
 
 .xfce4-panel button
 {
-/*
-	background-color:			@theme_bg_color;
-*/
-	font-weight:				normal;
-	padding:					6px;
-	color: 						@theme_fg_color;
 	border-radius:				8px;
 }
 
@@ -32,11 +23,6 @@
 /* On Active */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-/*
-	background-color:			@theme_selected_bg_color;
-	box-shadow:					inset 0px -4px 0px 0px @theme_selected_bg_color;
-    box-shadow:                 0px -2px 0px 0px white inset;
-*/
 	background-color:			rgba ( 255, 255, 255, 0.1 );
     box-shadow:                 none;
 	color: 						@theme_fg_color;
@@ -123,30 +109,28 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-	box-shadow:				        none;
     padding:                        8px;
     border-radius:                  16px;
     /* Set the application icon- and preview-size to 64px */
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
-    border-color:                   @theme_selected_bg_color;
-    background-color:               @theme_bg_color;
+    border-color:                   black;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
 }
 
 #xfwm-tabwin button
 {
-    font-weight: bold;
-    text-shadow: none;
-    border-radius: 8px;
-    padding:       16px;
+    font-weight:                    bold;
+    text-shadow:                    none;
+    border-radius:                  8px;
+    padding:                        16px;
 }
 
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
 {
-    background: @theme_selected_bg_color;
-    box-shadow: none;
-    transition-duration: 500ms;
+    background:                     @theme_selected_bg_color;
+    box-shadow:                     none;
+    transition-duration:            500ms;
 }
 
 #xfwm-tabwin button:hover
