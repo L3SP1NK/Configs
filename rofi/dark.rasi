@@ -7,14 +7,14 @@
 	foreground-color:		#ffffff;
 	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
-	border-color:			#1f1f1f;
 	border-color:			@selected-bg-color;
+	border-color:			#ffffff1a;
 }
 
 #window
 {
 	text-color:				@foreground-color;
-	border:					0;
+	border:					2;
 	border-radius:			16;
 	padding:				8;
 	border-color:			@border-color;
@@ -51,7 +51,7 @@
 #element
 {
 	padding:				8;
-	border-radius:			8;
+	border-radius:			16;
 }
 
 #element-text, element-icon
@@ -143,22 +143,26 @@
 #case-indicator
 {
 	spacing:				0;
-	text-color:				@foreground-color;
+    padding:                0;
+	text-color:				@background-color;
 }
 
 #entry
 {
 	margin:                 0;
+	background-color:		#ffffff1a;
 	text-color:				@foreground-color;
-	background-color:		@background-color;
-	padding:				8;
+	padding:				16;
 	spacing:				0;
+    border:                 0;
+    border-radius:          16;
 }
 
 #prompt
 {
 	spacing:				0;
-	padding:				8;
+	padding:				16;
+	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
 
