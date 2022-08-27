@@ -115,5 +115,6 @@ fi
 # Enables autocompletion of options for bashfuscator
 eval "$(/usr/bin/register-python-argcomplete3 bashfuscator)"
 
-## Display system information if connected through SSH.
+## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
+[[ ${TTY} == "/dev/tty1" ]] && neofetch
