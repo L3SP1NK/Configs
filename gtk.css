@@ -147,3 +147,60 @@
     transition-duration: 500ms;
     min-height: 96px;
 }
+
+
+/**********************/
+/* Workspace Switcher */
+/**********************/
+
+.xfce4-panel widget grid button.flat.toggle
+{
+/*
+    min-width: 24px;
+    border-style: none;
+*/
+}
+
+.xfce4-panel widget grid button.flat.toggle:hover,
+.xfce4-panel widget grid button.flat.toggle:checked
+{
+/*
+    color: white;
+*/
+}
+
+wnck-pager
+{
+/*
+    -gtk-icon-transform:    scale(0);
+    border-radius:          8px;
+    box-shadow:             none;
+*/
+}
+
+wnck-pager:selected
+{
+/*
+    box-shadow:             none;
+    background-color:       rgba(255,255,255,0.1);
+    box-shadow:             none;
+*/
+}
+
+wnck-pager:hover
+{
+/*
+    box-shadow:             none;
+    background-color:       gray;
+    box-shadow:             none;
+*/
+}
+
+#wnck-pager button
+{
+/*
+    -gtk-icon-transform:    scale(0);
+    border-radius:          8px;
+    box-shadow:             none;
+*/
+}
