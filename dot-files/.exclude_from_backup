@@ -4,9 +4,6 @@ boot
 dev
 #etc
 #home
-home/lespink/Pictures
-home/lespink/Downloads/Games
-home/lespink/.local/share/Steam/
 initrd.img
 lib
 lib32
@@ -25,3 +22,10 @@ tmp
 usr
 var
 vmlinuz
+
+home/lespink/Pictures
+home/lespink/Documents/Games
+home/lespink/Documents/4vera
+home/lespink/.local/share/Steam
+home/lespink/Documents/Watch-Later/
+home/lespink/Documents/Wifi/
