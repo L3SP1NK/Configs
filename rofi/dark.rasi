@@ -154,7 +154,9 @@
 	text-color:				@foreground-color;
 	padding:				16;
 	spacing:				0;
-    border:                 0;
+    border:                 4;
+    border-color:           @border-color;
+    border-color:           @selected-bg-color;
     border-radius:          16;
 }
 

@@ -36,7 +36,10 @@
 	color: 						@theme_fg_color;
 }
 
-/* Change icon size */
+/**************/
+/* Icons size */
+/**************/
+
 #pulseaudio-button image
 {
 	-gtk-icon-transform:		scale(0.8);
@@ -203,4 +206,10 @@ wnck-pager:hover
     border-radius:          8px;
     box-shadow:             none;
 */
+}
+
+
+#showdesktop-button
+{
+    -gtk-icon-transform:    scale(0);
 }
