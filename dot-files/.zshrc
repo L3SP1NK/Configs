@@ -118,3 +118,4 @@ PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %
 ## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
 [[ ${TTY} == "/dev/tty1" ]] && neofetch
+#[[ ${TERM} == "linux" ]] && neofetch
