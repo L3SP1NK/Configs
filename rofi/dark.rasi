@@ -4,6 +4,7 @@
  ***********************************************/
 * {
 	background-color:		#000000;
+	background-alt-color:   #0d0d0d;
 	foreground-color:		#ffffff;
 	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
@@ -16,14 +17,14 @@
 	text-color:				@foreground-color;
 	border:					4;
 	border-radius:			16;
-	padding:				8;
+	padding:				16;
 	border-color:			@border-color;
 }
 
 #mainbox
 {
+    padding:                0;
 	border:					0;
-	padding:				0;
 }
 
 #message
@@ -31,20 +32,19 @@
 	border:					0;
 	border-radius:			0;
 	border-color:			@selected-bg-color;
-	padding:				32;
+	padding:				0;
 }
 
 #textbox
 {
 	text-color:				@foreground-color;
-	padding:				32;
 	background-color:		rgba(255,0,0,0.5);
     border-radius:          8;
 }
 
 #listview
 {
-    padding:                16;
+	padding:				8 64 8 64;
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
@@ -52,15 +52,20 @@
 
 #element
 {
-	padding:				8;
+	padding:				8 64 8 64;
 	border-radius:			16;
 }
 
 #element-text, element-icon
 {
-	text-color:				@foreground-color;
 	background-color:		inherit;
 	size:					64;
+}
+
+#element-text
+{
+	text-color:				@foreground-color;
+    padding:                16;
 }
 
 #element.normal.normal
@@ -166,14 +171,14 @@
 	padding:				0;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
-    padding:                16px;
+    padding:                16;
 }
 
 #inputbar
 {
 	children:				[ prompt,textbox-prompt-colon,entry,case-indicator ];
-    padding:                8px;
-    margin:                 24px;
+    padding:                0;
+    margin:                 24;
 }
 
 #textbox-prompt-colon
