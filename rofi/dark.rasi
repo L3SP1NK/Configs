@@ -23,7 +23,7 @@
 
 #mainbox
 {
-    padding:                32;
+    padding:                0 0 16 0;
 }
 
 #message

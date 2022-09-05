@@ -113,7 +113,7 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-    padding:                        8px;
+    padding:                        32px;
     border-radius:                  16px;
     /* Set the application icon- and preview-size to 64px */
     -XfwmTabwinWidget-icon-size:    128px;
