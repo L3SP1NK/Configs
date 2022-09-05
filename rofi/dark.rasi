@@ -17,22 +17,18 @@
 	text-color:				@foreground-color;
 	border:					4;
 	border-radius:			16;
-	padding:				16;
 	border-color:			@border-color;
+    width:                  calc( 100% - 40em );
 }
 
 #mainbox
 {
-    padding:                0;
-	border:					0;
+    padding:                32;
 }
 
 #message
 {
-	border:					0;
-	border-radius:			0;
 	border-color:			@selected-bg-color;
-	padding:				0;
 }
 
 #textbox
@@ -40,11 +36,13 @@
 	text-color:				@foreground-color;
 	background-color:		rgba(255,0,0,0.5);
     border-radius:          8;
+	border-radius:			16;
+    padding:                32;
 }
 
 #listview
 {
-	padding:				8 64 8 64;
+	padding:				0 64 0 64;
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
@@ -52,20 +50,23 @@
 
 #element
 {
-	padding:				8 64 8 64;
 	border-radius:			16;
+	background-color:		inherit;
 }
 
-#element-text, element-icon
+#element-icon
 {
+	padding:				0 0 0 16;
 	background-color:		inherit;
-	size:					64;
+    size:                   64;
 }
 
 #element-text
 {
+	padding:				32 32 32 32;
+	background-color:		inherit;
 	text-color:				@foreground-color;
-    padding:                16;
+	background-color:		inherit;
 }
 
 #element.normal.normal
@@ -158,8 +159,6 @@
 	background-color:		#ffffff1a;
 	text-color:				@foreground-color;
 	padding:				16;
-	spacing:				0;
-    border:                 4;
     border-color:           @border-color;
     border-color:           @selected-bg-color;
     border-radius:          16;
@@ -167,7 +166,6 @@
 
 #prompt
 {
-	spacing:				0;
 	padding:				0;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
@@ -178,11 +176,10 @@
 {
 	children:				[ prompt,textbox-prompt-colon,entry,case-indicator ];
     padding:                0;
-    margin:                 24;
+    padding:                32;
 }
 
 #textbox-prompt-colon
 {
 	expand:					false;
-	str:					"";
 }
