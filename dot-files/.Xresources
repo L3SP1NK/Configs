@@ -80,7 +80,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 XTerm*faceName: jetbrains mono
-XTerm*faceSize: 13
+XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
@@ -119,4 +119,4 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 
 Sxiv.background: #000000
 Sxiv.foreground: #ffffff
-Sxiv.font: jetbrains mono-13
+Sxiv.font: jetbrains mono-14

@@ -222,9 +222,9 @@ set stripecolor yellow
 set numbercolor white
 set keycolor cyan
 set functioncolor green
-set minicolor italic,white
-set promptcolor bold,white,magenta
-set scrollercolor bold,white
+set minicolor italic,black,grey
+set promptcolor black,magenta
+set scrollercolor grey
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
@@ -307,6 +307,9 @@ bind ^H speller main
 bind ^U unindent all
 bind ^L linter execute
 bind ^E execute main
+
+bind F7 recordmacro all
+bind F8 runmacro all
 
 #bind M-X flipnewbuffer all
 #bind ^D findprevious all
