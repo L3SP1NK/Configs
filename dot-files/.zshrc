@@ -113,7 +113,9 @@ esac
 
 [[ ${EUID} -eq "0" ]] && NAME_COLOR="red" || NAME_COLOR="green"
 ## user@host:~ % ( "%" red if the last command failed)
-PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+#PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+## user@host ~ % ( "%" red if the last command failed)
+PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f %F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
 ## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
