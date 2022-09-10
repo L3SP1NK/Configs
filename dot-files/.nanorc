@@ -214,9 +214,9 @@ set zap
 
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
-set titlecolor bold,white,blue
-set statuscolor bold,white,green
-set errorcolor bold,white,red
+set titlecolor black,blue
+set statuscolor black,green
+set errorcolor black,red
 set selectedcolor bold,white,blue
 set stripecolor bold,black,yellow
 set numbercolor white
@@ -238,7 +238,7 @@ include "/usr/share/nanorc/*.nanorc"
 #include "/usr/share/nano/html.nanorc"
 #include "/usr/share/nano/python.nanorc"
 #include "/usr/share/nano/sh.nanorc"
-include "/home/lespink/.scripts/sh.nanorc"
+include "/opt/mygit/Configs/sh.nanorc"
 
 ## In /usr/share/nano/extra/ you can find some syntaxes that are
 ## specific for certain distros or for some less common languages.

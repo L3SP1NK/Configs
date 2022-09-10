@@ -115,9 +115,9 @@
 {
     padding:                        32px;
     border-radius:                  16px;
-    /* Set the application icon- and preview-size to 64px */
-    -XfwmTabwinWidget-icon-size:    128px;
-    -XfwmTabwinWidget-preview-size: 128px;
+    -XfwmTabwinWidget-icon-size:    512px;
+    -XfwmTabwinWidget-preview-size: 256px;
+    -XfwmTabwinWidget-background-color: black;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
     border-color:                   black;
     box-shadow:				        inset 0px 0px 0px 4px rgba ( 255, 255, 255, 0.1 );
