@@ -115,7 +115,7 @@
 {
     padding:                        32px;
     border-radius:                  16px;
-    -XfwmTabwinWidget-icon-size:    512px;
+    -XfwmTabwinWidget-icon-size:    256px;
     -XfwmTabwinWidget-preview-size: 256px;
     -XfwmTabwinWidget-background-color: black;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
