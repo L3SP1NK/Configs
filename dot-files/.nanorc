@@ -204,7 +204,7 @@ set whitespace "→·"
 ## The characters (besides alphanumeric ones) that should be considered
 ## as parts of words.  This option does not have a default value.  When
 ## set, it overrides option 'set wordbounds'.
-#set wordchars "<_>."
+#set wordchars "<_>.[]{}()/\"'$&"
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead
 ## of a single character, and without affecting the cutbuffer).
@@ -238,6 +238,8 @@ include "/usr/share/nanorc/*.nanorc"
 #include "/usr/share/nano/html.nanorc"
 #include "/usr/share/nano/python.nanorc"
 #include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/html.nanorc"
 include "/opt/mygit/Configs/sh.nanorc"
 
 ## In /usr/share/nano/extra/ you can find some syntaxes that are
