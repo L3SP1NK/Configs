@@ -6,6 +6,7 @@
 	background-color:			rgba ( 0, 0, 0, 0.9 );
 	font-weight:				normal;
 	color: 						@theme_fg_color;
+    margin:                     4px;
 }
 
 .xfce4-panel button
