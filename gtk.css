@@ -5,21 +5,22 @@
 {
 	background-color:			rgba ( 0, 0, 0, 0.9 );
 	font-weight:				normal;
-	color: 						@theme_fg_color;
+	color: 						white;
     margin:                     4px;
 }
 
 .xfce4-panel button
 {
 	border-radius:				8px;
+	font-weight:				normal;
     padding:                    4px;
+	color: 						white;
 }
 
 /* On Hover */
 .xfce4-panel button:hover
 {
 	background-color:			rgba ( 255, 255, 255, 0.05 );
-	color: 						@theme_fg_color;
 }
 
 /* On Active */
@@ -27,7 +28,6 @@
 {
 	background-color:			rgba ( 255, 255, 255, 0.1 );
     box-shadow:                 none;
-	color: 						@theme_fg_color;
 }
 
 /* On click */
@@ -119,6 +119,7 @@
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
     -XfwmTabwinWidget-background-color: black;
+    color:                          white;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
     border-color:                   black;
     box-shadow:				        inset 0px 0px 0px 4px rgba ( 255, 255, 255, 0.1 );
@@ -134,6 +135,7 @@
 
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
 {
+    color:white;
     background:                     @theme_selected_bg_color;
     box-shadow:                     none;
     transition-duration:            500ms;
@@ -141,12 +143,14 @@
 
 #xfwm-tabwin button:hover
 {
+    color:white;
     background: rgba(255, 255, 255, 0.1);
     transition-duration: 500ms;
 }
 
 #xfwm-tabwin .tabwin-app-grid button
 {
+    color:white;
     min-width: 96px;
     transition-duration: 500ms;
     min-height: 96px;
@@ -159,54 +163,62 @@
 
 .xfce4-panel widget grid button.flat.toggle
 {
-/*
+
     min-width: 24px;
     border-style: none;
-*/
+    background-color:    @theme_selected_bg_color;
+    color:white;
+    font-weight:normal;
 }
 
 .xfce4-panel widget grid button.flat.toggle:hover,
 .xfce4-panel widget grid button.flat.toggle:checked
 {
-/*
-    color: white;
-*/
+    min-width: 24px;
+    border-style: none;
+    background-color:    @theme_selected_bg_color;
+    color:white;
+    font-weight:normal;
+    color:white;
 }
 
 wnck-pager
 {
-/*
+    color:white;
     -gtk-icon-transform:    scale(0);
     border-radius:          8px;
     box-shadow:             none;
-*/
+
 }
 
 wnck-pager:selected
 {
-/*
+
+    color:white;
     box-shadow:             none;
     background-color:       rgba(255,255,255,0.1);
     box-shadow:             none;
-*/
+
 }
 
 wnck-pager:hover
 {
-/*
+
+    color:white;
     box-shadow:             none;
     background-color:       gray;
     box-shadow:             none;
-*/
+
 }
 
 #wnck-pager button
 {
-/*
+
+    color:white;
     -gtk-icon-transform:    scale(0);
     border-radius:          8px;
     box-shadow:             none;
-*/
+
 }
 
 
