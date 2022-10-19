@@ -4,17 +4,17 @@
  ***********************************************/
 * {
 	background-color:		#000000;
-	background-alt-color:   #FFFFFF;
+	background-alt-color:   #1f1f1f;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#ec0101;
+	selected-bg-color:		#2777ff;
 	selected-fg-color:		#ffffff;
-	border-color:			@foreground-color;
+	border-color:			@background-alt-color;
 }
 
 #window
 {
 	text-color:				@foreground-color;
-	border:					0;
+	border:					4;
 	border-radius:			16;
 	border-color:			@border-color;
     width:                  calc( 100% - 40em );

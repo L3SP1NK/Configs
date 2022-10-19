@@ -3,7 +3,7 @@
 /****************/
 .xfce4-panel
 {
-	background-color:			rgba ( 0, 0, 0, 0.9 );
+	background-color:			rgba ( 0, 0, 0, 0.8 );
 	font-weight:				normal;
 	color: 						white;
     margin:                     4px;
@@ -161,6 +161,7 @@
 /* Workspace Switcher */
 /**********************/
 
+/*
 .xfce4-panel widget grid button.flat.toggle
 {
 
@@ -181,6 +182,7 @@
     font-weight:normal;
     color:white;
 }
+
 
 wnck-pager
 {
@@ -219,8 +221,8 @@ wnck-pager:hover
     border-radius:          8px;
     box-shadow:             none;
 
-}
-
+#}
+*/
 
 #showdesktop-button
 {
