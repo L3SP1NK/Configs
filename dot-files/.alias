@@ -41,3 +41,4 @@ alias netstats="sudo netstat --tcp --udp -lapute | c"
 alias cal="calcurse"
 alias tg="telegram-cli"
 alias yt="clear&&ytfzf -lstc Y"
+alias pmx='pulsemixer'
