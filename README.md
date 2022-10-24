@@ -1,2 +1,2 @@
 ## Configs
-Configuration/dotfiles.
+My personal Configuration/dotfiles.
