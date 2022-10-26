@@ -3,10 +3,10 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#202020;
-	background-alt-color:   #191919;
+	background-color:		#000000;
+	background-alt-color:   #000000;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#ffffff;
+	selected-bg-color:		#2777ff;
 	selected-fg-color:		#000000;
 	border-color:			@background-alt-color;
 }
@@ -14,7 +14,7 @@
 #window
 {
 	text-color:				@foreground-color;
-	border:					4;
+	border:					1;
 	border-radius:			16;
 	border-color:			@border-color;
     width:                  calc( 100% - 40em );
@@ -64,7 +64,7 @@
 {
 	padding:				32 32 32 32;
 	background-color:		inherit;
-	text-color:				inherit;
+	text-color:				white;
 }
 
 #element.normal.normal

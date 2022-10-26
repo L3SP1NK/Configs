@@ -3,8 +3,8 @@
 /****************/
 .xfce4-panel
 {
-	background-color:			rgba ( 0, 0, 0, 0.9 );
 	background-color:			@theme_bg_color;
+	background-color:			rgba(0,0,0,0.9);
 	font-weight:				normal;
 	color: 						@theme_fg_color;
     font-size:                  32px;
@@ -17,7 +17,7 @@
 	font-weight:				normal;
     padding:                    4px;
     font-size:                  19px;
-	color: 						white;
+	color: 						@theme_fg_color;
 }
 
 /* On Hover */
@@ -31,6 +31,7 @@
 {
 	background-color:			rgba ( 255, 255, 255, 0.1 );
     box-shadow:                 none;
+    color:                      @theme_fg_color;
 }
 
 /* On click */
@@ -122,10 +123,11 @@
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
     -XfwmTabwinWidget-background-color: black;
-    color:                          @theme_selected_bg_color;
+    color:                          @theme_fg_color;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
-    border-color:                   @theme_selected_bg_color;
-    box-shadow:				        inset 0px 0px 0px 4px rgba ( 255, 255, 255, 0.1 );
+    border-color:                   @theme_bg_color;
+    border-color:                   black;
+    box-shadow:				        inset 0px 0px 0px 0px black;
 	background-color:			    @theme_bg_color;
 }
 
