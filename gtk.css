@@ -7,7 +7,6 @@
 	background-color:			rgba(0,0,0,0.9);
 	font-weight:				normal;
 	color: 						@theme_fg_color;
-    font-size:                  32px;
     margin:                     4px;
 }
 
@@ -16,7 +15,6 @@
 	border-radius:				8px;
 	font-weight:				normal;
     padding:                    4px;
-    font-size:                  19px;
 	color: 						@theme_fg_color;
 }
 

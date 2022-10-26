@@ -3,9 +3,9 @@ configuration
 	modi:					"window,run,ssh,drun";
 	font:					"Roboto 16";
 	location:				0;
-	yoffset:				0;
+	yoffset:				-200;
 	xoffset:				0;
-	fixed-num-lines:		true;
+	fixed-num-lines:		false;
 	show-icons:				true;
 	icon-theme:				"Papirus-Dark";
 	terminal:				"rofi-sensible-terminal";
