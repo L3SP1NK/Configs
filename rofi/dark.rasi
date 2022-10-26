@@ -3,11 +3,11 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#000000;
-	background-alt-color:   #1f1f1f;
+	background-color:		#202020;
+	background-alt-color:   #191919;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#2777ff;
-	selected-fg-color:		#ffffff;
+	selected-bg-color:		#ffffff;
+	selected-fg-color:		#000000;
 	border-color:			@background-alt-color;
 }
 
@@ -32,7 +32,7 @@
 
 #textbox
 {
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 	background-color:		rgba(255,0,0,0.5);
     border-radius:          8;
 	border-radius:			16;
@@ -64,8 +64,7 @@
 {
 	padding:				32 32 32 32;
 	background-color:		inherit;
-	text-color:				@foreground-color;
-	background-color:		inherit;
+	text-color:				inherit;
 }
 
 #element.normal.normal
@@ -76,13 +75,13 @@
 #element.normal.urgent
 {
 	background-color:		@selected-bg-color;
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 }
 
 #element.normal.active
 {
 	background-color:		@selected-bg-color;
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 }
 
 #element.selected.normal
@@ -100,7 +99,7 @@
 #element.selected.active
 {
 	background-color:		@selected-bg-color;
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 }
 
 #element.alternate.normal
@@ -111,13 +110,13 @@
 #element.alternate.urgent
 {
 	background-color:		@selected-bg-color;
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 }
 
 #element.alternate.active
 {
 	background-color:		@selected-bg-color;
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 }
 
 #mode-switcher
@@ -131,11 +130,12 @@
 {
 	spacing:				0;
 	color:					@background-color;
+	text-color:				@selected-fg-color;
 }
 
 #button.selected
 {
-	text-color:				@foreground-color;
+	text-color:				@selected-fg-color;
 	background-color:		@selected-bg-color;
 }
 

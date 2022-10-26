@@ -4,8 +4,10 @@
 .xfce4-panel
 {
 	background-color:			rgba ( 0, 0, 0, 0.9 );
+	background-color:			@theme_bg_color;
 	font-weight:				normal;
-	color: 						white;
+	color: 						@theme_fg_color;
+    font-size:                  32px;
     margin:                     4px;
 }
 
@@ -14,6 +16,7 @@
 	border-radius:				8px;
 	font-weight:				normal;
     padding:                    4px;
+    font-size:                  19px;
 	color: 						white;
 }
 
@@ -119,15 +122,16 @@
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
     -XfwmTabwinWidget-background-color: black;
-    color:                          white;
+    color:                          @theme_selected_bg_color;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
-    border-color:                   black;
+    border-color:                   @theme_selected_bg_color;
     box-shadow:				        inset 0px 0px 0px 4px rgba ( 255, 255, 255, 0.1 );
+	background-color:			    @theme_bg_color;
 }
 
 #xfwm-tabwin button
 {
-    font-weight:                    bold;
+    font-weight:                    normal;
     text-shadow:                    none;
     border-radius:                  8px;
     padding:                        16px;
@@ -135,7 +139,8 @@
 
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
 {
-    color:white;
+    color:                          @theme_selected_fg_color;
+    font-weight:                    normal;
     background:                     @theme_selected_bg_color;
     box-shadow:                     none;
     transition-duration:            500ms;
