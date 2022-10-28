@@ -135,8 +135,8 @@ border-radius:                  16px;
 	background-color:			    rgba ( 0, 0, 0, 0.9 );
     border-color:                   @theme_bg_color;
     border-color:                   black;
-    box-shadow:				        inset 0px 0px 0px 0px black;
-	background-color:			    @theme_bg_color;
+    box-shadow:				        inset 0px 0px 0px 2px #1f1f1f;
+	background-color:			    black;
 }
 
 #xfwm-tabwin button

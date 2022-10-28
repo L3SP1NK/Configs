@@ -4,7 +4,7 @@
  ***********************************************/
 * {
 	background-color:		#000000;
-	background-alt-color:   #000000;
+	background-alt-color:   #1f1f1f;
 	foreground-color:		#ffffff;
 	selected-bg-color:		#1f1f1f;
 	selected-fg-color:		#000000;
@@ -14,7 +14,7 @@
 #window
 {
 	text-color:				@foreground-color;
-	border:					1;
+	border:					2;
 	border-radius:			16;
 	border-color:			@border-color;
     width:                  calc( 100% - 40em );
