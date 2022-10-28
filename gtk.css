@@ -5,7 +5,8 @@
 {
 	background-color:			@theme_bg_color;
 	background-color:			rgba(0,0,0,0.6);
-	border-radius:                  16px;
+	border-top-left-radius:     16px;
+	border-bottom-left-radius:	16px;
 }
 
 
