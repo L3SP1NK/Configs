@@ -1,6 +1,15 @@
 /****************/
 /*	XFCE panel	*/
 /****************/
+.xfce4-panel.deskbar
+{
+	background-color:			@theme_bg_color;
+	background-color:			rgba(0,0,0,0.9);
+border-radius:                  16px;
+}
+
+
+
 .xfce4-panel
 {
 	background-color:			@theme_bg_color;
@@ -83,11 +92,12 @@
 	-gtk-icon-transform:		scale(0.8);
 }
 
+/*
 #showdesktop-button image
 {
 	-gtk-icon-transform:		scale(0.0);
 }
-
+*/
 /********************/
 /*	Whisker Menu	*/
 /********************/
