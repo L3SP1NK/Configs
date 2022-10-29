@@ -162,7 +162,7 @@ set showcursor
 ## will jump to that beginning (either forwards or backwards).  If the
 ## cursor is already at that position, it will jump to the true start
 ## of the line (the left edge).
-#set smarthome
+set smarthome
 
 ## Spread overlong lines over multiple screen lines.
 #set softwrap
