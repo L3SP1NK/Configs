@@ -102,7 +102,7 @@ set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
-#set multibuffer
+set multibuffer
 
 ## Don't convert files from DOS/Mac format.
 #set noconvert
