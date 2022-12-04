@@ -17,7 +17,6 @@
 	border:					2;
 	border-radius:			16;
 	border-color:			@border-color;
-    width:                  calc( 100% - 40em );
     padding:                32;
 }
 
