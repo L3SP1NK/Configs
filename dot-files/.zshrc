@@ -118,6 +118,6 @@ esac
 PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f %F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
 ## Display system information if connected through SSH or /dev/tty1
-[[ ${SSH_CONNECTION} ]] && neofetch
-[[ ${TTY} == "/dev/tty1" ]] && neofetch
+[[ ${SSH_CONNECTION} ]] && {clear;neofetch;}
+[[ ${TTY} == "/dev/tty1" ]] && {clear;neofetch;}
 #[[ ${TERM} == "linux" ]] && neofetch
