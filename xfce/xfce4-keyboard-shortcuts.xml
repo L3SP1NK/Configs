@@ -35,11 +35,11 @@
       <property name="&lt;Super&gt;v" type="string" value="xfce4-popup-clipman"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Escape" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Super&gt;f" type="string" value="thunar"/>
-      <property name="&lt;Super&gt;comma" type="string" value="emoji_select"/>
       <property name="&lt;Super&gt;s" type="string" value="web_search"/>
       <property name="&lt;Super&gt;r" type="string" value="genstring"/>
-      <property name="Print" type="string" value="xfce4-screenshooter -crs /home/lespink//Pictures/Screenshot/"/>
       <property name="&lt;Super&gt;c" type="string" value="gpick -pso"/>
+      <property name="Print" type="string" value="xfce4-screenshooter -r"/>
+      <property name="&lt;Super&gt;eacute" type="string" value="emoji_select"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
