@@ -17,7 +17,7 @@
 	background-color:			rgba(0,0,0,0.8);
 	font-weight:				normal;
 	color: 						@theme_fg_color;
-    margin:                     6px;
+    margin:                     16px;
 }
 
 .xfce4-panel button
@@ -60,7 +60,7 @@
 
 #XfcePanelWindow image
 {
-	-gtk-icon-transform:		scale(1.2);
+	-gtk-icon-transform:		scale(0.8);
 }
 
 #xfce4-notification-plugin image
