@@ -17,7 +17,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-#	zsh-navigation-tools
+	zsh-navigation-tools
+	zsh-completions
 	command-not-found
 #    fzf
 )
