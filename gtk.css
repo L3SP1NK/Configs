@@ -4,7 +4,6 @@
 .xfce4-panel.deskbar
 {
 	background-color:			@theme_bg_color;
-	background-color:			rgba(0,0,0,0.6);
 	border-top-left-radius:     16px;
 	border-bottom-left-radius:	16px;
 	padding:					16px;
@@ -14,7 +13,6 @@
 
 .xfce4-panel
 {
-	background-color:			rgba(0,0,0,0.8);
 	font-weight:				normal;
 	color: 						@theme_fg_color;
     margin:                     16px;

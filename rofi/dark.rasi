@@ -3,11 +3,11 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#000000;
-	background-alt-color:   #1f1f1f;
-	foreground-color:		#ffffff;
-	selected-bg-color:		#1f1f1f;
-	selected-fg-color:		#000000;
+	background-color:		#ffffff;
+	background-alt-color:		#1f1f1f;
+	foreground-color:		#000000;
+	selected-bg-color:		#15a6f0;
+	selected-fg-color:		#ffffff;
 	border-color:			@background-alt-color;
 }
 
