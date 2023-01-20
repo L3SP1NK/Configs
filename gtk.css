@@ -129,13 +129,11 @@
     border-radius:                  16px;
     -XfwmTabwinWidget-icon-size:    128px;
     -XfwmTabwinWidget-preview-size: 128px;
-    -XfwmTabwinWidget-background-color: black;
+    -XfwmTabwinWidget-background-color: @theme_bg_color;
     color:                          @theme_fg_color;
-	background-color:			    rgba ( 0, 0, 0, 0.9 );
+	background-color:			    @theme_bg_color;
     border-color:                   @theme_bg_color;
-    border-color:                   black;
     box-shadow:				        inset 0px 0px 0px 2px #1f1f1f;
-	background-color:			    black;
 }
 
 #xfwm-tabwin button
