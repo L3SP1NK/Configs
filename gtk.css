@@ -29,22 +29,22 @@
 /* On Hover */
 .xfce4-panel button:hover
 {
-	background-color:			rgba ( 255, 255, 255, 0.05 );
+	background-color:			rgba ( 0, 0, 0, 0.25 );
 }
 
 /* On Active */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-	background-color:			rgba ( 255, 255, 255, 0.1 );
     box-shadow:                 none;
     color:                      @theme_fg_color;
+	background-color:			rgba ( 0, 0, 0, 0.1 );
 }
 
 /* On click */
 .xfce4-panel button:active,#sn-button:active
 {
-	background-color:			@theme_selected_bg_color;
 	color: 						@theme_fg_color;
+	background-color:			@theme_selected_bg_color;
 }
 
 /**************/
