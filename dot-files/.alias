@@ -42,3 +42,4 @@ alias cal="calcurse"
 alias tg="telegram-cli"
 alias yt="clear&&ytfzf -lstc Y"
 alias pmx='pulsemixer'
+alias rtop='radeontop -cT'
