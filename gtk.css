@@ -13,15 +13,19 @@
 
 .xfce4-panel
 {
-	font-weight:				normal;
+	background-color:			@theme_bg_color;
+	foreground-color:			@theme_fg_color;
 	color: 						@theme_fg_color;
+	font-weight:				normal;
     margin:                     16px;
 }
 
 .xfce4-panel button
 {
+	background-color:			@theme_bg_color;
+	border-top-left-radius:     16px;
 	border-radius:				8px;
-	font-weight:				bold;
+	font-weight:				normal;
     padding:                    4px;
 	color: 						@theme_fg_color;
 }
