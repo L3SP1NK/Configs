@@ -4,8 +4,8 @@
 .xfce4-panel.deskbar
 {
 	background-color:			@theme_bg_color;
-	border-top-left-radius:     16px;
-	border-bottom-left-radius:	16px;
+	color:						@theme_fg_color;
+	border-radius:				16px;
 	padding:					16px;
 }
 
@@ -14,16 +14,14 @@
 .xfce4-panel
 {
 	background-color:			@theme_bg_color;
-	foreground-color:			@theme_fg_color;
 	color: 						@theme_fg_color;
 	font-weight:				normal;
     margin:                     16px;
+	background-color:			rgba(0,0,0,0.9);
 }
 
 .xfce4-panel button
 {
-	background-color:			@theme_bg_color;
-	border-top-left-radius:     16px;
 	border-radius:				8px;
 	font-weight:				normal;
     padding:                    4px;
@@ -57,7 +55,7 @@
 
 #pulseaudio-button image
 {
-	-gtk-icon-transform:		scale(0.8);
+	-gtk-icon-transform:		scale(0.6);
 }
 
 #XfcePanelWindow image
