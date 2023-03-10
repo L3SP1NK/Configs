@@ -159,11 +159,12 @@
     border-color:           @border-color;
     border-color:           @selected-bg-color;
     border-radius:          16;
-	padding:				16;
+	margin:					16;
 }
 
 #prompt
 {
+	padding:				16;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
 }

@@ -223,7 +223,7 @@ set stripecolor bold,black,magenta
 set numbercolor white
 set keycolor bold,black,cyan
 set functioncolor green
-set minicolor italic,white,blue
+set minicolor bold,italic,white,blue
 set promptcolor bold,white,blue
 set scrollercolor white
 
