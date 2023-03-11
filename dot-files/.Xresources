@@ -123,3 +123,30 @@ Sxiv.font: IBM 3270-16
 
 Xcursor.theme: Simp1e
 Xcursor.size: 48px
+
+xclock*foreground:  black
+xclock*background:  #000000
+xclock*highlight:	black
+xclock*hands:		white
+xclock*hourColor:   white
+xclock*secondColor: red
+xclock*minuteColor: white
+xclock*majorColor:  white
+xclock*minorColor:  grey
+xclock*interval:	1
+xclock*render:		1
+xclock*chime:		1
+xclock*twentyfour:	1
+xclock*sharp:		0
+xclock*analog:		1
+xclock*buffer:		1
+xclock*padding:		32
+xclock*update:		1
+
+
+Clock*Background:	black
+Clock*BorderColor:	black
+Clock*hour:			white
+Clock*jewel:		red
+Clock*minute:		white
+Clock*second:		white
