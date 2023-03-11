@@ -6,7 +6,7 @@
 	background-color:		#000000;
 	background-alt-color:	#1f1f1f;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#2777ff;
+	selected-bg-color:		#1f1f1f;
 	selected-fg-color:		#ffffff;
 	border-color:			@background-alt-color;
 }

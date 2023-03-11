@@ -1,0 +1,83 @@
+ctrl + q
+	xdotool getactivewindow windowkill
+
+mod4 + Down
+	xdotool getactivewindow windowminimize
+
+ctrl + mod4 + 1
+	xdotool getactivewindow set_desktop_for_window 0
+
+ctrl + mod4 + 2
+	xdotool getactivewindow set_desktop_for_window 1
+
+ctrl + mod4 + 3
+	xdotool getactivewindow set_desktop_for_window 2
+
+ctrl + mod4 + 4
+	xdotool getactivewindow set_desktop_for_window 3
+
+ctrl + mod4 + 5
+	xdotool getactivewindow set_desktop_for_window 4
+
+ctrl + mod4 + 6
+	xdotool getactivewindow set_desktop_for_window 5
+
+ctrl + mod4 + 7
+	xdotool getactivewindow set_desktop_for_window 6
+
+ctrl + mod4 + 8
+	xdotool getactivewindow set_desktop_for_window 7
+
+ctrl + mod4 + 9
+	xdotool getactivewindow set_desktop_for_window 8
+
+alt + Tab
+	rofi -show window
+
+ctrl + alt + BackSpace
+	xrefresh
+
+Print
+	xfce4-screenshooter -r
+
+super + d
+	wmctrl -k on
+
+ctrl + Escape
+	rofi -show drun
+
+ctrl + alt + t
+	x-terminal-emulator
+
+ctrl + alt + Delete
+	slock
+
+super + e
+	thunar
+
+ctrl + alt + 1
+	wmctrl -s 0
+
+ctrl + alt + 2
+	wmctrl -s 1
+
+ctrl + alt + 3
+	wmctrl -s 2
+
+ctrl + alt + 4
+	wmctrl -s 3
+
+ctrl + alt + 5
+	wmctrl -s 4
+
+ctrl + alt + 6
+	wmctrl -s 5
+
+ctrl + alt + 7
+	wmctrl -s 6
+
+ctrl + alt + 8
+	wmctrl -s 7
+
+ctrl + alt + 9
+	wmctrl -s 8
