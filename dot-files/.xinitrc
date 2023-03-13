@@ -9,6 +9,16 @@ startX(){
 		xrdb -merge -load ${HOME}/.Xresources&
 	fi
 
+	##################
+	## SOUND SERVER ##
+	##################
+
+	if which pulseaudio>/dev/null;then
+		if which pasystray>/dev/null;then
+			pasystray&
+		fi
+	fi
+
 	################
 	## DESKTOP BG ##
 	################
@@ -84,8 +94,9 @@ startX(){
 				echo "slstatus not found!"
 			fi
 
-			slstatus&
-			exec dwm>~/.dwm.log
+			#slstatus&
+			exec dwm\
+				>>~/.dwm.log
 
 		}
 
@@ -107,7 +118,7 @@ startX(){
 				--app polybar --dock\
 				--numvdesks 6\
 				--fn 'IBM 3270'\
-				>~/.evilwm.log
+					>>~/.evilwm.log
 		}
 
 		startDwm
