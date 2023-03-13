@@ -220,7 +220,7 @@ set statuscolor black,green
 set errorcolor black,red
 set selectedcolor bold,white,blue
 set stripecolor bold,black,magenta
-set numbercolor white
+set numbercolor bold,italic,black
 set keycolor bold,black,cyan
 set functioncolor green
 set minicolor bold,italic,white,blue

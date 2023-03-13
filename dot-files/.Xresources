@@ -79,8 +79,8 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: IBM 3270
-XTerm*faceSize: 16
+XTerm*faceName: jetbrains mono nf
+XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
@@ -119,7 +119,7 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 
 Sxiv.background: #000000
 Sxiv.foreground: #ffffff
-Sxiv.font: IBM 3270-16
+Sxiv.font: jetbrains mono nf-14
 
 Xcursor.theme: Simp1e
 Xcursor.size: 48px
