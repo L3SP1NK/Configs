@@ -9,9 +9,20 @@ startX(){
 		xrdb -merge -load ${HOME}/.Xresources&
 	fi
 
-	##################
-	## SOUND SERVER ##
-	##################
+	#############
+	## SYSTRAY ##
+	#############
+
+	if apropos geoclue>/dev/null;then
+		if which redshift>/dev/null;then
+			/usr/libexec/geoclue-2.0/demos/agent&
+			redshift-gtk&
+		fi
+	fi
+
+	if which nm-applet>/dev/null;then
+		nm-applet&
+	fi
 
 	if which pulseaudio>/dev/null;then
 		if which pasystray>/dev/null;then
@@ -94,7 +105,7 @@ startX(){
 				echo "slstatus not found!"
 			fi
 
-			#slstatus&
+			slstatus&
 			exec dwm\
 				>>~/.dwm.log
 
