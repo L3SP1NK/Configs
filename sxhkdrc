@@ -1,8 +1,14 @@
-ctrl + q
-	xdotool getactivewindow windowkill
+mod4 + v
+	xfce4-popup-clipman
 
-mod4 + Down
-	xdotool getactivewindow windowminimize
+mod4 + s
+	web_search
+
+#ctrl + q
+#	xdotool getactivewindow windowkill
+
+#mod4 + Down
+#	xdotool getactivewindow windowminimize
 
 ctrl + mod4 + 1
 	xdotool getactivewindow set_desktop_for_window 0
@@ -31,8 +37,8 @@ ctrl + mod4 + 8
 ctrl + mod4 + 9
 	xdotool getactivewindow set_desktop_for_window 8
 
-alt + Tab
-	rofi -show window
+#alt + Tab
+#	rofi -show window
 
 ctrl + alt + BackSpace
 	xrefresh
@@ -50,10 +56,13 @@ ctrl + alt + t
 	x-terminal-emulator
 
 ctrl + alt + Delete
-	slock
+	xsecurelock
 
 super + e
-	thunar
+	pcmanfm
+
+super + x
+	emixer
 
 ctrl + alt + 1
 	wmctrl -s 0

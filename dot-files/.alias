@@ -23,6 +23,12 @@ alias tshark='tshark --color'
 alias stress="stress -c $(nproc)"
 alias make="make -j $(nproc)"
 
+## Gum alias.
+alias gump='gum pager'
+alias gumc='gum choose'
+alias gumf='gum file'
+alias gums='gum style --align left --border rounded --border-foreground 3 --padding "1 1"'
+
 ## Custom.
 alias stopx="pidof Xorg>/dev/null && echo 'Close everything and press: [enter]' && read && killall Xorg || echo Xorg is not running!"
 alias l='ls --time-style="+%d-%m-%Y @ %T" -hAl'
@@ -43,3 +49,4 @@ alias tg="telegram-cli"
 alias yt="clear&&ytfzf -lstc Y"
 alias pmx='pulsemixer'
 alias rtop='radeontop -cT'
+

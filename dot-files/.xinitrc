@@ -5,47 +5,60 @@ startX(){
 	## X COLORS ##
 	##############
 
-	if [ -e ${HOME}/.Xresources ];then
-		xrdb -merge -load ${HOME}/.Xresources&
-	fi
+	loadXcolors(){
+		if [ -e ${HOME}/.Xresources ];then
+			xrdb -merge -load ${HOME}/.Xresources&
+		fi
+	}
+	loadXcolors
 
 	#############
 	## SYSTRAY ##
 	#############
 
-	if apropos geoclue>/dev/null;then
-		if which redshift>/dev/null;then
-			/usr/libexec/geoclue-2.0/demos/agent&
-			redshift-gtk&
+	setDisplayTemp(){
+		if apropos geoclue>/dev/null;then
+			if which redshift>/dev/null;then
+				/usr/libexec/geoclue-2.0/demos/agent&
+				redshift-gtk&
+			fi
 		fi
-	fi
+	}
+	setDisplayTemp
 
-	if which nm-applet>/dev/null;then
-		nm-applet&
-	fi
-
-	if which pulseaudio>/dev/null;then
-		if which pasystray>/dev/null;then
-			pasystray&
+	startNetworkTray(){
+		if which nm-applet>/dev/null;then
+			nm-applet&
 		fi
-	fi
+	}
+	startNetworkTray
+
+	startSoundTray(){
+		if which pulseaudio>/dev/null;then
+			if which pasystray>/dev/null;then
+				pasystray&
+			fi
+		fi
+	}
+	startSoundTray
 
 	################
 	## DESKTOP BG ##
 	################
 
-	setBg(){
-		setMoonBg(){
-			## Set the background to an image of the current moon phase.
+	setDesktopBackground(){
+		setMoonDesktopBackgorund(){
+			## Set the desktop background to an image of the current moon phase.
 			if which pngphoon feh>/dev/null;then
 				stars_num='100' ## Number of stars to display behind the moon.
-				res_x=`xrandr|grep '*' | head -n1 | awk '{print $1}'|cut -d "x" -f 1`
-				res_y=`xrandr|grep '*' | head -n1 | awk '{print $1}'|cut -d "x" -f 2`
+				res_x=`xrandr|grep "\*" | head -n1 | awk '{print $1}'|cut -d "x" -f 1`
+				res_y=`xrandr|grep "\*" | head -n1 | awk '{print $1}'|cut -d "x" -f 2`
 				pngphoon -w ${res_x} -h ${res_y} -x 1 -s ${stars_num} -f -|feh --bg-fill - &
 			fi
 		}
 
-		setAntFarmBg(){
+		setAntFarmDesktopBackground(){
+			## Set the desktop backgroun to an ant farm.
 			xantfarmbin='/opt/xantfarm/xantfarm'
 			if [ -e ${xantfarmbin} ];then
 				ant_num='9000' ## warning!
@@ -56,45 +69,82 @@ startX(){
 				nice -20 ${xantfarmbin} -num ${ant_num} -c 0 -air ${air_color} -sand ${sand_color} -ant ${ant_color}
 			fi
 		}
-		#setAntFarmBg
-		setMoonBg
+		#setAntFarmDesktopBackground
+		setMoonDesktopBackground
 	}
-	setBg
+	setDesktopBackground
+
+	#################
+	## SCREENSAVER ##
+	#################
+
+	startScreensaver(){
+		if which xscreensaver>/dev/null;then
+			if ! pidof xscreensaver>/dev/null;then
+				xscreensaver&
+			fi
+		fi
+	}
+	startScreensaver
 
 	##############
 	## KEYBOARD ##
 	##############
 
-	kbOpt(){
-		setxkbmap fr&
-		if which numlockx>/dev/null;then
-			numlockx on&
-		fi
-
-		if which xcape>/dev/null;then
-			mod='Super_L'
-			xcape -e "${mod}=Control_L|Escape"&
-		fi
-
-		if which sxhkd>/dev/null;then
-			if [ -e ${HOME}/.config/sxhkd/sxhkdrc ];then
-				sxhkd&
+	keyboardOptions(){
+		setKeyboardLayout(){
+			setxkbmap fr&
+			if which numlockx>/dev/null;then
+				numlockx on&
 			fi
-		fi
+		}
+		setKeyboardLayout
 
-		if which xfce4-clipman>/dev/null;then
-			if ! pidof xfce4-clipman>/dev/null;then
-				xfce4-clipman&
+		bindModKey(){
+			if which xcape>/dev/null;then
+				mod='Super_L'
+				xcape -e "${mod}=Control_L|Escape"&
 			fi
+		}
+		bindModKeys
+
+		startKeyboardShortcutDaemon(){
+			if which sxhkd>/dev/null;then
+				if [ -e ${HOME}/.config/sxhkd/sxhkdrc ];then
+					sxhkd&
+				fi
+			fi
+		}
+		startKeyboardShortcutDaemon
+
+		startClipboardManager(){
+			if which xfce4-clipman>/dev/null;then
+				if ! pidof xfce4-clipman>/dev/null;then
+					xfce4-clipman&
+				fi
+			fi
+		}
+		startClipboardManager
+	}
+	keyboardOptions
+
+	#############
+	## SYSINFO ##
+	#############
+
+	printSysInfo(){
+		if which xmessage>/dev/null
+			then
+ 				printf "`whoami`\n\n`uname -a`\n\n`cat /proc/cmdline`\n\n"|xmessage -nearmouse -file -&
 		fi
 	}
-	kbOpt
+	printSysInfo
 
 	####################
 	## WINDOW MANAGER ##
 	####################
 
-	startWm(){
+	startWindowManager(){
 		startDwm(){
 			if ! which dwm>/dev/null;then
 				echo "DWM not found!"
@@ -135,14 +185,6 @@ startX(){
 		startDwm
 		#startEvilWM
 	}
-
-	printSysInfo(){
-		if which xmessage>/dev/null
-			then
- 				echo -e "`whoami`\n\n`uname -a`\n\n`cat /proc/cmdline`\n\n"|xmessage -file -&
-		fi
-	}
-	printSysInfo
-	startWm
+	startWindowManager
 }
 startX
