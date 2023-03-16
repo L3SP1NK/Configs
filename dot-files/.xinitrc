@@ -12,6 +12,20 @@ startX(){
 	}
 	loadXcolors
 
+	##################
+	## NOTIFICATION ##
+	##################
+
+	startDunst(){
+		if which dunst>/dev/null;then
+			if ! pidof dunst>/dev/null;then
+				dunst --startup_notification&
+			fi
+		fi
+	 }
+	startDunst
+
+
 	#############
 	## SYSTRAY ##
 	#############
@@ -19,8 +33,13 @@ startX(){
 	setDisplayTemp(){
 		if apropos geoclue>/dev/null;then
 			if which redshift>/dev/null;then
-				/usr/libexec/geoclue-2.0/demos/agent&
-				redshift-gtk&
+				if ! pidof geoclue;then
+					/usr/libexec/geoclue-2.0/demos/agent&
+				fi
+
+				if ! pidof redshift-gtk>/dev/null;then
+					redshift-gtk&
+				fi
 			fi
 		fi
 	}
@@ -28,7 +47,9 @@ startX(){
 
 	startNetworkTray(){
 		if which nm-applet>/dev/null;then
-			nm-applet&
+			if ! pidof nm-applet>/dev/null;then
+				nm-applet&
+			fi
 		fi
 	}
 	startNetworkTray
@@ -36,7 +57,9 @@ startX(){
 	startSoundTray(){
 		if which pulseaudio>/dev/null;then
 			if which pasystray>/dev/null;then
-				pasystray&
+				if ! pidof pasystray>/dev/null;then
+					pasystray&
+				fi
 			fi
 		fi
 	}
@@ -102,8 +125,10 @@ startX(){
 
 		bindModKey(){
 			if which xcape>/dev/null;then
-				mod='Super_L'
-				xcape -e "${mod}=Control_L|Escape"&
+				if ! pidof xcape>/dev/null;then
+					mod='Super_L'
+					xcape -e "${mod}=Control_L|Escape"&
+				fi
 			fi
 		}
 		bindModKeys
@@ -111,7 +136,9 @@ startX(){
 		startKeyboardShortcutDaemon(){
 			if which sxhkd>/dev/null;then
 				if [ -e ${HOME}/.config/sxhkd/sxhkdrc ];then
-					sxhkd&
+					if ! pidof sxhkd>/dev/null;then
+						sxhkd&
+					fi
 				fi
 			fi
 		}
@@ -146,18 +173,24 @@ startX(){
 
 	startWindowManager(){
 		startDwm(){
+			if ! which slstatus>/dev/null;then
+				echo "slstatus not found!"
+				exit 1
+			else
+				if ! pidof slstatus>/dev/null;then
+					slstatus&
+				fi
+			fi
+
 			if ! which dwm>/dev/null;then
 				echo "DWM not found!"
 				exit 1
+			else
+				if ! pidof dwm>/dev/null;then
+					exec dwm\
+						>>~/.dwm.log
+				fi
 			fi
-
-			if ! which slstatus>/dev/null;then
-				echo "slstatus not found!"
-			fi
-
-			slstatus&
-			exec dwm\
-				>>~/.dwm.log
 
 		}
 
@@ -166,22 +199,21 @@ startX(){
 			if ! which evilwm>/dev/null;then
 				echo "EvilWM not found!"
 				exit 1
+			else
+				exec evilwm\
+					-fg '#2777ff'\
+					--fc magenta\
+					--bg black\
+					--snap 4\
+					--bw 2\
+					--mask2 mod4\
+					--altmask control+alt\
+					--app polybar --dock\
+					--numvdesks 6\
+					--fn 'IBM 3270'\
+						>>~/.evilwm.log
 			fi
-
-			exec evilwm\
-				-fg '#2777ff'\
-				--fc magenta\
-				--bg black\
-				--snap 4\
-				--bw 2\
-				--mask2 mod4\
-				--altmask control+alt\
-				--app polybar --dock\
-				--numvdesks 6\
-				--fn 'IBM 3270'\
-					>>~/.evilwm.log
 		}
-
 		startDwm
 		#startEvilWM
 	}
