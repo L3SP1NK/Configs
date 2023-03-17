@@ -1,5 +1,5 @@
 mod4 + a
-	response=$(question=$(rofi -dmenu -p "Ask ChatGPT:");echo "${question}"|gpt_prompt)&&notify-send -a "ChatGPT:" -s "🤖<${question}" -b "${response}"
+	response=$(rofi -dmenu -p "🤖 Ask ChatGPT:"|gpt_prompt)&&notify-send "${response}"
 
 mod4 + button2
 	killall wmagnify;wmagnify
