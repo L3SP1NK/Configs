@@ -13,7 +13,6 @@
 
 #window
 {
-	padding:				32;
 	text-color:				inherit;
 	border:					2;
 	border-radius:			16;
@@ -25,6 +24,7 @@
 
 #mainbox
 {
+	margin:					32;
 }
 
 #message
@@ -44,12 +44,10 @@
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
-	text-color:				black;
 }
 
 #element
 {
-	text-color:				black;
 	border-radius:			16;
 }
 
@@ -159,12 +157,10 @@
     border-color:           @border-color;
     border-color:           @selected-bg-color;
     border-radius:          16;
-	margin:					16;
 }
 
 #prompt
 {
-	padding:				16;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
