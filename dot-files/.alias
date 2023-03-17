@@ -27,7 +27,8 @@ alias make="make -j $(nproc)"
 alias gump='gum pager'
 alias gumc='gum choose'
 alias gumf='gum file'
-alias gums='gum style --align left --border rounded --border-foreground 3 --padding "1 1"'
+alias gums='gum style --align left --border rounded --border-foreground "254" --padding "1 1"'
+alias gumw='gum write'
 
 ## Custom.
 alias stopx="pidof Xorg>/dev/null && echo 'Close everything and press: [enter]' && read && killall Xorg || echo Xorg is not running!"

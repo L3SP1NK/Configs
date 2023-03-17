@@ -65,9 +65,9 @@ startX(){
 	}
 	startSoundTray
 
-	################
-	## DESKTOP BG ##
-	################
+	#############
+	## DESKTOP ##
+	#############
 
 	setDesktopBackground(){
 		setMoonDesktopBackgorund(){
@@ -107,6 +107,13 @@ startX(){
 				xscreensaver&
 			fi
 		fi
+		startCaffeine(){
+			if which caffeine-indicator>/dev/null;then
+				if ! pidstat | grep caffeine>/dev/null;then
+					caffeine-indicator&
+				fi
+			fi
+		}
 	}
 	startScreensaver
 
