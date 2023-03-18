@@ -125,4 +125,5 @@ fi
 
 ## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
-[[ ${TTY} == "/dev/tty1" ]] && neofet
+[[ ${TTY} == "/dev/tty1" ]] && neofetch
+export TERM='xterm-256color'
