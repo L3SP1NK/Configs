@@ -24,7 +24,7 @@ alias stress="stress -c $(nproc)"
 alias make="make -j $(nproc)"
 
 ## Gum alias.
-alias gump='gum pager'
+alias gump='gum pager --soft-wrap'
 alias gumc='gum choose'
 alias gumf='gum filter'
 alias gums='gum style --align left --border rounded --border-foreground "254" --padding "1 1"'
@@ -51,3 +51,4 @@ alias yt="clear&&ytfzf -lstc Y"
 alias pmx='pulsemixer'
 alias rtop='radeontop -cT'
 alias fzf='fzf --reverse'
+alias mpv='mpv --no-keepaspect --stretch-image-subs-to-screen=yes'

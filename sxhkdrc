@@ -1,3 +1,6 @@
+mod4 + o
+	xdg-open $(zenity --file-selection --multiple)
+
 mod4 + a
 	response=$(rofi -dmenu -p "🤖 Ask ChatGPT:"|gpt_prompt)&&notify-send "${response}"
 

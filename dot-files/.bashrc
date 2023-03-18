@@ -98,7 +98,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 ## Load personal aliases.
-[[ -f ~/.alias ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+[[ -f ~/.aliasrc ]] && . ~/.alias || echo '\e[31m Alias file missing!'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -111,11 +111,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-# Enables autocompletion of options for bashfuscator
-eval "$(/usr/bin/register-python-argcomplete3 bashfuscator)"
-
 ## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
 [[ ${TTY} == "/dev/tty1" ]] && neofetch
-export TERM='xterm-256color'
+TERM='xterm-256color'
