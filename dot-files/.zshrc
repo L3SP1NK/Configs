@@ -26,9 +26,6 @@ plugins=(
 ## Base zsh script (load it after plugins).
 source ${OMZ}/oh-my-zsh.sh
 
-## Load personal aliases.
-[[ -f ~/.alias ]] && source ~/.alias || echo -e '\e[31m Alias file missing!'
-
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
 ## Syntax highligthing configuration. ##
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##
@@ -118,7 +115,14 @@ esac
 ## user@host ~ % ( "%" red if the last command failed)
 PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f %F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 
+## Load personal aliases.
+aliasrc="${HOME}/.aliasrc"
+if [ -e ${aliasrc} ]; then
+	. ${aliasrc}
+else
+	echo -e '\n\e[31m Alias file missing!\n'
+fi
+
 ## Display system information if connected through SSH or /dev/tty1
-[[ ${SSH_CONNECTION} ]] && {clear;neofetch;}
-[[ ${TTY} == "/dev/tty1" ]] && {clear;neofetch;}
-#[[ ${TERM} == "linux" ]] && neofetch
+[[ ${SSH_CONNECTION} ]] && neofetch
+[[ ${TTY} == "/dev/tty1" ]] && neofet
