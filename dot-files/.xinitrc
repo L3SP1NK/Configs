@@ -31,5 +31,5 @@ startTwm(){
 	exec twm \
 			>> ~/.twm.log
 }
-#startDwm
-startTwm
+startDwm
+#startTwm
