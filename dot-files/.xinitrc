@@ -5,7 +5,8 @@ if [ -e ${HOME}/.Xresources ]; then
 fi
 
 setxkbmap fr&
-numlockx on&
+setxkbmap -option keypad:pointerkeys& ## Numpad as mouse (shift + numlock to enable)
+#numlockx on&
 
 kill $(pidof dunst> /dev/null)2>/dev/null; dunst --startup-notification&
 kill $(pidof geoclue> /dev/null)2>/dev/null; /usr/libexec/geoclue-2.0/demos/agent&
@@ -23,7 +24,12 @@ fi
 
 startDwm(){
 	slstatus&
-	exec dwm\
+	exec dwm \
 			>> ~/.dwm.log
 }
-startDwm
+startTwm(){
+	exec twm \
+			>> ~/.twm.log
+}
+#startDwm
+startTwm

@@ -1,8 +1,8 @@
 mod4 + o
-	xdg-open $(zenity --file-selection --multiple)
+	open_menu
 
 mod4 + a
-	response=$(rofi -dmenu -p "🤖 Ask ChatGPT:"|gpt_prompt)&&notify-send "${response}"
+	ask_gpt
 
 mod4 + button2
 	killall wmagnify;wmagnify
@@ -65,7 +65,7 @@ ctrl + alt + t
 	x-terminal-emulator
 
 ctrl + alt + Delete
-	xsecurelock
+	xscreensaver-command -lock
 
 super + e
 	pcmanfm
