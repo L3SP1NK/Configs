@@ -2,7 +2,7 @@ mod4 + o
 	open_menu
 
 mod4 + a
-	ask_gpt
+	gpt_ask
 
 mod4 + button2
 	killall wmagnify;wmagnify
