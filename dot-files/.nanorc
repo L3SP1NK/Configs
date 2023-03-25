@@ -98,11 +98,11 @@ set minibar
 ## mouse clicks can be used to place the cursor, set the mark (with a
 ## double click), and execute shortcuts.  The mouse will work in the
 ## X Window System, and on the console when gpm is running.
-set mouse
+#set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
-set multibuffer
+#set multibuffer
 
 ## Don't convert files from DOS/Mac format.
 #set noconvert
@@ -276,8 +276,8 @@ bind M-C comment main
 ## For quickly uppercasing or lowercasing the word under the cursor.
 ## (These effectively do a Ctrl+Right followed by a Shift+Ctrl+Left,
 ## and then pipe the selected text through a sed command.)
-bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
-bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
+#bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
+#bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
 
 ## If you would like nano to have keybindings that are more "usual",
 ## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
@@ -327,3 +327,4 @@ bind F8 runmacro all
 #bind ^H exit help
 #bind ^U undo main
 #bind ^E redo main
+bind Sh-M-X flipnewbuffer all

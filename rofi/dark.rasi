@@ -30,6 +30,7 @@
 #message
 {
 	border-color:			@selected-bg-color;
+	background-color:		#cc0000;
 }
 
 #textbox
@@ -37,6 +38,8 @@
 	text-color:				@selected-fg-color;
     border-radius:          8;
 	border-radius:			16;
+	padding:					32;
+	background-color:		#cc0000;
 }
 
 #listview

@@ -6,7 +6,7 @@ fi
 
 setxkbmap fr&
 setxkbmap -option keypad:pointerkeys& ## Numpad as mouse (shift + numlock to enable)
-#numlockx on&
+numlockx on&
 
 kill $(pidof dunst); dunst --startup-notification&
 kill $(pidof geoclue); /usr/libexec/geoclue-2.0/demos/agent&

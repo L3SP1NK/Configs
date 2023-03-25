@@ -17,10 +17,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	zsh-navigation-tools
+    fzf
+#	zsh-navigation-tools
 	zsh-completions
 	command-not-found
-    fzf
 )
 
 ## Base zsh script (load it after plugins).
@@ -126,4 +126,3 @@ fi
 ## Display system information if connected through SSH or /dev/tty1
 [[ ${SSH_CONNECTION} ]] && neofetch
 [[ ${TTY} == "/dev/tty1" ]] && neofetch
-TERM='xterm-256color'
