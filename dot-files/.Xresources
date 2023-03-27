@@ -124,14 +124,14 @@ Sxiv.font: jetbrains mono nf-14
 Xcursor.theme: Simp1e
 Xcursor.size: 48px
 
-xclock*foreground:  black
-xclock*background:  #000000
-xclock*highlight:	black
+xclock*foreground:  red
+xclock*background:  black
+xclock*highlight:	yellow
 xclock*hands:		white
 xclock*hourColor:   white
 xclock*secondColor: red
 xclock*minuteColor: white
-xclock*majorColor:  white
+xclock*majorColor:  red
 xclock*minorColor:  grey
 xclock*interval:	1
 xclock*render:		1
@@ -143,6 +143,13 @@ xclock*buffer:		1
 xclock*padding:		32
 xclock*update:		1
 
+xlogo*foreground:  red
+xlogo*background:  black
+
+xload*foreground:  red
+xload*background:  black
+xload*update:      1
+xload*sharp:       1
 
 Clock*Background:	black
 Clock*BorderColor:	black
@@ -150,3 +157,6 @@ Clock*hour:			white
 Clock*jewel:		red
 Clock*minute:		white
 Clock*second:		white
+
+! #include "/home/lespink/.resources/base16-google-dark.Xresources"
+! #include "/home/lespink/.resources/base16-google-dark-256.Xresources"

@@ -6,19 +6,17 @@
 	background-color:		#0d0d0d;
 	background-alt-color:	#1f1f1f;
 	foreground-color:		#ffffff;
-	selected-bg-color:		#1f1f1f;
-	selected-fg-color:		#ffffff;
+	selected-bg-color:		#EA4335;
+	selected-fg-color:		#000000;
 	border-color:			@background-alt-color;
 }
 
 #window
 {
 	text-color:				inherit;
-	border:					2;
+	border:					4;
 	border-radius:			16;
 	border-color:			@border-color;
-	border:					2;
-	border-color:			#0d0e11;
 	width:					600;
 }
 

@@ -42,7 +42,7 @@ set bookstyle
 set brackets ""')>]}"
 
 ## Automatically hard-wrap the current line when it becomes overlong.
-#set breaklonglines
+set breaklonglines
 
 ## Do case-sensitive searches by default.
 #set casesensitive
@@ -98,7 +98,7 @@ set minibar
 ## mouse clicks can be used to place the cursor, set the mark (with a
 ## double click), and execute shortcuts.  The mouse will work in the
 ## X Window System, and on the console when gpm is running.
-#set mouse
+set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
@@ -169,8 +169,7 @@ set smarthome
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
-#set speller "aspell -x -c"
-set speller "hunspell"
+set speller "aspell -x -c"
 
 ## Use the end of the title bar for some state flags: I = auto-indenting,
 ## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
@@ -184,14 +183,15 @@ set stateflags
 set tabsize 4
 
 ## Convert each typed tab to the fitting number of spaces.
-#set tabstospaces
+set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
-set trimblanks
+#set trimblanks
 
 ## The two single-column characters used to display the first characters
 ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
 ## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
+
 ## The default when in a UTF-8 locale:
 set whitespace "→·"
 ## The default otherwise:
@@ -282,13 +282,13 @@ bind M-C comment main
 ## If you would like nano to have keybindings that are more "usual",
 ## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
 ## then uncomment these:
-unbind ^K main
-unbind ^U all
-unbind ^N main
-unbind ^Y all
-unbind M-J main
-unbind M-U all
-unbind M-T main
+#unbind ^K main
+#unbind ^U all
+#unbind ^N main
+#unbind ^Y all
+#unbind M-J main
+#unbind M-U all
+#unbind M-T main
 
 bind ^W exit all
 bind ^S savefile all
@@ -313,18 +313,21 @@ bind ^Y redo main
 bind ^L linter execute
 bind ^E execute all
 
-bind ^A complete all
+#bind ^T complete all
 bind F7 recordmacro all
 bind F8 runmacro all
 
-#bind M-X flipnewbuffer all
 #bind ^D findprevious all
 #bind ^B wherewas all
 #bind ^G findnext all
 #bind ^T gotodir browser
-#bind ^W writeout main
+bind ^D writeout all
 #bind ^H help all
 #bind ^H exit help
 #bind ^U undo main
 #bind ^E redo main
-bind Sh-M-X flipnewbuffer all
+#bind ^A flipnewbuffer all
+#bind ^D gotodir browser
+bind ^A anchor main
+#bind ^C "{execute}|xsel -ib{enter}{undo}" main
+#bind ^A flipnewbuffer all
