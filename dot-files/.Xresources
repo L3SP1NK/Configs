@@ -143,10 +143,10 @@ xclock*buffer:		1
 xclock*padding:		32
 xclock*update:		1
 
-xlogo*foreground:  red
+xlogo*foreground:  orange
 xlogo*background:  black
 
-xload*foreground:  red
+xload*foreground:  green
 xload*background:  black
 xload*update:      1
 xload*sharp:       1

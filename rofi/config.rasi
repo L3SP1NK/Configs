@@ -46,12 +46,12 @@ configuration
 	combi-hide-mode-prefix:	true;
 	cache-dir:				"/home/lespink/.cache/rofi";
 	pid:					"/run/user/1000/rofi.pid";
-	display-window:			"";
-	display-windowcd:		"";
-	display-run:			"";
-	display-ssh:			"";
-	display-drun:			"";
-	display-combi:			"";
-	display-keys:			"";
+	display-window:			"   ";
+	display-windowcd:		"   ";
+	display-run:			"   ";
+	display-ssh:			"   ";
+	display-drun:			" > ";
+	display-combi:			"   ";
+	display-keys:			"   ";
 }
 @theme "~/.config/rofi/dark.rasi"

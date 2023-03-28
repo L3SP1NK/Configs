@@ -1,12 +1,13 @@
 #!/bin/sh
 
+setxkbmap fr&
+setxkbmap -option "keypad:pointerkeys"& ## Numpad as mouse (shift + numlock to enable)
+xsetroot -grey&
+numlockx on&
+
 if [ -e ${HOME}/.Xresources ]; then
 	xrdb -merge -load ${HOME}/.Xresources&
 fi
-
-setxkbmap fr&
-setxkbmap -option keypad:pointerkeys& ## Numpad as mouse (shift + numlock to enable)
-numlockx on&
 
 kill $(pidof dunst); dunst --startup-notification&
 kill $(pidof geoclue); /usr/libexec/geoclue-2.0/demos/agent&
@@ -23,6 +24,13 @@ if [ -e ${HOME}/.config/sxhkd/sxhkdrc ]; then
 fi
 
 startDwm(){
+
+    exportJavaOpt(){
+        export AWT_TOOLKIT=MToolKit
+           export _JAVA_AWT_WM_NONREPARENTING=1
+    }
+    exportJavaOpt
+
 	slstatus&
 	exec dwm \
 			>> ~/.dwm.log
