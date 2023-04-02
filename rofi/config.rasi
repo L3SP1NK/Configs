@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"jetbrains mono nfm 16";
+	font:					"arimo nfm 16";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;

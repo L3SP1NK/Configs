@@ -79,7 +79,8 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-XTerm*faceName: jetbrains mono nf
+! XTerm*faceName: jetbrains mono nf
+XTerm*faceName: meslolgm nfm
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
@@ -119,9 +120,9 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 
 Sxiv.background: #000000
 Sxiv.foreground: #ffffff
-Sxiv.font: jetbrains mono nf-14
+Sxiv.font: meslolgm nfm-14
 
-Xcursor.theme: Simp1e
+Xcursor.theme: Simp1e-dark
 Xcursor.size: 48px
 
 xclock*foreground:  red
