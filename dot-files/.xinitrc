@@ -17,6 +17,8 @@ kbOpt() {
 kbOpt
 
 bgJobs() {
+    kill $(pidof onboard);onboard&
+    kill $(pidof jgmenu);jgmenu --at-pointer --hide-on-startup&
     kill $(pidof dunst); dunst --startup-notification&
     kill $(pidof geoclue); /usr/libexec/geoclue-2.0/demos/agent&
     kill $(pidof redshift-gtk); redshift-gtk&

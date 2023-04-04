@@ -79,8 +79,8 @@ XTerm*trimSelection: true
 XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
-! XTerm*faceName: jetbrains mono nf
-XTerm*faceName: meslolgm nfm
+
+XTerm*faceName: robotomono nerd font mono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
@@ -120,7 +120,7 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 
 Sxiv.background: #000000
 Sxiv.foreground: #ffffff
-Sxiv.font: meslolgm nfm-14
+Sxiv.font: jetbrains mono nfm-14
 
 Xcursor.theme: Simp1e-dark
 Xcursor.size: 48px
@@ -159,5 +159,3 @@ Clock*jewel:		red
 Clock*minute:		white
 Clock*second:		white
 
-! #include "/home/lespink/.resources/base16-google-dark.Xresources"
-! #include "/home/lespink/.resources/base16-google-dark-256.Xresources"
