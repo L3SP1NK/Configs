@@ -1,53 +1,43 @@
 #!/bin/sh
 
-setColors() {
-    if [ -e ${HOME}/.Xresources ]; then
-	    xrdb -merge -load ${HOME}/.Xresources&
-    fi
+export AWT_TOOLKIT=MToolKit
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-    xsetroot -grey&
-}
-setColors
+if [ -e ${HOME}/.Xresources ]; then
+    xrdb -merge -load ${HOME}/.Xresources&
+fi
 
-kbOpt() {
-    setxkbmap fr&
-    setxkbmap -option "keypad:pointerkeys"& ## Numpad as mouse (shift + numlock to enable)
-    numlockx on&
-}
-kbOpt
+xsetroot -grey&     ## set the desktop backgorund (colors)
 
-bgJobs() {
-    kill $(pidof onboard);onboard&
-    kill $(pidof jgmenu);jgmenu --at-pointer --hide-on-startup&
-    kill $(pidof dunst); dunst --startup-notification&
-    kill $(pidof geoclue); /usr/libexec/geoclue-2.0/demos/agent&
-    kill $(pidof redshift-gtk); redshift-gtk&
-    kill $(pidof nm-applet); nm-applet&
-    kill $(pidof pasystray); pasystray&
-    kill $(pidof xscreensaver); xscreensaver&
-    kill $(pidof caffeine-indicator); caffeine-indicator&
-    kill $(pidof xcape); xcape -e "Super_L=Control_L|Escape"&
-    kill $(pidof xfce4-clipman); xfce4-clipman&
-    kill $(pidof sxhkd); sxhkd&
-}
-bgJobs
+setxkbmap fr&                               ## set layout (before every others keyboard options)
+numlockx on&                                ## turn on numlock (before numpad as mouse)
+setxkbmap -option "keypad:pointerkeys"&     ## numpad as mouse (shift + numlock to enable)
 
-exportJavaOpt() {
-    export AWT_TOOLKIT=MToolKit
-    export _JAVA_AWT_WM_NONREPARENTING=1
-}
-exportJavaOpt
+kill $( pidof xcape )
+xcape -e "Super_L=Control_L|Escape"&     ## super key (for keybinding (rofi/dmenu/whiskermenu/...)
+xcape -e "Super_R=Control_L|Escape"&
+
+kill $( pidof sxhkd ); sxhkd&                                   ## keyboard shortcut
+kill $( pidof xfce4-clipman ); xfce4-clipman&                   ## clipboard manager
+kill $( pidof onboard ); onboard&                               ## onscreen keyboard
+kill $( pidof nm-applet ); nm-applet&                           ## network tray icon
+kill $( pidof pasystray ); pasystray&                           ## pulseaudio tray icon
+kill $( pidof xscreensaver ); xscreensaver&                     ## screensaver
+#kill $( pidof caffeine-indicator ); caffeine-indicator&         ## stay awake
+kill $( pidof dunst ); dunst --startup-notification&            ## notification
+kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&  ## desktop menu
+kill $( pidof geoclue ); /usr/libexec/geoclue-2.0/demos/agent&  ## enable geolocation
+kill $( pidof redshift-gtk ); redshift-gtk&                     ## blue light filter
 
 startDwm() {
 	slstatus&
-	exec dwm \
+	exec dwm\
 			>> ~/.dwm.log
 }
 
 startTwm() {
-	exec twm \
+	exec twm\
 			>> ~/.twm.log
 }
 
-startDwm
-#startTwm
+startDwm||startTwm

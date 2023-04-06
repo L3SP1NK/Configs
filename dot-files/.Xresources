@@ -10,12 +10,12 @@ XTerm*selectToClipboard: true
 Xft.dpi: 96
 Xft.antialias: true
 Xft.rgba: rgb
-!Xft.lcdfilter: lcdfilter
+Xft.lcdfilter: lcdfilter
 
 ! Hinting
-Xft.hinting: true
-Xft.autohint: true
-Xft.hintstyle: hintfull
+Xft.hinting: false
+Xft.autohint: false
+Xft.hintstyle: none
 
 ! Global color
 !XTerm*foreground: rgb:ff/ff/ff
@@ -80,7 +80,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: robotomono nerd font mono
+XTerm*faceName: jetbrains mono nfm
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable

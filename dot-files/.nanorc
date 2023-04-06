@@ -300,7 +300,7 @@ bind ^P location main
 bind ^A mark main
 bind ^T gotoline main
 
-bind ^H speller main
+#bind ^H speller main
 
 bind ^Z undo main
 bind ^Y redo main

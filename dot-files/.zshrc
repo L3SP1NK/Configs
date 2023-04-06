@@ -15,6 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 #ZSH_THEME="random"
 
 plugins=(
+    colorize
 	zsh-autosuggestions
 	zsh-syntax-highlighting
     fzf
@@ -92,37 +93,29 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[1;32m'
 export LESS_TERMCAP_ue=$'\E[0m'
 
-##~~~~~~~~~##
-## Prompt. ##
-##~~~~~~~~~##
-## Set prompt color according to the distro.
-DISTRO=$(cat /etc/os-release | grep PRETTY | cut -d "=" -f 2 | sed 's/"//g' | awk '{print $1}')
-case ${DISTRO} in
-	Kali)
-		HOSTNAME_COLOR=cyan
-		;;
-	Debian)
-		HOSTNAME_COLOR=magenta
-		;;
-	*)
-		HOSTNAME_COLOR=white
-		;;
-esac
-
-[[ ${EUID} -eq "0" ]] && NAME_COLOR="red" || NAME_COLOR="green"
-## user@host:~ % ( "%" red if the last command failed)
-#PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f:%F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-## user@host ~ % ( "%" red if the last command failed)
-PROMPT='%B%F{${NAME_COLOR}}%n%F{yellow}@%F{${HOSTNAME_COLOR}}%m%f %F{blue}%~%f %(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-
 ## Load personal aliases.
 aliasrc="${HOME}/.aliasrc"
-if [ -e ${aliasrc} ]; then
-	. ${aliasrc}
+if [ -e "${aliasrc}" ]; then
+	source "${aliasrc}"
 else
 	echo -e '\n\e[31m Alias file missing!\n'
 fi
 
-## Display system information if connected through SSH or /dev/tty1
-[[ ${SSH_CONNECTION} ]] && neofetch
-[[ ${TTY} == "/dev/tty1" ]] && neofetch
+[[ "${TTY}" == "/dev/tty1" || "${SSH_CONNECTION}" ]] && neofetch
+
+## red username if root
+if [[ "${EUID}" -eq '0' ]]; then
+    PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+else
+    PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+fi
+
+
+## add emoji based on environment variables.
+if [[ "${SSH_CONNECTION}" ]]; then
+    PROMPT="📡%F{black}%B|${PROMPT}"
+fi
+
+if [[ "${MC_SID}" ]]; then
+    PROMPT="📂%F{black}%B|${PROMPT}"
+fi
