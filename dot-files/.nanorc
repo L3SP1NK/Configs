@@ -256,13 +256,13 @@ include "/usr/share/nanorc/*.nanorc"
 ## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor. On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is the ASCII character for 
 ## backspace, so it is bound by default to the backspace function.  The <Backspace> key itself produces a different keycode, which is hard-bound to the backspace function.  
 ## So, if you normally use <Backspace> for backspacing and not ^H, you can make <Ctrl+Backspace> delete the word to the left of the cursor with:
-bind ^H chopwordleft main
+#bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
 bind M-C comment main
 
 ## If you want ^L to just refresh the screen and not center the cursor:
-bind ^L refresh main
+#bind ^L refresh main
 
 ## When you sometimes type M-J instead of M-K, or M-T instead of M-R:
 # unbind M-J main
@@ -297,7 +297,7 @@ bind ^C copy main
 bind ^V paste all
 
 bind ^P location main
-bind ^A mark main
+bind ^A complete all
 bind ^T gotoline main
 
 #bind ^H speller main
@@ -323,7 +323,5 @@ bind ^D writeout all
 #bind ^E redo main
 #bind ^A flipnewbuffer all
 #bind ^D gotodir browser
-bind ^A anchor main
 #bind ^C "{execute}|xsel -ib{enter}{undo}" main
 #bind ^A flipnewbuffer all
-
