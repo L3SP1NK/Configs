@@ -110,12 +110,14 @@ else
     PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 fi
 
+if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
+    neofetch
+fi
 
-## add emoji based on environment variables.
 if [[ "${SSH_CONNECTION}" ]]; then
-    PROMPT="📡%F{black}%B|${PROMPT}"
+    PROMPT="📡 ${PROMPT}"
 fi
 
 if [[ "${MC_SID}" ]]; then
-    PROMPT="📂%F{black}%B|${PROMPT}"
+    PROMPT="📂 ${PROMPT}"
 fi

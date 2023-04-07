@@ -48,11 +48,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-	if [[ ${EUID} -eq "0" ]]
-		then
-		    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
+	if [ "${EUID}" -eq '0' ]; then
+            ## red username if root
+		    PS1='\[\033[01;30m\]${?} ${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
 		else
-		    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
+		    PS1='\[\033[01;30m\]${?} ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \$ '
 	fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -93,12 +93,16 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [ -e ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
 ## Load personal aliases.
-[[ -f ~/.aliasrc ]] && . ~/.alias || echo '\e[31m Alias file missing!'
+if [ -e ~/.aliasrc ]; then
+    . ~/.aliasrc
+else
+    echo -e '\e[31m Alias file missing!'
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -111,7 +115,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-## Display system information if connected through SSH or /dev/tty1
-[[ ${SSH_CONNECTION} ]] && neofetch
-[[ ${TTY} == "/dev/tty1" ]] && neofetch
-TERM='xterm-256color'
+if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
+    neofetch
+fi
+
+if [ "${MC_SID}" ]; then
+    PROMPT="📂 ${PS1}"
+fi
+
+if [ "${SSH_CONNECTION}" ]; then
+    PROMPT="📡 ${PS1}"
+fi
+
