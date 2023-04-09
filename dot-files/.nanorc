@@ -316,7 +316,7 @@ bind F8 runmacro all
 #bind ^B wherewas all
 #bind ^G findnext all
 #bind ^T gotodir browser
-bind ^D writeout all
+bind ^D writeout main
 #bind ^H help all
 #bind ^H exit help
 #bind ^U undo main
