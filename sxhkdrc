@@ -74,7 +74,7 @@ super + e
 	pcmanfm
 
 super + x
-	emixer
+	xmix
 
 ctrl + alt + 1
 	wmctrl -s 0

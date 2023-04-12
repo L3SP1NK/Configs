@@ -13,11 +13,11 @@
 
 ## Make 'nextord' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
 ## stop at word ends instead of at beginnings.
-#set afterends
+set afterends
 
 ## When soft line wrapping is enabled, make it wrap lines at blanks
 ## (tabs and spaces) instead of always at the edge of the screen.
-set atblanks
+#set atblanks
 
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
@@ -102,7 +102,7 @@ set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
-#set multibuffer
+set multibuffer
 
 ## Don't convert files from DOS/Mac format.
 #set noconvert
@@ -218,13 +218,14 @@ set zap
 set titlecolor italic,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor white,blue
+set selectedcolor bold,yellow,grey
+set spotlightcolor bold,white,magenta
 set stripecolor black,magenta
 set numbercolor bold,black
 set keycolor bold,black
 set functioncolor cyan
-set minicolor italic,white,blue
-set promptcolor white,blue
+set minicolor italic,grey
+set promptcolor bold,white,magenta
 set scrollercolor bold,white,black
 
 ## === Syntax coloring ===
@@ -253,13 +254,13 @@ include "/usr/share/nanorc/*.nanorc"
 ## === Key bindings ===
 ## For all details, see 'man nanorc', section REBINDING KEYS.
 
-## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor. On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is the ASCII character for 
-## backspace, so it is bound by default to the backspace function.  The <Backspace> key itself produces a different keycode, which is hard-bound to the backspace function.  
+## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor. On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is the ASCII character for
+## backspace, so it is bound by default to the backspace function.  The <Backspace> key itself produces a different keycode, which is hard-bound to the backspace function.
 ## So, if you normally use <Backspace> for backspacing and not ^H, you can make <Ctrl+Backspace> delete the word to the left of the cursor with:
-#bind ^H chopwordleft main
+bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
-bind M-C comment main
+#bind M-C comment main
 
 ## If you want ^L to just refresh the screen and not center the cursor:
 #bind ^L refresh main
@@ -272,56 +273,43 @@ bind M-C comment main
 ## For quickly uppercasing or lowercasing the word under the cursor.
 ## (These effectively do a Ctrl+Right followed by a Shift+Ctrl+Left,
 ## and then pipe the selected text through a sed command.)
-#bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
-#bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
-
-## If you would like nano to have keybindings that are more "usual",
-## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
-## then uncomment these:
-#unbind ^K main
-#unbind ^U all
-#unbind ^N main
-#unbind ^Y all
-#unbind M-J main
-#unbind M-U all
-#unbind M-T main
+bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
+bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
 
 bind ^W exit all
 bind ^S savefile all
-bind ^O insert main
+#bind ^O insert main
 bind ^F whereis all
 bind ^R replace main
-
 bind ^X cut main
 bind ^C copy main
 bind ^V paste all
-
 bind ^P location main
-bind ^A complete all
+bind ^A complete main
 bind ^T gotoline main
-
 #bind ^H speller main
-
 bind ^Z undo main
 bind ^Y redo main
-
 bind ^L linter execute
 bind ^E execute all
-
-#bind ^T complete all
 bind F7 recordmacro all
 bind F8 runmacro all
-
-#bind ^D findprevious all
-#bind ^B wherewas all
-#bind ^G findnext all
-#bind ^T gotodir browser
 bind ^D writeout main
-#bind ^H help all
-#bind ^H exit help
-#bind ^U undo main
-#bind ^E redo main
-#bind ^A flipnewbuffer all
-#bind ^D gotodir browser
-#bind ^C "{execute}|xsel -ib{enter}{undo}" main
-#bind ^A flipnewbuffer all
+
+#bind M-P prevbuf main
+#bind M-N nextbuf main
+bind M-C casesens all
+bind M-R regexp all
+bind M-P flippipe all
+bind M-B flipnewbuffer all
+bind M-A append all
+bind M-B prepend all
+#bind ^S "{execute}| sed 's/\s\+$//' {enter}{savefile}" all
+
+## copy nano selection to system clipboard
+#bind M-C "{execute}|xsel -ib{enter}{undo}" main
+bind M-C "{execute}|xclip -sel clip{enter}{undo}" main
+
+## upper case / lower case
+bind Sh-M-U "{execute}|sed 's/.*/\U&/'{enter}" main
+bind Sh-M-L "{execute}|sed 's/.*/\L&/'{enter}" main
