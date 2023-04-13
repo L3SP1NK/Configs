@@ -183,7 +183,7 @@ set stateflags
 set tabsize 4
 
 ## Convert each typed tab to the fitting number of spaces.
-set tabstospaces
+#set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
 #set trimblanks
@@ -260,7 +260,7 @@ include "/usr/share/nanorc/*.nanorc"
 bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
-#bind M-C comment main
+bind Sh-M-C comment main
 
 ## If you want ^L to just refresh the screen and not center the cursor:
 #bind ^L refresh main
