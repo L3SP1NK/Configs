@@ -71,7 +71,7 @@ ctrl + alt + Delete
 	xscreensaver-command -lock
 
 super + e
-	pcmanfm
+	thunar
 
 super + x
 	xmix
