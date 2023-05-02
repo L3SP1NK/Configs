@@ -122,7 +122,7 @@ Sxiv.background: #000000
 Sxiv.foreground: #ffffff
 Sxiv.font: jetbrains mono nfm-14
 
-Xcursor.theme: Simp1e-dark
+Xcursor.theme: Simp1e-Dark
 Xcursor.size: 48px
 
 xclock*foreground:  red

@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"roboto 16";
+	font:					"jetbrains mono nf 16";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;
@@ -50,7 +50,8 @@ configuration
 	display-windowcd:		"   ";
 	display-run:			"   ";
 	display-ssh:			"   ";
-	display-drun:			" > ";
+//	display-drun:			" 󰌧 ";
+	display-drun:			"   ";
 	display-combi:			"   ";
 	display-keys:			"   ";
 }
