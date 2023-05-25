@@ -2,12 +2,13 @@ configuration
 {
 	modi:					"window,run,ssh,drun";
 	font:					"jetbrains mono nf 16";
+	font:					"roboto 16";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;
 	fixed-num-lines:		false;
 	show-icons:				true;
-	icon-theme:				"Papirus-Dark";
+	icon-theme:				"Papirus-Light";
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
 	ssh-command:			"{terminal} -e {ssh-client} {host} [-p {port}]";
@@ -50,9 +51,9 @@ configuration
 	display-windowcd:		"   ";
 	display-run:			"   ";
 	display-ssh:			"   ";
-//	display-drun:			" 󰌧 ";
 	display-drun:			"   ";
+	display-drun:			" 󰌧	";
 	display-combi:			"   ";
 	display-keys:			"   ";
 }
-@theme "~/.config/rofi/dark.rasi"
+@theme "~/.config/rofi/light.rasi"

@@ -1,5 +1,5 @@
 [global]
-    font = jetbrains mono 14
+    font = roboto 14
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
 
@@ -58,12 +58,12 @@
     # the geometry of the window
     # geometry [{width}]x{height}][+/-{x}+/-{y}]
     # The geometry of the message window.
-    # The height is measured in number of notifications everything else in pixels. If the width
+    # The height is measu#cc000 in number of notifications everything else in pixels. If the width
     # is omitted but the height is given ("-geometry x2"), the message window
     # expands over the whole screen (dmenu-like). If width is 0,
     # the window expands to the longest message displayed.
-    # A positive x is measured from the left, a negative from the
-    # right side of the screen.  Y is measured from the top and down respectevly.
+    # A positive x is measu#cc000 from the left, a negative from the
+    # right side of the screen.  Y is measu#cc000 from the top and down respectevly.
     # The width can be negative. In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
     #geometry = "800x5-50+20"
@@ -90,7 +90,7 @@
     # This should be the case for almost all modern windowmanagers.
     #
     # If this option is set to mouse or keyboard, the monitor option will be
-    # ignored.
+    # igno#cc000.
     follow = keyboard
 
     # should a notification popped up from history be sticky or
@@ -133,7 +133,7 @@
 
 [frame]
     width = 4
-    color = "#1f1f1f"
+    color = "#FFFFFF"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -147,7 +147,7 @@
     # close all notifications
     close_all = mod4+shift+m
 
-    # redisplay last message(s)
+    # #cc000isplay last message(s)
     history = mod4+n
 
     # context menu
@@ -173,24 +173,21 @@
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-    frame_color = "#1f1f1f"
-    foreground = "#ffffff"
-    background = "#0d0d0d"
-    #background = "#2B313C"
+    frame_color = "#FFFFFF"
+    foreground = "#000000"
+    background = "#FFFFFF"
     timeout = 10
 
 [urgency_normal]
-    frame_color = "#1f1f1f"
-    foreground = "#ffffff"
-    background = "#0d0d0d"
-    #background = "#2B313C"
+    frame_color = "#FFFFFF"
+    foreground = "#000000"
+    background = "#FFFFFF"
     timeout = 15
 
 [urgency_critical]
-    frame_color = "#660000"
-    foreground = "#ffffff"
-    background = "#0d0d0d"
-    #background = "#2B313C"
+    frame_color = "#FFFFFF"
+    foreground = "#cc0000"
+    background = "#FFFFFF"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules
