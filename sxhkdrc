@@ -71,8 +71,8 @@ ctrl + alt + t
 	x-terminal-emulator
 
 ctrl + alt + Delete
-#	xscreensaver-command -lock
-	slock
+	xscreensaver-command -lock
+#	slock
 
 super + e
 	thunar

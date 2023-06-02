@@ -225,7 +225,7 @@ set numbercolor bold,black
 set keycolor bold,black
 set functioncolor cyan
 set minicolor italic,grey
-set promptcolor bold,white,magenta
+set promptcolor bold,yellow,black
 set scrollercolor bold,white,black
 
 ## === Syntax coloring ===
