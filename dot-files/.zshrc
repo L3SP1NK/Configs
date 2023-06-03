@@ -1,3 +1,4 @@
+myip=$(ip -4 -br a|awk '{print $3}'|cut -d "/" -f 1|tac|head -n1)
 export PATH="${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/.scripts"
 export OMZ="${HOME}/.oh-my-zsh"
 export MANPATH="/usr/local/man:$MANPATH"
@@ -123,3 +124,4 @@ fi
 if [[ "${MC_SID}" ]]; then
     PROMPT="📂 ${PROMPT}"
 fi
+
