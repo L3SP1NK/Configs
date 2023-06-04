@@ -1,14 +1,13 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"jetbrains mono nf 16";
 	font:					"roboto 16";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;
 	fixed-num-lines:		false;
 	show-icons:				true;
-	icon-theme:				"Papirus-Light";
+	icon-theme:				"ePapirus-Dark";
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
 	ssh-command:			"{terminal} -e {ssh-client} {host} [-p {port}]";
@@ -56,4 +55,4 @@ configuration
 	display-combi:			"   ";
 	display-keys:			"   ";
 }
-@theme "~/.config/rofi/light.rasi"
+@theme "~/.config/rofi/dark.rasi"

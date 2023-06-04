@@ -27,7 +27,7 @@ Xft.hintstyle: none
 
 
 ! Dracula Xresources palette
-*.foreground: #FFFFFF
+*.foreground: #ffffff
 *.background: #000000
 !*.color0:     #000000
 !*.color8:     #4D4D4D
@@ -80,7 +80,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: jetbrains mono nfm
+XTerm*faceName: jetbrains mono nerd font mono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
@@ -118,11 +118,12 @@ XTerm.vt100.translations: #override \n\
 ! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 
-Sxiv.background: #000000
+!Sxiv.background: #000000
+Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
-Sxiv.font: jetbrains mono nfm-14
+Sxiv.font: jetbrains mono nerd font mono 14
 
-!Xcursor.theme: Adwaita
+!Xcursor.theme: simp1e-dark
 Xcursor.size: 48px
 
 xclock*foreground:  red
