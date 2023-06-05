@@ -20,7 +20,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
     fzf
-	zsh-navigation-tools
+	#zsh-navigation-tools
 	zsh-completions
 	command-not-found
 )
