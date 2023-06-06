@@ -32,6 +32,7 @@ configuration
 /*	parse-known-hosts:		true;*/
 	combi-modi:				"window,run,drun";
 	matching:				"normal";
+	matching:				"fuzzy";
 	tokenize:				true;
 	m:						"-5";
 /*	filter:					;*/
