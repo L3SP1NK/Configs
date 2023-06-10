@@ -1,5 +1,5 @@
 [global]
-    font = roboto 14
+    font = firaSans 14
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
 
@@ -26,7 +26,7 @@
 #    format = "<small><i>%a\n\n</i></small><u>%s</u>\n\n%b"
     format = "<small>%s</small>\n\n%b"
     icon_position = left
-    corner_radius = 8
+    corner_radius = 16
 
     # Sort messages by urgency
     sort = yes
@@ -71,7 +71,7 @@
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 0
+    transparency = 30
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
@@ -173,21 +173,21 @@
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-    frame_color = "#000000"
+    frame_color = "#1f1f1f"
     foreground = "#ffffff"
-    background = "#000000"
+    background = "#1f1f1f"
     timeout = 10
 
 [urgency_normal]
-    frame_color = "#000000"
+    frame_color = "#1f1f1f"
     foreground = "#ffffff"
-    background = "#000000"
+    background = "#1f1f1f"
     timeout = 15
 
 [urgency_critical]
-    frame_color = "#000000"
+    frame_color = "#1f1f1f"
     foreground = "#cc0000"
-    background = "#000000"
+    background = "#1f1f1f"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules
