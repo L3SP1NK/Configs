@@ -218,7 +218,7 @@ set zap
 set titlecolor italic,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor bold,yellow,grey
+set selectedcolor bold,white,blue
 set spotlightcolor bold,white,magenta
 set stripecolor black,magenta
 set numbercolor bold,black
@@ -226,7 +226,7 @@ set keycolor bold,black
 set functioncolor cyan
 set minicolor italic,grey
 set promptcolor bold,yellow,black
-set scrollercolor bold,white,black
+set scrollercolor grey,black
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.

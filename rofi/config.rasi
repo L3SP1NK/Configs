@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"roboto 16";
+	font:					"roboto 14";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;
@@ -31,8 +31,8 @@ configuration
 /*	parse-hosts:			false;*/
 /*	parse-known-hosts:		true;*/
 	combi-modi:				"window,run,drun";
-	matching:				"normal";
 	matching:				"fuzzy";
+	matching:				"normal";
 	tokenize:				true;
 	m:						"-5";
 /*	filter:					;*/

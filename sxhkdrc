@@ -1,8 +1,13 @@
+#caps_lock?
+
+mod4 + t
+	prompt_translate
+
 mod4 + comma
 	emoji_select
 
 mod4 + c
-	gpick
+	gpick -pos
 
 mod4 + o
 	open_menu

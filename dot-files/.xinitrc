@@ -6,8 +6,8 @@ export _JAVA_AWT_WM_NONREPARENTING='1'
 xrdb -merge -load ${HOME}/.Xresources ## load Xcolors
 xsetroot -grey&     ## desktop colors
 setxkbmap fr&       ## layout (before every others keyboard options)
-numlockx on&        ## turn on numlock (before numpad as mouse)
 setxkbmap -option "keypad:pointerkeys"&     ## numpad as mouse (shift + numlock to enable)
+numlockx on&        ## turn on numlock (after numpad as mouse)
 
 kill $( pidof xcape ); xcape -e "Super_L=Control_L|Escape"&			## super key (for keybinding (rofi/dmenu/whiskermenu/...)
 xcape -e "Super_R=Control_L|Escape"&			## super key (for keybinding (rofi/dmenu/whiskermenu/...)
@@ -26,6 +26,8 @@ kill $( pidof picom ); picom -i 0.8&                     			## blue light filter
 #kill $( pidof xbattbar ); xbattbar -c -i orange -o brown -a -t 10&	## bottom battery indicator
 kill $( pidof meteo-qt ); meteo-qt -c -i orange -o brown -a -t 10&	## bottom battery indicator
 kill $( pidof xscreensaver ); xscreensaver&
+kill $( pidof psensor ); psensor&
+
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
 
 startDwm() {

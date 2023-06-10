@@ -174,7 +174,7 @@
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
     frame_color = "#000000"
-    foreground = "#000000"
+    foreground = "#ffffff"
     background = "#000000"
     timeout = 10
 

@@ -102,8 +102,6 @@ else
 	echo -e '\n\e[31m Alias file missing!\n'
 fi
 
-[[ "${TTY}" == "/dev/tty1" || "${SSH_CONNECTION}" ]] && neofetch
-
 ## red username if root
 if [[ "${EUID}" -eq '0' ]]; then
 	#PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
