@@ -54,3 +54,7 @@ alias fzf='fzf --reverse'
 alias mpv='mpv --no-keepaspect --stretch-image-subs-to-screen=yes'
 alias pl='parallel -j0'
 alias bb='byobu'
+
+if pidof polkitd>/dev/null && [[ ${DISPLAY} ]];then
+	alias sudo='pkexec'
+fi
