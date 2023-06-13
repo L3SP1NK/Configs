@@ -1,13 +1,5 @@
-export myip=$(ip -4 -br a|awk '{print $3}'|cut -d "/" -f 1|tac|head -n1)
-export PATH="${HOME}/bin:/usr/local/bin:${PATH}:/sbin:/usr/sbin:${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/.scripts"
 export OMZ="${HOME}/.oh-my-zsh"
-export MANPATH="/usr/local/man:$MANPATH"
-export ARCHFLAGS="-arch $(arch)"
 export UPDATE_ZSH_DAYS="1"
-export LANG="en_US.UTF-8"
-export EDITOR="nano"
-export QT_QPA_PLATFORMTHEME="qt5ct"
-export XDG_SESSION_TYPE="x11"
 
 CASE_SENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"

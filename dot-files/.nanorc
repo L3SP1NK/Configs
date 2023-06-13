@@ -218,7 +218,7 @@ set zap
 set titlecolor italic,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor bold,white,blue
+set selectedcolor bold,black,cyan
 set spotlightcolor bold,white,magenta
 set stripecolor black,magenta
 set numbercolor bold,black
@@ -298,7 +298,7 @@ bind ^D writeout main
 
 bind M-P prevbuf main
 bind M-N nextbuf main
-bind M-C casesens all
+#bind M-C casesens all
 bind M-R regexp all
 bind M-P flippipe all
 bind M-B flipnewbuffer all
@@ -308,7 +308,7 @@ bind M-B flipnewbuffer all
 
 ## copy nano selection to system clipboard
 #bind M-C "{execute}|xsel -ib{enter}{undo}" main
-bind M-C "{execute}|xclip -sel clip{enter}{undo}" main
+#bind M-C "{execute}|xclip -sel clip{enter}{undo}" main
 
 ## upper case / lower case
 bind Sh-M-U "{execute}|sed 's/.*/\U&/'{enter}" main

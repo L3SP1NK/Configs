@@ -121,9 +121,8 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 !Sxiv.background: #000000
 Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
-Sxiv.font: firacode nerd font mono 12
+Sxiv.font: firacode nerd font mono 13
 
-!Xcursor.theme: simp1e-dark
 Xcursor.size: 32px
 
 xclock*foreground:  red
