@@ -139,7 +139,7 @@ set quickblank
 set quotestr "^([ 	]*([!#%:;>|}]|//))+"
 
 ## Try to work around a mismatching terminfo terminal description.
-set rawsequences
+#set rawsequences
 
 ## Fix Backspace/Delete confusion problem.
 #set rebinddelete
