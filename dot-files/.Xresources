@@ -123,7 +123,8 @@ Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
 Sxiv.font: firacode nerd font mono 13
 
-Xcursor.size: 32px
+Xcursor.theme: WhiteSur-cursors
+Xcursor.size: 48px
 
 xclock*foreground:  red
 xclock*background:  black

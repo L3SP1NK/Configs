@@ -4,9 +4,9 @@
  ***********************************************/
 * {
 	background-color:		#1f1f1f;
-	background-alt-color:	#1f1f1f;
+	background-alt-color:	#ffffff10;
 	foreground-color:		white;
-	selected-bg-color:		#2777ff;
+	selected-bg-color:		#ffffff10;
 	selected-fg-color:		white;
 	border-color:			@background-alt-color;
 }
@@ -15,17 +15,20 @@
 {
 	text-color:				inherit;
 	border:					0;
+	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
 }
 
 #mainbox
 {
+	border:					0;
 	margin:					32;
 }
 
 #message
 {
+	border:					0;
 	border-color:			@selected-bg-color;
 	background-color:		#cc0000;
 }
@@ -36,10 +39,12 @@
 	border-radius:			0;
 	padding:				32;
 	background-color:		#cc0000;
+	border:					0;
 }
 
 #listview
 {
+	border:					0;
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
@@ -47,11 +52,13 @@
 
 #element
 {
+	border:					0;
 	border-radius:			16;
 }
 
 #element-icon
 {
+	border:					0;
 	background-color:		inherit;
     size:                   64;
 	padding:				8;
@@ -59,6 +66,7 @@
 
 #element-text
 {
+	border:					0;
 	background-color:		inherit;
 	text-color:				inherit;
 	padding:				24;

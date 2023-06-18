@@ -37,10 +37,4 @@ startDwm() {
 	exec dwm\
 			>> ~/.dwm.log
 }
-
-startTwm() {
-	exec twm\
-			>> ~/.twm.log
-}
-
-startDwm||startTwm
+startDwm||startxfce4
