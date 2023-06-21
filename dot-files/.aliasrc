@@ -48,10 +48,11 @@ alias netstats="sudo netstat --tcp --udp -lapute | c"
 alias cal="calcurse"
 alias tg="telegram-cli"
 alias yt="clear&&ytfzf -lstc Y"
-alias pmx='pulsemixer'
+alias pmix='pulsemixer'
 alias rtop='radeontop -cT'
 alias fzf='fzf --reverse'
 alias mpv='mpv --no-keepaspect --stretch-image-subs-to-screen=yes'
 alias pl='parallel -j0'
 alias bb='byobu'
 alias apt='nala'
+alias diff='mcdiff'

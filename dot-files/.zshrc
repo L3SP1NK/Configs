@@ -1,5 +1,12 @@
+export MANPATH="/usr/local/man:${MANTPATH}"
 export OMZ="${HOME}/.oh-my-zsh"
 export UPDATE_ZSH_DAYS="1"
+export GOROOT='/usr/local/go'
+export GOPATH="${HOME}/go"
+export PATH="${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin:${PATH}"
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"                    # This loads nvm
+[ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
 
 CASE_SENSITIVE="true"
 DISABLE_UPDATE_PROMPT="true"
@@ -114,4 +121,5 @@ fi
 if [[ "${MC_SID}" ]]; then
     PROMPT="📂 ${PROMPT}"
 fi
+
 

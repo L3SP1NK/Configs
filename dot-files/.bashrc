@@ -127,3 +127,4 @@ if [ "${SSH_CONNECTION}" ]; then
     PROMPT="📡 ${PS1}"
 fi
 
+. "$HOME/.cargo/env"
