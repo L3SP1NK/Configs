@@ -75,7 +75,7 @@ ctrl + Escape
 	rofi -show drun
 
 ctrl + alt + t
-	x-terminal-emulator
+	st
 
 ctrl + alt + Delete
 	slock||xscreensaver-command -lock
