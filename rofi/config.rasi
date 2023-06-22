@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"firaSans 14";
+	font:					"roboto 14";
 	location:				0;
 	yoffset:				-200;
 	xoffset:				0;

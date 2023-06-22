@@ -1,3 +1,4 @@
+#!/bin/bash
 ##~~~~~~~~##
 ## Alias. ##
 ##~~~~~~~~##
@@ -20,8 +21,8 @@ alias diff='diff --color=auto'
 alias tshark='tshark --color'
 
 ## CPU specific.
-alias stress="stress -c $(nproc)"
-alias make="make -j $(nproc)"
+alias stress='stress -c "$(nproc)"'
+alias make='make -j "$(nproc)"'
 
 ## Gum alias.
 alias gump='gum pager --soft-wrap'
