@@ -78,7 +78,7 @@ ctrl + alt + t
 	st
 
 ctrl + alt + Delete
-	slock||xscreensaver-command -lock
+	xscreensaver-command -lock||slock
 
 super + e
 	thunar
