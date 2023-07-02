@@ -69,7 +69,7 @@ set fill 0
 set historylog
 
 ## Display a "scrollbar" on the righthand side of the edit window.
-set indicator
+#set indicator
 
 ## Scroll the buffer contents per half-screen instead of per line.
 #set jumpyscrolling
@@ -221,12 +221,12 @@ set errorcolor black,red
 set selectedcolor bold,black,cyan
 set spotlightcolor bold,white,magenta
 set stripecolor black,magenta
-set numbercolor bold,black
+set numbercolor grey
 set keycolor bold,black
 set functioncolor cyan
 set minicolor italic,grey
-set promptcolor bold,yellow,black
-set scrollercolor grey,black
+set promptcolor bold,white,black
+set scrollercolor grey
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
