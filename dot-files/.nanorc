@@ -218,14 +218,14 @@ set zap
 set titlecolor italic,white,blue
 set statuscolor black,green
 set errorcolor black,red
-set selectedcolor bold,black,cyan
+set selectedcolor black,cyan
 set spotlightcolor bold,white,magenta
 set stripecolor black,magenta
 set numbercolor grey
 set keycolor bold,black
 set functioncolor cyan
 set minicolor italic,grey
-set promptcolor bold,white,black
+set promptcolor bold,yellow,black
 set scrollercolor grey
 
 ## === Syntax coloring ===

@@ -1,0 +1,19 @@
+"\C-i" menu-complete
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set bell-style visible
+set bind-tty-special-chars on
+set blink-matching-paren on
+set colored-completion-prefix on
+set colored-stats on
+set enable-keypad on
+set expand-tilde on
+set mark-directories on
+set mark-modified-lines on
+set match-hidden-files on
+set menu-complete-display-prefix on
+set page-completions on
+set print-completions-horizontally on
+set revert-all-at-newline on
+set skip-completed-text off
+set visible-stats on

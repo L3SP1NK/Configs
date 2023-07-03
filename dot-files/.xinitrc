@@ -3,11 +3,11 @@
 #export AWT_TOOLKIT='MToolKit'
 #export _JAVA_AWT_WM_NONREPARENTING='1'
 #
+numlockx on&        ## turn on numlock (before numpad as mouse)
 xrdb -merge -load ${HOME}/.Xresources ## load Xcolors
 xsetroot -grey&     ## desktop colors
 setxkbmap fr&       ## layout (before every others keyboard options)
 setxkbmap -option "keypad:pointerkeys"&     ## numpad as mouse (shift + numlock to enable)
-numlockx on&        ## turn on numlock (after numpad as mouse)
 
 kill $( pidof xcape ); xcape -e "Super_L=Control_L|Escape"&			## super key (for keybinding (rofi/dmenu/whiskermenu/...)
 xcape -e "Super_R=Control_L|Escape"&			## super key (for keybinding (rofi/dmenu/whiskermenu/...)

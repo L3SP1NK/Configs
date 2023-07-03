@@ -103,11 +103,11 @@ fi
 
 ## red username if root
 if [[ "${EUID}" -eq '0' ]]; then
-	#PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-	PROMPT='%B%F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 else
-	#PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-	PROMPT='%B%F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
