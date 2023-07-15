@@ -1,10 +1,7 @@
 export MANPATH="/usr/local/man:${MANTPATH}"
 export GOROOT='/usr/local/go'
 export GOPATH="${HOME}/go"
-export PATH="${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin:${PATH}"
-export NVM_DIR="${HOME}/.nvm"
-[ -s "${NVM_DIR}/nvm.sh" ] && \. "${NVM_DIR}/nvm.sh"                    # This loads nvm
-[ -s "${NVM_DIR}/bash_completion" ] && \. "${NVM_DIR}/bash_completion"  # This loads nvm bash_completion
+export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin"
 
 CASE_SENSITIVE='true'
 DISABLE_UPDATE_PROMPT='true'
@@ -15,7 +12,8 @@ UPDATE_ZSH_DAYS="1"
 #ZSH_THEME="random"
 
 plugins=(
-    colorize
+    man
+    colored-man-pages
 	zsh-autosuggestions
 	zsh-syntax-highlighting
     fzf
@@ -103,11 +101,11 @@ fi
 
 ## red username if root
 if [[ "${EUID}" -eq '0' ]]; then
-	PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-	PROMPT='%B%F{black}${?}%f %F{red}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='
+%(?..%F{red}!%?) %B%F{red}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 else
-	PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
-	PROMPT='%B%F{black}${?}%f %F{green}%n@%m%F{black}:%F{blue}%~ %F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='
+%(?..%F{red}!%?) %B%F{green}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
@@ -121,5 +119,3 @@ fi
 if [[ "${MC_SID}" ]]; then
     PROMPT="📂 ${PROMPT}"
 fi
-
-
