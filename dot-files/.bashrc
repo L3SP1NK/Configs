@@ -50,13 +50,10 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-	if [ "${EUID}" -eq '0' ]; then
-            ## red username if root
-		    PS1='
-\[\033[01;30m\]${?} ${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] \$ '
+	if [ "${EUID}" -eq '1000' ]; then
+            PS1="\e[30m\e[1m[${?}\e[30m\e[1m|\e[32m\h\e[30m\e[1m]\e[0m\$"
 		else
-		    PS1='
-\[\033[01;30m\]${?} ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] \$ '
+            PS1="\e[30m\e[1m[${?}\e[30m\e[1m|\e[31m\h\e[30m\e[1m]\e[0m\$"
 	fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -124,11 +121,9 @@ if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
 fi
 
 if [ "${MC_SID}" ]; then
-    PROMPT="📂 ${PS1}"
+    PS1="📂${PS1}"
 fi
 
 if [ "${SSH_CONNECTION}" ]; then
-    PROMPT="📡 ${PS1}"
+    PS1="🛜${PS1}"
 fi
-
-. "$HOME/.cargo/env"

@@ -100,22 +100,21 @@ else
 fi
 
 ## red username if root
-if [[ "${EUID}" -eq '0' ]]; then
-	PROMPT='
-%(?..%F{red}!%? )%B%F{red}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+if [[ "${EUID}" -eq '1000' ]]; then
+	PROMPT='%B%F{black}[%b%(?..%F{red}%?%B%F{black}|)%B%F{green}%m%F{black}:%F{blue}%c%F{black}]%(?.%F{green}.%F{red})%(!.#.%%)%b%f '
 else
-	PROMPT='
-%(?..%F{red}!%? )%B%F{green}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+	PROMPT='%B%F{black}[%b%(?..%F{red}%?%B%F{black}|)%B%F{red}%m%F{black}:%F{blue}%c%F{black}]%(?.%F{green}.%F{red})%(!.#.%%)%b%f '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
     neofetch
 fi
 
-if [[ "${SSH_CONNECTION}" ]]; then
-    PROMPT="📡 ${PROMPT}"
+if [[ "${MC_SID}" ]]; then
+    PROMPT="📂${PROMPT}"
 fi
 
-if [[ "${MC_SID}" ]]; then
-    PROMPT="📂 ${PROMPT}"
+if [[ "${SSH_CONNECTION}" ]]; then
+    PROMPT="🛜${PROMPT}"
 fi
+
