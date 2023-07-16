@@ -102,10 +102,10 @@ fi
 ## red username if root
 if [[ "${EUID}" -eq '0' ]]; then
 	PROMPT='
-%(?..%F{red}!%?) %B%F{red}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+%(?..%F{red}!%? )%B%F{red}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 else
 	PROMPT='
-%(?..%F{red}!%?) %B%F{green}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
+%(?..%F{red}!%? )%B%F{green}%m%F{black}:%F{blue}%c%f%F%(?.%F{green}.%F{red})%(!.#.%%)%f%b '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
