@@ -16,7 +16,7 @@ kill $( pidof dunst ); dunst --startup-notification&         	    ## notificatio
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&  	## desktop menu
 kill $( pidof geoclue ); /usr/libexec/geoclue-2.0/demos/agent&  	## enable geolocation
 kill $( pidof redshift-gtk ); redshift-gtk&                     	## blue light filter
-kill $( pidof picom ); picom -i 0.8&                     			## blue light filter
+kill $( pidof picom ); picom&                     			        ## blue light filter
 kill $( pidof xscreensaver ); xscreensaver&							## screen compositor
 kill $( pidof meteo-qt ); meteo-qt -c -i orange -o brown -a -t 10&	## bottom battery indicator
 kill $( pidof psensor ); psensor&
@@ -27,6 +27,8 @@ kill $( pidof psensor ); psensor&
 #kill $( pidof caffeine-indicator ); caffeine-indicator&  	        ## stay awake
 
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
+
+randombg&
 
 startDwm() {
 	slstatus&
