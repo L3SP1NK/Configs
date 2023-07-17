@@ -1,8 +1,4 @@
 #!/bin/bash
-
-#export AWT_TOOLKIT='MToolKit'
-#export _JAVA_AWT_WM_NONREPARENTING='1'
-#
 numlockx on&        ## turn on numlock (before numpad as mouse)
 xrdb -merge -load ${HOME}/.Xresources ## load Xcolors
 xsetroot -grey&     ## desktop colors
@@ -13,7 +9,7 @@ kill $( pidof xcape ); xcape -e "Super_L=Control_L|Escape"&			## super key (for 
 xcape -e "Super_R=Control_L|Escape"&			## super key (for keybinding (rofi/dmenu/whiskermenu/...)
 kill $( pidof sxhkd ); sxhkd&                               	    ## keyboard shortcut
 kill $( pidof xfce4-clipman ); xfce4-clipman&                   	## clipboard manager
-kill $( pidof onboard ); onboard&     		                        ## onscreen keyboard
+#kill $( pidof onboard ); onboard&     		                        ## onscreen keyboard
 kill $( pidof nm-applet ); nm-applet&        	                    ## network tray icon
 kill $( pidof pasystray ); pasystray&            	                ## pulseaudio tray icon
 kill $( pidof dunst ); dunst --startup-notification&         	    ## notification
