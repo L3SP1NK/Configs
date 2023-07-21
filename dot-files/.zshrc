@@ -7,10 +7,10 @@ setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
 setopt nonomatch           # hide error message if there is no match for the pattern
 setopt notify              # report the status of background jobs immediately
-setopt numericglobsort     # sort filenames numerically when it makes sense
+#setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
-
-WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
+DISABLE_MAGIC_FUNCTIONS=true
+#WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
@@ -33,7 +33,7 @@ bindkey '^[[Z' undo                               # shift + tab undo last action
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*' auto-description 'specify: %d'
+#zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete
 #zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
@@ -47,7 +47,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # History configurations
-HISTFILE=~/.zsh_history
+HISTFILE="${HOME}/.zsh_history"
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
@@ -92,7 +92,7 @@ fi
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=oneline
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -110,7 +110,6 @@ toggle_oneline_prompt(){
     else
         PROMPT_ALTERNATIVE=oneline
     fi
-    configure_prompt
     zle reset-prompt
 }
 zle -N toggle_oneline_prompt
@@ -289,3 +288,20 @@ fi
 if [[ "${SSH_CONNECTION}" ]]; then
     PROMPT="🛜${PROMPT}"
 fi
+
+edit_files_fzf() {
+  local file_path
+  file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
+
+  # Check if the file exists and if you don't own it
+    if [[ -n "$file_path" && ! -O "$file_path" ]]; then
+        sudo "${EDITOR}" "$file_path"
+    elif [[ -n "$file_path" ]]; then
+        "${EDITOR}" "$file_path"
+    fi
+}
+
+if [[ -o interactive ]]; then
+    bindkey -s '^[e' 'edit_files_fzf\n'
+fi
+

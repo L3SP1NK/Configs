@@ -36,7 +36,7 @@ alias stopx="pidof Xorg>/dev/null && echo 'Close everything and press: [enter]' 
 alias l='ls --time-style="+%d-%m-%Y @ %T" -hAl'
 alias unicode="cat ~/.unicode | tac"
 alias c='ccze -A'
-alias s="xclip -selection clipboard"
+alias s="xclip -selection clipboard&&notify-send 'Copied to X clipboard 📋'"
 alias disktemp="sudo hddtemp /dev/sd[a1..z9]|c"
 alias phs="sudo python3 -m http.server 80"
 alias tren="trans -b -t en"
