@@ -291,7 +291,8 @@ fi
 
 edit_files_fzf() {
   local file_path
-  file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
+#  file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
+  file_path="$(find . -type f -o -type l | fzf)"
 
   # Check if the file exists and if you don't own it
     if [[ -n "$file_path" && ! -O "$file_path" ]]; then
