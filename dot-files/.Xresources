@@ -127,7 +127,7 @@ Xcursor.theme: WhiteSur-cursors
 Xcursor.size: 48px
 
 xclock*foreground:  red
-xclock*background:  black
+xclock*background:  #0d0d0d
 xclock*highlight:	yellow
 xclock*hands:		white
 xclock*hourColor:   white
@@ -146,7 +146,7 @@ xclock*padding:		32
 xclock*update:		1
 
 xlogo*foreground:  orange
-xlogo*background:  black
+xlogo*background:  #0d0d0d
 
 xload*foreground:  green
 xload*background:  black

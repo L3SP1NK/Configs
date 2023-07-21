@@ -1,4 +1,6 @@
-#caps_lock?
+mod4 + shift + l
+    adb-screenlocker
+
 ctrl + alt d
 	randombg
 	
