@@ -1,17 +1,29 @@
-mod4 + shift + l
+## screenlocker
+ctrl + alt + l
     adb-screenlocker
 
+ctrl + alt + Delete
+	xscreensaver-command -lock||slock
+
+## desktop/X
 ctrl + alt d
 	randombg
-	
+
+ctrl + alt + BackSpace
+	xrefresh
+
+Print
+	xfce4-screenshooter -r -d 1
+
+super + d
+	wmctrl -k on
+
+## menu
 mod4 + t
 	prompt_translate
 
 mod4 + comma
 	emoji_select
-
-mod4 + c
-	gpick -pos
 
 mod4 + o
 	open_menu
@@ -25,6 +37,15 @@ mod4 + v
 mod4 + s
 	web_search
 
+mod4 + c
+	killall gpick;gpick -pos|xclip -sel clip
+
+mod4 + Tab
+	rofi -show window
+
+ctrl + Escape
+	rofi -show drun
+
 #ctrl + q
 #	xdotool getactivewindow windowkill
 
@@ -34,6 +55,35 @@ mod4 + s
 #mod4 + Up
 #	xdotool getactivewindow windowmaximize
 
+## workspace (go to)
+ctrl + alt + 1
+	wmctrl -s 0
+
+ctrl + alt + 2
+	wmctrl -s 1
+
+ctrl + alt + 3
+	wmctrl -s 2
+
+ctrl + alt + 4
+	wmctrl -s 3
+
+ctrl + alt + 5
+	wmctrl -s 4
+
+ctrl + alt + 6
+	wmctrl -s 5
+
+ctrl + alt + 7
+	wmctrl -s 6
+
+ctrl + alt + 8
+	wmctrl -s 7
+
+ctrl + alt + 9
+	wmctrl -s 8
+
+## workspace (send to)
 ctrl + mod4 + 1
 	xdotool getactivewindow set_desktop_for_window 0
 
@@ -61,56 +111,12 @@ ctrl + mod4 + 8
 ctrl + mod4 + 9
 	xdotool getactivewindow set_desktop_for_window 8
 
-mod4 + Tab
-	rofi -show window
-
-ctrl + alt + BackSpace
-	xrefresh
-
-Print
-	xfce4-screenshooter -r -d 1
-
-super + d
-	wmctrl -k on
-
-ctrl + Escape
-	rofi -show drun
-
+## Launcher
 ctrl + alt + t
 	st
-
-ctrl + alt + Delete
-	xscreensaver-command -lock||slock
 
 super + e
 	thunar
 
 super + x
 	xmix
-
-ctrl + alt + 1
-	wmctrl -s 0
-
-ctrl + alt + 2
-	wmctrl -s 1
-
-ctrl + alt + 3
-	wmctrl -s 2
-
-ctrl + alt + 4
-	wmctrl -s 3
-
-ctrl + alt + 5
-	wmctrl -s 4
-
-ctrl + alt + 6
-	wmctrl -s 5
-
-ctrl + alt + 7
-	wmctrl -s 6
-
-ctrl + alt + 8
-	wmctrl -s 7
-
-ctrl + alt + 9
-	wmctrl -s 8
