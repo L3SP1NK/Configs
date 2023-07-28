@@ -306,3 +306,7 @@ if [[ -o interactive ]]; then
     bindkey -s '^[e' 'edit_files_fzf\n'
 fi
 
+if [[ -o interactive ]]; then
+    bindkey -s '^[l' ';clear;tree -L 1\n'
+fi
+

@@ -180,3 +180,9 @@ if [[ $- =~ "i" ]]; then
     # Bind the function to Alt + E (Escape followed by E)
     bind -x '"\ee": edit_files_fzf'
 fi
+
+# Check if the shell is interactive
+if [[ $- =~ "i" ]]; then
+    # Bind the function to Alt + E (Escape followed by E)
+    bind -x '"\el": ;clear;tree -L 1'
+fi
