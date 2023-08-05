@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -94,6 +95,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
+    export FZF_DEFAULT_OPTS='--color=bg+:#1f1f1f,bg:#0d0d0d,border:#1f1f1f,spinner:#ff0000,hl:#ffffff,fg:#ffffff,header:#719872,info:#15FFBE,pointer:#FF0000,marker:#E17899,fg+:#ffffff,preview-bg:#D9D9D9,prompt:#0099BD,hl+:#FCFF15'
 
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
