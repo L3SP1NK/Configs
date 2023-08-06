@@ -292,10 +292,9 @@ fi
 edit_files_fzf() {
   local file_path
 #  file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
-  file_path="$(find . -type f -o -type l | fzf)"
+  file_path="$(find . -type f -o -type l | fzf -x)"
 
-  # Check if the file exists and if you don't own it
-    if [[ -n "$file_path" && ! -O "$file_path" ]]; then
+    if [[ ! -O "$file_path" ]]; then
         sudo "${EDITOR}" "$file_path"
     elif [[ -n "$file_path" ]]; then
         "${EDITOR}" "$file_path"
@@ -309,4 +308,3 @@ fi
 if [[ -o interactive ]]; then
     bindkey -s '^[l' ';clear;tree -L 1\n'
 fi
-

@@ -167,10 +167,10 @@ fi
 edit_files_fzf() {
     local file_path
     #file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
-    file_path="$(find . -type f -o -type l | fzf)"
+    file_path="$(find . -type f -o -type l | fzf -x )"
 
   # Check if the file exists and you don't own it
-    if [[ -n "$file_path" && -e "$file_path" && ! -O "$file_path" ]]; then
+    if [[ ! -O "$file_path" ]]; then
         sudo "${EDITOR}" "$file_path"
     elif [[ -n "$file_path" ]]; then
         "${EDITOR}" "$file_path"
