@@ -27,7 +27,7 @@ kill $( pidof psensor ); psensor&
 #kill $( pidof caffeine-indicator ); caffeine-indicator&  	        ## stay awake
 
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
-
+/home/lespink/.screenlayout/zda.sh&
 randombg&
 
 startDwm() {

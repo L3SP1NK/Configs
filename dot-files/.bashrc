@@ -163,28 +163,18 @@ if [ "${SSH_CONNECTION}" ]; then
     PS1="🛜${PS1}"
 fi
 
-# Define a function to execute "edit $(ls *|fzf)"
 edit_files_fzf() {
-    local file_path
-    #file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
-    file_path="$(find . -type f -o -type l | fzf -x )"
+        local FILE; FILE=$(find . -type f -o -type l | fzf)
 
-  # Check if the file exists and you don't own it
-    if [[ ! -O "$file_path" ]]; then
-        sudo "${EDITOR}" "$file_path"
-    elif [[ -n "$file_path" ]]; then
-        "${EDITOR}" "$file_path"
-    fi
+        if [[ -n "${FILE}" ]]; then
+                if [[ -O "${FILE}" ]]; then
+                "${EDITOR}" "${FILE}"
+                else
+                sudo "${EDITOR}" "${FILE}"
+            fi
+        fi
 }
 
-# Check if the shell is interactive
-if [[ $- =~ "i" ]]; then
-    # Bind the function to Alt + E (Escape followed by E)
-    bind -x '"\ee": edit_files_fzf'
-fi
-
-# Check if the shell is interactive
-if [[ $- =~ "i" ]]; then
-    # Bind the function to Alt + E (Escape followed by E)
-    bind -x '"\el": ;clear;tree -L 1'
-fi
+bind -x '"\ee": edit_files_fzf'
+bind -x '"\el": clear; tree -L 1'
+bind -x '"\e[1~": clear; cd ~'

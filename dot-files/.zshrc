@@ -14,19 +14,6 @@ DISABLE_MAGIC_FUNCTIONS=true
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
-# configure key keybindings
-bindkey -e                                        # emacs key bindings
-bindkey ' ' magic-space                           # do history expansion on space
-bindkey '^U' backward-kill-line                   # ctrl + U
-bindkey '^[[3;5~' kill-word                       # ctrl + Supr
-bindkey '^[[3~' delete-char                       # delete
-bindkey '^[[1;5C' forward-word                    # ctrl + ->
-bindkey '^[[1;5D' backward-word                   # ctrl + <-
-bindkey '^[[5~' beginning-of-buffer-or-history    # page up
-bindkey '^[[6~' end-of-buffer-or-history          # page down
-bindkey '^[[H' beginning-of-line                  # home
-bindkey '^[[F' end-of-line                        # end
-bindkey '^[[Z' undo                               # shift + tab undo last action
 
 # enable completion features
 autoload -Uz compinit
@@ -256,9 +243,14 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-export GOROOT='/usr/local/go'
-export GOPATH="${HOME}/go"
-export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin"
+loadGoEnv() {
+
+	export GOROOT='/usr/local/go'
+	export GOPATH="${HOME}/go"
+	export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin"
+}
+
+loadGoEnv
 
 ## Load personal aliases.
 aliasrc="${HOME}/.aliasrc"
@@ -270,10 +262,8 @@ fi
 
 ## red username if root
 if [[ "${EUID}" -eq '1000' ]]; then
-	PROMPT='%B%F{black}[%(?..%?|)%B%F{green}%m%F{black}:%F{blue}%c%F{black}] %#%b%f '
 	PROMPT='%B%F{black}%(?..%?|)%B%F{green}%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 else
-	#PROMPT='%B%F{black}[%(?..%?|)%B%F{red}%m%F{black}:%F{blue}%c%F{black}] %#%b%f '
 	PROMPT='%B%F{black}%(?..%?|)%B%F{red}%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 fi
 
@@ -289,22 +279,33 @@ if [[ "${SSH_CONNECTION}" ]]; then
     PROMPT="🛜${PROMPT}"
 fi
 
-edit_files_fzf() {
-  local file_path
-#  file_path="$(find . -maxdepth 1 -type f -o -type l | fzf)"
-  file_path="$(find . -type f -o -type l | fzf -x)"
 
-    if [[ ! -O "$file_path" ]]; then
-        sudo "${EDITOR}" "$file_path"
-    elif [[ -n "$file_path" ]]; then
-        "${EDITOR}" "$file_path"
-    fi
+# configure key keybindings
+bindkey ' ' magic-space                           	# do history expansion on space
+bindkey '^U' backward-kill-line                   	# ctrl + U
+bindkey '^[[3;5~' kill-word                       	# ctrl + Supr
+bindkey '^[[3~' delete-char                       	# delete
+bindkey '^[[1;5C' forward-word                    	# ctrl + ->
+bindkey '^[[1;5D' backward-word                   	# ctrl + <-
+bindkey '^[[5~' beginning-of-buffer-or-history    	# page up
+bindkey '^[[6~' end-of-buffer-or-history          	# page down
+bindkey '^[[H' beginning-of-line                 	# home
+bindkey '^[[F' end-of-line                        	# end
+bindkey '^[[Z' undo                               	# shift + tab undo last action
+
+edit_files_fzf() {
+	local FILE; FILE=$(find . -type f -o -type l | fzf)
+
+	if [[ -n "${FILE}" ]]; then
+		if [[ -O "${FILE}" ]]; then
+	        "${EDITOR}" "${FILE}"
+		else
+	        sudo "${EDITOR}" "${FILE}"
+	    fi
+	fi
 }
 
-if [[ -o interactive ]]; then
-    bindkey -s '^[e' 'edit_files_fzf\n'
-fi
-
-if [[ -o interactive ]]; then
-    bindkey -s '^[l' ';clear;tree -L 1\n'
-fi
+bindkey -s '^[e' 'edit_files_fzf\n' 				# alt + E edit a file.
+bindkey -s '^[l' ';clear;tree -L 1\n'				# List files.
+bindkey '^Z' undo									# undo last action
+bindkey -s '^[[1~' ';clear;cd ~\n'					# return to home

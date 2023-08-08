@@ -102,7 +102,7 @@ set minibar
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
-set multibuffer
+#set multibuffer
 
 ## Don't convert files from DOS/Mac format.
 #set noconvert
@@ -183,7 +183,7 @@ set stateflags
 set tabsize 4
 
 ## Convert each typed tab to the fitting number of spaces.
-set tabstospaces
+#set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
 #set trimblanks
@@ -204,7 +204,7 @@ set whitespace "→·"
 ## The characters (besides alphanumeric ones) that should be considered
 ## as parts of words.  This option does not have a default value.  When
 ## set, it overrides option 'set wordbounds'.
-set wordchars "<_>.[]{}()/\$&"
+#set wordchars "<>.[]{}()/\$&"
 
 ## Let an unmodified Backspace or Delete erase the marked region (instead
 ## of a single character, and without affecting the cutbuffer).
@@ -257,7 +257,7 @@ extendsyntax makefile tabgives "	"
 ## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor. On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is the ASCII character for
 ## backspace, so it is bound by default to the backspace function.  The <Backspace> key itself produces a different keycode, which is hard-bound to the backspace function.
 ## So, if you normally use <Backspace> for backspacing and not ^H, you can make <Ctrl+Backspace> delete the word to the left of the cursor with:
-#bind ^H chopwordleft main
+bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
 bind M-C comment main
