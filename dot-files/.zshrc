@@ -308,4 +308,4 @@ edit_files_fzf() {
 bindkey -s '^[e' 'edit_files_fzf\n' 				# alt + E edit a file.
 bindkey -s '^[l' ';clear;tree -L 1\n'				# List files.
 bindkey '^Z' undo									# undo last action
-bindkey -s '^[[1~' ';clear;cd ~\n'					# return to home
+bindkey -s '^[^[[1~' ';clear;cd ~\n'					# return to home
