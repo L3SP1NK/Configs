@@ -14,7 +14,6 @@ DISABLE_MAGIC_FUNCTIONS=true
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
-
 # enable completion features
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
@@ -187,14 +186,6 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=yellow,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=magenta,bold
 ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=red,bold
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
-## Man/less color.
-export LESS_TERMCAP_mb=$'\E[1;31m'
-export LESS_TERMCAP_md=$'\E[1;36m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;33m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[1;32m'
-export LESS_TERMCAP_ue=$'\E[0m'
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -226,11 +217,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -243,14 +229,9 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-loadGoEnv() {
-
 	export GOROOT='/usr/local/go'
 	export GOPATH="${HOME}/go"
 	export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin"
-}
-
-loadGoEnv
 
 ## Load personal aliases.
 aliasrc="${HOME}/.aliasrc"
