@@ -19,7 +19,7 @@ Xft.hintstyle: none
 
 ! Global color
 !XTerm*foreground: rgb:ff/ff/ff
-!XTerm*background: rgb:00/00/00
+XTerm*background:	#0d0d0d
 
 ! White/Grey
 !*color7:	white
