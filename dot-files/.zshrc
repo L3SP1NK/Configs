@@ -229,10 +229,6 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-	export GOROOT='/usr/local/go'
-	export GOPATH="${HOME}/go"
-	export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin:${HOME}/.local/bin"
-
 ## Load personal aliases.
 aliasrc="${HOME}/.aliasrc"
 if [ -e "${aliasrc}" ]; then
