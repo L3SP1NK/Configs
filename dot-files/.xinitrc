@@ -31,6 +31,7 @@ kill $( pidof psensor ); psensor&
 randombg&
 
 startDwm() {
+	wmname "LG3D"&
 	slstatus&
 	exec dwm\
 			>> ~/.dwm.log
