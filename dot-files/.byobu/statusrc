@@ -29,7 +29,8 @@
 
 # Default: depends on the distro (which is either auto-detected, either set
 # via $DISTRO)
-#LOGO="\o/"
+LOGO="  "
+#LOGO="  "
 
 # Abbreviate the release to N characters
 # By default, this is disabled.  But if you set RELEASE_ABBREVIATED=1
@@ -75,4 +76,4 @@
 
 # Set this to zero to hide seconds int the time display
 # Default 1
-#TIME_SECONDS=0
+TIME_SECONDS=0
