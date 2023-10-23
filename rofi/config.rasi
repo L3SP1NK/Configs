@@ -3,7 +3,7 @@ configuration
 	modi:					"window,run,ssh,drun";
 	font:					"jetbrains mono nerd font bold 13";
 	location:				0;
-	yoffset:				-200;
+	yoffset:				-50;
 	xoffset:				0;
 	fixed-num-lines:		false;
 	show-icons:				true;
