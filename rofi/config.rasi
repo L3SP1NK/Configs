@@ -24,14 +24,14 @@ configuration
 	sort:					true;
 	sorting-method:			"fzf";
 	case-sensitive:			false;
-	cycle:					true;
+	cycle:					false;
 	sidebar-mode:			false;
 	eh:						1;
 /*	auto-select:			false;*/
 /*	parse-hosts:			false;*/
 /*	parse-known-hosts:		true;*/
 	combi-modi:				"window,run,drun";
-	matching:				"fuzzy";
+/*	matching:				"fuzzy";*/
 	matching:				"normal";
 	tokenize:				true;
 	m:						"-5";
@@ -40,7 +40,7 @@ configuration
 	threads:				0;
 	scroll-method:			0;
 /*	fake-background:		"screenshot";*/
-	fake-transparency:		true;
+	fake-transparency:		false;
 	window-format:			"{w}  {c}  {t}";
 	click-to-exit:			true;
 	max-history-size:		10;
@@ -52,7 +52,7 @@ configuration
 	display-run:			"   ";
 	display-ssh:			"   ";
 	display-drun:			"   ";
-	display-drun:			" 󰌧	";
+	display-drun:			" 󰌧 ";
 	display-combi:			"   ";
 	display-keys:			"   ";
 }
