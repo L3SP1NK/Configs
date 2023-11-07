@@ -81,7 +81,7 @@ XTerm*xftAntialias: true
 ! set font and fontsize
 
 XTerm*faceName: jetbrainsmono nerd font mono
-XTerm*faceSize: 12
+XTerm*faceSize: 13
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8

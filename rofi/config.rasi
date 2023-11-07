@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"jetbrains mono nerd font bold 13";
+	font:					"roboto regular 14";
 	location:				0;
 	yoffset:				-50;
 	xoffset:				0;
