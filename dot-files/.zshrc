@@ -276,6 +276,8 @@ bindkey '^[[H' beginning-of-line                 	# home
 bindkey '^[[F' end-of-line                        	# end
 bindkey '^[[Z' undo                               	# shift + tab undo last action
 
+EDITOR='nano'
+
 edit_files_fzf() {
 	local FILE; FILE=$(find . -type f -o -type l | fzf)
 
