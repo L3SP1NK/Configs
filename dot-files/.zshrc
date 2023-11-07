@@ -257,6 +257,12 @@ if [[ "${SSH_CONNECTION}" ]]; then
 fi
 
 
+# load cargo env
+CARGO_DIR="${HOME}/.cargo/bin"
+if [[ -d ${CARGO_DIR} ]]; then
+	PATH="${PATH}:${CARGO_DIR}"
+fi
+
 # configure key keybindings
 bindkey ' ' magic-space                           	# do history expansion on space
 bindkey '^U' backward-kill-line                   	# ctrl + U
