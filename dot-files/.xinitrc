@@ -1,16 +1,16 @@
 #!/bin/bash
 
 ## KEYBOARD
+setxkbmap fr&       												## layout (before every others keyboard options).
 kill $( pidof xcape ); xcape -e "Super_L=Control_L|Escape"&			## 
 xcape -e "Super_R=Control_L|Escape"&								## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
-setxkbmap fr&       												## layout (before every others keyboard options).
 numlockx on&														## Turn on numlock (before numpad as mouse).
 setxkbmap -option "keypad:pointerkeys"&     						## Numpad as mouse (shift + numlock to enable)
 kill $( pidof sxhkd ); sxhkd&                               	    ## Keyboard shortcut.
 
 ## DESKTOP
 xsetroot -grey&     												## Desktop background.
-xrdb -merge -load ${HOME}/.Xresources 								## Load X colors.
+xrdb -merge -load ~/.Xresources		 								## Load X colors.
 kill $( pidof picom ); picom&                     			        ## Screen compositor.
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&  	## Desktop menu.
 /home/lespink/.screenlayout/layout.sh&								## Display resolution/layout.
