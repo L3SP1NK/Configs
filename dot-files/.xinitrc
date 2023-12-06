@@ -37,7 +37,7 @@ kill $( pidof redshift-gtk ); redshift-gtk&                     	## Blue light f
 ## BATTERY
 #kill $( pidof upowerd ); kill $( pidof xfce4-power-manager ); xfce4-power-manager&		## Power manager.
 #kill $( pidof xbattbar ); xbattbar -c -i orange -o brown -a -t 10&						## Battery indicator
-#kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
+kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
 
 
 startDwm() {
