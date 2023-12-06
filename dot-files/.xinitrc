@@ -39,6 +39,7 @@ kill $( pidof redshift-gtk ); redshift-gtk&                     	## Blue light f
 #kill $( pidof xbattbar ); xbattbar -c -i orange -o brown -a -t 10&						## Battery indicator
 kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
 
+oneko -sakura -rv -tofocus -cursor 123 -fg beige -bg black
 
 startDwm() {
 	wmname "LG3D"&
