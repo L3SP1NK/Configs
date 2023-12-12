@@ -37,26 +37,23 @@ set -g prefix2 F12
 source $BYOBU_PREFIX/share/byobu/keybindings/f-keys.tmux
 set-window-option -g xterm-keys on
 
-set-option -g history-limit 0
+#set-option -g set-titles on
+#set-option -g set-titles-string '#(whoami)@#H - byobu (#S)'
+set-option -g pane-active-border-style fg=$BYOBU_HIGHLIGHT
+set-option -g pane-border-style fg=$BYOBU_ACCENT
+set-option -g history-limit 1
 set-option -g display-panes-time 1
-set-option -g display-panes-colour $BYOBU_HIGHLIGHT
-set-option -g display-panes-active-colour $BYOBU_ACCENT
-set-option -g clock-mode-colour $BYOBU_LIGHT
+set-option -g display-panes-colour $BYOBU_ACCENT
+set-option -g display-panes-active-colour $BYOBU_HIGHLIGHT
+set-option -g clock-mode-colour $BYOBU_ACCENT
 set-option -g clock-mode-style 24
 set-option -g mode-keys vi
-
-## Border
-#set-option -g pane-active-border-style bg=$BYOBU_HIGHLIGHT,fg=$BYOBU_HIGHLIGHT
-set-option -g pane-active-border-style fg=$BYOBU_HIGHLIGHT
-set-option -g pane-border-style fg=darkgrey
-
-## Selection
-set-option -g mode-style bg=blue,fg=white
+set-option -g mode-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
 
 set-window-option -g window-status-style default
 set-window-option -g window-status-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
-set-window-option -g window-status-current-style bg=#1f1f1f,fg=$BYOBU_LIGHT
-set-window-option -g window-status-activity-style bg=$BYOBU_DARK,fg=green
+set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
+set-window-option -g window-status-activity-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT,bold
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
 set-window-option -g monitor-activity on
@@ -78,5 +75,4 @@ set -g status-left-length 256
 set -g status-right-length 256
 set -g status-left '#(byobu-status tmux_left)'
 set -g status-right '#(byobu-status tmux_right)'$BYOBU_DATE$BYOBU_TIME
-#set -g message-style bg=$BYOBU_ACCENT,fg=white
-set -g message-style fg=$BYOBU_ACCENT,bg=green
+set -g message-style bg=$BYOBU_ACCENT,fg=white
