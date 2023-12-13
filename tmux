@@ -53,7 +53,7 @@ set-option -g mode-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
 set-window-option -g window-status-style default
 set-window-option -g window-status-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
 set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
-set-window-option -g window-status-activity-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT,bold
+set-window-option -g window-status-activity-style bg=$BYOBU_DARK,fg=orange
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
 set-window-option -g monitor-activity on
