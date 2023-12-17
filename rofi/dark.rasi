@@ -3,10 +3,10 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#1f1f1f;
+	background-color:		#0d0d0d;
 	background-alt-color:	#e9e9e9;
 	foreground-color:		white;
-	selected-bg-color:		#ffffff10;
+	selected-bg-color:		#1f1f1f;
 	selected-fg-color:		white;
 	border-color:			@background-alt-color;
 }
@@ -30,7 +30,7 @@
 {
 	border:					0;
 	border-color:			@selected-bg-color;
-	background-color:		#cc0000;
+	background-color:		#cc000040;
 }
 
 #textbox
