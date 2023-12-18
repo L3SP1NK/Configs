@@ -22,17 +22,15 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-#    format = "<small><b>%a :</b>%s</small>\n%b"
-#    format = "<small><i>%a\n\n</i></small><u>%s</u>\n\n%b"
-    format = "<small>%s</small>\n\n%b"
+    format = "<small>%a:\n\n%s</small>\n\n<b>%b</b>\n"
     icon_position = left
     corner_radius = 16
 
     # Sort messages by urgency
-    sort = yes
+    sort = no
 
     # Show how many messages are currently hidden (because of geometry)
-    indicate_hidden = yes
+    indicate_hidden = no
 
     # alignment of message text.
     # Possible values are "left", "center" and "right"
@@ -71,12 +69,12 @@
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
-    transparency = 5
+    transparency = 20
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 60
+    idle_threshold = 0
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -91,7 +89,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option will be
     # igno#cc000.
-    follow = keyboard
+    follow = mouse
 
     # should a notification popped up from history be sticky or
     # timeout as if it would normally do.
@@ -173,21 +171,21 @@
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-    frame_color = "#1f1f1f"
+    frame_color = "#0d0d0d"
     foreground = "#ffffff"
-    background = "#1f1f1f"
+    background = "#0d0d0d"
     timeout = 10
 
 [urgency_normal]
-    frame_color = "#1f1f1f"
+    frame_color = "#0d0d0d"
     foreground = "#ffffff"
-    background = "#1f1f1f"
+    background = "#0d0d0d"
     timeout = 15
 
 [urgency_critical]
-    frame_color = "#1f1f1f"
+    frame_color = "#0d0d0d"
     foreground = "#cc0000"
-    background = "#1f1f1f"
+    background = "#0d0d0d"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules
