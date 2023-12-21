@@ -26,7 +26,7 @@ mod4 + comma
 	emoji_select
 
 mod4 + o
-	open_menu
+	ocr
 
 mod4 + a
 	gpt_ask
