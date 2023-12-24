@@ -128,7 +128,7 @@ plugins=(
     fzf
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-	zsh-navigation-tools
+	#zsh-navigation-tools
 	zsh-completions
 	command-not-found
 	man

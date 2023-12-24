@@ -14,14 +14,13 @@ xrdb -merge -load ~/.Xresources		 								## Load X colors.
 kill $( pidof picom ); picom&                     			        ## Screen compositor.
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&  	## Desktop menu.
 /home/lespink/.screenlayout/layout.sh&								## Display resolution/layout.
-xrandr --output HDMI-A-0 --scale 1.27 --mode 1360x768				## Set custom resolution.
 randombg&															## Set a random background.
 
 ## UTLITY
 kill $( pidof nm-applet ); nm-applet&        	                    ## Network tray icon.
 kill $( pidof meteo-qt ); meteo-qt -c -i orange -o brown -a -t 10&	## Meteo indicator.
 kill $( pidof psensor ); psensor&									## Temperature monitor.
-xterm -e "sudo btop"&
+x-terminal-emulator -e 'btop'&
 
 ## ACCESSIBILITY
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&		## Auth agent.
@@ -39,9 +38,12 @@ kill $( pidof redshift-gtk ); redshift-gtk&                     	## Blue light f
 #kill $( pidof xbattbar ); xbattbar -c -i orange -o brown -a -t 10&						## Battery indicator
 kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
 
-oneko -tomoyo -rv -tofocus -cursor 123 -fg beige -bg black
-
 startDwm() {
+
+	QT_QPA_PLATFORMTHEME=qt6ct
+	XDG_SESSION_TYPE=x11
+	_JAVA_AWT_WM_NONREPARENTING=1
+
 	wmname "LG3D"&
 	slstatus&
 	exec dwm\
