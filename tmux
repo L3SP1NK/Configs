@@ -48,7 +48,7 @@ set-option -g display-panes-active-colour $BYOBU_HIGHLIGHT
 set-option -g clock-mode-colour $BYOBU_ACCENT
 set-option -g clock-mode-style 24
 set-option -g mode-keys vi
-set-option -g mode-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
+set-option -g mode-style bg=royalblue,fg=$BYOBU_LIGHT,bold
 
 set-window-option -g window-status-style default
 set-window-option -g window-status-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
