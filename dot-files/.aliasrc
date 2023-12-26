@@ -58,3 +58,4 @@ alias bb='byobu'
 alias diff='mcdiff'
 alias watch='watch -t'
 alias sp='searchsploit'
+alias lip="ip -4 -br a|awk '{print $3}'|cut -d '/' -f 1|tac|head -n1|xclip -selection clipboard&&notify-send 'Copied to X clipboard 📋'"
