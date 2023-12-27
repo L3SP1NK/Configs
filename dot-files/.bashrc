@@ -178,3 +178,4 @@ edit_files_fzf() {
 bind -x '"\ee": edit_files_fzf'
 bind -x '"\el": clear; tree -L 1'
 bind -x '"\e[1~": clear; cd ~'
+source ~/.bash.d/cht.sh
