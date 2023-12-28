@@ -1,5 +1,8 @@
-mod4 + shift + comma
-	cs
+	#wmctrl -r :ACTIVE: -b toggle,fullscreen
+	#xdotool key F11
+alt + Return
+	wmctrl -r :ACTIVE: -b toggle,fullscreen
+
 
 ## screenlocker
 ctrl + alt + l

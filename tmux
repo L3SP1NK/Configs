@@ -42,9 +42,9 @@ set-option -g set-titles-string "#(whoami)@#H - ${TERM}"
 set-option -g pane-active-border-style fg=$BYOBU_HIGHLIGHT
 set-option -g pane-border-style fg=$BYOBU_ACCENT
 set-option -g history-limit 1
-set-option -g display-panes-time 1
-set-option -g display-panes-colour $BYOBU_ACCENT
-set-option -g display-panes-active-colour $BYOBU_HIGHLIGHT
+#set-option -g display-panes-time 1
+#set-option -g display-panes-colour
+#set-option -g display-panes-active-colour
 set-option -g clock-mode-colour $BYOBU_ACCENT
 set-option -g clock-mode-style 24
 set-option -g mode-keys vi
@@ -52,7 +52,7 @@ set-option -g mode-style bg=royalblue,fg=$BYOBU_LIGHT,bold
 
 set-window-option -g window-status-style default
 set-window-option -g window-status-style fg=$BYOBU_LIGHT
-set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
+set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,bold,fg=$BYOBU_LIGHT,reverse
 set-window-option -g window-status-activity-style fg=$BYOBU_LIGHT,bold
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
