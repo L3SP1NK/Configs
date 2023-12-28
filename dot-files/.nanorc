@@ -28,7 +28,7 @@ set atblanks
 set backup
 
 ## The directory to put unique backup files in.
-set backupdir "/tmp"
+set backupdir "/dev/shm"
 
 ## Use bold text instead of reverse video text.
 set boldtext
