@@ -40,9 +40,9 @@ kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
 
 startDwm() {
 
-	QT_QPA_PLATFORMTHEME=qt6ct
-	XDG_SESSION_TYPE=x11
-	_JAVA_AWT_WM_NONREPARENTING=1
+	QT_QPA_PLATFORMTHEME='qt6ct'
+	XDG_SESSION_TYPE='x11'
+	_JAVA_AWT_WM_NONREPARENTING='1'
 
 	wmname "LG3D"&
 	slstatus&
