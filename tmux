@@ -37,8 +37,8 @@ set -g prefix2 F12
 source $BYOBU_PREFIX/share/byobu/keybindings/f-keys.tmux
 set-window-option -g xterm-keys on
 
-#set-option -g set-titles on
-#set-option -g set-titles-string '#(whoami)@#H - byobu (#S)'
+set-option -g set-titles on
+set-option -g set-titles-string "#(whoami)@#H - ${TERM}"
 set-option -g pane-active-border-style fg=$BYOBU_HIGHLIGHT
 set-option -g pane-border-style fg=$BYOBU_ACCENT
 set-option -g history-limit 1
@@ -51,9 +51,9 @@ set-option -g mode-keys vi
 set-option -g mode-style bg=royalblue,fg=$BYOBU_LIGHT,bold
 
 set-window-option -g window-status-style default
-set-window-option -g window-status-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
+set-window-option -g window-status-style fg=$BYOBU_LIGHT
 set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
-set-window-option -g window-status-activity-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT,bold
+set-window-option -g window-status-activity-style fg=$BYOBU_LIGHT,bold
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
 set-window-option -g monitor-activity on
@@ -69,10 +69,10 @@ set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 #set -g default-command 'exec byobu-shell'
 set -g default-command $SHELL
 
-set -g status-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
+set -g status-style fg=$BYOBU_LIGHT
 set -g status-interval 1
 set -g status-left-length 256
 set -g status-right-length 256
 set -g status-left '#(byobu-status tmux_left)'
-set -g status-right '#(byobu-status tmux_right)'$BYOBU_DATE$BYOBU_TIME
+set -g status-right '#(byobu-status tmux_right)'
 set -g message-style bg=$BYOBU_ACCENT,fg=white
