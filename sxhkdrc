@@ -40,8 +40,12 @@ mod4 + a
 mod4 + v
 	xfce4-popup-clipman
 
-mod4 + s
-	web_search
+## Search On The Web
+mod4 + g
+	sotw google
+
+mod4 + y
+	sotw youtube
 
 mod4 + c
 	killall gpick;gpick -pos|xclip -sel clip
