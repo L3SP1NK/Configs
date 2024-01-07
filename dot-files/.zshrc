@@ -79,7 +79,7 @@ fi
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
 PROMPT_ALTERNATIVE=oneline
-NEWLINE_BEFORE_PROMPT=yes
+NEWLINE_BEFORE_PROMPT=no
 # STOP KALI CONFIG VARIABLES
 
 if [ "$color_prompt" = yes ]; then
