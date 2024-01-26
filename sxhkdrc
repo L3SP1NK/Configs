@@ -11,6 +11,9 @@ ctrl + alt + l
 ctrl + alt + Delete
 	xscreensaver-command -lock||slock
 
+ctrl + alt + shift + Delete
+	systemctl -i suspend
+
 ## desktop/X
 ctrl + alt d
 	randombg
@@ -127,3 +130,6 @@ super + e
 
 super + x
 	xmix
+
+super + exclam
+	telebash -t "$(rofi -dmenu -p '   Send to Telegram: ')" 1083792765
