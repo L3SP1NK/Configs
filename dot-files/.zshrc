@@ -252,11 +252,11 @@ if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
 fi
 
 if [[ "${MC_SID}" ]]; then
-    PROMPT="📂${PROMPT}"
+    PROMPT="📂 ${PROMPT}"
 fi
 
 if [[ "${SSH_CONNECTION}" ]]; then
-    PROMPT="🛜${PROMPT}"
+    PROMPT="🛜 ${PROMPT}"
 fi
 
 
