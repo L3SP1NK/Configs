@@ -69,9 +69,9 @@ if [ "$color_prompt" = yes ]; then
 
     if [ "$color_prompt" = yes ]; then
             if [ "${EUID}" -eq '0' ]; then
-                PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[31m\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
+                PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[31m\u@\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
                     else
-                PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[32m\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
+                PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[32m\u@\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
             fi
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
