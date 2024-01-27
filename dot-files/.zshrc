@@ -241,10 +241,10 @@ else
 fi
 
 ## red username if root
-if [[ "${EUID}" -eq '1000' ]]; then
-	PROMPT='%B%F{black}%(?..%?|)%B%F{green}%m%F{black}:%F{blue}%c%F{black} %#%b%f '
-else
+if [[ "${EUID}" -ne '0' ]]; then
 	PROMPT='%B%F{black}%(?..%?|)%B%F{red}%m%F{black}:%F{blue}%c%F{black} %#%b%f '
+else
+	PROMPT='%B%F{black}%(?..%?|)%B%F{green}%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
