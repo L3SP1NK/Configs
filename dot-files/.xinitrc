@@ -4,46 +4,139 @@ export QT_QPA_PLATFORMTHEME='qt5ct'
 export XDG_SESSION_TYPE='x11'
 export _JAVA_AWT_WM_NONREPARENTING='1'
 
-## KEYBOARD
-xrdb -merge -load ~/.Xresources&	 								## Load X colors.
-setxkbmap fr&       												## layout (before every others keyboard options).
-kill $( pidof xcape ); xcape -e "Super_L=Control_L|Escape"&			## 
-xcape -e "Super_R=Control_L|Escape"&								## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
-numlockx on&														## Turn on numlock (before numpad as mouse).
-setxkbmap -option "keypad:pointerkeys"&     						## Numpad as mouse (shift + numlock to enable)
-kill $( pidof sxhkd ); sxhkd&                               	    ## Keyboard shortcut.
+## Load X colors
+xrdb -merge -load ~/.Xresources&
 
-## UTLITY
-kill $( pidof meteo-qt ); meteo-qt -c -i orange -o brown -a -t 10&	## Meteo indicator.
-kill $( pidof nm-applet ); nm-applet&        	                    ## Network tray icon.
-kill $( pidof psensor ); psensor&									## Temperature monitor.
+## Keyboard layout (before every others keyboard options)
+setxkbmap fr&
+
+## Numpad as mouse (shift + numlock to enable)
+setxkbmap -option "keypad:pointerkeys"&
+
+## Turn on numlock (before numpad as mouse)
+numlockx on&
+
+## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
+if pidof xcape;	then
+	killall xcape
+fi
+xcape -e "Super_L=Control_L|Escape"&
+xcape -e "Super_R=Control_L|Escape"&
+
+## Keyboard shortcut
+if pidof sxhkd; then
+	killall sxhkd
+fi
+sxhkd&
+
+## Meteo indicator
+if pidof meteo-qt; then
+	killall meteo-qt
+fi
+meteo-qt -c -i orange -o brown -a -t 10&
+
+## Network tray icon
+if pidof nm-applet; then
+	killall nm-applet
+fi
+nm-applet&
+
+## Temperature monitor
+if pidof psensor; then
+	killall psensor
+fi
+psensor&
+
+## Clipboard manager
+if pidof xfce4-clipman; then
+	killall xfce4-clipman
+fi
+xfce4-clipman&
+
+## Sound indicator
+if pidof pasystray; then
+	killall pasystray
+fi
+pasystray&
+
+## Notifications
+if pidof dunst; then
+	killall dunst
+fi
+dunst --startup-notification&
+
+## Geolocation service
+if pidof geoclue; then
+	killall geoclue
+fi
+geoclue /usr/libexec/geoclue-2.0/demos/agent&
+
+## Blue light filter
+if pidof redshift-gtk; then
+	killall redshift-gtk
+fi
+redshift-gtk&
+
+### Onscreen keyboard
+#if pidof onboard; then
+#	killall onboard
+#fi
+#onboard&
+
+### Stay awake
+#if pidof caffeine-indicator; then
+#	killall caffeine-indicator
+#fi
+#caffeine-indicator&
+
+## Display resolution/layout
+${HOME}/.screenlayout/layout.sh&
+
+## Set a random background
+randombg&
+
+## Desktop right click menu
+kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
+
+## System monitor
 x-terminal-emulator -e 'btop'&
-kill $( pidof xfce4-clipman ); xfce4-clipman&                   	## Clipboard manager.
-kill $( pidof pasystray ); pasystray&            	                ## Pulseaudio tray icon.
-kill $( pidof dunst ); dunst --startup-notification&         	    ## Notification.
-kill $( pidof geoclue ); /usr/libexec/geoclue-2.0/demos/agent&  	## Geolocation service.
-kill $( pidof redshift-gtk ); redshift-gtk&                     	## Blue light filter.
-#kill $( pidof onboard ); onboard&     		                        ## Onscreen keyboard
-#kill $( pidof caffeine-indicator ); caffeine-indicator&  	        ## stay awake
 
-## DESKTOP
-/home/lespink/.screenlayout/layout.sh&								## Display resolution/layout.
-randombg&															## Set a random background.
-kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&  	## Desktop menu.
+## Auth agent
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
 
-## ACCESSIBILITY
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&		## Auth agent.
+### Power manager
+#if pidof xfce4-power-manager; then
+#	killall xfce4-power-manager
+#fi
+#xfce4-power-manager&
+#
+### Battery indicator
+#if pidof xbattbar; then
+#	killall xbattbar
+#fi
+#xbattbar -c -i orange -o brown -a -t 10&
 
-## BATTERY
-#kill $( pidof upowerd ); kill $( pidof xfce4-power-manager ); xfce4-power-manager&		## Power manager.
-#kill $( pidof xbattbar ); xbattbar -c -i orange -o brown -a -t 10&						## Battery indicator
-kill $( pidof xscreensaver ); xscreensaver&											## Screen saver.
+
+## Screen saver
+if pidof xscreensaver; then
+	killall xscreensaver
+fi
+xscreensaver&
+
+## Screen compositor
+if pidof picom; then
+	killall picom
+fi
+picom&
 
 startDwm() {
 
-	wmname "LG3D"&
+	wmname 'LG3D'&
+
 	slstatus&
-	kill $(pidof picom); picom&		        						## Screen compositor.
+
 	exec dwm >> ~/.dwm.log
+
 }
+
 startDwm
