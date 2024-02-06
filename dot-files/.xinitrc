@@ -66,10 +66,10 @@ fi
 dunst --startup-notification&
 
 ## Geolocation service
-if pidof geoclue; then
-	killall geoclue
+if pidof geoclue||pidof agent; then
+	killall geoclue agent
 fi
-geoclue /usr/libexec/geoclue-2.0/demos/agent&
+/usr/libexec/geoclue-2.0/demos/agent&
 
 ## Blue light filter
 if pidof redshift-gtk; then
