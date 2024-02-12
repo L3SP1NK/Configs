@@ -132,7 +132,7 @@ super + x
 	xmix
 
 super + exclam
-	telebash -t "$(rofi -dmenu -p '   Send to Telegram: ')" 1083792765
+	telebash -t "$(rofi -dmenu -p '✉️  Send to Telegram: ')" 1083792765
 
 mod4 + button2
 	xzoom -mag 4
