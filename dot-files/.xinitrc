@@ -7,11 +7,11 @@ export _JAVA_AWT_WM_NONREPARENTING='1'
 ## Load X colors
 xrdb -merge -load ~/.Xresources&
 
-## Keyboard layout (before every others keyboard options)
-setxkbmap fr&
-
 ## Turn on numlock (before numpad as mouse)
 numlockx on&
+
+## Keyboard layout (before every others keyboard options)
+setxkbmap fr&
 
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
