@@ -179,4 +179,17 @@ bind -x '"\el": clear; tree -L 1'
 bind -x '"\e[1~": clear; cd ~'
 source ~/.bash.d/cht.sh
 complete -cf doas
-[[ ${TTY} == '/dev/tty1' ]] && nice -19 'startx'
+
+if [[ ${TTY} =~ /dev/tty[0-6] ]]; then
+        while true; do
+                reset
+                echo "Press [ENTER] to start the X server..."
+                read&&nice -19 startx
+        done
+fi
+
+
+if command -v zoxide>/dev/null; then
+        alias cd='z'
+        eval "$(zoxide init zsh)"
+fi

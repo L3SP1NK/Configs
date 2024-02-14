@@ -306,3 +306,9 @@ if [[ ${TTY} =~ /dev/tty[0-6] ]]; then
 		read&&nice -19 startx
 	done
 fi
+
+
+if command -v zoxide>/dev/null; then
+	alias cd='z'
+	eval "$(zoxide init zsh)"
+fi
