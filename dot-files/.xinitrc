@@ -10,11 +10,11 @@ xrdb -merge -load ~/.Xresources&
 ## Keyboard layout (before every others keyboard options)
 setxkbmap fr&
 
-## Numpad as mouse (shift + numlock to enable)
-setxkbmap -option "keypad:pointerkeys"&
-
 ## Turn on numlock (before numpad as mouse)
 numlockx on&
+
+## Numpad as mouse (shift + numlock to enable)
+setxkbmap -option "keypad:pointerkeys"&
 
 ## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
 if pidof xcape;	then
@@ -139,4 +139,4 @@ startDwm() {
 
 }
 
-startDwm
+nice -17 startDwm

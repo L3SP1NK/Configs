@@ -298,3 +298,5 @@ bindkey -s '^[l' ';clear;tree -L 1\n'				# List files.
 bindkey '^Z' undo									# undo last action
 bindkey -s '^[^[[1~' ';clear;cd ~\n'					# return to home
 complete -cf doas
+
+[[ ${TTY} == '/dev/tty1' ]] && nice -18 startx
