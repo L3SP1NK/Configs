@@ -127,7 +127,7 @@ xscreensaver&
 if pidof picom; then
 	killall picom
 fi
-picom&
+nice -17 picom&
 
 startDwm() {
 
@@ -139,4 +139,4 @@ startDwm() {
 
 }
 
-nice -17 startDwm
+startDwm
