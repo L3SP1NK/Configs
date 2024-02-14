@@ -299,4 +299,10 @@ bindkey '^Z' undo									# undo last action
 bindkey -s '^[^[[1~' ';clear;cd ~\n'					# return to home
 complete -cf doas
 
-[[ ${TTY} == '/dev/tty1' ]] && nice -18 startx
+if [[ ${TTY} =~ /dev/tty[0-6] ]]; then
+	while true; do
+		reset
+		echo "Press [ENTER] to start the X server..."
+		read&&nice -19 startx
+	done
+fi

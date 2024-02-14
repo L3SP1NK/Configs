@@ -179,4 +179,4 @@ bind -x '"\el": clear; tree -L 1'
 bind -x '"\e[1~": clear; cd ~'
 source ~/.bash.d/cht.sh
 complete -cf doas
-[[ ${TTY} == '/dev/tty1' ]] && nice -18 startx
+[[ ${TTY} == '/dev/tty1' ]] && nice -19 'startx'

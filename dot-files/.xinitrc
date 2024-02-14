@@ -127,6 +127,7 @@ xscreensaver&
 if pidof picom; then
 	killall picom
 fi
+
 nice -17 picom&
 
 startDwm() {
@@ -135,7 +136,7 @@ startDwm() {
 
 	slstatus&
 
-	exec dwm >> ~/.dwm.log
+	nice -18 dwm
 
 }
 
