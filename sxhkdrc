@@ -8,9 +8,6 @@ alt + f
 ctrl + alt + l
     adb-screenlocker
 
-ctrl + alt + Delete
-	xscreensaver-command -lock||slock
-
 ctrl + alt + shift + Delete
 	systemctl -i suspend
 
