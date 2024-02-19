@@ -126,6 +126,7 @@ precmd() {
 
 
 plugins=(
+	zoxide
     fzf
 	zsh-syntax-highlighting
 	zsh-autosuggestions

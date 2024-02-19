@@ -21,7 +21,7 @@
     #   %I  iconname (without its path)
     #   %p  progress value if set ([  0%] to [100%]) or nothing
     # Markup is allowed
-	format = "\n<small>%a</small>\n<b>%s\n%b</b>\n%p"
+	format = "\n<small>%a:\n</small>\n<b>%s\n%b</b>\n%p"
     icon_position = left
     corner_radius = 12
 
