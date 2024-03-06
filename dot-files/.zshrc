@@ -300,7 +300,7 @@ bindkey '^Z' undo									# undo last action
 bindkey -s '^[^[[1~' ';clear;cd ~\n'					# return to home
 complete -cf doas
 
-if [[ ${TTY} =~ /dev/tty[0-6] ]]; then
+if [[ "${TTY}" =~ /dev/tty[0-6] && "${EUID}" -ne '0' ]]; then
 	while true; do
 		reset
 		echo "Press [ENTER] to start the X server..."
