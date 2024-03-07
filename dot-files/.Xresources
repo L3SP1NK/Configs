@@ -13,9 +13,9 @@ Xft.rgba: rgb
 Xft.lcdfilter: lcdfilter
 
 ! Hinting
-Xft.hinting: false
-Xft.autohint: false
-Xft.hintstyle: none
+Xft.hinting: true
+Xft.autohint: true
+Xft.hintstyle: full
 
 ! Global color
 !XTerm*foreground: rgb:ff/ff/ff
@@ -80,7 +80,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: jetbrainsmono nerd font mono
+XTerm*faceName: firacode nerd font mono
 XTerm*faceSize: 13
 
 ! VT Font Menu: Unreadable
@@ -121,7 +121,7 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 !Sxiv.background: #000000
 Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
-Sxiv.font: jetbrainsmono nerd font mono 13
+Sxiv.font: firacode nerd font mono 13
 
 ! Xcursor.theme: WhiteSur-cursors
 Xcursor.theme: Adwaita
