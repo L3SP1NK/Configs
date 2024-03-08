@@ -116,8 +116,7 @@ x-terminal-emulator -e 'btop'&
 #fi
 #xbattbar -c -i orange -o brown -a -t 10&
 
-
-## Screen saver
+## Screensaver
 if pidof xscreensaver; then
 	killall xscreensaver
 fi
