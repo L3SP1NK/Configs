@@ -183,8 +183,8 @@
 
 [urgency_critical]
     frame_color = "#0d0d0d"
-    foreground = "#ffffff"
-    background = "#cc0000"
+    foreground = "#cc0000"
+    background = "#0d0d0d"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules
@@ -217,31 +217,3 @@
 ## This notification will not be displayed
 #    summary = "foobar"
 #    format = ""
-
-[signed_on]
-    appname = Pidgin
-    summary = "*signed on*"
-    urgency = low
-
-[signed_off]
-    appname = Pidgin
-    summary = *signed off*
-    urgency = low
-
-[says]
-    appname = Pidgin
-    summary = *says*
-    urgency = critical
-    format  = "%s "%b""
-
-[music]
-    appname = Amarok
-    summary = "Now playing"
-    urgency = low
-
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-
