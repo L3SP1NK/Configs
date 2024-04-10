@@ -1,7 +1,7 @@
 configuration
 {
 	modi:					"window,run,ssh,drun";
-	font:					"sf pro rounded medium 16";
+	font:					"sf pro display semibold 16";
 	location:				0;
 	yoffset:				-50;
 	xoffset:				0;

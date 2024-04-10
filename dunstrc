@@ -1,5 +1,5 @@
 [global]
-    font = sf pro rounded semibold 14
+    font = sf pro semibold 14
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
 

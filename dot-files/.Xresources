@@ -123,7 +123,7 @@ Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
 Sxiv.font: MartianMono Nerd Font Mono 12
 
-! Xcursor.theme: WhiteSur-cursors
+!Xcursor.theme: WhiteSur-cursors
 Xcursor.theme: Adwaita
 Xcursor.size: 48px
 
