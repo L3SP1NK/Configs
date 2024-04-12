@@ -21,7 +21,7 @@ if pidof xcape;	then
 	killall xcape
 fi
 xcape -e "Super_L=Control_L|Escape"&
-xcape -e "Super_R=Control_L|Escape"&
+#xcape -e "Super_R=Control_L|Escape"&
 
 ## Keyboard shortcut
 if pidof sxhkd; then
@@ -89,9 +89,6 @@ redshift-gtk&
 #fi
 #caffeine-indicator&
 
-## Display resolution/layout
-${HOME}/.screenlayout/layout.sh&
-
 ## Set a random background
 randombg&
 
@@ -130,6 +127,8 @@ fi
 nice -17 picom&
 
 startDwm() {
+
+	setrez
 
 	wmname 'LG3D'&
 
