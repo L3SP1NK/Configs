@@ -80,7 +80,8 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: MartianMono Nerd Font Mono
+!XTerm*faceName: MartianMono Nerd Font Mono
+XTerm*faceName: JetbrainsMono Nerd Font Mono
 XTerm*faceSize: 12
 
 ! VT Font Menu: Unreadable
