@@ -25,7 +25,6 @@ XTerm*background:	black
 !*color7:	white
 !*color15:	grey
 
-
 ! Dracula Xresources palette
 *.foreground: #ffffff
 *.background: #000000

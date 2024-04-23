@@ -1,52 +1,67 @@
 configuration
 {
-	modi:					"window,run,ssh,drun";
 	font:					"sf pro rounded semibold 18";
-	location:				0;
-	yoffset:				-50;
-	xoffset:				0;
-	fixed-num-lines:		false;
+
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";
+
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
 	ssh-command:			"{terminal} -e {ssh-client} {host} [-p {port}]";
+
 	run-command:			"{cmd}";
 	run-list-command:		"";
 	run-shell-command:		"{terminal} -e {cmd}";
+
+	window-format:			"{w}  {c}  {t}";
 	window-command:			"wmctrl -i -R {window}";
 	window-match-fields:	"all";
-	drun-match-fields:		"name,generic,exec,categories";
-	drun-show-actions:		true;
+
+	drun-match-fields:		"all";
+	drun-show-actions:		false;
 	drun-display-format:	"{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+
 	disable-history:		false;
-/*	ignored-prefixes:		"";*/
+	max-history-size:		10;
+
+	fixed-num-lines:		false;
 	sort:					true;
 	sorting-method:			"fzf";
+
 	case-sensitive:			false;
+	click-to-exit:			true;
 	cycle:					false;
 	sidebar-mode:			false;
-	eh:						1;
+
+	location:				0;
+	yoffset:				-50;
+	xoffset:				0;
+	fake-transparency:		false; /* screenshot */
+
 /*	auto-select:			false;*/
 /*	parse-hosts:			false;*/
 /*	parse-known-hosts:		true;*/
-	combi-modi:				"window,run,drun";
-/*	matching:				"fuzzy";*/
-	matching:				"normal";
-	tokenize:				true;
-	m:						"-5";
+/*	ignored-prefixes:		"";*/
 /*	filter:					;*/
-/*	dpi:					-1;*/
+/*	dpi:					96;*/
+
+	modi:					"window,run,ssh,drun";
+	combi-modi:				"window,run,drun";
+	combi-hide-mode-prefix:	true;
+
+	matching:				"fuzzy"; /* normal */
+
+	tokenize:				true;
+
+	m:						"-5";
+
 	threads:				0;
 	scroll-method:			0;
-/*	fake-background:		"screenshot";*/
-	fake-transparency:		false;
-	window-format:			"{w}  {c}  {t}";
-	click-to-exit:			true;
-	max-history-size:		10;
-	combi-hide-mode-prefix:	true;
+	eh:						1;
+
 	cache-dir:				"/home/lespink/.cache/rofi";
 	pid:					"/run/user/1000/rofi.pid";
+
 	display-window:			"   ";
 	display-windowcd:		"   ";
 	display-run:			"   ";
@@ -55,5 +70,7 @@ configuration
 	display-drun:			" 󰌧 ";
 	display-combi:			"   ";
 	display-keys:			"   ";
+
 }
+
 @theme "~/.config/rofi/dark.rasi"
