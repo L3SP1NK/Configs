@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro rounded semibold 18";
+	font:					"roboto semibold 16";
 
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";
