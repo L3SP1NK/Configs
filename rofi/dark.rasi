@@ -4,7 +4,7 @@
  ***********************************************/
 * {
 	background-color:		#0d0d0d;
-	background-alt-color:	#0d0d0d;
+	background-alt-color:	#1f1f1f;
 	foreground-color:		white;
 	selected-bg-color:		#1f1f1f;
 	selected-fg-color:		white;
@@ -15,8 +15,8 @@
 {
 	transparency:			"real";
 	text-color:				inherit;
-	border:					0;
-//	border-radius:			16;
+	border:					2;
+	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
 }

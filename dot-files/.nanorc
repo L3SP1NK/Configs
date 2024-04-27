@@ -216,17 +216,17 @@ set zap
 ## Paint the interface elements of nano.  These are examples;
 ## by default there are no colors, except for errorcolor.
 set titlecolor italic,white,blue
-set statuscolor black,green
-set errorcolor black,red
-set selectedcolor black,cyan
-set spotlightcolor bold,white,magenta
-set stripecolor black,magenta
-set numbercolor grey
+set statuscolor bold,green
+set errorcolor bold,red
+set selectedcolor bold,white,magenta
+set spotlightcolor white,magenta
+set stripecolor bold,magenta
+set numbercolor bold,grey
 set keycolor bold,black
-set functioncolor cyan
+set functioncolor bold,cyan
 set minicolor italic,grey
-set promptcolor bold,yellow,black
-set scrollercolor grey
+set promptcolor bold,yellow
+set scrollercolor bold,grey
 
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.

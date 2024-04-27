@@ -139,3 +139,4 @@ startDwm() {
 }
 
 startDwm
+#startxfce4

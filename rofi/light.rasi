@@ -4,43 +4,48 @@
  ***********************************************/
 * {
 	background-color:		white;
-	background-alt-color:	grey;
+	background-alt-color:	black;
 	foreground-color:		black;
-	selected-bg-color:		grey;
-	selected-fg-color:		black;
+	selected-bg-color:		#2777ff;
+	selected-fg-color:		white;
 	border-color:			@background-alt-color;
 }
 
 #window
 {
+	transparency:			"real";
 	text-color:				inherit;
-	border:					2;
-	border-radius:			8;
+	border:					1;
+	border-radius:			16;
 	border-color:			@border-color;
-	width:					600;
+	width:					500;
 }
 
 #mainbox
 {
+	border:					0;
 	margin:					32;
 }
 
 #message
 {
+	border:					0;
 	border-color:			@selected-bg-color;
-	background-color:		#cc0000;
+	background-color:		#cc000040;
 }
 
 #textbox
 {
 	text-color:				@selected-fg-color;
-	border-radius:			4;
+	border-radius:			0;
 	padding:				32;
 	background-color:		#cc0000;
+	border:					0;
 }
 
 #listview
 {
+	border:					0;
 	fixed-height:			0;
 	scrollbar:				false;
 	lines:					3;
@@ -48,11 +53,13 @@
 
 #element
 {
-	border-radius:			8;
+	border:					0;
+	border-radius:			16;
 }
 
 #element-icon
 {
+	border:					0;
 	background-color:		inherit;
     size:                   64;
 	padding:				8;
@@ -60,6 +67,7 @@
 
 #element-text
 {
+	border:					0;
 	background-color:		inherit;
 	text-color:				inherit;
 	padding:				24;
@@ -86,8 +94,8 @@
 {
 	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
-	border:					0;
-	border-color:			#0d0e11;
+	border:					2;
+	border-color:			#00000030;
 }
 
 #element.selected.urgent
@@ -129,12 +137,14 @@
 #button
 {
 	spacing:				0;
+	border:					0;
 	color:					@background-color;
 	text-color:				@selected-fg-color;
 }
 
 #button.selected
 {
+	border:					0;
 	text-color:				@selected-fg-color;
 	background-color:		@selected-bg-color;
 }
@@ -160,6 +170,7 @@
 
 #prompt
 {
+	enabled:				true;
 	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
