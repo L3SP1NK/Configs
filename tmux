@@ -48,12 +48,12 @@ set-option -g display-panes-active-colour $BYOBU_ACCENT
 set-option -g clock-mode-colour $BYOBU_ACCENT
 set-option -g clock-mode-style 24
 set-option -g mode-keys vi
-set-option -g mode-style bg=royalblue,fg=$BYOBU_LIGHT,bold
+set-option -g mode-style bg=royalblue,fg=$BYOBU_LIGHT
 
 set-window-option -g window-status-style default
-set-window-option -g window-status-style fg=$BYOBU_LIGHT
-set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,bold,fg=$BYOBU_LIGHT,reverse
-set-window-option -g window-status-activity-style fg=$BYOBU_LIGHT,bold
+set-window-option -g window-status-style fg=grey
+set-window-option -g window-status-current-style bg=$BYOBU_ACCENT,fg=$BYOBU_LIGHT
+set-window-option -g window-status-activity-style fg=yellow
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
 set-window-option -g monitor-activity on

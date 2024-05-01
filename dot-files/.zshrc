@@ -17,7 +17,7 @@ PROMPT_EOL_MARK=""
 ## enable completion features
 #autoload -Uz compinit
 #compinit -d ~/.cache/zcompdump
-#zstyle ':completion:*:*:*:*:*' menu select
+#zstyle ':completion:*:*:*:*:*' menu1 select
 ##zstyle ':completion:*' auto-description 'specify: %d'
 #zstyle ':completion:*' completer _expand _complete
 ##zstyle ':completion:*' format 'Completing %d'
@@ -185,19 +185,16 @@ ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
-    export FZF_DEFAULT_OPTS='--color=bg+:#1f1f1f,bg:#0d0d0d,border:#1f1f1f,spinner:#ff0000,hl:#ffffff,fg:#ffffff,header:#719872,info:#15FFBE,pointer:#FF0000,marker:#E17899,fg+:#ffffff,preview-bg:#D9D9D9,prompt:#0099BD,hl+:#FCFF15'
-
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias ip='ip --color=auto'
 
-    export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blink
-    export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blink
+    export LESS_TERMCAP_mb=$'\e[1;32m'     # begin blink
     export LESS_TERMCAP_md=$'\e[1;36m'     # begin bold
     export LESS_TERMCAP_me=$'\e[0m'        # reset bold/blink
-    export LESS_TERMCAP_so=$'\e[01;33m'    # begin reverse video
+    export LESS_TERMCAP_so=$'\e[01;34m'    # begin reverse video
     export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
-    export LESS_TERMCAP_us=$'\e[1;32m'     # begin underline
+    export LESS_TERMCAP_us=$'\e[1;34m'     # begin underline
     export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 
     # Take advantage of $LS_COLORS for completion as well
