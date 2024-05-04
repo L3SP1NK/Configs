@@ -1,5 +1,5 @@
 [global]
-    font = roboto semibold 14
+    font = sf pro display semibold 14
 	icon_theme = Papirus-Light
 	enable_recursive_icon_lookup = true
 
@@ -150,58 +150,28 @@
     # context menu
     context = mod4+shift+i
 
-# [urgency_low]
-#     # IMPORTANT: colors have to be defined in quotation marks.
-#     # Otherwise the '#' and following  would be interpreted as a comment.
-#     background = "#222222"
-#     foreground = "#888888"
-#     timeout = 10
-# 
-# [urgency_normal]
-#     background = "#285577"
-#     foreground = "#000000"
-#     timeout = 10
-# 
-# [urgency_critical]
-#     background = "#900000"
-#     foreground = "#000000"
-#     timeout = 0
-
-[urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-#    frame_color = "#0d0d0d"
-#    foreground = "#ffffff"
-#    background = "#0d0d0d"
-#    timeout = 5
+[urgency_low]
+	frame_color = "#0d0d0d"
+	foreground = "#ffffff"
+	background = "#0d0d0d"
 
-    frame_color = "#0d0d0d"
-    foreground = "#000000"
-    background = "#ffffff"
-    timeout = 5
+	timeout = 5
 
 [urgency_normal]
-#    frame_color = "#0d0d0d"
-#    foreground = "#ffffff"
-#    background = "#0d0d0d"
-#    timeout = 10
+	frame_color = "#0d0d0d"
+	foreground = "#ffffff"
+	background = "#0d0d0d"
 
-    frame_color = "#0d0d0d"
-    foreground = "#000000"
-    background = "#ffffff"
-    timeout = 10
+	timeout = 10
 
 [urgency_critical]
-#    frame_color = "#0d0d0d"
-#    foreground = "#cc0000"
-#    background = "#0d0d0d"
-#    timeout = 0
+	frame_color = "#0d0d0d"
+	foreground = "#cc0000"
+	background = "#0d0d0d"
 
-    frame_color = "#0d0d0d"
-    foreground = "#cc0000"
-    background = "#ffffff"
-    timeout = 0
-
+	timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules
 # to override settings for certain messages.
