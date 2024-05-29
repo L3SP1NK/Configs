@@ -157,21 +157,21 @@
 	foreground = "#ffffff"
 	background = "#0d0d0d"
 
-	timeout = 5
+	timeout = 3
 
 [urgency_normal]
 	frame_color = "#0d0d0d"
 	foreground = "#ffffff"
 	background = "#0d0d0d"
 
-	timeout = 10
+	timeout = 5
 
 [urgency_critical]
 	frame_color = "#0d0d0d"
 	foreground = "#cc0000"
 	background = "#0d0d0d"
 
-	timeout = 0
+	timeout = 10
 
 # Every section that isn't one of the above is interpreted as a rules
 # to override settings for certain messages.
