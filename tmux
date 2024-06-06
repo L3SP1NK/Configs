@@ -39,7 +39,7 @@ set-window-option -g xterm-keys on
 
 set-option -g set-titles on
 set-option -g set-titles-string "#(whoami)@#H - ${TERM}"
-set-option -g pane-active-border-style fg=$BYOBU_ACCENT
+set-option -g pane-active-border-style fg=$BYOBU_ACCENT,bg=$BYOBU_ACCENT
 set-option -g pane-border-style fg=$BYOBU_DARK
 set-option -g history-limit 0
 set-option -g display-panes-time 1
@@ -48,7 +48,7 @@ set-option -g display-panes-active-colour $MONOCHROME
 set-option -g clock-mode-colour $BYOBU_ACCENT
 set-option -g clock-mode-style 24
 set-option -g mode-keys vi
-set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$MONOCHROME
+set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$BYOBU_LIGHT
 
 set-window-option -g window-status-style default
 set-window-option -g window-status-style fg=$BYOBU_LIGHT
@@ -75,4 +75,4 @@ set -g status-left-length 256
 set -g status-right-length 256
 set -g status-left '#(byobu-status tmux_left)'
 set -g status-right '#(byobu-status tmux_right)'
-set -g message-style bg=$BYOBU_ACCENT,fg=white
+set -g message-style bg=$BYOBU_DARK,fg=$BYOBU_LIGHT
