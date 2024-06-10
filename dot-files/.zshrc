@@ -294,3 +294,5 @@ if command -v zoxide>/dev/null; then
 	alias cd='z'
 	eval "$(zoxide init zsh)"
 fi
+
+eval "$(oh-my-posh init zsh --config ~/.omp.yaml)"
