@@ -218,7 +218,7 @@ set zap
 set titlecolor italic,white,blue
 set statuscolor bold,green
 set errorcolor bold,red
-set selectedcolor bold,white,magenta
+set selectedcolor black,yellow
 set spotlightcolor white,magenta
 set stripecolor bold,magenta
 set numbercolor bold,grey

@@ -39,8 +39,8 @@ set-window-option -g xterm-keys on
 
 set-option -g set-titles on
 set-option -g set-titles-string "#(whoami)@#H - ${TERM}"
-set-option -g pane-active-border-style fg=$BYOBU_ACCENT,bg=$BYOBU_ACCENT
-set-option -g pane-border-style fg=$BYOBU_DARK
+set-option -g pane-active-border-style fg=$BYOBU_ACCENT
+set-option -g pane-border-style fg=$BYOBU_LIGHT
 set-option -g history-limit 0
 set-option -g display-panes-time 1
 set-option -g display-panes-colour $MONOCHROME
@@ -51,9 +51,9 @@ set-option -g mode-keys vi
 set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$MONOCHROME
 
 set-window-option -g window-status-style default
-set-window-option -g window-status-style fg=$MONOCHROME
-set-window-option -g window-status-current-style bg=$BYOBU_LIGHT,fg=$MONOCHROME,bold
-set-window-option -g window-status-activity-style fg=$BYOBU_LIGHT,bold
+set-window-option -g window-status-style fg=$BYOBU_DARK
+set-window-option -g window-status-current-style bg=$BYOBU_HIGHLIGHT,fg=$MONOCHROME
+set-window-option -g window-status-activity-style fg=$BYOBU_DARK,bold
 set-window-option -g automatic-rename on
 set-window-option -g aggressive-resize on
 set-window-option -g monitor-activity on
