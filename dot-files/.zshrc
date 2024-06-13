@@ -264,7 +264,7 @@ bindkey '^[[Z' undo                               	# shift + tab undo last actio
 EDITOR='nano'
 
 edit_files_fzf() {
-	local FILE; FILE=$(find . -maxdepth 9 -type f -o -type l|fzf)
+	local FILE; FILE=$(find -O3 . -maxdepth 9 -type f -o -type l 2>/dev/null|fzf)
 
 	if [[ -n "${FILE}" ]]; then
 		if [[ -O "${FILE}" ]]; then
