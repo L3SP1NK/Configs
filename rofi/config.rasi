@@ -49,7 +49,7 @@ configuration
 	combi-modi:				"window,run,drun";
 	combi-hide-mode-prefix:	true;
 
-	matching:				"fuzzy"; /* normal */
+	matching:				"normal"; /* fuzzy */
 
 	tokenize:				true;
 
