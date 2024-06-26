@@ -191,6 +191,6 @@ fi
 #        alias cd='z'
 #        eval "$(zoxide init zsh)"
 #fi
-complete -cf doas
+#complete -cf doas
 
-eval "$(oh-my-posh init bash --config ~/.omp.yaml)"
+#eval "$(oh-my-posh init bash --config ~/.omp.yaml)"
