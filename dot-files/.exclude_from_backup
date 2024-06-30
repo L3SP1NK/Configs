@@ -23,8 +23,4 @@ usr
 var
 vmlinuz
 
-opt/FIRMWARE
-opt/metasploit-framework
-
-home/lespink/Downloads
-home/lespink/.wine
+home/${USER}/.cache
