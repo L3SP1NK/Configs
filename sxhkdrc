@@ -6,7 +6,6 @@ ctrl + alt BackSpace
 alt + f
 	wmctrl -r :ACTIVE: -b toggle,fullscreen
 
-
 ## screenlocker
 ctrl + alt + l
     adb-screenlocker
@@ -16,10 +15,7 @@ ctrl + alt + shift + Delete
 
 ## desktop/X
 ctrl + alt d
-	randombg
-
-ctrl + alt + BackSpace
-	xrefresh
+	displaym
 
 Print
 	xfce4-screenshooter -r -d 1
