@@ -15,7 +15,7 @@ ctrl + alt + shift + Delete
 
 ## desktop/X
 ctrl + alt d
-	displaym
+	randombg
 
 Print
 	xfce4-screenshooter -r -d 1
