@@ -71,12 +71,12 @@ if pidof geoclue||pidof agent; then
 fi
 /usr/libexec/geoclue-2.0/demos/agent&
 
-## Blue light filter
-if pidof redshift-gtk; then
-	killall redshift-gtk
-fi
-redshift-gtk&
-
+### Blue light filter
+#if pidof redshift-gtk; then
+#	killall redshift-gtk
+#fi
+#redshift-gtk&
+#
 ### Onscreen keyboard
 #if pidof onboard; then
 #	killall onboard
@@ -96,7 +96,8 @@ randombg&
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 
 ## System monitor
-x-terminal-emulator -e 'btop'&
+#x-terminal-emulator -e 'btop'&
+xterm -e 'btop'&
 
 ## Auth agent
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
@@ -128,11 +129,12 @@ nice -17 picom&
 
 startDwm() {
 
-	setrez
-
 	wmname 'LG3D'&
 
+	${HOME}/.screenlayout/layout.sh&
+
 	slstatus&
+
 
 	nice -18 dwm
 
