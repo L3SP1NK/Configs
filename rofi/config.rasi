@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro display semibold 15";
+	font:					"sf pro display 15";
 
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";
