@@ -79,9 +79,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-!XTerm*faceName: MartianMono NFM Cond
-!XTerm*faceName: JetbrainsMono Nerd Font Mono
-!XTerm*faceName: CommitMono Nerd Font
+XTerm*faceName: RobotoMono Nerd Font
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable

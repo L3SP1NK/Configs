@@ -1,7 +1,6 @@
 configuration
 {
-	font:					"robotoregular semibold 16";
-	font:					"sf pro display semibold 16";
+	font:					"robotoregular bold 16";
 
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";
