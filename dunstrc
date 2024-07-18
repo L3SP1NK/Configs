@@ -1,5 +1,9 @@
 [global]
-	format = "\n<small>%a:\n</small>\n<b>%s\n%b</b>\n%p"
+	gap_size = 0
+	markup = full
+	alignment = center
+	hide_text = false
+	format = "<b>%s\n%b</b>\n"
 	icon_position = left
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
@@ -22,7 +26,6 @@
 
 	separator_color = auto
 	background = "#0d0d0d"
-	frame_color = "#0d0d0d"
 
 [urgency_low]
 	timeout = 5
@@ -33,6 +36,7 @@
 	foreground = "#ffffff"
 
 [urgency_critical]
+	format = "<b>%s\n%b</b>\n(click to dismiss)"
 	timeout = 0
-	frame_color = "#cc0000"
-	foreground = "#cc0000"
+#	frame_color = "#cc0000"
+	background = "#cc0000"
