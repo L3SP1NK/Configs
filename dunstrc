@@ -25,7 +25,9 @@
 	browser = /usr/bin/firefox -new-tab
 
 	separator_color = auto
-	background = "#0d0d0d"
+	background = "#1f1f1f"
+	frame_color = "#656565"
+	frame_width = 1
 
 [urgency_low]
 	timeout = 5
@@ -38,5 +40,5 @@
 [urgency_critical]
 	format = "<b>%s\n%b</b>\n(click to dismiss)"
 	timeout = 0
-#	frame_color = "#cc0000"
+	frame_color = "#cc0000"
 	background = "#cc0000"

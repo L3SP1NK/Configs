@@ -3,11 +3,14 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#0d0d0d;
-	background-alt-color:	#1f1f1f;
+	background-color:		#1f1f1f;
+	background-alt-color:	#656565;
+
 	foreground-color:		white;
-	selected-bg-color:		#1f1f1f;
 	selected-fg-color:		white;
+
+	selected-bg-color:		#0860F2;
+
 	border-color:			@background-alt-color;
 }
 
@@ -15,7 +18,7 @@
 {
 	transparency:			"real";
 	text-color:				inherit;
-	border:					2;
+	border:					1;
 	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
@@ -180,5 +183,6 @@
 
 #textbox-prompt-colon
 {
+	padding:				10;
 	expand:					false;
 }
