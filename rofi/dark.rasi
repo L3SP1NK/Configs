@@ -9,7 +9,7 @@
 	foreground-color:		white;
 	selected-fg-color:		white;
 
-	selected-bg-color:		#0860F2;
+	selected-bg-color:		#4D4D4D;
 
 	border-color:			@background-alt-color;
 }

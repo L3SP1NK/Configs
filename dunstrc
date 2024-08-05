@@ -8,6 +8,7 @@
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
 	font = robotoregular 14
+	font = sf pro display 14
 	sort = yes
 	word_wrap = yes
 	force_xinerama = yes

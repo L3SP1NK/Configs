@@ -233,7 +233,7 @@ set scrollercolor bold,grey
 
 ## To include most of the existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
-#include "/usr/share/nanorc/*.nanorc"
+include "/usr/share/nanorc/*.nanorc"
 
 ## Or you can select just the ones you need.  For example:
 #include "/usr/share/nano/html.nanorc"
