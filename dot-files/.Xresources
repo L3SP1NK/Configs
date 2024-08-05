@@ -79,7 +79,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: RobotoMono Nerd Font
+XTerm*faceName: sf mono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
@@ -120,11 +120,11 @@ XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]]
 !Sxiv.background: #000000
 Sxiv.background: #0d0d0d
 Sxiv.foreground: #ffffff
-Sxiv.font: Roboto Mono Nerd Font Mono 14
+Sxiv.font: sf pro display 14
 
 !Xcursor.theme: WhiteSur-cursors
-Xcursor.theme:  Bibata-Modern-Ice
-Xcursor.size: 36
+Xcursor.theme:  Nowaita-White
+Xcursor.size: 42
 
 xclock*foreground:  red
 xclock*background:  #0d0d0d
