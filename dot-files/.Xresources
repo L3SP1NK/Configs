@@ -123,7 +123,7 @@ Sxiv.foreground: #ffffff
 Sxiv.font: sf pro display 14
 
 !Xcursor.theme: WhiteSur-cursors
-Xcursor.theme:  Nowaita-White
+Xcursor.theme:  Notwaita-White
 Xcursor.size: 42
 
 xclock*foreground:  red
