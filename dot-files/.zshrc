@@ -261,7 +261,7 @@ bindkey '^[[H' beginning-of-line                 	# home
 bindkey '^[[F' end-of-line                        	# end
 bindkey '^[[Z' undo                               	# shift + tab undo last action
 
-EDITOR='nano'
+export EDITOR='nano'
 
 edit_files_fzf() {
 	local FILE; FILE=$(find -O3 . -maxdepth 9 -type f -o -type l 2>/dev/null|fzf)
