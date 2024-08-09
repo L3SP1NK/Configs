@@ -3,7 +3,7 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		#1f1f1f;
+	background-color:		#0d0d0d;
 	background-alt-color:	#656565;
 
 	foreground-color:		white;
