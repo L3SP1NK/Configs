@@ -11,6 +11,7 @@ setopt promptsubst         # enable command substitution in prompt
 DISABLE_MAGIC_FUNCTIONS=true
 #WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
+PATH=$PATH:$HOME/.cargo/bin
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
