@@ -4,7 +4,7 @@
  ***********************************************/
 * {
 	background-color:		#0d0d0d;
-	background-alt-color:	#656565;
+	background-alt-color:	#4d4d4d;
 
 	foreground-color:		white;
 	selected-fg-color:		white;

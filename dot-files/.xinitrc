@@ -125,7 +125,7 @@ if pidof picom; then
 	killall picom
 fi
 
-nice -17 picom&
+nice -20 picom&
 
 startDwm() {
 
@@ -135,8 +135,7 @@ startDwm() {
 
 	slstatus&
 
-
-	nice -18 dwm
+	nice -20 dwm
 
 }
 

@@ -1,7 +1,7 @@
 [global]
-	gap_size = 0
+	gap_size = 8
 	markup = full
-	alignment = center
+	alignment = right
 	hide_text = false
 	format = "<b>%s\n%b</b>\n"
 	icon_position = left
@@ -26,8 +26,8 @@
 	browser = /usr/bin/firefox -new-tab
 
 	separator_color = auto
-	background = "#1f1f1f"
-	frame_color = "#656565"
+	background = "#0d0d0d"
+	frame_color = "#4d4d4d"
 	frame_width = 1
 
 [urgency_low]
