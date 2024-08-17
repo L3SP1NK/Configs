@@ -79,7 +79,9 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: sf mono
+!XTerm*faceName: sf mono
+!XTerm*faceName: firacode nerd font mono
+XTerm*faceName: RobotoMono Nerd Font Mono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
@@ -87,11 +89,11 @@ XTerm*faceSize1: 8
 ! VT font menu: Tiny
 XTerm*faceSize2: 10
 ! VT font menu: Medium
-XTerm*faceSize3: 12
+XTerm*faceSize3: 14
 ! VT font menu: Large
-XTerm*faceSize4: 16
+XTerm*faceSize4: 15
 ! VT font menu: Huge
-XTerm*faceSize5: 22
+XTerm*faceSize5: 26
 
 ! Ensure that your locale is set up for UTF-8. If you do not use UTF-8, you may need to force XTerm to more strictly follow your locale by setting
 XTerm.vt100.locale: true

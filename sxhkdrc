@@ -133,3 +133,9 @@ super + exclam
 mod4 + button2
 	xzoom -mag 4
 
+mod4 + KP_Add
+    scalor +
+
+mod4 + KP_Subtract
+    scalor -
+
