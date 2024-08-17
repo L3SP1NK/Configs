@@ -72,10 +72,10 @@ fi
 /usr/libexec/geoclue-2.0/demos/agent&
 
 ### Blue light filter
-#if pidof redshift-gtk; then
-#	killall redshift-gtk
-#fi
-#redshift-gtk&
+if pidof redshift-qt; then
+	killall redshift-qt
+fi
+redshift-qt&
 #
 ### Onscreen keyboard
 #if pidof onboard; then

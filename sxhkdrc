@@ -1,64 +1,52 @@
-ctrl + alt BackSpace
-	compokill
-
-	#wmctrl -r :ACTIVE: -b toggle,fullscreen
-	#xdotool key F11
-alt + f
-	wmctrl -r :ACTIVE: -b toggle,fullscreen
-
-## screenlocker
-ctrl + alt + l
-    adb-screenlocker
-
-ctrl + alt + shift + Delete
-	systemctl -i suspend
-
-## desktop/X
-ctrl + alt d
-	randombg
-
-Print
-	xfce4-screenshooter -r -d 1
-
-super + d
-	wmctrl -k on
-
-## menu
-mod4 + t
+ctrl + alt + t
+	st
+super + e
+	thunar
+super + exclam
+	telebash -t "$(rofi -dmenu -p '✉️  Send to Telegram: ')" 
+super + button2
+	xzoom -mag 4
+super + KP_Add
+    scalor +
+super + KP_Subtract
+    scalor -
+#####################
+super + t
 	prompt_translate
-
-mod4 + comma
+super + comma
 	emoji_select
-
-mod4 + o
+super + o
 	ocr
-
-mod4 + a
+super + a
 	gpt_ask
-
-mod4 + v
+super + v
 	xfce4-popup-clipman
-
-## Search On The Web
-mod4 + s
+super + s
 	sotw
-
-mod4 + c
+super + c
 	killall gpick;gpick -pos|xclip -sel clip
-
-mod4 + Tab
+super + Tab
 	rofi -show window
-
 ctrl + Escape
 	rofi -show drun
-
+#####################
+ctrl + alt BackSpace
+	compokill
+alt + f
+	wmctrl -r :ACTIVE: -b toggle,fullscreen
+ctrl + alt + Delete
+	systemctl -i suspend
+ctrl + alt d
+	randombg
+Print
+	xfce4-screenshooter -r -d 1
 #ctrl + q
 #	xdotool getactivewindow windowkill
 
-#mod4 + Down
+#super + Down
 #	xdotool getactivewindow windowminimize
 
-#mod4 + Up
+#super + Up
 #	xdotool getactivewindow windowmaximize
 
 ## workspace (go to)
@@ -90,52 +78,29 @@ ctrl + alt + 9
 	wmctrl -s 8
 
 ## workspace (send to)
-ctrl + mod4 + 1
+ctrl + super + 1
 	xdotool getactivewindow set_desktop_for_window 0
 
-ctrl + mod4 + 2
+ctrl + super + 2
 	xdotool getactivewindow set_desktop_for_window 1
 
-ctrl + mod4 + 3
+ctrl + super + 3
 	xdotool getactivewindow set_desktop_for_window 2
 
-ctrl + mod4 + 4
+ctrl + super + 4
 	xdotool getactivewindow set_desktop_for_window 3
 
-ctrl + mod4 + 5
+ctrl + super + 5
 	xdotool getactivewindow set_desktop_for_window 4
 
-ctrl + mod4 + 6
+ctrl + super + 6
 	xdotool getactivewindow set_desktop_for_window 5
 
-ctrl + mod4 + 7
+ctrl + super + 7
 	xdotool getactivewindow set_desktop_for_window 6
 
-ctrl + mod4 + 8
+ctrl + super + 8
 	xdotool getactivewindow set_desktop_for_window 7
 
-ctrl + mod4 + 9
+ctrl + super + 9
 	xdotool getactivewindow set_desktop_for_window 8
-
-## Launcher
-ctrl + alt + t
-	st
-
-super + e
-	thunar
-
-super + x
-	xmix
-
-super + exclam
-	telebash -t "$(rofi -dmenu -p '✉️  Send to Telegram: ')" 1083792765
-
-mod4 + button2
-	xzoom -mag 4
-
-mod4 + KP_Add
-    scalor +
-
-mod4 + KP_Subtract
-    scalor -
-
