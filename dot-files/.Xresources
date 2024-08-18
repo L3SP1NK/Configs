@@ -79,9 +79,9 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-!XTerm*faceName: sf mono
+XTerm*faceName: sf mono
 !XTerm*faceName: firacode nerd font mono
-XTerm*faceName: RobotoMono Nerd Font Mono
+!XTerm*faceName: RobotoMono Nerd Font Mono
 XTerm*faceSize: 14
 
 ! VT Font Menu: Unreadable
