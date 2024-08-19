@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export QT_QPA_PLATFORMTHEME='qt5ct'
+export QT_QPA_PLATFORMTHEME='qt6ct'
 export XDG_SESSION_TYPE='x11'
 export _JAVA_AWT_WM_NONREPARENTING='1'
 
