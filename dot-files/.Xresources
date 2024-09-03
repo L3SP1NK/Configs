@@ -91,7 +91,7 @@ XTerm*faceSize2: 10
 ! VT font menu: Medium
 XTerm*faceSize3: 14
 ! VT font menu: Large
-XTerm*faceSize4: 15
+XTerm*faceSize4: 18
 ! VT font menu: Huge
 XTerm*faceSize5: 26
 
