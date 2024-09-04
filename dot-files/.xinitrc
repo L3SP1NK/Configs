@@ -97,7 +97,7 @@ kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 
 ## System monitor
 #x-terminal-emulator -e 'btop'&
-xterm -e 'btop'&
+xterm -e 'byobu'&
 
 ## Auth agent
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
