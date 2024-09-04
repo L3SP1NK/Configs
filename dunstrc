@@ -3,12 +3,11 @@
 	markup = full
 	alignment = right
 	hide_text = false
-	format = "<b>%s\n%b</b>\n"
-	icon_position = left
-	icon_theme = ePapirus-Dark
+	format = "%s\n %b\n"
+#	icon_position = top
+#	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
-	font = robotoregular 14
-	font = sf pro display 14
+	font = sf pro rounded 15
 	sort = yes
 	word_wrap = yes
 	force_xinerama = yes
