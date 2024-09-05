@@ -1,18 +1,18 @@
 [global]
 	gap_size = 8
 	markup = full
-	alignment = right
 	hide_text = false
 	format = "%s\n %b\n"
 #	icon_position = top
 #	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
-	font = sf pro rounded 15
+	font = sf pro rounded medium 14
 	sort = yes
 	word_wrap = yes
 	force_xinerama = yes
 	alignment = left
 	corner_radius = 16
+	padding = 20
 	indicate_hidden = yes
 	show_age_threshold = -1
 	ignore_newline = no
