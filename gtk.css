@@ -16,14 +16,14 @@
 	background-color:			@theme_bg_color;
 	color: 						@theme_fg_color;
 	font-weight:				normal;
-    margin:                     16px;
+	margin:					 16px;
 }
 
 .xfce4-panel button
 {
 	border-radius:				8px;
 	font-weight:				normal;
-    padding:                    4px;
+	padding:					4px;
 	color: 						@theme_fg_color;
 }
 
@@ -36,8 +36,8 @@
 /* On Active */
 .xfce4-panel button:checked, .xfce4-panel button:selected, #sn-button:checked, #sn-button:selected
 {
-    box-shadow:                 none;
-    color:                      @theme_fg_color;
+	box-shadow:				 none;
+	color:					  @theme_fg_color;
 	background-color:			rgba ( 255, 255, 255, 0.1 );
 }
 
@@ -110,13 +110,13 @@
 
 #whiskermenu-window
 {
-    padding:                    8px;
-    border-radius:              8px;
+	padding:					8px;
+	border-radius:			  8px;
 }
 #whiskermenu-window border
 {
-    border:               none;
-    padding:              8px;
+	border:			   none;
+	padding:			  8px;
 }
 
 /*************/
@@ -126,47 +126,47 @@
 /* Xfwm4's alt-tab dialog, aka "tabwin" */
 #xfwm-tabwin
 {
-    padding:                        32px;
-    border-radius:                  16px;
-    -XfwmTabwinWidget-icon-size:    128px;
-    -XfwmTabwinWidget-preview-size: 128px;
-    -XfwmTabwinWidget-background-color: @theme_bg_color;
-    color:                          @theme_fg_color;
-	background-color:			    @theme_bg_color;
-    border-color:                   @theme_bg_color;
-    box-shadow:				        inset 0px 0px 0px 2px #1f1f1f;
+	padding:						32px;
+	border-radius:				  16px;
+	-XfwmTabwinWidget-icon-size:	128px;
+	-XfwmTabwinWidget-preview-size: 128px;
+	-XfwmTabwinWidget-background-color: @theme_bg_color;
+	color:						  @theme_fg_color;
+	background-color:				@theme_bg_color;
+	border-color:				   @theme_bg_color;
+	box-shadow:						inset 0px 0px 0px 2px #1f1f1f;
 }
 
 #xfwm-tabwin button
 {
-    font-weight:                    normal;
-    text-shadow:                    none;
-    border-radius:                  8px;
-    padding:                        16px;
+	font-weight:					normal;
+	text-shadow:					none;
+	border-radius:				  8px;
+	padding:						16px;
 }
 
 #xfwm-tabwin button:active, #xfwm-tabwin button:checked, #xfwm-tabwin button:active:hover, #xfwm-tabwin button:checked:hover
 {
-    color:                          @theme_selected_fg_color;
-    font-weight:                    normal;
-    background:                     @theme_selected_bg_color;
-    box-shadow:                     none;
-    transition-duration:            500ms;
+	color:						  @theme_selected_fg_color;
+	font-weight:					normal;
+	background:					 @theme_selected_bg_color;
+	box-shadow:					 none;
+	transition-duration:			500ms;
 }
 
 #xfwm-tabwin button:hover
 {
-    color:white;
-    background: rgba(255, 255, 255, 0.1);
-    transition-duration: 500ms;
+	color:white;
+	background: rgba(255, 255, 255, 0.1);
+	transition-duration: 500ms;
 }
 
 #xfwm-tabwin .tabwin-app-grid button
 {
-    color:white;
-    min-width: 96px;
-    transition-duration: 500ms;
-    min-height: 96px;
+	color:white;
+	min-width: 96px;
+	transition-duration: 500ms;
+	min-height: 96px;
 }
 
 
@@ -178,66 +178,66 @@
 .xfce4-panel widget grid button.flat.toggle
 {
 
-    min-width: 24px;
-    border-style: none;
-    background-color:    @theme_selected_bg_color;
-    color:white;
-    font-weight:normal;
+	min-width: 24px;
+	border-style: none;
+	background-color:	@theme_selected_bg_color;
+	color:white;
+	font-weight:normal;
 }
 
 .xfce4-panel widget grid button.flat.toggle:hover,
 .xfce4-panel widget grid button.flat.toggle:checked
 {
-    min-width: 24px;
-    border-style: none;
-    background-color:    @theme_selected_bg_color;
-    color:white;
-    font-weight:normal;
-    color:white;
+	min-width: 24px;
+	border-style: none;
+	background-color:	@theme_selected_bg_color;
+	color:white;
+	font-weight:normal;
+	color:white;
 }
 
 
 wnck-pager
 {
-    color:white;
-    -gtk-icon-transform:    scale(0);
-    border-radius:          8px;
-    box-shadow:             none;
+	color:white;
+	-gtk-icon-transform:	scale(0);
+	border-radius:		  8px;
+	box-shadow:			 none;
 
 }
 
 wnck-pager:selected
 {
 
-    color:white;
-    box-shadow:             none;
-    background-color:       rgba(255,255,255,0.1);
-    box-shadow:             none;
+	color:white;
+	box-shadow:			 none;
+	background-color:	   rgba(255,255,255,0.1);
+	box-shadow:			 none;
 
 }
 
 wnck-pager:hover
 {
 
-    color:white;
-    box-shadow:             none;
-    background-color:       gray;
-    box-shadow:             none;
+	color:white;
+	box-shadow:			 none;
+	background-color:	   gray;
+	box-shadow:			 none;
 
 }
 
 #wnck-pager button
 {
 
-    color:white;
-    -gtk-icon-transform:    scale(0);
-    border-radius:          8px;
-    box-shadow:             none;
+	color:white;
+	-gtk-icon-transform:	scale(0);
+	border-radius:		  8px;
+	box-shadow:			 none;
 
 #}
 */
 
 #showdesktop-button
 {
-    -gtk-icon-transform:    scale(0);
+	-gtk-icon-transform:	scale(0);
 }

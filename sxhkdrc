@@ -7,9 +7,9 @@ super + exclam
 super + button2
 	xzoom -mag 4
 super + KP_Add
-    scalor +
+	scalor +
 super + KP_Subtract
-    scalor -
+	scalor -
 #####################
 super + t
 	prompt_translate

@@ -244,7 +244,7 @@ include "/usr/share/nanorc/*.nanorc"
 
 ## If <Tab> should always produce four spaces when editing a Python file,
 ## independent of the settings of 'tabsize' and 'tabstospaces':
-extendsyntax python tabgives "    "
+extendsyntax python tabgives "	"
 
 ## If <Tab> should always produce an actual TAB when editing a Makefile:
 extendsyntax makefile tabgives "	"

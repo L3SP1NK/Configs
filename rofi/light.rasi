@@ -61,7 +61,7 @@
 {
 	border:					0;
 	background-color:		inherit;
-    size:                   64;
+	size:				   64;
 	padding:				8;
 }
 
@@ -164,8 +164,8 @@
 #entry
 {
 	text-color:				@foreground-color;
-    border-color:           @border-color;
-    border-radius:          0;
+	border-color:		   @border-color;
+	border-radius:		  0;
 }
 
 #prompt
