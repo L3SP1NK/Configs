@@ -1,12 +1,13 @@
 [global]
+	origin = top-right
 	gap_size = 8
 	markup = full
 	hide_text = false
-	format = "%s\n %b\n"
+	format = "%s\n%b\n"
 #	icon_position = top
 #	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
-	font = sf pro rounded medium 14
+	font = sf pro display medium 14
 	sort = yes
 	word_wrap = yes
 	force_xinerama = yes
@@ -18,7 +19,7 @@
 	ignore_newline = no
 	transparency = 20
 	idle_threshold = 0
-	monitor = 0
+	monitor = -1
 	follow = mouse
 	sticky_history = yes
 	dmenu = /usr/bin/rofi -dmenu -p dunst:

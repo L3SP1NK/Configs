@@ -1,7 +1,7 @@
 configuration
 {
 	font:					"robotoregular 14";
-	font:					"sf pro rounded 14";
+	font:					"sf pro display 14";
 
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";
