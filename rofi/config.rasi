@@ -1,10 +1,9 @@
 configuration
 {
-	font:					"robotoregular 14";
-	font:					"sf pro display 14";
+	font:					"sf pro rounded 14";
 
 	show-icons:				true;
-	icon-theme:				"ePapirus-Dark";
+	icon-theme:				"BeautyLine";
 
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
