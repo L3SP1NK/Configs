@@ -118,14 +118,15 @@ XTerm.vt100.translations: #override \n\
 ! XTerm*on3Clicks: regex [[:alpha:]]+://([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
 
-!Sxiv.background: #000000
-Sxiv.background: #0d0d0d
-Sxiv.foreground: #ffffff
-Sxiv.font: sf pro display 14
+!Sxiv.background:	#000000
+Sxiv.background:	#0d0d0d
+Sxiv.foreground:	#ffffff
+Sxiv.font:			sf pro display 14
 
-!Xcursor.theme: WhiteSur-cursors
-Xcursor.theme:  Notwaita-White
-Xcursor.size: 42
+!Xcursor.theme:	WhiteSur-cursors
+!Xcursor.theme:	Notwaita-White
+Xcursor.theme:	Bibata-Modern-Ice
+Xcursor.size:	36
 
 xclock*foreground:  red
 xclock*background:  #0d0d0d

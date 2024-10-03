@@ -6,20 +6,20 @@
 
 	foreground-color:		white;
 
-	selected-fg-color:		white;
-	selected-bg-color:		#1f1f1f;
+	selected-fg-color:		black;
+	selected-bg-color:		#e9e9e9;
 
-	background-color:		black;
+	background-color:		#191919;
 	background-alt-color:	@selected-bg-color;
 
-	border-color:			@background-alt-color;
+	border-color:			#1f1f1f;
 }
 
 #window
 {
 	transparency:			"real";
 	text-color:				inherit;
-	border:					1;
+	border:					2;
 	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
@@ -28,7 +28,7 @@
 #mainbox
 {
 	border:					0;
-	margin:					32;
+	padding:				24;
 }
 
 #message
@@ -42,7 +42,7 @@
 {
 	text-color:				@selected-fg-color;
 	border-radius:			0;
-	padding:				32;
+	padding:				0;
 	background-color:		#cc0000;
 	border:					0;
 }
@@ -52,7 +52,7 @@
 	border:					0;
 	fixed-height:			0;
 	scrollbar:				false;
-	lines:					3;
+	lines:					5;
 }
 
 #element
@@ -65,7 +65,7 @@
 {
 	border:					0;
 	background-color:		inherit;
-	size:				   64;
+	size:				   48;
 	padding:				8;
 }
 
@@ -74,7 +74,7 @@
 	border:					0;
 	background-color:		inherit;
 	text-color:				inherit;
-	padding:				24;
+	padding:				16;
 }
 
 #element.normal.normal

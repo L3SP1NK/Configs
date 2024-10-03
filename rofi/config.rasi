@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro rounded 14";
+	font:					"sf pro rounded medium 14";
 
 	show-icons:				true;
 	icon-theme:				"BeautyLine";
@@ -18,7 +18,7 @@ configuration
 	window-match-fields:	"all";
 
 	drun-match-fields:		"all";
-	drun-show-actions:		false;
+	drun-show-actions:		true;
 	drun-display-format:	"{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 
 	disable-history:		false;
@@ -33,9 +33,9 @@ configuration
 	cycle:					false;
 	sidebar-mode:			false;
 
-	location:				0;
-	yoffset:				-50;
-	xoffset:				0;
+	location:				-0;
+	yoffset:				-75;
+	xoffset:				-0;
 	fake-transparency:		false; /* screenshot */
 
 /*	auto-select:			false;*/
@@ -43,7 +43,7 @@ configuration
 /*	parse-known-hosts:		true;*/
 /*	ignored-prefixes:		"";*/
 /*	filter:					;*/
-/*	dpi:					96;*/
+	dpi:					96;
 
 	modi:					"window,run,ssh,drun";
 	combi-modi:				"window,run,drun";
