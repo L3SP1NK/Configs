@@ -80,7 +80,6 @@ XTerm*xftAntialias: true
 ! set font and fontsize
 
 XTerm*faceName: sf mono
-!XTerm*faceName: RobotoMono Nerd Font Mono
 XTerm*faceSize: 13
 
 ! VT Font Menu: Unreadable

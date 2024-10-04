@@ -4,9 +4,9 @@ setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
 setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
-setopt nonomatch           # hide error message if there is no match for the pattern
+#setopt nonomatch           # hide error message if there is no match for the pattern
 setopt notify              # report the status of background jobs immediately
-#setopt numericglobsort     # sort filenames numerically when it makes sense
+setopt numericglobsort     # sort filenames numerically when it makes sense
 setopt promptsubst         # enable command substitution in prompt
 DISABLE_MAGIC_FUNCTIONS=true
 #WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
@@ -190,12 +190,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias ip='ip --color=auto'
 
-    export LESS_TERMCAP_mb=$'\e[1;32m'     # begin blink
-    export LESS_TERMCAP_md=$'\e[1;36m'     # begin bold
+    export LESS_TERMCAP_mb=$'\e[1;31m'     # begin blink
+    export LESS_TERMCAP_md=$'\e[1;35m'     # begin bold
     export LESS_TERMCAP_me=$'\e[0m'        # reset bold/blink
-    export LESS_TERMCAP_so=$'\e[01;34m'    # begin reverse video
+    export LESS_TERMCAP_so=$'\e[01;33m'    # begin reverse video
     export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
-    export LESS_TERMCAP_us=$'\e[1;34m'     # begin underline
+    export LESS_TERMCAP_us=$'\e[1;35m'     # begin underline
     export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 
     # Take advantage of $LS_COLORS for completion as well

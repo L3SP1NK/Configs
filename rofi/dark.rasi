@@ -42,7 +42,7 @@
 {
 	text-color:				@selected-fg-color;
 	border-radius:			0;
-	padding:				0;
+	padding:				30;
 	background-color:		#cc0000;
 	border:					0;
 }

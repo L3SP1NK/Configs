@@ -41,7 +41,7 @@ ctrl + alt + Delete
 ctrl + alt d
 	randombg
 Print
-	xfce4-screenshooter -r -d 1
+	xfce4-screenshooter -r -c
 #ctrl + q
 #	xdotool getactivewindow windowkill
 
