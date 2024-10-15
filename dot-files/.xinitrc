@@ -16,6 +16,8 @@ setxkbmap fr&
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
 
+xbindkeys&
+
 ## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
 if pidof xcape;	then
 	killall xcape

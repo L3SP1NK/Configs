@@ -1,5 +1,5 @@
 ctrl + alt + t
-	st
+	st -e byobu
 super + e
 	thunar
 super + exclam
@@ -40,8 +40,13 @@ ctrl + alt + Delete
 	xlock
 ctrl + alt d
 	randombg
+
 Print
 	xfce4-screenshooter -r -c
+
+shift+Print
+	xfce4-screenshooter -r -S
+
 #ctrl + q
 #	xdotool getactivewindow windowkill
 
