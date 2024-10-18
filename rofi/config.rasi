@@ -3,7 +3,7 @@ configuration
 	font:					"sf pro rounded medium 14";
 
 	show-icons:				true;
-	icon-theme:				"BeautyLine";
+	icon-theme:				"Papirus-Dark";
 
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
