@@ -276,10 +276,10 @@ edit_files_fzf() {
 	fi
 }
 
-bindkey -s '^[e' 'edit_files_fzf\n' 				# alt + E edit a file.
-bindkey -s '^[l' ';clear;tree -L 1\n'				# List files.
-bindkey -s '^[o' ';open "$(fzf)"\n'					# Open file.
-bindkey '^Z' undo									# undo last action
+bindkey -s '^[e' 'edit_files_fzf\n' 	# Edit a file.
+bindkey -s '^[l' ';clear;tree -L1\n'	# List files.
+bindkey -s '^[o' ';open "$(fzf)"\n'		# Open file.
+bindkey '^Z' undo						# Undo last action
 complete -cf doas
 
 if [[ "${TTY}" =~ /dev/tty[0-6] && "${EUID}" -ne '0' ]]; then
