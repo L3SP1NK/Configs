@@ -49,7 +49,7 @@ alias tb="nc termbin.com 9999"
 alias netstats="sudo netstat -lapute | c"
 alias cal="calcurse"
 alias tg="telegram-cli"
-alias yt="clear&&ytfzf -lstc Y --thumbnail-quality=default --ytdl-opts=--ytdl-format=worst"
+alias yt="clear&&ytfzf -flst --async-thumbnails --notify-playing --preview-side=left -c Y --force-youtube --max-threads=$(nproc) --nsfw --video-duration=long --type=video --thumbnail-quality=default --keep-cache"
 alias pmix='pulsemixer'
 alias rtop='radeontop -cT'
 alias fzf='fzf --reverse'
