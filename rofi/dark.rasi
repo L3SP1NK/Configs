@@ -7,7 +7,6 @@
 	foreground-color:		white;
 
 	selected-fg-color:		white;
-	selected-bg-color:		#ffffff20;
 	selected-bg-color:		#474747;
 
 	background-color:		#191919;
