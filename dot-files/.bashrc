@@ -1,3 +1,4 @@
+export PATH="/home/lespink/.local/bin:$PATH"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -195,3 +196,5 @@ fi
 #complete -cf doas
 
 #eval "$(oh-my-posh init bash --config ~/.omp.yaml)"
+
+. "$HOME/.local/bin/env"

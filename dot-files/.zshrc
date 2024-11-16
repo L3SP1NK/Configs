@@ -11,7 +11,8 @@ setopt promptsubst         # enable command substitution in prompt
 DISABLE_MAGIC_FUNCTIONS=true
 #WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
-PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH="/home/lespink/.local/bin:$PATH"
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
@@ -297,3 +298,5 @@ fi
 
 #eval "$(oh-my-posh init zsh --config ~/.omp.yaml)"
 #face_opt=('-b' '-d' '-g' '-p' '-t' '-w' '-y');_face_opt=$(printf '%s\n' "${face_opt[@]}"|shuf|head -n1);cowpath='/usr/share/cowsay';cowfile=$(find "$cowpath/cows" -maxdepth 1 -type f|shuf|head -n1);echo "Welcome back $USER!"|cowsay "$_face_opt" -f $cowfile
+
+. "$HOME/.local/bin/env"
