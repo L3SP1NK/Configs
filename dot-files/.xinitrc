@@ -116,18 +116,18 @@ xterm -e 'byobu'&
 #fi
 #xbattbar -c -i orange -o brown -a -t 10&
 
-## Screensaver
-if pidof xscreensaver; then
-	killall xscreensaver
-fi
-xscreensaver&
+### Screensaver
+#if pidof xscreensaver; then
+#	killall xscreensaver
+#fi
+#xscreensaver&
 
 ## Screen compositor
 if pidof picom; then
 	killall picom
 fi
 
-nice -20 picom&
+picom&
 
 startDwm() {
 
@@ -137,7 +137,7 @@ startDwm() {
 
 	slstatus&
 
-	nice -20 dwm
+	dwm
 
 }
 
