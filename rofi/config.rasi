@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro rounded medium 14";
+	font:					"sf pro display medium 14";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Dark";
