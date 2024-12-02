@@ -1,4 +1,4 @@
-BYOBU_DARK=black
+BYOBU_DARK=dimgrey
 BYOBU_LIGHT=white
 BYOBU_ACCENT=white
 BYOBU_HIGHLIGHT=dodgerblue

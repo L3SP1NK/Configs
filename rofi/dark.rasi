@@ -12,7 +12,7 @@
 	background-color:		#191919;
 	background-alt-color:	@selected-bg-color;
 
-	border-color:			#1f1f1f;
+	border-color:			@selected-bg-color;
 }
 
 #window
