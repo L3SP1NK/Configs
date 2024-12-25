@@ -1,5 +1,5 @@
 ctrl + alt + t
-	st -e byobu
+	st
 super + e
 	thunar
 super + exclam
