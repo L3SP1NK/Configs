@@ -1,5 +1,5 @@
 BYOBU_DARK="snow4"
 BYOBU_LIGHT=grey
-BYOBU_ACCENT=white,bold
+BYOBU_ACCENT=white
 BYOBU_HIGHLIGHT=orange
 MONOCHROME=black
