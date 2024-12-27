@@ -19,7 +19,7 @@
 {
 	transparency:			"real";
 	text-color:				inherit;
-	border:					2;
+	border:					0;
 	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
