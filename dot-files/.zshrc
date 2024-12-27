@@ -148,9 +148,9 @@ ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=yellow
 ZSH_HIGHLIGHT_STYLES[global-alias]=fg=yellow
 ## Path.
 ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[path]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=cyan
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=cyan
+ZSH_HIGHLIGHT_STYLES[path]=fg=cyan,underline
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]=fg=cyan,underline
+ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=fg=cyan,underline
 ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
 ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
 ## Substitution.

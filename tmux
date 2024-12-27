@@ -43,7 +43,7 @@ set-option -g set-titles-string "#(whoami)@#H - ${TERM}"
 #set-option -g history-limit 0
 
 set-option -g pane-active-border-style fg=$BYOBU_ACCENT,bold
-set-option -g pane-border-style fg=$BYOBU_DARK,bold
+set-option -g pane-border-style fg=$BYOBU_DARK,dim
 
 set-option -g display-panes-time 10
 set-option -g display-panes-colour $MONOCHROME
