@@ -32,10 +32,10 @@ fi
 sxhkd&
 
 ## Meteo indicator
-if pidof meteo-qt; then
-	killall meteo-qt
-fi
-meteo-qt -c -i orange -o brown -a -t 10&
+#if pidof meteo-qt; then
+#	killall meteo-qt
+#fi
+#meteo-qt -c -i orange -o brown -a -t 10&
 
 ## Network tray icon
 if pidof nm-applet; then
