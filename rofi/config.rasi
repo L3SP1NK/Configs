@@ -3,7 +3,7 @@ configuration
 	font:					"sf pro display medium 14";
 
 	show-icons:				true;
-	icon-theme:				"Papirus-Dark";
+	icon-theme:				"ePapirus-Dark";
 
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
