@@ -5,7 +5,7 @@
 	hide_text = false
 	format = "%s\n%b\n"
 #	icon_position = top
-#	icon_theme = ePapirus-Dark
+	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
 	font = sf pro display medium 14
 	sort = yes
