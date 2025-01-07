@@ -3,19 +3,23 @@
  * User: Lespink
  ***********************************************/
 * {
-	background-color:		white;
-	background-alt-color:	black;
+
 	foreground-color:		black;
-	selected-bg-color:		#2777ff;
+
 	selected-fg-color:		white;
-	border-color:			@background-alt-color;
+	selected-bg-color:		#E9873A;
+
+	background-color:		white;
+	background-alt-color:	@selected-bg-color;
+
+	border-color:			@selected-bg-color;
 }
 
 #window
 {
 	transparency:			"real";
 	text-color:				inherit;
-	border:					1;
+	border:					0;
 	border-radius:			16;
 	border-color:			@border-color;
 	width:					500;
@@ -24,7 +28,7 @@
 #mainbox
 {
 	border:					0;
-	margin:					32;
+	padding:				24;
 }
 
 #message
@@ -38,7 +42,7 @@
 {
 	text-color:				@selected-fg-color;
 	border-radius:			0;
-	padding:				32;
+	padding:				30;
 	background-color:		#cc0000;
 	border:					0;
 }
@@ -61,7 +65,7 @@
 {
 	border:					0;
 	background-color:		inherit;
-	size:				   64;
+	size:					48;
 	padding:				8;
 }
 
@@ -70,7 +74,7 @@
 	border:					0;
 	background-color:		inherit;
 	text-color:				inherit;
-	padding:				24;
+	padding:				16;
 }
 
 #element.normal.normal
@@ -94,8 +98,8 @@
 {
 	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
-	border:					2;
-	border-color:			#00000030;
+	border:					0;
+	border-color:			@border-color;
 }
 
 #element.selected.urgent
@@ -137,14 +141,12 @@
 #button
 {
 	spacing:				0;
-	border:					0;
 	color:					@background-color;
 	text-color:				@selected-fg-color;
 }
 
 #button.selected
 {
-	border:					0;
 	text-color:				@selected-fg-color;
 	background-color:		@selected-bg-color;
 }
@@ -182,5 +184,6 @@
 
 #textbox-prompt-colon
 {
+	padding:				10;
 	expand:					false;
 }

@@ -80,7 +80,7 @@ XTerm*xftAntialias: true
 ! set font and fontsize
 
 !XTerm*faceName: commit mono nerd font mono
-XTerm*faceName: sf mono
+XTerm*faceName: jetbrains mono nerd font mono
 XTerm*faceSize: 13
 
 Xmessage*font: -sf pro rounded-medium-r-normal--14-140-72-72-p-71-iso10646-1
@@ -127,7 +127,8 @@ Sxiv.font:			sf pro display 14
 
 !Xcursor.theme:	WhiteSur-cursors
 !Xcursor.theme:	Notwaita-White
-Xcursor.theme:	Bibata-Modern-Ice
+!Xcursor.theme:	Bibata-Modern-Ice
+Xcursor.theme:	Simp1e-Mix-Light
 Xcursor.size:	36
 
 xclock*foreground:  red
