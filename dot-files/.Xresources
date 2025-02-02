@@ -79,7 +79,6 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-!XTerm*faceName: commit mono nerd font mono
 XTerm*faceName: jetbrains mono nerd font mono
 XTerm*faceSize: 13
 
@@ -125,7 +124,8 @@ Sxiv.background:	#0d0d0d
 Sxiv.foreground:	#ffffff
 Sxiv.font:			sf pro text 14
 
-Xcursor.theme:	Oreo-White-Cursor
+!Xcursor.theme:	Oreo-White-Cursor
+Xcursor.theme:	Oreo-Spark-Lime-Cursor
 !Xcursor.theme:	Simp1e-Mix-Light
 Xcursor.size:	36
 

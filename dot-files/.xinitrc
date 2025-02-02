@@ -78,8 +78,8 @@ fi
 /usr/libexec/geoclue-2.0/demos/agent&
 
 ### Blue light filter
-if pidof redshift-qt; then
-	killall redshift-qt
+if pidof redshift-gtk; then
+	killall redshift-gtk
 fi
 redshift-qt&
 #
