@@ -47,11 +47,11 @@ if pidof nm-applet; then
 fi
 nm-applet&
 
-## Temperature monitor
-if pidof psensor; then
-	killall psensor
-fi
-psensor&
+### Temperature monitor
+#if pidof psensor; then
+#	killall psensor
+#fi
+#psensor&
 
 ## Clipboard manager
 if pidof xfce4-clipman; then
@@ -81,7 +81,7 @@ fi
 if pidof redshift-gtk; then
 	killall redshift-gtk
 fi
-redshift-qt&
+redshift-gtk&
 #
 ### Onscreen keyboard
 #if pidof onboard; then
