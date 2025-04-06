@@ -16,11 +16,10 @@ xinput --set-prop 8 "libinput Natural Scrolling Enabled" 1&
 ## Turn on numlock (before numpad as mouse)
 numlockx on&
 
-
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
 
-xbindkeys&
+#xbindkeys&
 
 ## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
 if pidof xcape;	then
@@ -121,10 +120,10 @@ xterm -e 'byobu'&
 #xbattbar -c -i orange -o brown -a -t 10&
 
 ### Screensaver
-#if pidof xscreensaver; then
-#	killall xscreensaver
-#fi
-#xscreensaver&
+if pidof xscreensaver; then
+	killall xscreensaver
+fi
+xscreensaver&
 
 ## Screen compositor
 if pidof picom; then
