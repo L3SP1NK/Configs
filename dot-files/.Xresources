@@ -79,8 +79,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-XTerm*faceName: sf mono
-!XTerm*faceName: roboto mono nerd font mono
+XTerm*faceName: maple mono nf
 XTerm*faceSize: 13
 
 Xmessage*font: -sf pro rounded-medium-r-normal--14-140-72-72-p-71-iso10646-1

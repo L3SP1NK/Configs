@@ -7,7 +7,7 @@
 #	icon_position = top
 	icon_theme = ePapirus-Dark
 	enable_recursive_icon_lookup = true
-	font = roboto bold 14
+	font = rubik bold 14
 	sort = yes
 	word_wrap = yes
 	force_xinerama = yes
