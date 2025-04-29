@@ -40,9 +40,8 @@ ctrl + alt + Delete
 	xscreensaver-command -lock
 ctrl + alt d
 	randombg
-
 Print
-	xfce4-screenshooter -r -c
+	compokill ;xfce4-screenshooter -r -c
 
 shift+Print
 	xfce4-screenshooter -r -S
