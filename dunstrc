@@ -17,7 +17,7 @@
 	indicate_hidden = yes
 	show_age_threshold = -1
 	ignore_newline = no
-	transparency = 20
+	transparency = 0
 	idle_threshold = 0
 	monitor = -1
 	follow = mouse

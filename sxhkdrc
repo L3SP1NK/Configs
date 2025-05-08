@@ -41,7 +41,7 @@ ctrl + alt + Delete
 ctrl + alt d
 	randombg
 Print
-	compokill ;xfce4-screenshooter -r -c
+	compokill && xfce4-screenshooter -r -c
 
 shift+Print
 	xfce4-screenshooter -r -S

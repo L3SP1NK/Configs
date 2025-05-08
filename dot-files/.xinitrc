@@ -11,7 +11,8 @@ xrdb -merge -load ~/.Xresources&
 setxkbmap fr&
 
 ## Reverse touchpad scroool direction
-xinput --set-prop 8 "libinput Natural Scrolling Enabled" 1&
+xinput --set-prop 8 "libinput Natural Scrolling Enabled" 0&
+xinput --set-prop 13 "libinput Natural Scrolling Enabled" 1&
 
 ## Turn on numlock (before numpad as mouse)
 numlockx on&
