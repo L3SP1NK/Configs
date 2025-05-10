@@ -37,7 +37,8 @@ ctrl + alt BackSpace
 alt + f
 	wmctrl -r :ACTIVE: -b toggle,fullscreen
 ctrl + alt + Delete
-	xscreensaver-command -lock
+#	xscreensaver-command -lock
+	systemctl -i suspend
 ctrl + alt d
 	randombg
 Print
