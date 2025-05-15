@@ -37,12 +37,12 @@ ctrl + alt BackSpace
 alt + f
 	wmctrl -r :ACTIVE: -b toggle,fullscreen
 ctrl + alt + Delete
-#	xscreensaver-command -lock
-	systemctl -i suspend
+	xscreensaver-command -lock
+#	systemctl -i suspend
 ctrl + alt d
 	randombg
 Print
-	compokill && xfce4-screenshooter -r -c
+	xfce4-screenshooter -r -c
 
 shift+Print
 	xfce4-screenshooter -r -S
