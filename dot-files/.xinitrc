@@ -11,11 +11,14 @@ xrdb -merge -load ~/.Xresources&
 setxkbmap fr&
 
 ## Reverse touchpad scroool direction
-xinput --set-prop 8 "libinput Natural Scrolling Enabled" 0&
-xinput --set-prop 13 "libinput Natural Scrolling Enabled" 1&
+xinput --set-prop 11 348 1&
+xinput --set-prop 11 349 1&
+xinput --set-prop 11 351 1&
+xinput --set-prop 11 "libinput Natural Scrolling Enabled" 1&
+
 
 ## Turn on numlock (before numpad as mouse)
-numlockx on&
+#numlockx on&
 
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
@@ -109,11 +112,12 @@ xterm -e 'byobu'&
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
 
 ### Power manager
-#if pidof xfce4-power-manager; then
-#	killall xfce4-power-manager
-#fi
-#xfce4-power-manager&
-#
+if pidof xfce4-power-manager; then
+	killall xfce4-power-manager
+fi
+xfce4-power-manager&
+
+
 ### Battery indicator
 #if pidof xbattbar; then
 #	killall xbattbar

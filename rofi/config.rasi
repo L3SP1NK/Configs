@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"samsung sharp sans bold 15";
+	font:					"sf pro text semibold 15";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Light";

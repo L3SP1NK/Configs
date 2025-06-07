@@ -124,8 +124,8 @@ Sxiv.background:	#0d0d0d
 Sxiv.foreground:	#ffffff
 Sxiv.font:			Rubik 14
 
-Xcursor.theme:	Bibata-Modern-Ice
-Xcursor.size:	36
+Xcursor.theme:	Notwaita-White
+Xcursor.size:	42
 
 xclock*foreground:  red
 xclock*background:  #0d0d0d
