@@ -53,7 +53,7 @@ set-option -g clock-mode-colour $MONOCHROME
 set-option -g clock-mode-style 24
 
 set-option -g mode-keys vi
-set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$MONOCHROME
+set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$BYOBU_DARK
 
 set-window-option -g window-status-style fg=$BYOBU_LIGHT,dim
 set-window-option -g window-status-current-style fg=$BYOBU_ACCENT,bold
