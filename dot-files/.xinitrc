@@ -18,7 +18,7 @@ xinput --set-prop 11 "libinput Natural Scrolling Enabled" 1&
 
 
 ## Turn on numlock (before numpad as mouse)
-#numlockx on&
+numlockx on&
 
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
@@ -38,11 +38,11 @@ if pidof sxhkd; then
 fi
 sxhkd&
 
-## Meteo indicator
-#if pidof meteo-qt; then
-#	killall meteo-qt
-#fi
-#meteo-qt -c -i orange -o brown -a -t 10&
+# Meteo indicator
+if pidof meteo-qt; then
+	killall meteo-qt
+fi
+meteo-qt -c -i orange -o brown -a -t 10&
 
 ## Network tray icon
 if pidof nm-applet; then
@@ -50,11 +50,11 @@ if pidof nm-applet; then
 fi
 nm-applet&
 
-### Temperature monitor
-#if pidof psensor; then
-#	killall psensor
-#fi
-#psensor&
+## Temperature monitor
+if pidof psensor; then
+	killall psensor
+fi
+psensor&
 
 ## Clipboard manager
 if pidof xfce4-clipman; then
@@ -112,10 +112,10 @@ xterm -e 'byobu'&
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
 
 ### Power manager
-if pidof xfce4-power-manager; then
-	killall xfce4-power-manager
-fi
-xfce4-power-manager&
+#if pidof xfce4-power-manager; then
+#	killall xfce4-power-manager
+#fi
+#xfce4-power-manager&
 
 
 ### Battery indicator
