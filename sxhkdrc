@@ -24,7 +24,7 @@ super + v
 super + s
 	sotw
 super + g
-	sudo selgov
+	selgov
 super + c
 	killall gpick;gpick -pos|xclip -sel clip
 super + Tab
@@ -36,16 +36,21 @@ ctrl + alt BackSpace
 	compokill
 alt + f
 	wmctrl -r :ACTIVE: -b toggle,fullscreen
+super + l
+	xscreensaver-command -lock
+	
 ctrl + alt + Delete
 	xscreensaver-command -lock
 #	systemctl -i suspend
 ctrl + alt d
 	randombg
-Print
+
+super + shift + s
 	xfce4-screenshooter -r -c
 
-shift+Print
-	xfce4-screenshooter -r -S
+
+Print
+	xfce4-screenshooter -r -c
 
 #ctrl + q
 #	xdotool getactivewindow windowkill

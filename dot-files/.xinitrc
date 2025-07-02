@@ -11,10 +11,10 @@ xrdb -merge -load ~/.Xresources&
 setxkbmap fr&
 
 ## Reverse touchpad scroool direction
-xinput --set-prop 11 348 1&
-xinput --set-prop 11 349 1&
-xinput --set-prop 11 351 1&
-xinput --set-prop 11 "libinput Natural Scrolling Enabled" 1&
+xinput --set-prop 15 348 1&
+xinput --set-prop 15 349 1&
+xinput --set-prop 15 351 1&
+xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1&
 
 
 ## Turn on numlock (before numpad as mouse)
@@ -105,8 +105,7 @@ randombg&
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 
 ## System monitor
-#x-terminal-emulator -e 'btop'&
-xterm -e 'byobu'&
+x-terminal-emulator -e 'byobu'&
 
 ## Auth agent
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
