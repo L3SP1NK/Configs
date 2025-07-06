@@ -40,8 +40,9 @@ super + l
 	xscreensaver-command -lock
 	
 ctrl + alt + Delete
-	xscreensaver-command -lock
+#	xscreensaver-command -lock
 #	systemctl -i suspend
+	pm-suspend
 ctrl + alt d
 	randombg
 
