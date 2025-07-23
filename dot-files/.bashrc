@@ -198,3 +198,4 @@ fi
 #eval "$(oh-my-posh init bash --config ~/.omp.yaml)"
 
 . "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"

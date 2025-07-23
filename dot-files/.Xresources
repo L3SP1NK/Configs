@@ -82,7 +82,7 @@ XTerm*xftAntialias: true
 XTerm*faceName: Jetbrainsmono nerd font mono
 XTerm*faceSize: 13
 
-Xmessage*font: -sf pro rounded-medium-r-normal--14-140-72-72-p-71-iso10646-1
+Xmessage*font: -sf pro display-medium-r-normal--14-140-72-72-p-71-iso10646-1
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8

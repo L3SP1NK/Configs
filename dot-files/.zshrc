@@ -300,3 +300,7 @@ fi
 #face_opt=('-b' '-d' '-g' '-p' '-t' '-w' '-y');_face_opt=$(printf '%s\n' "${face_opt[@]}"|shuf|head -n1);cowpath='/usr/share/cowsay';cowfile=$(find "$cowpath/cows" -maxdepth 1 -type f|shuf|head -n1);echo "Welcome back $USER!"|cowsay "$_face_opt" -f $cowfile
 
 . "$HOME/.local/bin/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

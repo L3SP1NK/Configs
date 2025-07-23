@@ -49,7 +49,7 @@ set-option -g display-panes-time 1
 set-option -g display-panes-colour $BYOBU_LIGHT
 set-option -g display-panes-active-colour $BYOBU_ACCENT
 
-set-option -g clock-mode-colour $MONOCHROME
+set-option -g clock-mode-colour $BYOBU_LIGHT
 set-option -g clock-mode-style 24
 
 set-option -g mode-keys vi
@@ -82,3 +82,4 @@ set -g status-left '#(byobu-status tmux_left)'
 set -g status-right '#(byobu-status tmux_right)'
 
 set -g message-style bg=$BYOBU_ACCENT,fg=$MONOCHROME
+set -g status-right '#(byobu-status tmux_right)'$BYOBU_DATE$BYOBU_TIME

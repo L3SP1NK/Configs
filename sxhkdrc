@@ -46,6 +46,9 @@ ctrl + alt + Delete
 ctrl + alt d
 	randombg
 
+caps
+	notify-send caps
+
 super + shift + s
 	xfce4-screenshooter -r -c
 

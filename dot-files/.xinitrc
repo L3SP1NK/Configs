@@ -9,12 +9,14 @@ xrdb -merge -load ~/.Xresources&
 
 ## Keyboard layout (before every others keyboard options)
 setxkbmap fr&
+setxkbmap -option caps:none
+
 
 ## Reverse touchpad scroool direction
-xinput --set-prop 15 348 1&
-xinput --set-prop 15 349 1&
-xinput --set-prop 15 351 1&
-xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1&
+xinput --set-prop 9 348 1&
+xinput --set-prop 9 349 1&
+xinput --set-prop 9 351 1&
+xinput --set-prop 9 "libinput Natural Scrolling Enabled" 1&
 
 
 ## Turn on numlock (before numpad as mouse)
@@ -23,7 +25,7 @@ numlockx on&
 ## Numpad as mouse (shift + numlock to enable)
 setxkbmap -option "keypad:pointerkeys"&
 
-#xbindkeys&
+xbindkeys&
 
 ## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
 if pidof xcape;	then
@@ -105,7 +107,7 @@ randombg&
 kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 
 ## System monitor
-x-terminal-emulator -e 'byobu'&
+#x-terminal-emulator -e 'byobu'&
 
 ## Auth agent
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
