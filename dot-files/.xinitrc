@@ -13,10 +13,13 @@ setxkbmap -option caps:none
 
 
 ## Reverse touchpad scroool direction
-xinput --set-prop 9 348 1&
-xinput --set-prop 9 349 1&
-xinput --set-prop 9 351 1&
-xinput --set-prop 9 "libinput Natural Scrolling Enabled" 1&
+#xinput --set-prop 9 348 1&
+#xinput --set-prop 9 349 1&
+#xinput --set-prop 9 351 1&
+#xinput --set-prop 9 "libinput Natural Scrolling Enabled" 1&
+xinput --set-prop "Sourcing & Creation EB_VM-11-SF 2,4GHz Mouse" "libinput Accel Speed" 0                                                                    23:44:45
+xinput --set-prop "Sourcing & Creation EB_VM-11-SF 2,4GHz Mouse" "libinput Accel Profile Enabled" 0, 0, 1
+
 
 
 ## Turn on numlock (before numpad as mouse)
