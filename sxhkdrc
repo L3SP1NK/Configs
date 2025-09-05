@@ -52,7 +52,6 @@ caps
 super + shift + s
 	'screenshooter'
 
-
 Print
 	xfce4-screenshooter -r -c
 

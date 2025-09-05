@@ -43,6 +43,12 @@ if pidof sxhkd; then
 fi
 sxhkd&
 
+## Keyboard shortcut
+if pidof blueman-applet; then
+	killall blueman-applet
+fi
+blueman-applet&
+
 # Meteo indicator
 if pidof meteo-qt; then
 	killall meteo-qt
