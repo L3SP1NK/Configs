@@ -121,18 +121,18 @@ kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 ## Auth agent
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
 
-### Power manager
-#if pidof xfce4-power-manager; then
-#	killall xfce4-power-manager
-#fi
-#xfce4-power-manager&
-
-
 ### Battery indicator
 #if pidof xbattbar; then
 #	killall xbattbar
 #fi
 #xbattbar -c -i orange -o brown -a -t 10&
+
+## Power manager
+if pidof xfce4-power-manager; then
+	killall xfce4-power-manager
+fi
+xfce4-power-manager&
+
 
 ### Screensaver
 if pidof xscreensaver; then
