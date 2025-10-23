@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro display semibold 15";
+	font:					"because we learn bold 15";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Light";
