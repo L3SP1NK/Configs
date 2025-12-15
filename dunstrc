@@ -17,7 +17,7 @@
 	indicate_hidden = yes
 	show_age_threshold = -1
 	ignore_newline = no
-	transparency = 0
+	transparency = 00
 	idle_threshold = 0
 	monitor = -1
 	follow = mouse
@@ -26,7 +26,7 @@
 	browser = /usr/bin/firefox -new-tab
 
 	separator_color = auto
-	background = "#1F1F1F"
+	background = "#1F1F1F30"
 	frame_color = "#ffffff"
 	frame_width = 0
 	foreground = "#ffffff"
@@ -41,5 +41,5 @@
 	format = "<b>%s\n%b</b>\n(click to dismiss)"
 	timeout = 0
 	frame_color = "#cc0000"
-	background = "#cc0000"
+	background = "#cc000050"
 	foreground = "#ffffff"
