@@ -7,9 +7,10 @@
 	foreground-color:		white;
 
 	selected-fg-color:		white;
-	selected-bg-color:		#474747;
+//	selected-bg-color:		#474747;
+	selected-bg-color:		#000000;
 
-	background-color:		#191919;
+	background-color:		#19191910;
 	background-alt-color:	@selected-bg-color;
 
 	border-color:			@selected-bg-color;
@@ -34,7 +35,7 @@
 {
 	border:					0;
 	border-color:			@selected-bg-color;
-	background-color:		#cc000040;
+	background-color:		#cc0000;
 }
 
 #textbox
@@ -98,7 +99,7 @@
 	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 	border:					1;
-	border-color:			#0d0e11;
+	border-color:			@selected-bg-color;
 }
 
 #element.selected.urgent
