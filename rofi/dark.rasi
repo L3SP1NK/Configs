@@ -4,13 +4,12 @@
  ***********************************************/
 * {
 
-	foreground-color:		white;
+	foreground-color:		#FFFFFF;
 
-	selected-fg-color:		white;
-//	selected-bg-color:		#474747;
-	selected-bg-color:		#000000;
+	selected-fg-color:		@foreground-color;
+	selected-bg-color:		#00000050;
 
-	background-color:		#19191910;
+	background-color:		#00000000;
 	background-alt-color:	@selected-bg-color;
 
 	border-color:			@selected-bg-color;
@@ -64,7 +63,6 @@
 #element-icon
 {
 	border:					0;
-	background-color:		inherit;
 	size:					48;
 	padding:				8;
 }
@@ -72,7 +70,6 @@
 #element-text
 {
 	border:					0;
-	background-color:		inherit;
 	text-color:				inherit;
 	padding:				16;
 }
@@ -84,7 +81,6 @@
 
 #element.normal.urgent
 {
-	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
@@ -110,7 +106,6 @@
 
 #element.selected.active
 {
-	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
@@ -127,13 +122,11 @@
 
 #element.alternate.active
 {
-	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
 #mode-switcher
 {
-	background-color:		@background-color;
 	border:					0 0 0;
 	border-color:			@selected-bg-color;
 }
@@ -141,14 +134,12 @@
 #button
 {
 	spacing:				0;
-	color:					@background-color;
 	text-color:				@selected-fg-color;
 }
 
 #button.selected
 {
 	text-color:				@selected-fg-color;
-	background-color:		@selected-bg-color;
 }
 
 #inputbar
@@ -173,7 +164,6 @@
 #prompt
 {
 	enabled:				true;
-	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
 
