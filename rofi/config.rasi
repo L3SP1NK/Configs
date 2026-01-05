@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"sf pro text 14";
+	font:					"sf pro 14";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Light";
