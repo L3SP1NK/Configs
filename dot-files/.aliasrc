@@ -52,7 +52,6 @@ alias yt="clear&&ytfzf -flst --async-thumbnails --notify-playing --preview-side=
 alias pmix='pulsemixer'
 alias rtop='radeontop -cT'
 alias fzf='fzf --reverse'
-alias mpv='mpv --no-keepaspect --stretch-image-subs-to-screen=yes'
 alias pl='parallel -j0'
 alias bb='byobu'
 alias diff='diff --suppress-common-lines -y'

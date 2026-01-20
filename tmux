@@ -53,7 +53,7 @@ set-option -g clock-mode-colour $BYOBU_LIGHT
 set-option -g clock-mode-style 24
 
 set-option -g mode-keys vi
-set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$BYOBU_DARK
+set-option -g mode-style bg=$BYOBU_HIGHLIGHT,fg=$BYOBU_LIGHT
 
 set-window-option -g window-status-style fg=$BYOBU_LIGHT,dim
 set-window-option -g window-status-current-style fg=$BYOBU_ACCENT,bold
@@ -81,5 +81,31 @@ set -g status-right-length 256
 set -g status-left '#(byobu-status tmux_left)'
 set -g status-right '#(byobu-status tmux_right)'
 
-set -g message-style bg=$BYOBU_ACCENT,fg=$MONOCHROME
+#set -g message-style bg=$BYOBU_ACCENT,fg=$MONOCHROME
 set -g status-right '#(byobu-status tmux_right)'$BYOBU_DATE$BYOBU_TIME
+
+set-option -g status-position top
+set-window-option -g status-position top
+#set -g allow-rename on
+#set -g mouse
+
+set-option -g status-interval 1
+set-option -g automatic-rename on
+set-option -g automatic-rename-format "#(ps -f --no-headers --ppid $(tmux display-message -p #{pane_pid}) | awk '{ print substr($0, index($0,$8)) }')"
+
+
+# Enable mouse support
+set -g mouse on
+
+# Automatically copy to both tmux clipboard and X clipboard on mouse selection
+bind -T copy-mode-vi c send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+bind-key -T copy-mode-vi c send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+
+# List of plugins
+#set -g @plugin 'tmux-plugins/tpm'
+#set -g @plugin 'tmux-plugins/tmux-yank'
+
+# Initialize TMUX plugin manager
+#run '~/.tmux/plugins/tpm/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
