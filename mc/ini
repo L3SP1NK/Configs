@@ -4,7 +4,7 @@ shell_patterns=true
 auto_save_setup=true
 preallocate_space=false
 auto_menu=false
-use_internal_view=true
+use_internal_view=false
 use_internal_edit=false
 clear_before_exec=true
 confirm_delete=true
@@ -89,7 +89,7 @@ filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=95
+left_panel_size=105
 top_panel_size=20
 message_visible=true
 keybar_visible=true

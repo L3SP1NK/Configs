@@ -60,7 +60,7 @@ fi
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=oneline
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -71,8 +71,13 @@ if [ "$color_prompt" = yes ]; then
 	if [ "$color_prompt" = yes ]; then
 			if [ "${EUID}" -eq '0' ]; then
 				PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[31m\u@\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
+				PS1='\[\e[30m\e[1m\]${?}\[\e[30m\e[1m\]|\[\e[31m\]\u@\h\[\e[30m\e[1m\]:\[\e[34m\e[1m\]\W\[\e[30m\e[1m\] $\[\e[0m\] '
+
+
 					else
 				PS1="\e[30m\e[1m\${?}\e[30m\e[1m|\e[32m\u@\h\e[30m\e[1m:\e[34m\e[1m\W\e[30m\e[1m \$\e[0m "
+				PS1='\[\e[30m\e[1m\]${?}\[\e[30m\e[1m\]|\[\e[32m\]\u@\h\[\e[30m\e[1m\]:\[\e[34m\e[1m\]\W\[\e[30m\e[1m\] $\[\e[0m\] '
+
 			fi
 	else
 		PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -89,7 +94,7 @@ xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty)
 	;;
 esac
 
-[ "$NEWLINE_BEFORE_PROMPT" = yes ] && PROMPT_COMMAND="PROMPT_COMMAND=echo"
+#[ "$NEWLINE_BEFORE_PROMPT" = yes ] && PROMPT_COMMAND="PROMPT_COMMAND=echo"
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -119,10 +124,10 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
+## some more ls aliases
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -146,13 +151,13 @@ fi
 
 ## Load personal aliases.
 if [ -e ~/.aliasrc ]; then
-	. ~/.aliasrc
+	source $HOME/.aliasrc
 else
 	echo -e '\e[31m Alias file missing!'
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
-	neofetch
+	fastfetch
 fi
 
 if [ "${MC_SID}" ]; then
@@ -196,6 +201,6 @@ fi
 #complete -cf doas
 
 #eval "$(oh-my-posh init bash --config ~/.omp.yaml)"
-
-. "$HOME/.local/bin/env"
-. "$HOME/.cargo/env"
+#
+#. "$HOME/.local/bin/env"
+#. "$HOME/.cargo/env"

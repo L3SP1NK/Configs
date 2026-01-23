@@ -226,9 +226,9 @@ fi
 
 ## red username if root
 if [[ "${EUID}" -ne '0' ]]; then
-	PROMPT='%B%F{black}%(?..%?|)%B%F{green}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
+	PROMPT=' %B%F{black}%* %B%F{red}%(?..%? ⚠️) %B%F{green}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 else
-	PROMPT='%B%F{black}%(?..%?|)%B%F{red}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
+	PROMPT=' %B%F{black}%* %B%F{red}%(?..%? ⚠️) %B%F{red}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
@@ -299,4 +299,5 @@ fi
 #eval "$(oh-my-posh init zsh --config ~/.omp.yaml)"
 #face_opt=('-b' '-d' '-g' '-p' '-t' '-w' '-y');_face_opt=$(printf '%s\n' "${face_opt[@]}"|shuf|head -n1);cowpath='/usr/share/cowsay';cowfile=$(find "$cowpath/cows" -maxdepth 1 -type f|shuf|head -n1);echo "Welcome back $USER!"|cowsay "$_face_opt" -f $cowfile
 
-RPROMPT=%T
+#RPROMPT=%T
+
