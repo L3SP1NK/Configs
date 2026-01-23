@@ -81,17 +81,16 @@ set -g status-right-length 256
 set -g status-left '#(byobu-status tmux_left)'
 set -g status-right '#(byobu-status tmux_right)'
 
-#set -g message-style bg=$BYOBU_ACCENT,fg=$MONOCHROME
+set -g message-style bg=$BYOBU_ACCENT,fg=$MONOCHROME
 set -g status-right '#(byobu-status tmux_right)'$BYOBU_DATE$BYOBU_TIME
 
 set-option -g status-position top
 set-window-option -g status-position top
-#set -g allow-rename on
-#set -g mouse
+set -g allow-rename on
 
 set-option -g status-interval 1
 set-option -g automatic-rename on
-set-option -g automatic-rename-format "#(ps -f --no-headers --ppid $(tmux display-message -p #{pane_pid}) | awk '{ print substr($0, index($0,$8)) }')"
+#set-option -g automatic-rename-format "#(ps -f --no-headers --ppid $(tmux display-message -p #{pane_pid}) | awk '{ print substr($0, index($0,$8)) }')"
 
 
 # Enable mouse support
@@ -108,4 +107,4 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel 'xc
 
 # Initialize TMUX plugin manager
 #run '~/.tmux/plugins/tpm/tpm'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
+#set -g @plugin 'tmux-plugins/tmux-resurrect'
