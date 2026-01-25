@@ -17,9 +17,8 @@ setxkbmap -option caps:none&
 /usr/libexec/at-spi-bus-launcher --launch-immediately&
 /usr/bin/pkcs11-register --skip-chrome=off --skip-firefox=off&
 /usr/libexec/polkit-mate-authentication-agent-1&
-#xdg-user-dirs-update&
-#xdg-user-dirs-gtk-update&
-#
+xdg-user-dirs-update&
+xdg-user-dirs-gtk-update&
 xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1&
 xinput --set-prop 15 297 0&
 

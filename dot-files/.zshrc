@@ -226,9 +226,10 @@ fi
 
 ## red username if root
 if [[ "${EUID}" -ne '0' ]]; then
-	PROMPT=' %B%F{black}%* %B%F{red}%(?..%? ⚠️) %B%F{green}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
+#❌⭕️🛑⛔️🚫❓⚠️
+	PROMPT='%B%F{black} %* %B%F{red}%(?..!%? )%B%F{green}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 else
-	PROMPT=' %B%F{black}%* %B%F{red}%(?..%? ⚠️) %B%F{red}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
+	PROMPT='%B%F{black} %*] %B%F{red}%(?..!%? )%B%F{red}%n@%m%F{black}:%F{blue}%c%F{black} %#%b%f '
 fi
 
 if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
@@ -236,11 +237,13 @@ if [[ "${SSH_CONNECTION}" || "${TTY}" == "/dev/tty1" ]]; then
 fi
 
 if [[ "${MC_SID}" ]]; then
-    PROMPT="📂 ${PROMPT}"
+#    PROMPT="📂 ${PROMPT}"
+    PROMPT="[mc] ${PROMPT}"
 fi
 
 if [[ "${SSH_CONNECTION}" ]]; then
-    PROMPT="🛜 ${PROMPT}"
+#    PROMPT="🛜 ${PROMPT}"
+    PROMPT="[ssh] ${PROMPT}"
 fi
 
 
