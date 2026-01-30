@@ -4,9 +4,6 @@ super + c
 super + l
 	xscreensaver-command -lock
 
-Shift_L + Super_L
-	compokill;xfce4-screenshooter -r -c
-		
 super + shift + s
 	compokill;xfce4-screenshooter -r -c
 

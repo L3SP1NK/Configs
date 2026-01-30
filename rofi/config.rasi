@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"Inter Display 14";
+	font:					"Google Sans 17pt 14";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Light";
