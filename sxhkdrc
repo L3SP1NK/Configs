@@ -1,121 +1,14 @@
-ctrl + alt + t
-	st
-super + e
-	thunar
-super + exclam
-	telebash -t "$(rofi -dmenu -p '✉️  Send to Telegram: ')" 
-super + button2
-	xzoom -mag 4
-super + KP_Add
-	scalor +
-super + KP_Subtract
-	scalor -
-#####################
-super + t
-	prompt_translate
-super + comma
-	emoji_select
-super + o
-	ocr
-super + a
-	gpt_ask
-super + v
-	xfce4-popup-clipman
-super + s
-	sotw
-super + g
-	selgov
 super + c
 	killall gpick;gpick -pos|xclip -sel clip
-super + Tab
-	rofi -show window
-ctrl + Escape
-	rofi -show drun
-#####################
-ctrl + alt BackSpace
-	compokill
-alt + f
-	wmctrl -r :ACTIVE: -b toggle,fullscreen
+
 super + l
 	xscreensaver-command -lock
-	
-ctrl + alt + Delete
-#	xscreensaver-command -lock
-#	systemctl -i suspend
-	pm-suspend
-ctrl + alt d
-	randombg
 
-caps
-	notify-send caps
-
-Print
-	xfce4-screenshooter -r -c
-
+Shift_L + Super_L
+	compokill;xfce4-screenshooter -r -c
+		
 super + shift + s
-	xfce4-screenshooter -r -c
+	compokill;xfce4-screenshooter -r -c
 
-#ctrl + q
-#	xdotool getactivewindow windowkill
-
-#super + Down
-#	xdotool getactivewindow windowminimize
-
-#super + Up
-#	xdotool getactivewindow windowmaximize
-
-## workspace (go to)
-ctrl + alt + 1
-	wmctrl -s 0
-
-ctrl + alt + 2
-	wmctrl -s 1
-
-ctrl + alt + 3
-	wmctrl -s 2
-
-ctrl + alt + 4
-	wmctrl -s 3
-
-ctrl + alt + 5
-	wmctrl -s 4
-
-ctrl + alt + 6
-	wmctrl -s 5
-
-ctrl + alt + 7
-	wmctrl -s 6
-
-ctrl + alt + 8
-	wmctrl -s 7
-
-ctrl + alt + 9
-	wmctrl -s 8
-
-## workspace (send to)
-ctrl + super + 1
-	xdotool getactivewindow set_desktop_for_window 0
-
-ctrl + super + 2
-	xdotool getactivewindow set_desktop_for_window 1
-
-ctrl + super + 3
-	xdotool getactivewindow set_desktop_for_window 2
-
-ctrl + super + 4
-	xdotool getactivewindow set_desktop_for_window 3
-
-ctrl + super + 5
-	xdotool getactivewindow set_desktop_for_window 4
-
-ctrl + super + 6
-	xdotool getactivewindow set_desktop_for_window 5
-
-ctrl + super + 7
-	xdotool getactivewindow set_desktop_for_window 6
-
-ctrl + super + 8
-	xdotool getactivewindow set_desktop_for_window 7
-
-ctrl + super + 9
-	xdotool getactivewindow set_desktop_for_window 8
+ctrl + alt + Delete
+	xscreensaver-command -lock

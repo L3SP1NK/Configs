@@ -151,9 +151,9 @@ startDwm() {
 
 	wmname 'LG3D'&
 
-	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_75 +0+56, HDMI-0: 1920x1080_60 +1280+0, DP-0: 1680x1050_70 +3200+0"&
+#	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_75 +0+56, HDMI-0: 1920x1080_60 +1280+0, DP-0: 1680x1050_70 +3200+0"&
 
-#	${HOME}/.screenlayout/layout.sh&
+	${HOME}/.screenlayout/layout.sh&
 
 	slstatus&
 

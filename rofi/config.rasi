@@ -1,6 +1,6 @@
 configuration
 {
-	font:					"Rubik 16";
+	font:					"Inter Display 14";
 
 	show-icons:				true;
 	icon-theme:				"Papirus-Light";
