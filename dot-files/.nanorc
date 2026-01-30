@@ -59,7 +59,7 @@ set emptyline
 ## Set the target width for automatic hard-wrapping and for justifying
 ## paragraphs.  If the specified value is 0 or less, the wrapping point
 ## will be the terminal's width minus this number.
-set fill 0
+set fill 80
 
 ## Draw a vertical stripe at the given column, to help judge text width.
 ## (This option does not have a default value.)
@@ -132,7 +132,7 @@ set positionlog
 set punct "!.?"
 
 ## Make status-bar messages disappear after 1 keystroke instead of after 20.
-set quickblank
+#set quickblank
 
 ## The regular expression that matches quoting characters in email
 ## or line-comment introducers in source code.  The default is:
@@ -186,7 +186,7 @@ set tabsize 4
 #set tabstospaces
 
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
-#set trimblanks
+set trimblanks
 
 ## The two single-column characters used to display the first characters
 ## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
@@ -194,7 +194,7 @@ set tabsize 4
 
 ## The default when in a UTF-8 locale:
 ## The default otherwise:
-set whitespace ">."
+set whitespace "~."
 
 ## Detect word boundaries differently by treating punctuation
 ## characters as parts of words.
@@ -227,6 +227,7 @@ set minicolor italic,grey
 set promptcolor bold,yellow
 set scrollercolor bold,grey
 
+
 ## === Syntax coloring ===
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
 
@@ -237,7 +238,6 @@ include "/usr/share/nanorc/*.nanorc"
 ## Or you can select just the ones you need.  For example:
 #include "/usr/share/nano/html.nanorc"
 #include "/usr/share/nano/python.nanorc"
-#include "/usr/share/nano/sh.nanorc"
 
 ## In /usr/share/nano/extra/ you can find some syntaxes that are
 ## specific for certain distros or for some less common languages.
@@ -256,7 +256,7 @@ extendsyntax makefile tabgives "	"
 ## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor. On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is the ASCII character for
 ## backspace, so it is bound by default to the backspace function.  The <Backspace> key itself produces a different keycode, which is hard-bound to the backspace function.
 ## So, if you normally use <Backspace> for backspacing and not ^H, you can make <Ctrl+Backspace> delete the word to the left of the cursor with:
-bind ^H chopwordleft main
+#bind ^H chopwordleft main
 
 ## For a more mnemonic Comment keystroke (overriding Cut-from-cursor):
 bind M-C comment main
@@ -269,31 +269,36 @@ bind M-C comment main
 # unbind M-T main
 ## (Those functions are still accessible through ^T^J and ^T^V.)
 
-## For quickly uppercasing or lowercasing the word under the cursor.
-## (These effectively do a Ctrl+Right followed by a Shift+Ctrl+Left,
-## and then pipe the selected text through a sed command.)
-bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
-bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
-
 bind ^W exit all
 bind ^S savefile all
-#bind ^O insert main
+bind ^O insert main
 bind ^F whereis all
 bind ^R replace main
 bind ^X cut main
 bind ^C copy main
 bind ^V paste all
 bind ^P location main
-bind ^A complete main
+bind M-X complete main
 bind ^T gotoline main
-#bind ^H speller main
+bind ^H speller main
 bind ^Z undo main
 bind ^Y redo main
-bind ^L linter execute
+
+
+#include "/usr/share/nano/sh.nanorc"
+
+extendsyntax sh formatter shfmt -w -s -bn -i 4
+bind M-S formatter main
+
+extendsyntax sh linter shellcheck -f gcc
+bind ^L linter main
+
 bind M-E execute all
 bind F7 recordmacro all
 bind F8 runmacro all
 bind ^D writeout main
+
+
 
 bind M-P prevbuf main
 bind M-N nextbuf main

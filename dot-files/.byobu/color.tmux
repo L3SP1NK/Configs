@@ -1,5 +1,5 @@
 BYOBU_DARK=black
 BYOBU_LIGHT=white
-BYOBU_ACCENT=white
-BYOBU_HIGHLIGHT=darkgrey
+BYOBU_ACCENT=magenta
+BYOBU_HIGHLIGHT=goldenrod
 MONOCHROME=black
