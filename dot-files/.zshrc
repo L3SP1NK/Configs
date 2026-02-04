@@ -281,7 +281,7 @@ edit_files_fzf() {
 }
 
 bindkey -s '^[e' 'edit_files_fzf\n' 	# Edit a file.
-bindkey -s '^[l' ';clear;tree -hL1\n'	# List files.
+bindkey -s '^[l' ';clear;tree -hsL1D \n'	# List files.
 bindkey -s '^[o' ';open "$(fzf)"\n'		# Open file.
 bindkey '^Z' undo						# Undo last action
 complete -cf doas
