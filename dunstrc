@@ -7,7 +7,7 @@
 #	icon_position = top
 	enable_recursive_icon_lookup = false
 	icon_theme = ePapirus
-	font = Inter Display 14
+	font = Google Sans 17pt 14
 	sort = yes
 	word_wrap = yes
 	force_xinerama = no

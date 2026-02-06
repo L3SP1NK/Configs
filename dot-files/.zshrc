@@ -269,7 +269,7 @@ bindkey '^[[Z' undo                               	# shift + tab undo last actio
 export EDITOR='nano'
 
 edit_files_fzf() {
-	local FILE; FILE=$(find -O3 . -maxdepth 9 -type f -o -type l 2>/dev/null|fzf)
+	local FILE; FILE=$(find -O3 . -maxdepth 9 -type f -o -type l 2>/dev/null|fzf --smart-case -m)
 
 	if [[ -n "${FILE}" ]]; then
 		if [[ -O "${FILE}" ]]; then
@@ -282,7 +282,7 @@ edit_files_fzf() {
 
 bindkey -s '^[e' 'edit_files_fzf\n' 	# Edit a file.
 bindkey -s '^[l' ';clear;tree -hsL1D \n'	# List files.
-bindkey -s '^[o' ';open "$(fzf)"\n'		# Open file.
+bindkey -s '^[o' ';open "$(fzf --smart-case -m)"\n'		# Open file.
 bindkey '^Z' undo						# Undo last action
 complete -cf doas
 
