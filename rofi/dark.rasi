@@ -4,12 +4,12 @@
  ***********************************************/
 * {
 
-	foreground-color:		#FFFFFF;
+	foreground-color:		white;
 
-	selected-fg-color:		@foreground-color;
-	selected-bg-color:		#00000050;
+	selected-fg-color:		white;
+	selected-bg-color:		#00000030;
 
-	background-color:		#00000000;
+	background-color:		#00000005;
 	background-alt-color:	@selected-bg-color;
 
 	border-color:			@selected-bg-color;
@@ -20,8 +20,9 @@
 	transparency:			"real";
 	text-color:				inherit;
 	border:					0;
+	border-radius:			16;
 	border-color:			@border-color;
-	width:					400;
+	width:					500;
 }
 
 #mainbox
@@ -34,7 +35,7 @@
 {
 	border:					0;
 	border-color:			@selected-bg-color;
-	background-color:		#cc0000;
+	background-color:		#cc000040;
 }
 
 #textbox
@@ -57,19 +58,29 @@
 #element
 {
 	border:					0;
-	border-radius:			16;
+	border-radius:			12;
 }
 
 #element-icon
 {
 	border:					0;
+	background-color:		@background-color;
 	size:					48;
 	padding:				8;
 }
 
+
+//#element-icon.selected.normal
+//{
+
+//	background-color: @selected-bg-color;
+
+//}
+
 #element-text
 {
 	border:					0;
+	background-color:		inherit;
 	text-color:				inherit;
 	padding:				16;
 }
@@ -86,16 +97,15 @@
 
 #element.normal.active
 {
-	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
+	background-color:		@selected-bg-color;
 }
 
 #element.selected.normal
 {
 	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
-	border:					1;
-	border-color:			@selected-bg-color;
+	border:					0;
 }
 
 #element.selected.urgent
@@ -106,6 +116,7 @@
 
 #element.selected.active
 {
+	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
@@ -116,17 +127,18 @@
 
 #element.alternate.urgent
 {
-	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
 #element.alternate.active
 {
+	background-color:		@selected-bg-color;
 	text-color:				@selected-fg-color;
 }
 
 #mode-switcher
 {
+	background-color:		@background-color;
 	border:					0 0 0;
 	border-color:			@selected-bg-color;
 }
@@ -134,6 +146,7 @@
 #button
 {
 	spacing:				0;
+	color:					@background-color;
 	text-color:				@selected-fg-color;
 }
 
@@ -158,12 +171,17 @@
 {
 	text-color:				@foreground-color;
 	border-color:		   @border-color;
+	border:					0;
 	border-radius:		  0;
+
 }
 
 #prompt
 {
+	border:					0;
+	border-radius:		  0;
 	enabled:				true;
+	text-color:				@background-color;
 	text-color:				@foreground-color;
 }
 
