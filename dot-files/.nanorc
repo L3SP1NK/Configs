@@ -291,6 +291,8 @@ extendsyntax sh formatter shfmt -w -s -bn -i 4
 bind M-S formatter main
 
 extendsyntax sh linter shellcheck -f gcc
+extendsyntax xml linter xml_spellcheck
+extendsyntax kml linter xml_spellcheck
 bind ^L linter main
 
 bind M-E execute all
