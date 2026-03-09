@@ -293,7 +293,7 @@ bind M-S formatter main
 #extendsyntax sh linter shellcheck -f gcc
 #extendsyntax xml linter xml_spellcheck
 #extendsyntax kml linter xml_spellcheck
-bind ^L linter main
+#bind ^L linter main
 
 bind M-E execute all
 bind F7 recordmacro all
