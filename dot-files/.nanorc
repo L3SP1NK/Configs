@@ -280,7 +280,7 @@ bind ^V paste all
 bind ^P location main
 bind M-X complete main
 bind ^T gotoline main
-bind ^H speller main
+#bind ^H speller main
 bind ^Z undo main
 bind ^Y redo main
 
@@ -290,10 +290,10 @@ bind ^Y redo main
 extendsyntax sh formatter shfmt -w -s -bn -i 4
 bind M-S formatter main
 
-#extendsyntax sh linter shellcheck -f gcc
+extendsyntax sh linter shellcheck -f gcc
 #extendsyntax xml linter xml_spellcheck
 #extendsyntax kml linter xml_spellcheck
-#bind ^L linter main
+bind ^L linter main
 
 bind M-E execute all
 bind F7 recordmacro all
