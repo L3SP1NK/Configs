@@ -145,13 +145,13 @@ if pidof picom; then
 	killall picom
 fi
 
-picom&
+#picom&
 
 startDwm() {
 
 	wmname 'LG3D'&
 
-	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_60 +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, HDMI-0: 1920x1080_60 +1280+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DP-0: 1680x1050_60 +3200+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
+#	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_60 +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, HDMI-0: 1920x1080_60 +1280+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DP-0: 1680x1050_60 +3200+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
 
 #	${HOME}/.screenlayout/layout.sh&
 
