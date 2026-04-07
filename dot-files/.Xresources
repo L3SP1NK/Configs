@@ -124,7 +124,7 @@ Sxiv.background:	#0d0d0d
 Sxiv.foreground:	#ffffff
 
 Xcursor.theme:	macOS-White
-Xcursor.size:	64
+Xcursor.size:	75
 
 xclock*foreground:  red
 xclock*background:  #0d0d0d
