@@ -79,7 +79,7 @@ XTerm*veryBoldColors: 4
 XTerm*xftAntialias: true
 ! set font and fontsize
 
-!XTerm*faceName: 3270 nerd font
+XTerm*faceName: GoogleSansCode
 XTerm*faceSize: 13
 
 Xmessage*font: -sf pro display-medium-r-normal--14-140-72-72-p-71-iso10646-1
@@ -124,7 +124,7 @@ Sxiv.background:	#0d0d0d
 Sxiv.foreground:	#ffffff
 
 Xcursor.theme:	macOS-White
-Xcursor.size:	75
+Xcursor.size:	80
 
 xclock*foreground:  red
 xclock*background:  #0d0d0d
