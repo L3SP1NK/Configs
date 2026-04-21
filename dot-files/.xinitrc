@@ -6,96 +6,96 @@ export XDG_SESSION_TYPE='x11'
 export _JAVA_AWT_WM_NONREPARENTING='1'
 
 ## Load X colors
-xrdb -merge -load ~/.Xresources&
+xrdb -merge -load ~/.Xresources &
+
+/usr/libexec/at-spi-bus-launcher --launch-immediately &
+/usr/bin/pkcs11-register --skip-chrome=off --skip-firefox=off &
+/usr/libexec/polkit-mate-authentication-agent-1 &
+xdg-user-dirs-update &
+xdg-user-dirs-gtk-update &
 
 ## Keyboard layout (before every others keyboard options)
-setxkbmap fr&
-setxkbmap -option caps:none&
-
+setxkbmap fr &
+setxkbmap -option caps:none &
 
 ## Natural touchpad scroll direction
-/usr/libexec/at-spi-bus-launcher --launch-immediately&
-/usr/bin/pkcs11-register --skip-chrome=off --skip-firefox=off&
-/usr/libexec/polkit-mate-authentication-agent-1&
-xdg-user-dirs-update&
-xdg-user-dirs-gtk-update&
-xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1&
-xinput --set-prop 15 297 0&
+xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1 &
+xinput --set-prop 15 297 0 &
 
 ## Turn on numlock (before numpad as mouse)
-numlockx on&
+numlockx on &
 
 ## Numpad as mouse (shift + numlock to enable)
-setxkbmap -option "keypad:pointerkeys"&
+setxkbmap -option "keypad:pointerkeys" &
 
-xbindkeys&
+xbindkeys &
 
 ## Super key (for keybinding (rofi/dmenu/whiskermenu/...)
-if pidof xcape;	then
-	killall xcape
+if pidof xcape; then
+    killall xcape
 fi
-xcape -e "Super_L=Control_L|Escape"&
+xcape -e "Super_L=Control_L|Escape" &
 #xcape -e "Super_R=Control_L|Escape"&
 
 ## Keyboard shortcut
 if pidof sxhkd; then
-	killall sxhkd
+    killall sxhkd
 fi
-sxhkd&
+sxhkd &
 
 ## Keyboard shortcut
 if pidof blueman-applet; then
-	killall blueman-applet
+    killall blueman-applet
 fi
-blueman-applet&
+blueman-applet &
 
 # Meteo indicator
 if pidof meteo-qt; then
-	killall meteo-qt
+    killall meteo-qt
 fi
-meteo-qt -c -i orange -o brown -a -t 10&
+meteo-qt -c -i orange -o brown -a -t 10 &
 
 ## Network tray icon
 if pidof nm-applet; then
-	killall nm-applet
+    killall nm-applet
 fi
-nm-applet&
+nm-applet &
 
 ## Temperature monitor
 if pidof psensor; then
-	killall psensor
+    killall psensor
 fi
-psensor&
+psensor &
 
 ## Clipboard manager
 if pidof xfce4-clipman; then
-	killall xfce4-clipman
+    killall xfce4-clipman
 fi
-xfce4-clipman&
+xfce4-clipman &
 
 ## Sound indicator
 if pidof pasystray; then
-	killall pasystray
+    killall pasystray
 fi
-pasystray&
+pasystray &
 
 ## Notifications
 if pidof dunst; then
-	killall dunst
+    killall dunst
 fi
-dunst --startup-notification&
+dunst --startup-notification &
 
 ## Geolocation service
-if pidof geoclue||pidof agent; then
-	killall geoclue agent
+if pidof geoclue || pidof agent; then
+    killall geoclue agent
 fi
-/usr/libexec/geoclue-2.0/demos/agent&
+/usr/libexec/geoclue-2.0/demos/agent &
 
 ### Blue light filter
 if pidof redshift-gtk; then
-	killall redshift-gtk
+    killall redshift-gtk
 fi
-redshift-gtk&
+redshift-gtk &
 #
 ### Onscreen keyboard
 #if pidof onboard; then
@@ -110,16 +110,17 @@ redshift-gtk&
 #caffeine-indicator&
 
 ## Set a random background
-randombg&
+randombg &
 
 ## Desktop right click menu
-kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
+kill $(pidof jgmenu)
+jgmenu --at-pointer --hide-on-startup &
 
 ## System monitor
 #x-terminal-emulator -e 'byobu'&
 
 ## Auth agent
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1&
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 ### Battery indicator
 #if pidof xbattbar; then
@@ -129,35 +130,34 @@ kill $( pidof jgmenu ); jgmenu --at-pointer --hide-on-startup&
 
 ## Power manager
 if pidof xfce4-power-manager; then
-	killall xfce4-power-manager
+    killall xfce4-power-manager
 fi
-xfce4-power-manager&
-
+xfce4-power-manager &
 
 ### Screensaver
 if pidof xscreensaver; then
-	killall xscreensaver
+    killall xscreensaver
 fi
-xscreensaver&
+xscreensaver &
 
 ## Screen compositor
 if pidof picom; then
-	killall picom
+    killall picom
 fi
 
 #picom&
 
 startDwm() {
 
-	wmname 'LG3D'&
+    wmname 'LG3D' &
 
-#	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_60 +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, HDMI-0: 1920x1080_60 +1280+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DP-0: 1680x1050_60 +3200+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
+    #	nvidia-settings -a "CurrentMetaMode=DVI-D-0: 1280x1024_60 +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, HDMI-0: 1920x1080_60 +1280+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DP-0: 1680x1050_60 +3200+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
 
-#	${HOME}/.screenlayout/layout.sh&
+    #	${HOME}/.screenlayout/layout.sh&
 
-	slstatus&
+    slstatus &
 
-	dwm
+    dwm
 
 }
 
