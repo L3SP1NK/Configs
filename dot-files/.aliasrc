@@ -67,3 +67,5 @@ alias rm='trash'
 alias pssh='parallel-ssh'
 alias cpp='rsync -Pa'
 alias mvp='rsync -Pa --remove-source-files'
+
+alias ipinfo='curl -sLk https://ipinfo.io/$(proxychains curl -sLk https://ifconfig.me)'
