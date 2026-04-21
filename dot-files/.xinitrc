@@ -134,6 +134,9 @@ if pidof xfce4-power-manager; then
 fi
 xfce4-power-manager &
 
+## Hide mouse cursor
+unclutter -idle 3&disown
+
 ### Screensaver
 if pidof xscreensaver; then
     killall xscreensaver
@@ -145,7 +148,7 @@ if pidof picom; then
     killall picom
 fi
 
-#picom&
+picom&
 
 startDwm() {
 
