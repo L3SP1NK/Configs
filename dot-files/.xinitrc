@@ -16,7 +16,7 @@ xdg-user-dirs-gtk-update &
 
 ## Keyboard layout (before every others keyboard options)
 setxkbmap fr &
-setxkbmap -option caps:none &
+#setxkbmap -option caps:none &
 
 ## Natural touchpad scroll direction
 xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1 &

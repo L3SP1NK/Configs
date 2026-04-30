@@ -1,5 +1,6 @@
 configuration
 {
+	font:					"sora 16";
 	font:					"sf pro text regular 16";
 
 	show-icons:				true;
