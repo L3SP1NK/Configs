@@ -1,7 +1,6 @@
 configuration
 {
-	font:					"Fira Sans regular 16";
-	font:					"sf pro text 16";
+	font:					"SF Pro Text 16";
 
 	show-icons:				true;
 	icon-theme:				"ePapirus-Dark";

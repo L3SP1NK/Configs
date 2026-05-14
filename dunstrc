@@ -7,7 +7,8 @@
 #	icon_position = top
 	enable_recursive_icon_lookup = false
 	icon_theme = ePapirus
-	font = sf pro display bold 18
+#	font = Fira Sans SemiBold 18
+	font = SF Pro Text SemiBold 18
 	sort = yes
 	word_wrap = yes
 	force_xinerama = no
