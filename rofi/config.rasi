@@ -1,10 +1,10 @@
 configuration
 {
-	font:					"sora 16";
-	font:					"sf pro text regular 16";
+	font:					"Fira Sans regular 16";
+	font:					"sf pro text 16";
 
 	show-icons:				true;
-	icon-theme:				"Papirus-Light";
+	icon-theme:				"ePapirus-Dark";
 
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";

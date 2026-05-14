@@ -11,11 +11,6 @@ setopt promptsubst         # enable command substitution in prompt
 DISABLE_MAGIC_FUNCTIONS=true
 #WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH="/home/lespink/.local/bin:$PATH"
-# hide EOL sign ('%')
-PROMPT_EOL_MARK=""
-
 ## enable completion features
 #autoload -Uz compinit
 #compinit -d ~/.cache/zcompdump
@@ -246,12 +241,6 @@ if [[ "${SSH_CONNECTION}" ]]; then
 #    PROMPT="[ssh] ${PROMPT}"
 fi
 
-
-# load cargo env
-CARGO_DIR="${HOME}/.cargo/bin"
-if [[ -d ${CARGO_DIR} ]]; then
-	PATH="${PATH}:${CARGO_DIR}"
-fi
 
 # configure key keybindings
 bindkey ' ' magic-space                           	# do history expansion on space
