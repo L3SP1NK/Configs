@@ -3,7 +3,7 @@ configuration
 	font:					"SF Pro Text 16";
 
 	show-icons:				true;
-	icon-theme:				"GNOME";
+	icon-theme:				"ePapirus-Dark";
 
 	terminal:				"rofi-sensible-terminal";
 	ssh-client:				"ssh";
