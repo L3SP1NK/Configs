@@ -5,7 +5,7 @@ super + l
 	xscreensaver-command -lock
 
 super + shift + s
-	compokill;xfce4-screenshooter -r -c
+	xfce4-screenshooter -r -c
 
 ctrl + alt + Delete
 	xscreensaver-command -lock
